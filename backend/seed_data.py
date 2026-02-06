@@ -211,6 +211,48 @@ projects_data = [
         "category": "Full Automation",
         "description": "Integrated smart home with voice control",
         "image": "https://images.pexels.com/photos/32967485/pexels-photo-32967485.jpeg?w=800"
+    },
+    {
+        "id": 7,
+        "name": "Brigade Panorama",
+        "category": "Home Theatre",
+        "description": "State-of-the-art cinema with premium acoustics",
+        "image": "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=800"
+    },
+    {
+        "id": 8,
+        "name": "DLF Westend Heights",
+        "category": "Security System",
+        "description": "Comprehensive security with AI monitoring",
+        "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=800"
+    },
+    {
+        "id": 9,
+        "name": "Mantri Espana",
+        "category": "Full Automation",
+        "description": "Complete home automation solution",
+        "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+    },
+    {
+        "id": 10,
+        "name": "Purva Whitehall",
+        "category": "Smart Lighting",
+        "description": "Advanced lighting control system",
+        "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800"
+    },
+    {
+        "id": 11,
+        "name": "Shriram Chirping Woods",
+        "category": "Home Theatre",
+        "description": "Premium entertainment setup with Dolby Atmos",
+        "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800"
+    },
+    {
+        "id": 12,
+        "name": "Embassy Pristine",
+        "category": "Full Automation",
+        "description": "Smart home with integrated automation",
+        "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
     }
 ]
 
