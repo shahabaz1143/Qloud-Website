@@ -79,7 +79,7 @@ const Projects = () => {
             <p className="mt-3 text-sm">Loading projects...</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {projects.map((project, index) => (
               <div
                 key={project.id}
@@ -91,7 +91,7 @@ const Projects = () => {
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
                 {/* Image Container */}
-                <div className="relative h-56 overflow-hidden bg-gray-900">
+                <div className="relative h-40 overflow-hidden bg-gray-900">
                   <img
                     src={project.image}
                     alt={project.name}
@@ -105,26 +105,26 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-cyan-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   {/* Category Badge */}
-                  <div className="absolute top-3 left-3 z-10">
-                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full text-xs font-semibold text-white shadow-lg backdrop-blur-sm">
+                  <div className="absolute top-2 left-2 z-10">
+                    <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full text-xs font-semibold text-white shadow-lg backdrop-blur-sm">
                       {project.category}
                     </span>
                   </div>
 
                   {/* View Details Button - appears on hover */}
-                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-90 z-10">
-                    <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 group/btn">
-                      <ExternalLink className="w-4 h-4 text-gray-900 group-hover/btn:text-white" />
+                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-90 z-10">
+                    <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 group/btn">
+                      <ExternalLink className="w-3 h-3 text-gray-900 group-hover/btn:text-white" />
                     </button>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="relative p-5 bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm">
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                <div className="relative p-3 bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm">
+                  <h3 className="text-sm font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-1">
                     {project.name}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-gray-400 text-xs leading-relaxed group-hover:text-gray-300 transition-colors duration-300 line-clamp-2">
                     {project.description}
                   </p>
 
