@@ -7,7 +7,6 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Pricing from './components/Pricing';
 import Process from './components/Process';
 import Projects from './components/Projects';
-import BrandPartners from './components/BrandPartners';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
@@ -24,7 +23,6 @@ function App() {
       <Pricing />
       <Process />
       <Projects />
-      <BrandPartners />
       <Testimonials />
       <FAQ />
       <Contact />
