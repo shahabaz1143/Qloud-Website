@@ -11,11 +11,11 @@ services_data = [
     },
     {
         "id": 2,
-        "title": "Smart Lighting Solutions",
-        "description": "Enhance your space with intelligent lighting that adapts to your mood, schedule, and lifestyle. Energy-efficient, voice-controlled, and beautifully integrated.",
-        "image": "https://images.unsplash.com/photo-1606170033648-5d55a3edf314?w=800",
+        "title": "Smart Touch Switches",
+        "description": "Modern touch-enabled switches that bring elegance and functionality to your home. Control lights with a simple touch, set schedules, and integrate with your smart home ecosystem.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
         "icon": "Lightbulb",
-        "features": ["Voice Control", "Scene Setting", "Energy Saving", "App Control"]
+        "features": ["Touch Control", "Scene Setting", "Timer Functions", "Smart Integration"]
     },
     {
         "id": 3,
