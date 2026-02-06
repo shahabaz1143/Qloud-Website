@@ -1,15 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Check, Sparkles } from 'lucide-react';
-import { pricingPackages } from '../mockData';
+import { fetchPricing } from '../services/api';
 
 const Pricing = () => {
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadPricing = async () => {
+      try {
+        const data = await fetchPricing();
+        setPackages(data);
+      } catch (error) {
+        console.error('Error loading pricing:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadPricing();
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  if (loading) {
+    return (
+      <section id="packages" className="py-24 bg-[#0f1419]">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-cyan-400">Loading pricing...</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="packages" className="py-24 bg-[#0f1419]">
@@ -28,7 +55,7 @@ const Pricing = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {pricingPackages.map((pkg) => (
+          {packages.map((pkg) => (
             <div
               key={pkg.id}
               className={`relative p-8 rounded-2xl border transition-all duration-300 ${

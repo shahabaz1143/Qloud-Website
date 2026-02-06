@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Film, Lightbulb, Shield, Home, Wifi, Building2, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { services } from '../mockData';
+import { fetchServices } from '../services/api';
 
 const iconMap = {
   Film: Film,
@@ -13,6 +13,33 @@ const iconMap = {
 };
 
 const Services = () => {
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadServices = async () => {
+      try {
+        const data = await fetchServices();
+        setServices(data);
+      } catch (error) {
+        console.error('Error loading services:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadServices();
+  }, []);
+
+  if (loading) {
+    return (
+      <section id="services" className="py-24 bg-[#0a0e1a] relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-cyan-400">Loading services...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="services" className="py-24 bg-[#0a0e1a] relative">
       <div className="container mx-auto px-6">

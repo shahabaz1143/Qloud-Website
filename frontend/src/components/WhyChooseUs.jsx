@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Users, DollarSign, Boxes, Headphones, Wrench, CheckCircle } from 'lucide-react';
-import { whyChooseUs } from '../mockData';
+import { fetchBenefits } from '../services/api';
 
 const iconMap = {
   Users: Users,
@@ -12,6 +12,33 @@ const iconMap = {
 };
 
 const WhyChooseUs = () => {
+  const [benefits, setBenefits] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadBenefits = async () => {
+      try {
+        const data = await fetchBenefits();
+        setBenefits(data);
+      } catch (error) {
+        console.error('Error loading benefits:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadBenefits();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-24 bg-gradient-to-b from-[#0a0e1a] to-[#0f1419]">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-cyan-400">Loading...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-24 bg-gradient-to-b from-[#0a0e1a] to-[#0f1419]">
       <div className="container mx-auto px-6">
@@ -28,7 +55,7 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {whyChooseUs.map((item) => {
+          {benefits.map((item) => {
             const IconComponent = iconMap[item.icon];
             return (
               <div
