@@ -21,7 +21,7 @@ services_data = [
         "id": 3,
         "title": "Security Systems",
         "description": "Protect what matters most with cutting-edge security automation—smart cameras, alarms, motion sensors, and 24/7 monitoring designed to keep your home safe.",
-        "image": "https://images.unsplash.com/photo-1549109926-58f039549485?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/d3e2luzr_download.avif",
         "icon": "Shield",
         "features": ["Smart Cameras", "Motion Sensors", "24/7 Monitoring", "Remote Access"]
     },
