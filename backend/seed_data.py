@@ -93,62 +93,50 @@ benefits_data = [
 pricing_data = [
     {
         "id": 1,
-        "name": "Essential",
+        "name": "Essential Package",
         "description": "Perfect entry into cinema-quality entertainment",
-        "price": "₹2,29,000",
+        "price": "2,29,000",
         "popular": False,
         "features": [
-            "Speakers & Subwoofer",
-            "AVR & Upscaling 4K Projector",
-            "Cables & Projector Mount",
-            "HDMI Connectivity",
-            "Basic Installation",
-            "1 Year Warranty"
+            "Includes Speakers & Subwoofer",
+            "AVR & Upscaling 4k Projector",
+            "Cables & Projector Mount, HDMI"
         ]
     },
     {
         "id": 2,
-        "name": "Premium",
+        "name": "Budget Package",
         "description": "High-end speakers with acoustic treatment",
-        "price": "₹6,99,000",
+        "price": "6,99,000",
         "popular": False,
         "features": [
-            "High-End Speakers",
-            "Basic Acoustic Wall Paneling",
-            "5.1 Surround System",
-            "Premium AVR",
-            "Professional Calibration",
-            "5 Years Warranty on Speakers"
+            "Includes High End Speakers",
+            "Basic Acoustic ( Wall Paneling )",
+            "5 Years Warranty on Speaker"
         ]
     },
     {
         "id": 3,
-        "name": "Signature",
+        "name": "Silver Package",
         "description": "Dolby Atmos with complete acoustic setup",
-        "price": "₹9,99,000",
+        "price": "9,99,000",
         "popular": True,
         "features": [
             "5.1.2 Dolby Atmos System",
-            "4K Projector with Edgeless Screen",
-            "4 Layer Acoustic Treatment",
-            "Premium Recliners Included",
-            "Smart Lighting Integration",
-            "Lifetime Support"
+            "4k Projector with Edge Less Screen",
+            "4 Layer Acoustics including Recliners"
         ]
     },
     {
         "id": 4,
-        "name": "Ultimate",
+        "name": "Gold Package",
         "description": "The pinnacle of home cinema luxury",
-        "price": "₹12,39,000",
+        "price": "12,39,000",
         "popular": False,
         "features": [
             "7.1.2 Dolby Atmos System",
             "300 Watts Premium Speakers",
-            "6 Layers Acoustic Treatment",
-            "Luxury Recliners with Massage",
-            "Automated Curtains & Lighting",
-            "Lifetime Priority Support"
+            "6 Layers Acoustic treatment with Recliners"
         ]
     }
 ]
