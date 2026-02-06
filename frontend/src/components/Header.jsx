@@ -27,55 +27,61 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold tracking-wider text-white">
-            QLOUD
+          <div className="flex-shrink-0">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
+              alt="Qloud Tech Logo" 
+              className="h-10"
+            />
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-            >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection('packages')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-            >
-              Packages
-            </button>
-            <button
-              onClick={() => scrollToSection('process')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-            >
-              Process
-            </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection('faq')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-            >
-              FAQ
-            </button>
-          </nav>
+          <div className="flex items-center gap-8">
+            <nav className="hidden md:flex items-center space-x-8">
+              <button
+                onClick={() => scrollToSection('home')}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => scrollToSection('packages')}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              >
+                Packages
+              </button>
+              <button
+                onClick={() => scrollToSection('process')}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              >
+                Process
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection('faq')}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              >
+                FAQ
+              </button>
+            </nav>
 
-          <Button
-            onClick={() => scrollToSection('contact')}
-            className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-md transition-all duration-200"
-          >
-            Get Quote
-          </Button>
+            <Button
+              onClick={() => scrollToSection('contact')}
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-md transition-all duration-200"
+            >
+              Get Quote
+            </Button>
+          </div>
         </div>
       </div>
     </header>
