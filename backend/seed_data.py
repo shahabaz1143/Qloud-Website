@@ -13,7 +13,7 @@ services_data = [
         "id": 2,
         "title": "Smart Touch Switches",
         "description": "Modern touch-enabled switches that bring elegance and functionality to your home. Control lights with a simple touch, set schedules, and integrate with your smart home ecosystem.",
-        "image": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/99fx1zh1_keypads-bg-design-mob%20%281%29.webp",
         "icon": "Lightbulb",
         "features": ["Touch Control", "Scene Setting", "Timer Functions", "Smart Integration"]
     },
