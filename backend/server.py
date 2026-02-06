@@ -146,13 +146,16 @@ async def create_contact_inquiry(inquiry: ContactInquiry):
         inquiry_dict["status"] = "new"
         inquiry_dict["createdAt"] = datetime.utcnow()
         
+        # Create a copy for response (without MongoDB _id)
+        response_inquiry = inquiry_dict.copy()
+        
         result = await db.contact_inquiries.insert_one(inquiry_dict)
         
         if result.inserted_id:
             return {
                 "success": True,
                 "message": "Thank you for contacting us! We'll get back to you within 24 hours.",
-                "inquiry": inquiry_dict
+                "inquiry": response_inquiry
             }
         else:
             raise HTTPException(status_code=500, detail="Failed to create inquiry")
