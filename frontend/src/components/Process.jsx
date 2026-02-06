@@ -65,30 +65,27 @@ const Process = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          {steps.map((step, index) => (
-            <div 
-              key={step.id} 
-              className={`relative transition-all duration-700 transform ${
-                visibleSteps.includes(index) 
-                  ? 'opacity-100 translate-x-0' 
-                  : 'opacity-0 -translate-x-10'
-              }`}
-            >
-              {/* Animated Connecting Line */}
-              {index < steps.length - 1 && (
-                <div className="absolute left-8 top-20 w-0.5 h-32 bg-gradient-to-b from-cyan-500 to-cyan-500/20 overflow-hidden">
-                  <div 
-                    className="w-full h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent animate-flowDown"
-                    style={{ animationDelay: `${index * 0.2}s` }}
-                  ></div>
-                </div>
-              )}
+        {/* Horizontal Timeline */}
+        <div className="max-w-7xl mx-auto relative">
+          {/* Connecting Line */}
+          <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500/20 via-cyan-500 to-cyan-500/20 hidden md:block">
+            <div className="h-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-flowRight"></div>
+          </div>
 
-              <div className="flex gap-6 mb-12 group">
+          {/* Steps in horizontal layout */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+            {steps.map((step, index) => (
+              <div 
+                key={step.id} 
+                className={`flex flex-col items-center text-center transition-all duration-700 transform ${
+                  visibleSteps.includes(index) 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
                 {/* Animated Number Circle */}
-                <div className="flex-shrink-0">
-                  <div className="relative w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-cyan-500/30 group-hover:scale-110 group-hover:shadow-cyan-500/50 transition-all duration-300">
+                <div className="relative mb-6 group">
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-all duration-300 z-10">
                     <span className="relative z-10">{step.id}</span>
                     {/* Pulse effect */}
                     <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-20"></div>
@@ -96,17 +93,17 @@ const Process = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 pt-2 bg-gradient-to-br from-gray-900/30 to-transparent rounded-2xl p-6 border border-gray-800/50 group-hover:border-cyan-500/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/10">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                <div className="bg-gradient-to-br from-gray-900/30 to-transparent rounded-2xl p-6 border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 h-full">
+                  <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-300">
                     {step.title}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-sm text-gray-400 leading-relaxed hover:text-gray-300 transition-colors duration-300">
                     {step.description}
                   </p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* CTA Section with hover effect */}
@@ -136,12 +133,12 @@ const Process = () => {
           }
         }
 
-        @keyframes flowDown {
+        @keyframes flowRight {
           0% {
-            transform: translateY(-100%);
+            transform: translateX(-100%);
           }
           100% {
-            transform: translateY(100%);
+            transform: translateX(100%);
           }
         }
 
@@ -149,8 +146,8 @@ const Process = () => {
           animation: fadeIn 0.6s ease-out forwards;
         }
 
-        .animate-flowDown {
-          animation: flowDown 2s ease-in-out infinite;
+        .animate-flowRight {
+          animation: flowRight 3s ease-in-out infinite;
         }
       `}</style>
     </section>
