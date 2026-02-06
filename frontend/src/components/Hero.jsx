@@ -68,16 +68,16 @@ const Hero = () => {
           </div>
 
           {/* Info Cards */}
-          <div className="flex flex-wrap items-center gap-4 mb-8">
-            <div className="w-56 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
               <div className="text-cyan-400 text-sm font-medium mb-0.5">Free Consultation</div>
               <div className="text-white text-xs uppercase tracking-wide">& SITE VISIT</div>
             </div>
-            <div className="w-56 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
               <div className="text-cyan-400 text-2xl font-bold">₹50K+</div>
               <div className="text-white text-xs uppercase tracking-wide">AUTOMATION STARTS</div>
             </div>
-            <div className="w-56 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
               <div className="text-cyan-400 text-2xl font-bold">₹3.5L+</div>
               <div className="text-white text-xs uppercase tracking-wide">THEATRE STARTS</div>
             </div>
