@@ -37,7 +37,7 @@ services_data = [
         "id": 5,
         "title": "Networking Solutions",
         "description": "Professional mesh networks that eliminate dead zones and keep all your devices connected. Fast, reliable WiFi in every room, every corner.",
-        "image": "https://images.pexels.com/photos/28940512/pexels-photo-28940512.jpeg?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/by22ktly_istockphoto-1932001837-612x612.jpg",
         "icon": "Wifi",
         "features": ["Mesh Network", "No Dead Zones", "High-Speed WiFi", "Secure Connection"]
     },
