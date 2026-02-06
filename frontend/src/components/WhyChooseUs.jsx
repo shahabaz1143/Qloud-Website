@@ -1,0 +1,52 @@
+import React from 'react';
+import { Users, DollarSign, Boxes, Headphones, Wrench, CheckCircle } from 'lucide-react';
+import { whyChooseUs } from '../mockData';
+
+const iconMap = {
+  Users: Users,
+  DollarSign: DollarSign,
+  Boxes: Boxes,
+  HeadphonesIcon: Headphones,
+  Wrench: Wrench,
+  CheckCircle: CheckCircle,
+};
+
+const WhyChooseUs = () => {
+  return (
+    <section className="py-24 bg-gradient-to-b from-[#0a0e1a] to-[#0f1419]">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
+            WHY CHOOSE US
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            The Qloud Tech Advantage
+          </h2>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            Pioneers in Smart Home Automation & Immersive Home Theatre Solutions
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {whyChooseUs.map((item) => {
+            const IconComponent = iconMap[item.icon];
+            return (
+              <div
+                key={item.id}
+                className="group p-8 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors duration-300">
+                  <IconComponent className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{item.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;
