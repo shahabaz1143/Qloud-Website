@@ -10,10 +10,10 @@ import {
   SelectValue,
 } from './ui/select';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { useToast } from '../hooks/use-toast';
+import { toast } from 'sonner';
+import { submitContact } from '../services/api';
 
 const Contact = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -21,6 +21,7 @@ const Contact = () => {
     service: '',
     message: '',
   });
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,23 +31,33 @@ const Contact = () => {
     setFormData({ ...formData, service: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Mock submission
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+    try {
+      setSubmitting(true);
+      const response = await submitContact(formData);
+      
+      toast.success("Message Sent!", {
+        description: response.message || "We'll get back to you within 24 hours.",
+      });
 
-    // Reset form
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: '',
-    });
+      // Reset form
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      toast.error("Failed to send message", {
+        description: "Please try again later or contact us directly.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -145,9 +156,10 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-6 text-lg rounded-lg"
+                disabled={submitting}
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-6 text-lg rounded-lg disabled:opacity-50"
               >
-                Send Message
+                {submitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>

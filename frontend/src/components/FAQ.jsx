@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -7,9 +7,36 @@ import {
 } from './ui/accordion';
 import { Button } from './ui/button';
 import { MessageCircle, Phone } from 'lucide-react';
-import { faqs } from '../mockData';
+import { fetchFAQs } from '../services/api';
 
 const FAQ = () => {
+  const [faqs, setFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadFAQs = async () => {
+      try {
+        const data = await fetchFAQs();
+        setFaqs(data);
+      } catch (error) {
+        console.error('Error loading FAQs:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadFAQs();
+  }, []);
+
+  if (loading) {
+    return (
+      <section id="faq" className="py-24 bg-[#0f1419]">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-cyan-400">Loading FAQs...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="faq" className="py-24 bg-[#0f1419]">
       <div className="container mx-auto px-6">

@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
-import { testimonials } from '../mockData';
+import { fetchTestimonials } from '../services/api';
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadTestimonials = async () => {
+      try {
+        const data = await fetchTestimonials();
+        setTestimonials(data);
+      } catch (error) {
+        console.error('Error loading testimonials:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadTestimonials();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-24 bg-[#0a0e1a]">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-cyan-400">Loading testimonials...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-24 bg-[#0a0e1a]">
       <div className="container mx-auto px-6">

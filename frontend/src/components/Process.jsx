@@ -1,14 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
-import { processSteps } from '../mockData';
+import { fetchProcess } from '../services/api';
 
 const Process = () => {
+  const [steps, setSteps] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadProcess = async () => {
+      try {
+        const data = await fetchProcess();
+        setSteps(data);
+      } catch (error) {
+        console.error('Error loading process:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadProcess();
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  if (loading) {
+    return (
+      <section id="process" className="py-24 bg-[#0a0e1a]">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-cyan-400">Loading...</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="process" className="py-24 bg-[#0a0e1a]">
@@ -26,10 +53,10 @@ const Process = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          {processSteps.map((step, index) => (
+          {steps.map((step, index) => (
             <div key={step.id} className="relative">
               {/* Connecting Line */}
-              {index < processSteps.length - 1 && (
+              {index < steps.length - 1 && (
                 <div className="absolute left-8 top-20 w-0.5 h-32 bg-gradient-to-b from-cyan-500 to-transparent"></div>
               )}
 
