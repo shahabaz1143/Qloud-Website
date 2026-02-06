@@ -53,14 +53,14 @@ const Hero = () => {
 
           {/* Main Heading */}
           <div className="mb-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
               WHERE SMART LIVING
               <br />
               MEETS
               <br />
               <span className="text-cyan-400">CINEMATIC MAGIC</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300">
+            <p className="text-base md:text-lg text-gray-300 max-w-xl">
               From voice-controlled automation to{' '}
               <span className="text-cyan-400 font-semibold">Dolby Atmos theatres</span>—we craft
               intelligent spaces that entertain, protect, and inspire.
