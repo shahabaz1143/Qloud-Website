@@ -53,7 +53,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <div className="mb-8">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
               WHERE SMART LIVING
               <br />
               MEETS
