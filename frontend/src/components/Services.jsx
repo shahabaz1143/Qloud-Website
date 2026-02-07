@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Film, Lightbulb, Shield, Home, Wifi, Building2, Lock, Video, DoorOpen, Music, ArrowRight } from 'lucide-react';
+import { Film, Lightbulb, Shield, Home, Wifi, Lock, Video, DoorOpen, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { fetchServices } from '../services/api';
 
@@ -9,11 +9,9 @@ const iconMap = {
   Shield: Shield,
   Home: Home,
   Wifi: Wifi,
-  Building2: Building2,
   Lock: Lock,
   Video: Video,
   DoorOpen: DoorOpen,
-  Music: Music,
 };
 
 const Services = () => {
@@ -60,7 +58,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {services.map((service) => {
             const IconComponent = iconMap[service.icon] || Film;
             return (
