@@ -43,9 +43,9 @@ services_data = [
     },
     {
         "id": 6,
-        "title": "Smart Office Automation",
+        "title": "Office Automation",
         "description": "Boost productivity with automated lighting, climate control, meeting room booking, and energy management for modern workspaces.",
-        "image": "https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/a0ok6pry_Office%20Automation.jpg",
         "icon": "Building2",
         "features": ["Climate Control", "Energy Management", "Meeting Integration", "Smart Access"]
     },
@@ -53,7 +53,7 @@ services_data = [
         "id": 7,
         "title": "Digital Door Locks",
         "description": "Keyless entry with fingerprint, PIN, card, or smartphone access. Monitor who enters your home and grant temporary access to guests remotely.",
-        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/sis74avg_Digital%20Door%20Locks.webp",
         "icon": "Lock",
         "features": ["Fingerprint Access", "PIN & Card Entry", "Remote Unlock", "Access Logs"]
     },
@@ -61,7 +61,7 @@ services_data = [
         "id": 8,
         "title": "Video Door Phones",
         "description": "See and speak to visitors from anywhere with HD video doorbells. Two-way audio, motion detection, and seamless integration with your smart home.",
-        "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/suio62mb_Video%20Door%20Phone.png",
         "icon": "Video",
         "features": ["HD Video", "Two-Way Audio", "Motion Detection", "Cloud Recording"]
     },
@@ -69,7 +69,7 @@ services_data = [
         "id": 9,
         "title": "Motorised Gates",
         "description": "Automated gate systems with remote control, smartphone access, and integration with your home security. Smooth, silent operation with safety sensors.",
-        "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/bmlu8vl4_Motorised%20Gates.jpg",
         "icon": "DoorOpen",
         "features": ["Remote Control", "Smartphone Access", "Safety Sensors", "Intercom Integration"]
     },
@@ -77,7 +77,7 @@ services_data = [
         "id": 10,
         "title": "Acoustic Treatment",
         "description": "Professional acoustic panels and treatments for home theatres, studios, and living spaces. Optimize sound quality and eliminate unwanted echoes.",
-        "image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800",
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/sg52q5r0_Acoustic%20treatment.webp",
         "icon": "Music",
         "features": ["Sound Panels", "Bass Traps", "Diffusers", "Custom Design"]
     }
