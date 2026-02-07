@@ -172,84 +172,84 @@ process_data = [
 projects_data = [
     {
         "id": 1,
-        "name": "Concorde Neo",
+        "name": "Adarsh Tranquil",
         "category": "Home Theatre",
         "description": "Premium home theatre with Dolby Atmos and acoustic treatment",
         "image": "https://images.unsplash.com/photo-1710131459450-7c384b8be18f?w=800"
     },
     {
         "id": 2,
-        "name": "Sobha Crystal Meadows",
+        "name": "DSR Elixir",
         "category": "Full Automation",
         "description": "Complete smart home automation with lighting and security",
         "image": "https://images.unsplash.com/photo-1608377205619-03a0b4c4e270?w=800"
     },
     {
         "id": 3,
-        "name": "Prestige Serenity Shores",
+        "name": "Nikoo Homes",
         "category": "Security System",
         "description": "Advanced security system with 24/7 monitoring",
         "image": "https://images.pexels.com/photos/7508684/pexels-photo-7508684.jpeg?w=800"
     },
     {
         "id": 4,
-        "name": "TVS Emerald Cascadia",
+        "name": "NCC Retreat",
         "category": "Home Theatre",
         "description": "Luxury cinema room with custom seating",
         "image": "https://images.unsplash.com/flagged/photo-1572609239482-d3a83f976aa0?w=800"
     },
     {
         "id": 5,
-        "name": "Godrej Lakeside Orchard",
+        "name": "Karle Zenith",
         "category": "Smart Lighting",
         "description": "Intelligent lighting system throughout the residence",
         "image": "https://images.unsplash.com/photo-1606170033648-5d55a3edf314?w=800"
     },
     {
         "id": 6,
-        "name": "Aston Park Residences",
+        "name": "SNN Enternia",
         "category": "Full Automation",
         "description": "Integrated smart home with voice control",
         "image": "https://images.pexels.com/photos/32967485/pexels-photo-32967485.jpeg?w=800"
     },
     {
         "id": 7,
-        "name": "Brigade Panorama",
+        "name": "Shobha City",
         "category": "Home Theatre",
         "description": "State-of-the-art cinema with premium acoustics",
         "image": "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=800"
     },
     {
         "id": 8,
-        "name": "DLF Westend Heights",
+        "name": "RR Signature",
         "category": "Security System",
         "description": "Comprehensive security with AI monitoring",
         "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=800"
     },
     {
         "id": 9,
-        "name": "Mantri Espana",
+        "name": "Leela Residency",
         "category": "Full Automation",
         "description": "Complete home automation solution",
         "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
     },
     {
         "id": 10,
-        "name": "Purva Whitehall",
+        "name": "Shriram Luxor",
         "category": "Smart Lighting",
         "description": "Advanced lighting control system",
         "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800"
     },
     {
         "id": 11,
-        "name": "Shriram Chirping Woods",
+        "name": "Orchid Picadilly",
         "category": "Home Theatre",
         "description": "Premium entertainment setup with Dolby Atmos",
         "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800"
     },
     {
         "id": 12,
-        "name": "Embassy Pristine",
+        "name": "Prestige Lake side Habitat",
         "category": "Full Automation",
         "description": "Smart home with integrated automation",
         "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800"
