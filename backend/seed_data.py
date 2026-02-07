@@ -43,14 +43,6 @@ services_data = [
     },
     {
         "id": 6,
-        "title": "Office Automation",
-        "description": "Boost productivity with automated lighting, climate control, meeting room booking, and energy management for modern workspaces.",
-        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/a0ok6pry_Office%20Automation.jpg",
-        "icon": "Building2",
-        "features": ["Climate Control", "Energy Management", "Meeting Integration", "Smart Access"]
-    },
-    {
-        "id": 7,
         "title": "Digital Door Locks",
         "description": "Keyless entry with fingerprint, PIN, card, or smartphone access. Monitor who enters your home and grant temporary access to guests remotely.",
         "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/emph1fnm_1_d41ba0ee-d7c8-4526-bcb2-c9b3c69a7090%20%284%29.webp",
@@ -58,7 +50,7 @@ services_data = [
         "features": ["Fingerprint Access", "PIN & Card Entry", "Remote Unlock", "Access Logs"]
     },
     {
-        "id": 8,
+        "id": 7,
         "title": "Video Door Phones",
         "description": "See and speak to visitors from anywhere with HD video doorbells. Two-way audio, motion detection, and seamless integration with your smart home.",
         "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/suio62mb_Video%20Door%20Phone.png",
@@ -66,20 +58,12 @@ services_data = [
         "features": ["HD Video", "Two-Way Audio", "Motion Detection", "Cloud Recording"]
     },
     {
-        "id": 9,
+        "id": 8,
         "title": "Motorised Gates",
         "description": "Automated gate systems with remote control, smartphone access, and integration with your home security. Smooth, silent operation with safety sensors.",
         "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/bmlu8vl4_Motorised%20Gates.jpg",
         "icon": "DoorOpen",
         "features": ["Remote Control", "Smartphone Access", "Safety Sensors", "Intercom Integration"]
-    },
-    {
-        "id": 10,
-        "title": "Acoustic Treatment",
-        "description": "Professional acoustic panels and treatments for home theatres, studios, and living spaces. Optimize sound quality and eliminate unwanted echoes.",
-        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/sg52q5r0_Acoustic%20treatment.webp",
-        "icon": "Music",
-        "features": ["Sound Panels", "Bass Traps", "Diffusers", "Custom Design"]
     }
 ]
 
