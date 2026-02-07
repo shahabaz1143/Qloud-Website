@@ -119,7 +119,7 @@ const Pricing = () => {
               </p>
             </div>
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://wa.me/917204746043', '_blank')}
               className="flex-shrink-0 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 rounded-lg"
             >
               Schedule Consultation
