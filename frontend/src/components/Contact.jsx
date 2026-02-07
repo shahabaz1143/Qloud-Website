@@ -77,7 +77,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl p-6 border border-gray-800/50">
+          <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl p-6 border border-cyan-500/30">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="text-white text-sm font-semibold mb-2 block">
