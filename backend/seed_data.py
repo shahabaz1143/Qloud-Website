@@ -175,14 +175,14 @@ projects_data = [
         "name": "Adarsh Tranquil",
         "category": "Home Theatre",
         "description": "Premium home theatre with Dolby Atmos and acoustic treatment",
-        "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/g52fv2rb_adarsh%20tranquil.jpg"
     },
     {
         "id": 2,
         "name": "DSR Elixir",
         "category": "Full Automation",
         "description": "Complete smart home automation with lighting and security",
-        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/529o4d5j_DSR%20Elixir.avif"
     },
     {
         "id": 3,
