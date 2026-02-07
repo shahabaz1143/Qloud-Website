@@ -207,6 +207,26 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
+            {/* Experience Centers */}
+            <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-white" />
+                </div>
+                <div className="w-full">
+                  <h3 className="text-lg font-bold text-white mb-2">Experience Centers</h3>
+                  <div className="space-y-2">
+                    <div>
+                      <p className="text-cyan-400 text-base font-semibold">Bharatiya City</p>
+                    </div>
+                    <div>
+                      <p className="text-cyan-400 text-base font-semibold">MG Road</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
