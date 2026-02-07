@@ -247,7 +247,7 @@ async def get_faqs():
         raise HTTPException(status_code=500, detail="Failed to fetch FAQs")
 
 @api_router.post("/contact", response_model=dict)
-async def create_contact_inquiry(inquiry: ContactInquiry):
+async def create_contact_inquiry(inquiry: ContactInquiry, background_tasks: BackgroundTasks):
     try:
         inquiry_dict = inquiry.dict()
         inquiry_dict["id"] = str(uuid.uuid4())
@@ -260,6 +260,15 @@ async def create_contact_inquiry(inquiry: ContactInquiry):
         result = await db.contact_inquiries.insert_one(inquiry_dict)
         
         if result.inserted_id:
+            # Send email notification in background
+            background_tasks.add_task(
+                send_contact_email,
+                inquiry.name,
+                inquiry.email,
+                inquiry.phone,
+                inquiry.message
+            )
+            
             return {
                 "success": True,
                 "message": "Thank you for contacting us! We'll get back to you within 24 hours.",
