@@ -88,13 +88,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-800 pt-4">
+          <div className="lg:hidden mt-4 pb-4 border-t border-gray-800 pt-4 bg-[#0a0e1a]">
             <nav className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left py-2"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left py-2 text-base"
                 >
                   {item.label}
                 </button>
