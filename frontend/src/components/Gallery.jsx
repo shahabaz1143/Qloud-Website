@@ -38,7 +38,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-20 bg-[#0a0e1a] relative overflow-hidden">
+    <section id="designs" className="py-20 bg-[#0a0e1a] relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-10 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
