@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
           <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
             WHY CHOOSE US
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             The Qloud Tech Advantage
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
