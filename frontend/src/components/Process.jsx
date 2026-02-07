@@ -93,7 +93,7 @@ const Process = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="bg-gradient-to-br from-gray-900/30 to-transparent rounded-2xl p-6 border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 h-full">
+                <div className="bg-gradient-to-br from-gray-900/30 to-transparent rounded-2xl p-6 border border-cyan-500/40 hover:border-cyan-500/70 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 h-full">
                   <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-300">
                     {step.title}
                   </h3>
@@ -107,7 +107,7 @@ const Process = () => {
         </div>
 
         {/* CTA Section with hover effect */}
-        <div className="max-w-3xl mx-auto mt-16 text-center p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-transparent border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+        <div className="max-w-3xl mx-auto mt-16 text-center p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-transparent border border-cyan-500/50 hover:border-cyan-500/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-gray-400 mb-6">
             Schedule a free consultation today and let's discuss how we can transform your home.
