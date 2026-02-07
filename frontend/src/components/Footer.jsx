@@ -8,7 +8,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">Qloud Tech</h3>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
+              alt="Qloud Tech Logo" 
+              className="h-8 brightness-0 invert mb-4"
+            />
             <p className="text-gray-400 mb-6">
               Pioneers in Smart Home Automation & Immersive Home Theatre Solutions. We
               revolutionize home automation & home theatre industry with aggressive pricing and
