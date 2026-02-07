@@ -196,21 +196,21 @@ projects_data = [
         "name": "NCC Retreat",
         "category": "Home Theatre",
         "description": "Luxury cinema room with custom seating",
-        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/x8pg0gdw_NCC%20Retreat.jpg"
     },
     {
         "id": 5,
         "name": "Karle Zenith",
         "category": "Smart Lighting",
         "description": "Intelligent lighting system throughout the residence",
-        "image": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=800"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/rct5wa5v_Karle%20Zenith%20Residence.png"
     },
     {
         "id": 6,
         "name": "SNN Enternia",
         "category": "Full Automation",
         "description": "Integrated smart home with voice control",
-        "image": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/ybgjk63j_Snn%20eternia.jpeg"
     },
     {
         "id": 7,
@@ -231,14 +231,14 @@ projects_data = [
         "name": "Leela Residency",
         "category": "Full Automation",
         "description": "Complete home automation solution",
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/qp4rbl2t_leela%20residency.jpg"
     },
     {
         "id": 10,
         "name": "Shriram Luxor",
         "category": "Smart Lighting",
         "description": "Advanced lighting control system",
-        "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/bx1r9pe4_shriram%20luxor.png"
     },
     {
         "id": 11,
