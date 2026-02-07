@@ -88,15 +88,15 @@ const Services = () => {
                   <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-gray-400 text-sm mb-4 line-clamp-3">{service.description}</p>
 
-                  {/* Features */}
-                  <div className="space-y-1 mb-4">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                  {/* Features - exactly 2 items */}
+                  <div className="space-y-1.5 mb-4 min-h-[44px]">
+                    {service.features.slice(0, 2).map((feature, idx) => (
                       <div
                         key={idx}
                         className="text-xs text-cyan-400 flex items-center gap-2"
                       >
-                        <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
-                        {feature}
+                        <div className="w-1 h-1 bg-cyan-400 rounded-full flex-shrink-0"></div>
+                        <span className="truncate">{feature}</span>
                       </div>
                     ))}
                   </div>

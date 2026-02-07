@@ -3,7 +3,7 @@
 services_data = [
     {
         "id": 1,
-        "title": "Customized Home Theatre",
+        "title": "Home Theatre",
         "description": "Transform your living space into a cinematic experience with immersive sound, stunning visuals, and personalized smart controls. From Dolby Atmos systems to 4K projection.",
         "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif",
         "icon": "Film",
