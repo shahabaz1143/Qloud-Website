@@ -259,27 +259,75 @@ projects_data = [
 testimonials_data = [
     {
         "id": 1,
-        "name": "Rajesh Kumar",
+        "name": "Pallav Godeswar",
         "location": "Bangalore",
         "service": "Home Theatre Installation",
-        "review": "Absolutely thrilled with our home theatre! The team at IN Automations transformed our living room into a cinema experience. Professional service and transparent pricing.",
-        "avatar": "R"
+        "review": "Got my custom home theatre done, and it's amazing! The team was professional, listened to my needs, and delivered exactly what I envisioned. It feels like a mini-cinema at home. Highly recommend them!",
+        "avatar": "P",
+        "rating": 5
     },
     {
         "id": 2,
-        "name": "Priya Sharma",
+        "name": "Anju",
         "location": "Bangalore",
-        "service": "Smart Home Automation",
-        "review": "From consultation to installation, everything was seamless. The smart lighting system has completely changed how we use our home. Highly recommend!",
-        "avatar": "P"
+        "service": "Home Networking Services",
+        "review": "Fantastic job on the home networking services. Everything is now up to the speed!",
+        "avatar": "A",
+        "rating": 5
     },
     {
         "id": 3,
-        "name": "Amit Patel",
+        "name": "Anusha",
         "location": "Bangalore",
-        "service": "Security System",
-        "review": "The security system gives us complete peace of mind. Installation was quick, and the lifetime support is invaluable. Best decision we made for our home.",
-        "avatar": "A"
+        "service": "Home Automation",
+        "review": "The home automation solutions from Qloud Tech are impressive. They were quick and professional, and my home now has a seamless automation system. Highly recommend!",
+        "avatar": "A",
+        "rating": 5
+    },
+    {
+        "id": 4,
+        "name": "Soughandika",
+        "location": "Bangalore",
+        "service": "CCTV Installation",
+        "review": "Great experience with Qloud tech for CCTV installation services. The team was efficient, and the cameras are working perfectly. My home feels much safer now.",
+        "avatar": "S",
+        "rating": 5
+    },
+    {
+        "id": 5,
+        "name": "Harshit",
+        "location": "Bangalore",
+        "service": "Smart Lighting Solutions",
+        "review": "Qloud Tech really provided smart lighting solutions. The setup was also quick and the lights look amazing. Great service overall!",
+        "avatar": "H",
+        "rating": 5
+    },
+    {
+        "id": 6,
+        "name": "Himanshu",
+        "location": "Bangalore",
+        "service": "Home Theatre Installation",
+        "review": "Excellent home theatre designing and installation. Professional and reliable team.",
+        "avatar": "H",
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "name": "Mahi Sinha",
+        "location": "Bangalore",
+        "service": "Custom Home Automation",
+        "review": "Qloud Tech's custom home automation systems were tailored perfectly to my needs. The installation was smooth, and everything is worked as expected. Their team were professional and the results are impressive.",
+        "avatar": "M",
+        "rating": 5
+    },
+    {
+        "id": 8,
+        "name": "Rohit",
+        "location": "Bangalore",
+        "service": "Home Theatre Setup",
+        "review": "The team did a great job with our Home Theatre set up. Quick and efficient service😀",
+        "avatar": "R",
+        "rating": 5
     }
 ]
 
