@@ -93,11 +93,11 @@ const Gallery = () => {
                   onContextMenu={(e) => e.preventDefault()}
                 />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                {/* Overlay - Darker for better theme matching */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30 group-hover:from-black/60 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-300"></div>
                 
                 {/* Hover Effect - Cyan Glow */}
-                <div className="absolute inset-0 bg-cyan-500/0 group-hover:bg-cyan-500/20 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-cyan-500/0 group-hover:bg-cyan-500/10 transition-all duration-300"></div>
                 
                 {/* Bottom Border on Hover */}
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-cyan-500 to-cyan-600 group-hover:w-full transition-all duration-500"></div>
