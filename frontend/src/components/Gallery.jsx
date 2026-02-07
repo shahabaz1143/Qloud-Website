@@ -21,11 +21,11 @@ const Gallery = () => {
       'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/wm8df44x_c7ed42f0-a87d-405c-8132-2199f4e5c8fe.JPG'
     ],
     [
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600',
-      'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600',
-      'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=600',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600'
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/7xd4pp0c_c21c64cc-3f89-4a14-b8e9-97d14d8ec707.JPG',
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/9d7drlum_d0e7659d-5cf0-4751-8199-9e34fead3f23%202.JPG',
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/w9fvldqe_fa00cf58-a61a-4907-8be0-7b01ded9ce7c.JPG',
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/3v20bxga_IMG_4180.jpg',
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600'
     ]
   ];
 
