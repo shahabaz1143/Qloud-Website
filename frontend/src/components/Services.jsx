@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Film, Lightbulb, Shield, Home, Wifi, Building2, ArrowRight } from 'lucide-react';
+import { Film, Lightbulb, Shield, Home, Wifi, Building2, Lock, Video, DoorOpen, Music, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { fetchServices } from '../services/api';
 
@@ -10,6 +10,10 @@ const iconMap = {
   Home: Home,
   Wifi: Wifi,
   Building2: Building2,
+  Lock: Lock,
+  Video: Video,
+  DoorOpen: DoorOpen,
+  Music: Music,
 };
 
 const Services = () => {
@@ -56,16 +60,16 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {services.map((service) => {
-            const IconComponent = iconMap[service.icon];
+            const IconComponent = iconMap[service.icon] || Film;
             return (
               <div
                 key={service.id}
                 className="group relative bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -74,22 +78,22 @@ const Services = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
                   
                   {/* Icon Badge */}
-                  <div className="absolute top-4 right-4 w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center">
-                    <IconComponent className="w-6 h-6 text-white" />
+                  <div className="absolute top-3 right-3 w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center">
+                    <IconComponent className="w-5 h-5 text-white" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-400 mb-6">{service.description}</p>
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">{service.description}</p>
 
                   {/* Features */}
-                  <div className="grid grid-cols-2 gap-2 mb-6">
-                    {service.features.map((feature, idx) => (
+                  <div className="space-y-1 mb-4">
+                    {service.features.slice(0, 3).map((feature, idx) => (
                       <div
                         key={idx}
-                        className="text-sm text-cyan-400 flex items-center gap-2"
+                        className="text-xs text-cyan-400 flex items-center gap-2"
                       >
                         <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
                         {feature}
@@ -99,10 +103,10 @@ const Services = () => {
 
                   <Button
                     variant="ghost"
-                    className="text-cyan-400 hover:text-cyan-300 p-0 h-auto font-semibold group/btn"
+                    className="text-cyan-400 hover:text-cyan-300 p-0 h-auto text-sm font-semibold group/btn"
                   >
                     Learn More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </div>
               </div>
