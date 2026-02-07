@@ -29,6 +29,111 @@ mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
+# Email configuration
+SMTP_EMAIL = os.environ.get('SMTP_EMAIL', '')
+SMTP_PASSWORD = os.environ.get('SMTP_PASSWORD', '')
+NOTIFICATION_EMAIL = os.environ.get('NOTIFICATION_EMAIL', '')
+
+# Configure logging early
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+def send_contact_email(name: str, email: str, phone: str, message: str):
+    """Send email notification for new contact form submission"""
+    try:
+        if not all([SMTP_EMAIL, SMTP_PASSWORD, NOTIFICATION_EMAIL]):
+            logger.warning("Email configuration missing, skipping email notification")
+            return False
+        
+        # Create email content
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = f'🏠 New Contact Inquiry from {name} - Qloud Tech'
+        msg['From'] = SMTP_EMAIL
+        msg['To'] = NOTIFICATION_EMAIL
+        
+        # Plain text version
+        text_content = f"""
+New Contact Form Submission
+
+Name: {name}
+Email: {email}
+Phone: {phone}
+
+Message:
+{message}
+
+---
+This inquiry was submitted via the Qloud Tech website contact form.
+        """
+        
+        # HTML version
+        html_content = f"""
+        <html>
+        <head>
+            <style>
+                body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+                .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                .header {{ background: linear-gradient(135deg, #0a0e1a 0%, #1a2332 100%); color: white; padding: 20px; border-radius: 10px 10px 0 0; }}
+                .header h1 {{ margin: 0; color: #00bcd4; }}
+                .content {{ background: #f9f9f9; padding: 20px; border: 1px solid #ddd; }}
+                .field {{ margin-bottom: 15px; }}
+                .label {{ font-weight: bold; color: #00bcd4; }}
+                .value {{ margin-top: 5px; }}
+                .message-box {{ background: white; padding: 15px; border-left: 4px solid #00bcd4; margin-top: 10px; }}
+                .footer {{ background: #0a0e1a; color: #888; padding: 15px; text-align: center; border-radius: 0 0 10px 10px; font-size: 12px; }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>🏠 New Contact Inquiry</h1>
+                    <p style="margin: 10px 0 0 0; color: #ccc;">Someone is interested in your services!</p>
+                </div>
+                <div class="content">
+                    <div class="field">
+                        <div class="label">👤 Name</div>
+                        <div class="value">{name}</div>
+                    </div>
+                    <div class="field">
+                        <div class="label">📧 Email</div>
+                        <div class="value"><a href="mailto:{email}">{email}</a></div>
+                    </div>
+                    <div class="field">
+                        <div class="label">📱 Phone</div>
+                        <div class="value"><a href="tel:{phone}">{phone}</a></div>
+                    </div>
+                    <div class="field">
+                        <div class="label">💬 Message</div>
+                        <div class="message-box">{message}</div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>This inquiry was submitted via the Qloud Tech website contact form.</p>
+                    <p style="color: #00bcd4;">Qloud Tech - Smart Home & Theatre Solutions</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        """
+        
+        msg.attach(MIMEText(text_content, 'plain'))
+        msg.attach(MIMEText(html_content, 'html'))
+        
+        # Send email via Gmail SMTP
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+            server.login(SMTP_EMAIL, SMTP_PASSWORD)
+            server.sendmail(SMTP_EMAIL, NOTIFICATION_EMAIL, msg.as_string())
+        
+        logger.info(f"Email notification sent successfully for inquiry from {name}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"Failed to send email notification: {e}")
+        return False
+
 # Create the main app without a prefix
 app = FastAPI()
 
