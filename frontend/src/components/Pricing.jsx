@@ -61,7 +61,7 @@ const Pricing = () => {
               className={`relative p-8 rounded-2xl border transition-all duration-300 ${
                 pkg.popular
                   ? 'bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 border-cyan-500 shadow-xl shadow-cyan-500/20'
-                  : 'bg-gradient-to-br from-gray-900/50 to-gray-900/30 border-gray-800/50 hover:border-cyan-500/50'
+                  : 'bg-gradient-to-br from-gray-900/50 to-gray-900/30 border-cyan-500/40 hover:border-cyan-500/70'
               }`}
             >
               {pkg.popular && (
