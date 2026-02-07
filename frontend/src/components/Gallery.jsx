@@ -25,7 +25,7 @@ const Gallery = () => {
       'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/9d7drlum_d0e7659d-5cf0-4751-8199-9e34fead3f23%202.JPG',
       'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/w9fvldqe_fa00cf58-a61a-4907-8be0-7b01ded9ce7c.JPG',
       'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/3v20bxga_IMG_4180.jpg',
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600'
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/fs2mvcf9_98ff289b-206b-4109-bc93-b20ff099aaee.JPG'
     ]
   ];
 
