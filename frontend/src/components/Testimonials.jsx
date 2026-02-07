@@ -44,7 +44,7 @@ const Testimonials = () => {
     if (testimonials.length === 0) return [];
     
     const visible = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       const index = (currentIndex + i) % testimonials.length;
       visible.push(testimonials[index]);
     }
