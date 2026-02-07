@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
             return (
               <div
                 key={item.id}
-                className="group p-8 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300"
+                className="group p-8 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-2xl border border-cyan-500/40 hover:border-cyan-500/70 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors duration-300">
                   <IconComponent className="w-8 h-8 text-cyan-400" />
