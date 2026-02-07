@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +19,17 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setMobileMenuOpen(false);
   };
+
+  const navItems = [
+    { label: 'Home', id: 'home' },
+    { label: 'Services', id: 'services' },
+    { label: 'Packages', id: 'packages' },
+    { label: 'Process', id: 'process' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Designs', id: 'designs' },
+  ];
 
   return (
     <header
@@ -25,7 +37,7 @@ const Header = () => {
         scrolled ? 'bg-[#0a0e1a]/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <img 
@@ -35,54 +47,61 @@ const Header = () => {
             />
           </div>
 
-          <div className="flex items-center gap-8">
-            <nav className="hidden md:flex items-center space-x-8">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection('packages')}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-              >
-                Packages
-              </button>
-              <button
-                onClick={() => scrollToSection('process')}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-              >
-                Process
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-              >
-                Projects
-              </button>
-              <button
-                onClick={() => scrollToSection('designs')}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-              >
-                Designs
-              </button>
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8">
+            <nav className="flex items-center space-x-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                >
+                  {item.label}
+                </button>
+              ))}
             </nav>
 
             <Button
               onClick={() => window.open('https://wa.me/917204746043', '_blank')}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-md transition-all duration-200"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-md transition-all duration-200 text-sm"
             >
               Get Quote
             </Button>
           </div>
+
+          {/* Mobile/Tablet Menu Button */}
+          <div className="flex lg:hidden items-center gap-3">
+            <Button
+              onClick={() => window.open('https://wa.me/917204746043', '_blank')}
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-md transition-all duration-200 text-sm"
+            >
+              Get Quote
+            </Button>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-white p-2"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-gray-800 pt-4">
+            <nav className="flex flex-col space-y-3">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left py-2"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
