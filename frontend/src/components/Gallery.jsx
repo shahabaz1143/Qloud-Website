@@ -4,8 +4,15 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const Gallery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Placeholder images - will be replaced with real photos
+  // Real home theatre images
   const galleryImages = [
+    [
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/rxbr16ev_3f53009e-1b0b-4acf-853c-64bdafa7f505.JPG',
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/eglex7eg_7c3ac259-d705-4d0f-b6c6-cbba791d580f.JPG',
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/yzqwcagp_8e20a366-093c-4b22-84af-0e64382c047c.JPG',
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/u0j3l0gh_060a9a8a-0cf4-4dec-b559-d3fc24928ccc.JPG',
+      'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mv19fc62_78c7fae8-7a17-4f3e-914e-dc033cef3b34.JPG'
+    ],
     [
       'https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=600',
       'https://images.unsplash.com/photo-1635788798247-92a15f830a3b?w=600',
