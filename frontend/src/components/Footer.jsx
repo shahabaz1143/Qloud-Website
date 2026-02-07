@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -34,6 +34,14 @@ const Footer = () => {
                 className="w-10 h-10 bg-gray-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors duration-200"
               >
                 <Instagram className="w-5 h-5 text-white" />
+              </a>
+              <a
+                href="https://wa.me/917204746043"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors duration-200"
+              >
+                <MessageCircle className="w-5 h-5 text-white" />
               </a>
             </div>
           </div>
