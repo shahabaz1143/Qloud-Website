@@ -41,7 +41,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def send_contact_email(name: str, email: str, phone: str, message: str):
+def send_contact_email(fullName: str, email: str, phone: str, service: str, message: str):
     """Send email notification for new contact form submission"""
     try:
         if not all([SMTP_EMAIL, SMTP_PASSWORD, NOTIFICATION_EMAIL]):
@@ -50,7 +50,7 @@ def send_contact_email(name: str, email: str, phone: str, message: str):
         
         # Create email content
         msg = MIMEMultipart('alternative')
-        msg['Subject'] = f'🏠 New Contact Inquiry from {name} - Qloud Tech'
+        msg['Subject'] = f'🏠 New Contact Inquiry from {fullName} - Qloud Tech'
         msg['From'] = SMTP_EMAIL
         msg['To'] = NOTIFICATION_EMAIL
         
@@ -58,12 +58,13 @@ def send_contact_email(name: str, email: str, phone: str, message: str):
         text_content = f"""
 New Contact Form Submission
 
-Name: {name}
+Name: {fullName}
 Email: {email}
 Phone: {phone}
+Service Interested: {service}
 
 Message:
-{message}
+{message if message else 'No message provided'}
 
 ---
 This inquiry was submitted via the Qloud Tech website contact form.
@@ -95,7 +96,7 @@ This inquiry was submitted via the Qloud Tech website contact form.
                 <div class="content">
                     <div class="field">
                         <div class="label">👤 Name</div>
-                        <div class="value">{name}</div>
+                        <div class="value">{fullName}</div>
                     </div>
                     <div class="field">
                         <div class="label">📧 Email</div>
@@ -106,8 +107,12 @@ This inquiry was submitted via the Qloud Tech website contact form.
                         <div class="value"><a href="tel:{phone}">{phone}</a></div>
                     </div>
                     <div class="field">
+                        <div class="label">🎯 Service Interested</div>
+                        <div class="value">{service}</div>
+                    </div>
+                    <div class="field">
                         <div class="label">💬 Message</div>
-                        <div class="message-box">{message}</div>
+                        <div class="message-box">{message if message else 'No message provided'}</div>
                     </div>
                 </div>
                 <div class="footer">
@@ -127,7 +132,7 @@ This inquiry was submitted via the Qloud Tech website contact form.
             server.login(SMTP_EMAIL, SMTP_PASSWORD)
             server.sendmail(SMTP_EMAIL, NOTIFICATION_EMAIL, msg.as_string())
         
-        logger.info(f"Email notification sent successfully for inquiry from {name}")
+        logger.info(f"Email notification sent successfully for inquiry from {fullName}")
         return True
         
     except Exception as e:
