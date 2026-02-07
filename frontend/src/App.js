@@ -35,12 +35,12 @@ function App() {
       
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-        <div className="bg-gray-900/90 text-white text-sm px-4 py-2 rounded-full shadow-lg border border-green-500/30 animate-pulse">
+        <div className="bg-gray-900/90 text-white text-sm px-4 py-2 rounded-full shadow-lg border border-green-500/30 animate-bounce">
           We're here to help! 💬
         </div>
         <button
           onClick={openWhatsApp}
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300"
+          className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 animate-pulse"
           aria-label="Chat on WhatsApp"
         >
           <svg 
