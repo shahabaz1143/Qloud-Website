@@ -25,3 +25,10 @@ html {
 .App {
     min-height: 100vh;
 }
+
+/* Hide Emergent badge */
+#emergent-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
