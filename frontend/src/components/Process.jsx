@@ -113,7 +113,7 @@ const Process = () => {
             Schedule a free consultation today and let's discuss how we can transform your home.
           </p>
           <Button
-            onClick={() => scrollToSection('contact')}
+            onClick={() => window.open('https://wa.me/917204746043', '_blank')}
             className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/30"
           >
             Schedule Free Consultation
