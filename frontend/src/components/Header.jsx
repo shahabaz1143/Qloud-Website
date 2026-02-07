@@ -31,7 +31,7 @@ const Header = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
               alt="Qloud Tech Logo" 
-              className="h-8 brightness-0 invert"
+              className="h-6 brightness-0 invert"
             />
           </div>
 
