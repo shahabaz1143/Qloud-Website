@@ -70,8 +70,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact - Takes 4 columns */}
-          <div className="col-span-12 md:col-span-4">
+          {/* Spacer */}
+          <div className="hidden md:block md:col-span-1"></div>
+
+          {/* Contact - Takes 3 columns, pushed right */}
+          <div className="col-span-12 md:col-span-3">
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Contact Us</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
