@@ -53,7 +53,7 @@ services_data = [
         "id": 7,
         "title": "Digital Door Locks",
         "description": "Keyless entry with fingerprint, PIN, card, or smartphone access. Monitor who enters your home and grant temporary access to guests remotely.",
-        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/sis74avg_Digital%20Door%20Locks.webp",
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/emph1fnm_1_d41ba0ee-d7c8-4526-bcb2-c9b3c69a7090%20%284%29.webp",
         "icon": "Lock",
         "features": ["Fingerprint Access", "PIN & Card Entry", "Remote Unlock", "Access Logs"]
     },
