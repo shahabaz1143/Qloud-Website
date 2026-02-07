@@ -90,7 +90,7 @@ const Pricing = () => {
               </ul>
 
               <Button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.open('https://wa.me/917204746043', '_blank')}
                 className={`w-full py-6 rounded-lg transition-all duration-200 ${
                   pkg.popular
                     ? 'bg-cyan-500 hover:bg-cyan-600 text-white'

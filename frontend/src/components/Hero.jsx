@@ -89,7 +89,7 @@ const Hero = () => {
               <span className="ml-2">→</span>
             </Button>
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://wa.me/917204746043', '_blank')}
               variant="outline"
               className="border-2 border-white/30 bg-transparent text-white hover:bg-white/10 px-8 py-3 text-base font-semibold rounded-full transition-all duration-200"
             >
