@@ -48,6 +48,38 @@ services_data = [
         "image": "https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=800",
         "icon": "Building2",
         "features": ["Climate Control", "Energy Management", "Meeting Integration", "Smart Access"]
+    },
+    {
+        "id": 7,
+        "title": "Digital Door Locks",
+        "description": "Keyless entry with fingerprint, PIN, card, or smartphone access. Monitor who enters your home and grant temporary access to guests remotely.",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+        "icon": "Lock",
+        "features": ["Fingerprint Access", "PIN & Card Entry", "Remote Unlock", "Access Logs"]
+    },
+    {
+        "id": 8,
+        "title": "Video Door Phones",
+        "description": "See and speak to visitors from anywhere with HD video doorbells. Two-way audio, motion detection, and seamless integration with your smart home.",
+        "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800",
+        "icon": "Video",
+        "features": ["HD Video", "Two-Way Audio", "Motion Detection", "Cloud Recording"]
+    },
+    {
+        "id": 9,
+        "title": "Motorised Gates",
+        "description": "Automated gate systems with remote control, smartphone access, and integration with your home security. Smooth, silent operation with safety sensors.",
+        "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800",
+        "icon": "DoorOpen",
+        "features": ["Remote Control", "Smartphone Access", "Safety Sensors", "Intercom Integration"]
+    },
+    {
+        "id": 10,
+        "title": "Acoustic Treatment",
+        "description": "Professional acoustic panels and treatments for home theatres, studios, and living spaces. Optimize sound quality and eliminate unwanted echoes.",
+        "image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800",
+        "icon": "Music",
+        "features": ["Sound Panels", "Bass Traps", "Diffusers", "Custom Design"]
     }
 ]
 
