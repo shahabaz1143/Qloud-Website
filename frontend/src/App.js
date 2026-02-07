@@ -8,7 +8,7 @@ import Pricing from './components/Pricing';
 import Process from './components/Process';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
+import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Toaster } from './components/ui/sonner';
@@ -24,7 +24,7 @@ function App() {
       <Process />
       <Projects />
       <Testimonials />
-      <FAQ />
+      <Gallery />
       <Contact />
       <Footer />
       <Toaster />
