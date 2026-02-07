@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="mb-6">
             <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
               <Award className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 font-medium text-sm">Bangalore's #1 Home Theatre Specialists</span>
+              <span className="text-cyan-400 font-medium text-sm">Bangalore's #1 Home Theatre & Automation Specialists</span>
               <div className="flex items-center gap-0.5 ml-2">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
