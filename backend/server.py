@@ -268,10 +268,11 @@ async def create_contact_inquiry(inquiry: ContactInquiry, background_tasks: Back
             # Send email notification in background
             background_tasks.add_task(
                 send_contact_email,
-                inquiry.name,
+                inquiry.fullName,
                 inquiry.email,
                 inquiry.phone,
-                inquiry.message
+                inquiry.service,
+                inquiry.message or ""
             )
             
             return {
