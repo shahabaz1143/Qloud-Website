@@ -108,30 +108,37 @@ const Testimonials = () => {
             {visibleTestimonials.map((testimonial, idx) => (
               <div
                 key={`${testimonial.id}-${idx}`}
-                className="group p-6 bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fadeInUp"
+                className="group p-6 bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fadeInUp flex flex-col"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
+                {/* Name and Avatar at Top */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="font-bold text-white text-base group-hover:text-cyan-400 transition-colors duration-300">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-xs text-gray-400">{testimonial.location}</div>
+                  </div>
+                </div>
+
+                {/* Stars */}
                 <div className="flex gap-1 mb-3">
                   {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 
-                <p className="text-gray-300 mb-4 leading-relaxed italic text-sm min-h-[100px]">
+                {/* Review at Bottom */}
+                <p className="text-gray-300 leading-relaxed italic text-sm flex-grow mb-3">
                   "{testimonial.review}"
                 </p>
 
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-bold text-white text-sm group-hover:text-cyan-400 transition-colors duration-300">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-xs text-gray-400">{testimonial.location}</div>
-                    <div className="text-xs text-cyan-400">{testimonial.service}</div>
-                  </div>
+                {/* Service Tag */}
+                <div className="text-xs text-cyan-400 mt-auto">
+                  {testimonial.service}
                 </div>
               </div>
             ))}
