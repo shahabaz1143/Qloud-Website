@@ -189,7 +189,7 @@ projects_data = [
         "name": "Nikoo Homes",
         "category": "Security System",
         "description": "Advanced security system with 24/7 monitoring",
-        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/7jwm8oui_Nikoo%20Homes.jpg"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/vz9t4rbo_Nikoo%20Homes.jpg"
     },
     {
         "id": 4,
@@ -217,14 +217,14 @@ projects_data = [
         "name": "Shobha City",
         "category": "Home Theatre",
         "description": "State-of-the-art cinema with premium acoustics",
-        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/t7uanpms_Shobha%20city.webp"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/7c5wola2_Shobha%20city.webp"
     },
     {
         "id": 8,
         "name": "RR Signature",
         "category": "Security System",
         "description": "Comprehensive security with AI monitoring",
-        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/zaixx6d3_RR%20Signature.jpg"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/gfdgg2zf_RR%20Signature.jpg"
     },
     {
         "id": 9,
@@ -245,14 +245,14 @@ projects_data = [
         "name": "Orchid Picadilly",
         "category": "Home Theatre",
         "description": "Premium entertainment setup with Dolby Atmos",
-        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/u5y55b8j_orchid%20picadily.jpg"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/f82kgy6b_orchid%20picadily.jpg"
     },
     {
         "id": 12,
         "name": "Prestige Lake side Habitat",
         "category": "Full Automation",
         "description": "Smart home with integrated automation",
-        "image": "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/vxbseawz_prestige%20lake%20side%20habitat.webp"
+        "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/kjtm3bvq_prestige%20lake%20side%20habitat.webp"
     }
 ]
 
