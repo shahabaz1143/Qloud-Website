@@ -21,7 +21,7 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e1a]/70 via-[#0a0e1a]/60 to-[#0a0e1a]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e1a]/50 via-[#0a0e1a]/40 to-[#0a0e1a]"></div>
       </div>
 
       {/* Decorative Lines */}
@@ -52,15 +52,15 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <div className="mb-8">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          <div className="mb-6">
+            <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
               WHERE SMART LIVING
               <br />
               MEETS
               <br />
               <span className="text-cyan-400">CINEMATIC MAGIC</span>
             </h1>
-            <p className="text-base md:text-lg text-gray-300 max-w-xl">
+            <p className="text-sm md:text-base text-gray-300 max-w-lg">
               From voice-controlled automation to{' '}
               <span className="text-cyan-400 font-semibold">Dolby Atmos theatres</span>—we craft
               intelligent spaces that entertain, protect, and inspire.
@@ -68,22 +68,22 @@ const Hero = () => {
           </div>
 
           {/* Info Cards */}
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
-              <div className="text-cyan-400 text-2xl font-bold">₹50K+</div>
-              <div className="text-white text-xs uppercase tracking-wide">AUTOMATION STARTS</div>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="flex-1 max-w-[180px] px-5 py-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+              <div className="text-cyan-400 text-xl font-bold">₹50K+</div>
+              <div className="text-white text-[10px] uppercase tracking-wide">AUTOMATION STARTS</div>
             </div>
-            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
-              <div className="text-cyan-400 text-2xl font-bold">₹3.5L+</div>
-              <div className="text-white text-xs uppercase tracking-wide">THEATRE STARTS</div>
+            <div className="flex-1 max-w-[180px] px-5 py-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+              <div className="text-cyan-400 text-xl font-bold">₹3.5L+</div>
+              <div className="text-white text-[10px] uppercase tracking-wide">THEATRE STARTS</div>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 mb-12">
+          <div className="flex flex-wrap items-center gap-3 mb-10">
             <Button
               onClick={() => scrollToSection('packages')}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 text-base font-semibold rounded-full transition-all duration-200 shadow-lg shadow-cyan-500/20"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 shadow-lg shadow-cyan-500/20"
             >
               VIEW PACKAGES
               <span className="ml-2">→</span>
@@ -91,7 +91,7 @@ const Hero = () => {
             <Button
               onClick={() => scrollToSection('contact')}
               variant="outline"
-              className="border-2 border-white/30 bg-transparent text-white hover:bg-white/10 px-8 py-3 text-base font-semibold rounded-full transition-all duration-200"
+              className="border-2 border-white/30 bg-transparent text-white hover:bg-white/10 px-6 py-2.5 text-sm font-semibold rounded-full transition-all duration-200"
             >
               <Play className="w-4 h-4 mr-2" />
               BOOK DEMO
@@ -99,34 +99,34 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap items-center gap-8 md:gap-16">
+          <div className="flex flex-wrap items-center gap-6 md:gap-12">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">200+</div>
-              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
+              <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">200+</div>
+              <div className="text-[10px] md:text-xs text-gray-400 uppercase tracking-wide leading-tight">
                 HOMES MADE
                 <br />
                 SMARTER
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">8+</div>
-              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
+              <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">8+</div>
+              <div className="text-[10px] md:text-xs text-gray-400 uppercase tracking-wide leading-tight">
                 YEARS OF
                 <br />
                 EXPERIENCE
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">100+</div>
-              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
+              <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">100+</div>
+              <div className="text-[10px] md:text-xs text-gray-400 uppercase tracking-wide leading-tight">
                 HOME THEATRES
                 <br />
                 DESIGNED
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">4.9/5</div>
-              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
+              <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">4.9/5</div>
+              <div className="text-[10px] md:text-xs text-gray-400 uppercase tracking-wide leading-tight">
                 CUSTOMER
                 <br />
                 RATINGS
