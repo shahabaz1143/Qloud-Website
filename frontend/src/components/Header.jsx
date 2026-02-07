@@ -76,7 +76,7 @@ const Header = () => {
             </nav>
 
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://wa.me/917204746043', '_blank')}
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-md transition-all duration-200"
             >
               Get Quote
