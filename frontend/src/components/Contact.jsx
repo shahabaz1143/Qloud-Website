@@ -188,7 +188,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Email</h3>
-                  <p className="text-cyan-400 text-base font-semibold">contact@qloud.tech</p>
+                  <p className="text-cyan-400 text-base font-semibold">contact@qloudsmarthomes.com</p>
                   <p className="text-gray-400 text-sm">24/7 Support</p>
                 </div>
               </div>
