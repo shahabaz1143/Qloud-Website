@@ -95,7 +95,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white text-sm font-medium">contact@qloud.tech</div>
+                  <div className="text-white text-sm font-medium">contact@qloudsmarthomes.com</div>
                   <div className="text-gray-500 text-xs">24/7 Support</div>
                 </div>
               </div>
