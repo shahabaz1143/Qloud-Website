@@ -157,7 +157,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 text-base rounded-lg disabled:opacity-50"
+                className="w-full bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 text-black font-semibold py-3 text-base rounded-lg disabled:opacity-50"
               >
                 {submitting ? 'Sending...' : 'Send Message'}
               </Button>
