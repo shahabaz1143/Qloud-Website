@@ -10,7 +10,7 @@ import sys
 from datetime import datetime
 
 # Backend URL from frontend environment
-BACKEND_URL = "https://theatreclone.preview.emergentagent.com/api"
+BACKEND_URL = "https://theatresmart.preview.emergentagent.com/api"
 
 class QloudTechAPITester:
     def __init__(self):
