@@ -54,7 +54,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  className="text-gray-300 hover:text-violet-400 transition-colors duration-200 text-sm"
                 >
                   {item.label}
                 </button>
@@ -63,7 +63,7 @@ const Header = () => {
 
             <Button
               onClick={() => window.open('https://wa.me/917204746043', '_blank')}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-md transition-all duration-200 text-sm"
+              className="bg-violet-600 hover:bg-violet-700 text-white px-5 py-2 rounded-md transition-all duration-200 text-sm"
             >
               Get Quote
             </Button>
@@ -73,7 +73,7 @@ const Header = () => {
           <div className="flex lg:hidden items-center gap-3">
             <Button
               onClick={() => window.open('https://wa.me/917204746043', '_blank')}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-md transition-all duration-200 text-sm"
+              className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-md transition-all duration-200 text-sm"
             >
               Get Quote
             </Button>
@@ -94,7 +94,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left py-2 text-base"
+                  className="text-gray-300 hover:text-violet-400 transition-colors duration-200 text-left py-2 text-base"
                 >
                   {item.label}
                 </button>
