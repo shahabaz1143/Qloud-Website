@@ -69,7 +69,7 @@ const Hero = () => {
           <div className="flex flex-wrap items-center gap-4 mb-12">
             <Button
               onClick={() => scrollToSection('packages')}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 text-base font-semibold rounded-full transition-all duration-200 shadow-lg shadow-cyan-500/20"
+              className="bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 text-black font-semibold px-8 py-3 text-base rounded-full transition-all duration-200 shadow-lg shadow-cyan-400/30"
             >
               VIEW PACKAGES
               <span className="ml-2">→</span>
