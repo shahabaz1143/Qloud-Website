@@ -85,10 +85,10 @@ const Process = () => {
               >
                 {/* Animated Number Circle */}
                 <div className="relative mb-6 group">
-                  <div className="relative w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-all duration-300 z-10">
+                  <div className="relative w-16 h-16 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center text-2xl font-bold text-black shadow-lg shadow-cyan-400/30 group-hover:scale-110 transition-all duration-300 z-10">
                     <span className="relative z-10">{step.id}</span>
                     {/* Pulse effect */}
-                    <div className="absolute inset-0 rounded-full bg-cyan-500 animate-ping opacity-20"></div>
+                    <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-20"></div>
                   </div>
                 </div>
 
@@ -114,7 +114,7 @@ const Process = () => {
           </p>
           <Button
             onClick={() => window.open('https://wa.me/917204746043', '_blank')}
-            className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+            className="bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 text-black font-semibold px-8 py-6 text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-400/30"
           >
             Schedule Free Consultation
           </Button>
