@@ -133,6 +133,17 @@ const Hero = () => {
               </div>
             </div>
           </div>
+          
+          {/* Tagline */}
+          <div className="mt-8 flex items-center gap-3">
+            <div className="text-white text-sm md:text-base font-medium">
+              Bangalore's #1 Home Theatre & Automation Specialists
+            </div>
+            <div className="flex items-center gap-1 bg-cyan-500/20 px-3 py-1 rounded-full">
+              <span className="text-cyan-400 font-bold text-sm">4.9/5</span>
+              <span className="text-yellow-400">★</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
