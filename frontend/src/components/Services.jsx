@@ -36,7 +36,7 @@ const Services = () => {
     return (
       <section id="services" className="py-24 bg-[#0a0e1a] relative">
         <div className="container mx-auto px-6">
-          <div className="text-center text-cyan-400">Loading services...</div>
+          <div className="text-center text-violet-400">Loading services...</div>
         </div>
       </section>
     );
@@ -46,7 +46,7 @@ const Services = () => {
     <section id="services" className="py-24 bg-[#0a0e1a] relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
+          <div className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-4">
             OUR SERVICES
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -64,7 +64,7 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="group relative bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300"
+                className="group relative bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl overflow-hidden border border-gray-800/50 hover:border-violet-500/50 transition-all duration-300"
               >
                 {/* Image */}
                 <div className="relative h-40 overflow-hidden">
@@ -76,7 +76,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
                   
                   {/* Icon Badge */}
-                  <div className="absolute top-3 right-3 w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center">
+                  <div className="absolute top-3 right-3 w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center">
                     <IconComponent className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -91,9 +91,9 @@ const Services = () => {
                     {service.features.slice(0, 2).map((feature, idx) => (
                       <div
                         key={idx}
-                        className="text-xs text-cyan-400 flex items-center gap-2"
+                        className="text-xs text-violet-400 flex items-center gap-2"
                       >
-                        <div className="w-1 h-1 bg-cyan-400 rounded-full flex-shrink-0"></div>
+                        <div className="w-1 h-1 bg-violet-400 rounded-full flex-shrink-0"></div>
                         <span className="truncate">{feature}</span>
                       </div>
                     ))}
@@ -101,7 +101,7 @@ const Services = () => {
 
                   <Button
                     variant="ghost"
-                    className="text-cyan-400 hover:text-cyan-300 p-0 h-auto text-sm font-semibold group/btn"
+                    className="text-violet-400 hover:text-violet-300 p-0 h-auto text-sm font-semibold group/btn"
                   >
                     Learn More
                     <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
@@ -114,7 +114,7 @@ const Services = () => {
 
         <div className="text-center mt-12">
           <Button
-            className="bg-transparent border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-6 text-lg rounded-full transition-all duration-200"
+            className="bg-transparent border-2 border-violet-500/50 text-violet-400 hover:bg-violet-500/10 px-8 py-6 text-lg rounded-full transition-all duration-200"
           >
             View All Services
           </Button>
