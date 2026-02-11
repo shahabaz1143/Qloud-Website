@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
     return (
       <section className="py-24 bg-gradient-to-b from-[#0a0e1a] to-[#0f1419]">
         <div className="container mx-auto px-6">
-          <div className="text-center text-violet-400">Loading...</div>
+          <div className="text-center text-cyan-400">Loading...</div>
         </div>
       </section>
     );
@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
     <section className="py-24 bg-gradient-to-b from-[#0a0e1a] to-[#0f1419]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-4">
+          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
             WHY CHOOSE US
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -60,10 +60,10 @@ const WhyChooseUs = () => {
             return (
               <div
                 key={item.id}
-                className="group p-8 bg-gradient-to-br from-violet-600/5 to-transparent rounded-2xl border border-violet-500/40 hover:border-violet-500/70 transition-all duration-300"
+                className="group p-8 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-2xl border border-cyan-500/40 hover:border-cyan-500/70 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-violet-600/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-violet-600/20 transition-colors duration-300">
-                  <IconComponent className="w-8 h-8 text-violet-400" />
+                <div className="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors duration-300">
+                  <IconComponent className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{item.description}</p>

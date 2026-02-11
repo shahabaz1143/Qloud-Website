@@ -55,7 +55,7 @@ const Testimonials = () => {
     return (
       <section className="py-24 bg-[#0a0e1a]">
         <div className="container mx-auto px-6">
-          <div className="text-center text-violet-400">Loading testimonials...</div>
+          <div className="text-center text-cyan-400">Loading testimonials...</div>
         </div>
       </section>
     );
@@ -67,13 +67,13 @@ const Testimonials = () => {
     <section className="py-24 bg-[#0a0e1a] relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-violet-600 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-violet-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-4">
+          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
             CLIENT TESTIMONIALS
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -89,7 +89,7 @@ const Testimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-violet-600 hover:bg-violet-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-cyan-500 hover:bg-cyan-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
@@ -97,7 +97,7 @@ const Testimonials = () => {
           
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-violet-600 hover:bg-violet-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-cyan-500 hover:bg-cyan-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6 text-white" />
@@ -108,16 +108,16 @@ const Testimonials = () => {
             {visibleTestimonials.map((testimonial, idx) => (
               <div
                 key={`${testimonial.id}-${idx}`}
-                className="group p-6 bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-violet-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20 animate-fadeInUp flex flex-col"
+                className="group p-6 bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fadeInUp flex flex-col"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 {/* Name and Avatar at Top */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-violet-600 to-violet-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <div className="font-bold text-white text-base group-hover:text-violet-400 transition-colors duration-300">
+                    <div className="font-bold text-white text-base group-hover:text-cyan-400 transition-colors duration-300">
                       {testimonial.name}
                     </div>
                     <div className="text-xs text-gray-400">{testimonial.location}</div>
@@ -137,7 +137,7 @@ const Testimonials = () => {
                 </p>
 
                 {/* Service Tag */}
-                <div className="text-xs text-violet-400 mt-auto">
+                <div className="text-xs text-cyan-400 mt-auto">
                   {testimonial.service}
                 </div>
               </div>
@@ -152,7 +152,7 @@ const Testimonials = () => {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? 'w-8 bg-violet-600'
+                    ? 'w-8 bg-cyan-500'
                     : 'bg-gray-600 hover:bg-gray-500'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
@@ -163,7 +163,7 @@ const Testimonials = () => {
 
         {/* Rating Summary */}
         <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-violet-600/10 border border-violet-500/30">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/30">
             <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
             <span className="text-2xl font-bold text-white">4.9/5</span>
             <span className="text-gray-400">From 57 Reviews on Google</span>

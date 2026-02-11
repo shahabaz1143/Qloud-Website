@@ -44,23 +44,23 @@ const Hero = () => {
               <br />
               MEETS
               <br />
-              <span className="text-violet-400">CINEMATIC MAGIC</span>
+              <span className="text-cyan-400">CINEMATIC MAGIC</span>
             </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-xl">
               From voice-controlled automation to{' '}
-              <span className="text-violet-400 font-semibold">Dolby Atmos theatres</span>—we craft
+              <span className="text-cyan-400 font-semibold">Dolby Atmos theatres</span>—we craft
               intelligent spaces that entertain, protect, and inspire.
             </p>
           </div>
 
           {/* Info Cards */}
           <div className="flex items-center gap-4 mb-8">
-            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-violet-600/10 border border-violet-500/30 backdrop-blur-sm">
-              <div className="text-violet-400 text-2xl font-bold">₹50K+</div>
+            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+              <div className="text-cyan-400 text-2xl font-bold">₹50K+</div>
               <div className="text-white text-xs uppercase tracking-wide">AUTOMATION STARTS</div>
             </div>
-            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-violet-600/10 border border-violet-500/30 backdrop-blur-sm">
-              <div className="text-violet-400 text-2xl font-bold">₹3.5L+</div>
+            <div className="flex-1 max-w-xs px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+              <div className="text-cyan-400 text-2xl font-bold">₹3.5L+</div>
               <div className="text-white text-xs uppercase tracking-wide">THEATRE STARTS</div>
             </div>
           </div>
@@ -69,7 +69,7 @@ const Hero = () => {
           <div className="flex flex-wrap items-center gap-4 mb-12">
             <Button
               onClick={() => scrollToSection('packages')}
-              className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-3 text-base font-semibold rounded-full transition-all duration-200 shadow-lg shadow-violet-500/20"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 text-base font-semibold rounded-full transition-all duration-200 shadow-lg shadow-cyan-500/20"
             >
               VIEW PACKAGES
               <span className="ml-2">→</span>
@@ -87,7 +87,7 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex flex-wrap items-center gap-8 md:gap-16">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-1">200+</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">200+</div>
               <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
                 HOMES MADE
                 <br />
@@ -95,7 +95,7 @@ const Hero = () => {
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-1">8+</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">8+</div>
               <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
                 YEARS OF
                 <br />
@@ -103,7 +103,7 @@ const Hero = () => {
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-1">100+</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">100+</div>
               <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
                 HOME THEATRES
                 <br />
@@ -111,7 +111,7 @@ const Hero = () => {
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-1">4.9/5</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">4.9/5</div>
               <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
                 CUSTOMER
                 <br />
@@ -122,9 +122,9 @@ const Hero = () => {
           
           {/* Tagline Badge */}
           <div className="mt-8">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-violet-600/10 border border-violet-500/30 backdrop-blur-sm">
-              <Award className="w-4 h-4 text-violet-400" />
-              <span className="text-violet-400 font-medium text-sm">Bangalore's #1 Home Theatre & Automation Specialists</span>
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
+              <Award className="w-4 h-4 text-cyan-400" />
+              <span className="text-cyan-400 font-medium text-sm">Bangalore's #1 Home Theatre & Automation Specialists</span>
               <div className="flex items-center gap-0.5 ml-2">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />

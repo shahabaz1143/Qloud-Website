@@ -64,7 +64,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-[#0a0e1a]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <div className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-3">
+          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-3">
             GET IN TOUCH
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -77,7 +77,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl p-6 border border-violet-500/30">
+          <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl p-6 border border-cyan-500/30">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="text-white text-sm font-semibold mb-2 block">
@@ -89,7 +89,7 @@ const Contact = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800/50 border-gray-700 text-white focus:border-violet-500"
+                  className="bg-gray-800/50 border-gray-700 text-white focus:border-cyan-500"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -104,7 +104,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800/50 border-gray-700 text-white focus:border-violet-500"
+                  className="bg-gray-800/50 border-gray-700 text-white focus:border-cyan-500"
                   placeholder="Enter your email"
                 />
               </div>
@@ -119,7 +119,7 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800/50 border-gray-700 text-white focus:border-violet-500"
+                  className="bg-gray-800/50 border-gray-700 text-white focus:border-cyan-500"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -129,7 +129,7 @@ const Contact = () => {
                   Service Interested In <span className="text-red-500">*</span>
                 </label>
                 <Select value={formData.service} onValueChange={handleServiceChange} required>
-                  <SelectTrigger className="bg-gray-800/50 border-gray-700 text-white focus:border-violet-500">
+                  <SelectTrigger className="bg-gray-800/50 border-gray-700 text-white focus:border-cyan-500">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -157,7 +157,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-violet-600 hover:bg-violet-700 text-white py-3 text-base rounded-lg disabled:opacity-50"
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 text-base rounded-lg disabled:opacity-50"
               >
                 {submitting ? 'Sending...' : 'Send Message'}
               </Button>
@@ -167,61 +167,61 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-6">
             {/* Phone */}
-            <div className="bg-gradient-to-br from-violet-600/10 to-transparent rounded-2xl p-6 border border-violet-500/30">
+            <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
-                  <p className="text-violet-400 text-base font-semibold">+91 72047 46043</p>
+                  <p className="text-cyan-400 text-base font-semibold">+91 72047 46043</p>
                   <p className="text-gray-400 text-sm">Mon-Sat, 9AM-7PM</p>
                 </div>
               </div>
             </div>
 
             {/* Email */}
-            <div className="bg-gradient-to-br from-violet-600/10 to-transparent rounded-2xl p-6 border border-violet-500/30">
+            <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Email</h3>
-                  <p className="text-violet-400 text-base font-semibold">contact@qloudsmarthomes.com</p>
+                  <p className="text-cyan-400 text-base font-semibold">contact@qloudsmarthomes.com</p>
                   <p className="text-gray-400 text-sm">24/7 Support</p>
                 </div>
               </div>
             </div>
 
             {/* Office */}
-            <div className="bg-gradient-to-br from-violet-600/10 to-transparent rounded-2xl p-6 border border-violet-500/30">
+            <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Office</h3>
-                  <p className="text-violet-400 text-base font-semibold">Bharatiya City, Bangalore</p>
+                  <p className="text-cyan-400 text-base font-semibold">Bharatiya City, Bangalore</p>
                   <p className="text-gray-400 text-sm">Karnataka, India</p>
                 </div>
               </div>
             </div>
 
             {/* Experience Centers */}
-            <div className="bg-gradient-to-br from-violet-600/10 to-transparent rounded-2xl p-6 border border-violet-500/30">
+            <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-violet-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div className="w-full">
                   <h3 className="text-lg font-bold text-white mb-2">Experience Centers</h3>
                   <div className="space-y-2">
                     <div>
-                      <p className="text-violet-400 text-base font-semibold">Bharatiya City</p>
+                      <p className="text-cyan-400 text-base font-semibold">Bharatiya City</p>
                     </div>
                     <div>
-                      <p className="text-violet-400 text-base font-semibold">MG Road</p>
+                      <p className="text-cyan-400 text-base font-semibold">MG Road</p>
                     </div>
                   </div>
                 </div>

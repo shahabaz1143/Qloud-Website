@@ -41,13 +41,13 @@ const Gallery = () => {
     <section id="designs" className="py-20 bg-[#0a0e1a] relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-violet-600 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-violet-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <div className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-3">
+          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-3">
             OUR GALLERY
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -63,7 +63,7 @@ const Gallery = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-violet-600 hover:bg-violet-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-cyan-500 hover:bg-cyan-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Previous images"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
@@ -71,7 +71,7 @@ const Gallery = () => {
           
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-violet-600 hover:bg-violet-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-cyan-500 hover:bg-cyan-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Next images"
           >
             <ChevronRight className="w-6 h-6 text-white" />
@@ -82,7 +82,7 @@ const Gallery = () => {
             {galleryImages[currentSlide].map((image, index) => (
               <div
                 key={index}
-                className="group relative aspect-square overflow-hidden rounded-xl border border-gray-800/50 hover:border-violet-500/50 transition-all duration-300"
+                className="group relative aspect-square overflow-hidden rounded-xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 {/* Image */}
                 <img
@@ -97,10 +97,10 @@ const Gallery = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30 group-hover:from-black/60 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-300"></div>
                 
                 {/* Hover Effect - Violet Glow */}
-                <div className="absolute inset-0 bg-violet-600/0 group-hover:bg-violet-600/10 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-cyan-500/0 group-hover:bg-cyan-500/10 transition-all duration-300"></div>
                 
                 {/* Bottom Border on Hover */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-violet-600 to-violet-700 group-hover:w-full transition-all duration-500"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-cyan-500 to-cyan-600 group-hover:w-full transition-all duration-500"></div>
               </div>
             ))}
           </div>
@@ -113,7 +113,7 @@ const Gallery = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? 'w-8 bg-violet-600'
+                    ? 'w-8 bg-cyan-500'
                     : 'bg-gray-600 hover:bg-gray-500'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
