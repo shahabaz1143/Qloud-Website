@@ -38,7 +38,7 @@ const Process = () => {
     return (
       <section id="process" className="py-24 bg-[#0a0e1a]">
         <div className="container mx-auto px-6">
-          <div className="text-center text-cyan-400">Loading...</div>
+          <div className="text-center text-violet-400">Loading...</div>
         </div>
       </section>
     );
@@ -48,13 +48,13 @@ const Process = () => {
     <section id="process" className="py-24 bg-[#0a0e1a] relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-600 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-violet-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4 animate-fadeIn">
+          <div className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-4 animate-fadeIn">
             OUR PROCESS
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 animate-fadeIn">
@@ -68,8 +68,8 @@ const Process = () => {
         {/* Horizontal Timeline */}
         <div className="max-w-7xl mx-auto relative">
           {/* Connecting Line */}
-          <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500/20 via-cyan-500 to-cyan-500/20 hidden md:block">
-            <div className="h-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-flowRight"></div>
+          <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500/20 via-violet-500 to-violet-500/20 hidden md:block">
+            <div className="h-full bg-gradient-to-r from-transparent via-violet-400 to-transparent animate-flowRight"></div>
           </div>
 
           {/* Steps in horizontal layout */}
@@ -85,16 +85,16 @@ const Process = () => {
               >
                 {/* Animated Number Circle */}
                 <div className="relative mb-6 group">
-                  <div className="relative w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-all duration-300 z-10">
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-violet-600 to-violet-700 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-violet-500/30 group-hover:scale-110 transition-all duration-300 z-10">
                     <span className="relative z-10">{step.id}</span>
                     {/* Pulse effect */}
-                    <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-20"></div>
+                    <div className="absolute inset-0 rounded-full bg-violet-500 animate-ping opacity-20"></div>
                   </div>
                 </div>
 
                 {/* Content Card */}
-                <div className="bg-gradient-to-br from-gray-900/30 to-transparent rounded-2xl p-6 border border-cyan-500/40 hover:border-cyan-500/70 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 h-full">
-                  <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-300">
+                <div className="bg-gradient-to-br from-gray-900/30 to-transparent rounded-2xl p-6 border border-violet-500/40 hover:border-violet-500/70 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10 h-full">
+                  <h3 className="text-lg font-bold text-white mb-3 hover:text-violet-400 transition-colors duration-300">
                     {step.title}
                   </h3>
                   <p className="text-sm text-gray-400 leading-relaxed hover:text-gray-300 transition-colors duration-300">
@@ -107,14 +107,14 @@ const Process = () => {
         </div>
 
         {/* CTA Section with hover effect */}
-        <div className="max-w-3xl mx-auto mt-16 text-center p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-transparent border border-cyan-500/50 hover:border-cyan-500/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+        <div className="max-w-3xl mx-auto mt-16 text-center p-8 rounded-2xl bg-gradient-to-br from-violet-600/10 to-transparent border border-violet-500/50 hover:border-violet-500/70 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/20">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-gray-400 mb-6">
             Schedule a free consultation today and let's discuss how we can transform your home.
           </p>
           <Button
             onClick={() => window.open('https://wa.me/917204746043', '_blank')}
-            className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+            className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-6 text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-violet-500/30"
           >
             Schedule Free Consultation
           </Button>
