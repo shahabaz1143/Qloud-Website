@@ -102,19 +102,19 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
                   
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-violet-900/80 via-violet-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-cyan-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   {/* Category Badge */}
                   <div className="absolute top-2 left-2 z-10">
-                    <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full text-xs font-semibold text-white shadow-lg backdrop-blur-sm">
+                    <span className="px-2 py-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full text-xs font-semibold text-black shadow-lg backdrop-blur-sm">
                       {project.category}
                     </span>
                   </div>
 
                   {/* View Details Button - appears on hover */}
                   <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-90 z-10">
-                    <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 group/btn">
-                      <ExternalLink className="w-3 h-3 text-gray-900 group-hover/btn:text-white" />
+                    <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-sky-400 transition-all duration-300 group/btn">
+                      <ExternalLink className="w-3 h-3 text-gray-900 group-hover/btn:text-black" />
                     </button>
                   </div>
                 </div>
