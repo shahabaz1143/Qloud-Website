@@ -13,12 +13,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #7C3AED;
+    background: #22D3EE;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #6D28D9;
+    background: #06B6D4;
 }
 
 /* Remove default app centering */
