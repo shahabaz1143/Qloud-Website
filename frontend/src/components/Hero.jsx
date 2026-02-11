@@ -37,20 +37,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10 py-12">
         <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="mb-6">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
-              <Award className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 font-medium text-sm">Bangalore's #1 Home Theatre & Automation Specialists</span>
-              <div className="flex items-center gap-0.5 ml-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                ))}
-                <span className="text-white ml-1 text-sm">4.9/5</span>
-              </div>
-            </div>
-          </div>
-
           {/* Main Heading */}
           <div className="mb-8">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
