@@ -60,12 +60,12 @@ const Projects = () => {
               onClick={() => setActiveFilter(category)}
               className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 overflow-hidden group ${
                 activeFilter === category
-                  ? 'bg-gradient-to-r from-cyan-500 to-cyan-600 text-white shadow-lg shadow-cyan-500/30'
+                  ? 'bg-gradient-to-r from-cyan-400 to-sky-400 text-black font-semibold shadow-lg shadow-cyan-400/30'
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700 hover:text-white'
               }`}
             >
               {activeFilter === category && (
-                <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
               )}
               <span className="relative z-10">{category}</span>
             </button>
