@@ -169,8 +169,8 @@ const Contact = () => {
             {/* Phone */}
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-black" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
@@ -183,8 +183,8 @@ const Contact = () => {
             {/* Email */}
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-black" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Email</h3>
@@ -197,8 +197,8 @@ const Contact = () => {
             {/* Office */}
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-black" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Office</h3>
@@ -211,8 +211,8 @@ const Contact = () => {
             {/* Experience Centers */}
             <div className="bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl p-6 border border-cyan-500/30">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-black" />
                 </div>
                 <div className="w-full">
                   <h3 className="text-lg font-bold text-white mb-2">Experience Centers</h3>
