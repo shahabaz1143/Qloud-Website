@@ -1,43 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button } from './ui/button';
 import { Check, Sparkles } from 'lucide-react';
-import { fetchPricing } from '../services/api';
+
+// Static data - no backend required
+const packages = [
+  {
+    id: 1,
+    name: "Essential Package",
+    description: "Perfect entry into cinema-quality entertainment",
+    price: "2,29,000",
+    popular: false,
+    features: [
+      "Includes Speakers & Subwoofer",
+      "AVR & Upscaling 4k Projector",
+      "Cables & Projector Mount, HDMI"
+    ]
+  },
+  {
+    id: 2,
+    name: "Budget Package",
+    description: "High-end speakers with acoustic treatment",
+    price: "6,99,000",
+    popular: false,
+    features: [
+      "Includes High End Speakers",
+      "Basic Acoustic ( Wall Paneling )",
+      "5 Years Warranty on Speaker"
+    ]
+  },
+  {
+    id: 3,
+    name: "Silver Package",
+    description: "Dolby Atmos with complete acoustic setup",
+    price: "9,99,000",
+    popular: true,
+    features: [
+      "5.1.2 Dolby Atmos System",
+      "4k Projector with Edge Less Screen",
+      "4 Layer Acoustics including Recliners"
+    ]
+  },
+  {
+    id: 4,
+    name: "Gold Package",
+    description: "The pinnacle of home cinema luxury",
+    price: "12,39,000",
+    popular: false,
+    features: [
+      "7.1.2 Dolby Atmos System",
+      "300 Watts Premium Speakers",
+      "6 Layers Acoustic treatment with Recliners"
+    ]
+  }
+];
 
 const Pricing = () => {
-  const [packages, setPackages] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadPricing = async () => {
-      try {
-        const data = await fetchPricing();
-        setPackages(data);
-      } catch (error) {
-        console.error('Error loading pricing:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadPricing();
-  }, []);
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  if (loading) {
-    return (
-      <section id="packages" className="py-24 bg-[#0f1419]">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-cyan-400">Loading pricing...</div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="packages" className="py-24 bg-[#0f1419]">
       <div className="container mx-auto px-6">
@@ -65,7 +82,7 @@ const Pricing = () => {
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-cyan-500 rounded-full text-sm font-semibold text-white">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full text-sm font-semibold text-black">
                   Most Popular
                 </div>
               )}
@@ -108,7 +125,7 @@ const Pricing = () => {
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-shrink-0">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center">
-                <Sparkles className="w-8 h-8 text-white" />
+                <Sparkles className="w-8 h-8 text-black" />
               </div>
             </div>
             <div className="flex-1 text-center md:text-left">
