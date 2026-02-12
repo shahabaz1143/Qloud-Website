@@ -1,36 +1,93 @@
 import React, { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import { fetchTestimonials } from '../services/api';
+
+// Static data - no backend required
+const testimonials = [
+  {
+    id: 1,
+    name: "Pallav Godeswar",
+    location: "Bangalore",
+    service: "Home Theatre Installation",
+    review: "Got my custom home theatre done, and it's amazing! The team was professional, listened to my needs, and delivered exactly what I envisioned. It feels like a mini-cinema at home. Highly recommend them!",
+    avatar: "P",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Anju",
+    location: "Bangalore",
+    service: "Home Networking Services",
+    review: "Fantastic job on the home networking services. Everything is now up to the speed!",
+    avatar: "A",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Anusha",
+    location: "Bangalore",
+    service: "Home Automation",
+    review: "The home automation solutions from Qloud Tech are impressive. They were quick and professional, and my home now has a seamless automation system. Highly recommend!",
+    avatar: "A",
+    rating: 5
+  },
+  {
+    id: 4,
+    name: "Soughandika",
+    location: "Bangalore",
+    service: "CCTV Installation",
+    review: "Great experience with Qloud tech for CCTV installation services. The team was efficient, and the cameras are working perfectly. My home feels much safer now.",
+    avatar: "S",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Harshit",
+    location: "Bangalore",
+    service: "Smart Lighting Solutions",
+    review: "Qloud Tech really provided smart lighting solutions. The setup was also quick and the lights look amazing. Great service overall!",
+    avatar: "H",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Himanshu",
+    location: "Bangalore",
+    service: "Home Theatre Installation",
+    review: "Excellent home theatre designing and installation. Professional and reliable team.",
+    avatar: "H",
+    rating: 5
+  },
+  {
+    id: 7,
+    name: "Mahi Sinha",
+    location: "Bangalore",
+    service: "Custom Home Automation",
+    review: "Qloud Tech's custom home automation systems were tailored perfectly to my needs. The installation was smooth, and everything is worked as expected. Their team were professional and the results are impressive.",
+    avatar: "M",
+    rating: 5
+  },
+  {
+    id: 8,
+    name: "Rohit",
+    location: "Bangalore",
+    service: "Home Theatre Setup",
+    review: "The team did a great job with our Home Theatre set up. Quick and efficient service😀",
+    avatar: "R",
+    rating: 5
+  }
+];
 
 const Testimonials = () => {
-  const [testimonials, setTestimonials] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const loadTestimonials = async () => {
-      try {
-        const data = await fetchTestimonials();
-        setTestimonials(data);
-      } catch (error) {
-        console.error('Error loading testimonials:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadTestimonials();
-  }, []);
 
   // Auto-scroll effect
   useEffect(() => {
-    if (testimonials.length === 0) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Change every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -41,8 +98,6 @@ const Testimonials = () => {
   };
 
   const getVisibleTestimonials = () => {
-    if (testimonials.length === 0) return [];
-    
     const visible = [];
     for (let i = 0; i < 4; i++) {
       const index = (currentIndex + i) % testimonials.length;
@@ -51,16 +106,6 @@ const Testimonials = () => {
     return visible;
   };
 
-  if (loading) {
-    return (
-      <section className="py-24 bg-[#0a0e1a]">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-cyan-400">Loading testimonials...</div>
-        </div>
-      </section>
-    );
-  }
-
   const visibleTestimonials = getVisibleTestimonials();
 
   return (
@@ -68,7 +113,7 @@ const Testimonials = () => {
       {/* Animated background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -108,8 +153,7 @@ const Testimonials = () => {
             {visibleTestimonials.map((testimonial, idx) => (
               <div
                 key={`${testimonial.id}-${idx}`}
-                className="group p-6 bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fadeInUp flex flex-col"
-                style={{ animationDelay: `${idx * 0.1}s` }}
+                className="group p-6 bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 flex flex-col"
               >
                 {/* Name and Avatar at Top */}
                 <div className="flex items-center gap-3 mb-4">
@@ -170,23 +214,6 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fadeInUp {
-          animation: fadeInUp 0.6s ease-out forwards;
-        }
-      `}</style>
     </section>
   );
 };
