@@ -63,7 +63,7 @@ const Gallery = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Previous images"
           >
             <ChevronLeft className="w-6 h-6 text-black" />
@@ -71,7 +71,7 @@ const Gallery = () => {
           
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
             aria-label="Next images"
           >
             <ChevronRight className="w-6 h-6 text-black" />

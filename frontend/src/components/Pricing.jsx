@@ -82,7 +82,7 @@ const Pricing = () => {
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full text-sm font-semibold text-black">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full text-sm font-semibold text-black">
                   Most Popular
                 </div>
               )}
@@ -110,7 +110,7 @@ const Pricing = () => {
                 onClick={() => window.open('https://wa.me/917204746043', '_blank')}
                 className={`w-full py-6 rounded-lg transition-all duration-200 ${
                   pkg.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 text-black font-semibold'
+                    ? 'bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 text-black font-semibold'
                     : 'bg-gray-800 hover:bg-gray-700 text-white'
                 }`}
               >
@@ -124,7 +124,7 @@ const Pricing = () => {
         <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-cyan-500/30">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center">
                 <Sparkles className="w-8 h-8 text-black" />
               </div>
             </div>
@@ -137,7 +137,7 @@ const Pricing = () => {
             </div>
             <Button
               onClick={() => window.open('https://wa.me/917204746043', '_blank')}
-              className="flex-shrink-0 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 text-black font-semibold px-8 py-6 rounded-lg"
+              className="flex-shrink-0 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 text-black font-semibold px-8 py-6 rounded-lg"
             >
               Schedule Consultation
             </Button>

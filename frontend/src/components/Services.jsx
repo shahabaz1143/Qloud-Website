@@ -116,7 +116,7 @@ const Services = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
                   
                   {/* Icon Badge */}
-                  <div className="absolute top-3 right-3 w-10 h-10 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center">
+                  <div className="absolute top-3 right-3 w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center">
                     <IconComponent className="w-5 h-5 text-black" />
                   </div>
                 </div>

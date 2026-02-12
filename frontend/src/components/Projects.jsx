@@ -126,7 +126,7 @@ const Projects = () => {
               onClick={() => setActiveFilter(category)}
               className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 overflow-hidden group ${
                 activeFilter === category
-                  ? 'bg-gradient-to-r from-cyan-400 to-sky-400 text-black font-semibold shadow-lg shadow-cyan-400/30'
+                  ? 'bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] text-black font-semibold shadow-lg shadow-cyan-400/30'
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700 hover:text-white'
               }`}
             >
@@ -158,7 +158,7 @@ const Projects = () => {
 
                 {/* Category Badge */}
                 <div className="absolute top-2 left-2 z-10">
-                  <span className="px-2 py-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full text-xs font-semibold text-black shadow-lg backdrop-blur-sm">
+                  <span className="px-2 py-1 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full text-xs font-semibold text-black shadow-lg backdrop-blur-sm">
                     {project.category}
                   </span>
                 </div>
@@ -181,7 +181,7 @@ const Projects = () => {
                 </p>
 
                 {/* Decorative line */}
-                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-cyan-400 to-sky-400 group-hover:w-full transition-all duration-500"></div>
+                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] group-hover:w-full transition-all duration-500"></div>
               </div>
             </div>
           ))}

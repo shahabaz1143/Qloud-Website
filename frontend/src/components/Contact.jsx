@@ -120,7 +120,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     disabled={submitting}
-                    className="w-full bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-500 hover:to-sky-500 text-black font-semibold py-4 h-14 text-base rounded-lg disabled:opacity-50"
+                    className="w-full bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 text-black font-semibold py-4 h-14 text-base rounded-lg disabled:opacity-50"
                   >
                     {submitting ? 'Opening WhatsApp...' : 'Send Message'}
                   </Button>
@@ -133,7 +133,7 @@ const Contact = () => {
               {/* Phone */}
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-xl p-5 border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-black" />
                   </div>
                   <div>
@@ -147,7 +147,7 @@ const Contact = () => {
               {/* Email */}
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-xl p-5 border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-black" />
                   </div>
                   <div>
@@ -161,7 +161,7 @@ const Contact = () => {
               {/* Office */}
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-xl p-5 border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-black" />
                   </div>
                   <div>
@@ -175,7 +175,7 @@ const Contact = () => {
               {/* Experience Centers */}
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-xl p-5 border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-black" />
                   </div>
                   <div>
