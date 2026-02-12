@@ -1,44 +1,110 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { ExternalLink } from 'lucide-react';
-import { fetchProjects } from '../services/api';
+
+// Static data - no backend required
+const allProjects = [
+  {
+    id: 1,
+    name: "Adarsh Tranquil",
+    category: "Home Theatre",
+    description: "Premium home theatre with Dolby Atmos and acoustic treatment",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/g52fv2rb_adarsh%20tranquil.jpg"
+  },
+  {
+    id: 2,
+    name: "DSR Elixir",
+    category: "Full Automation",
+    description: "Complete smart home automation with lighting and security",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/529o4d5j_DSR%20Elixir.avif"
+  },
+  {
+    id: 3,
+    name: "Nikoo Homes",
+    category: "Security System",
+    description: "Advanced security system with 24/7 monitoring",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/vz9t4rbo_Nikoo%20Homes.jpg"
+  },
+  {
+    id: 4,
+    name: "NCC Retreat",
+    category: "Home Theatre",
+    description: "Luxury cinema room with custom seating",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/x8pg0gdw_NCC%20Retreat.jpg"
+  },
+  {
+    id: 5,
+    name: "Karle Zenith",
+    category: "Smart Lighting",
+    description: "Intelligent lighting system throughout the residence",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/rct5wa5v_Karle%20Zenith%20Residence.png"
+  },
+  {
+    id: 6,
+    name: "SNN Enternia",
+    category: "Full Automation",
+    description: "Integrated smart home with voice control",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/ybgjk63j_Snn%20eternia.jpeg"
+  },
+  {
+    id: 7,
+    name: "Shobha City",
+    category: "Home Theatre",
+    description: "State-of-the-art cinema with premium acoustics",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/7c5wola2_Shobha%20city.webp"
+  },
+  {
+    id: 8,
+    name: "RR Signature",
+    category: "Security System",
+    description: "Comprehensive security with AI monitoring",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/gfdgg2zf_RR%20Signature.jpg"
+  },
+  {
+    id: 9,
+    name: "Leela Residency",
+    category: "Full Automation",
+    description: "Complete home automation solution",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/qp4rbl2t_leela%20residency.jpg"
+  },
+  {
+    id: 10,
+    name: "Shriram Luxor",
+    category: "Smart Lighting",
+    description: "Advanced lighting control system",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/bx1r9pe4_shriram%20luxor.png"
+  },
+  {
+    id: 11,
+    name: "Orchid Picadilly",
+    category: "Home Theatre",
+    description: "Premium entertainment setup with Dolby Atmos",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/f82kgy6b_orchid%20picadily.jpg"
+  },
+  {
+    id: 12,
+    name: "Prestige Lake side Habitat",
+    category: "Full Automation",
+    description: "Smart home with integrated automation",
+    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/kjtm3bvq_prestige%20lake%20side%20habitat.webp"
+  }
+];
+
+const categories = ['All', 'Home Theatre', 'Full Automation', 'Security System', 'Smart Lighting'];
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [displayedProjects, setDisplayedProjects] = useState([]);
 
-  const categories = ['All', 'Home Theatre', 'Full Automation', 'Security System', 'Smart Lighting'];
-
-  useEffect(() => {
-    const loadProjects = async () => {
-      try {
-        setLoading(true);
-        const data = await fetchProjects(activeFilter);
-        setProjects(data);
-        // Animate projects one by one
-        setDisplayedProjects([]);
-        data.forEach((_, index) => {
-          setTimeout(() => {
-            setDisplayedProjects(prev => [...prev, index]);
-          }, index * 150);
-        });
-      } catch (error) {
-        console.error('Error loading projects:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadProjects();
-  }, [activeFilter]);
+  const filteredProjects = activeFilter === 'All' 
+    ? allProjects 
+    : allProjects.filter(p => p.category === activeFilter);
 
   return (
     <section id="projects" className="py-20 bg-[#0f1419] relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-40 left-20 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-40 left-20 w-80 h-80 bg-cyan-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -52,7 +118,7 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Enhanced Filter Tabs */}
+        {/* Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
           {categories.map((category) => (
             <button
@@ -64,77 +130,62 @@ const Projects = () => {
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700 hover:text-white'
               }`}
             >
-              {activeFilter === category && (
-                <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-              )}
               <span className="relative z-10">{category}</span>
             </button>
           ))}
         </div>
 
-        {/* Projects Grid with staggered animation */}
-        {loading ? (
-          <div className="text-center text-cyan-400 py-8">
-            <div className="inline-block w-6 h-6 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-            <p className="mt-3 text-sm">Loading projects...</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className={`group relative rounded-xl overflow-hidden border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/20 transform hover:-translate-y-1 ${
-                  displayedProjects.includes(index)
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 50}ms` }}
-              >
-                {/* Image Container */}
-                <div className="relative h-40 overflow-hidden bg-gray-900">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
-                  
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-cyan-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        {/* Projects Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className="group relative rounded-xl overflow-hidden border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/20 transform hover:-translate-y-1"
+            >
+              {/* Image Container */}
+              <div className="relative h-40 overflow-hidden bg-gray-900">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-cyan-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  {/* Category Badge */}
-                  <div className="absolute top-2 left-2 z-10">
-                    <span className="px-2 py-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full text-xs font-semibold text-black shadow-lg backdrop-blur-sm">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  {/* View Details Button - appears on hover */}
-                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-90 z-10">
-                    <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-sky-400 transition-all duration-300 group/btn">
-                      <ExternalLink className="w-3 h-3 text-gray-900 group-hover/btn:text-black" />
-                    </button>
-                  </div>
+                {/* Category Badge */}
+                <div className="absolute top-2 left-2 z-10">
+                  <span className="px-2 py-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full text-xs font-semibold text-black shadow-lg backdrop-blur-sm">
+                    {project.category}
+                  </span>
                 </div>
 
-                {/* Content */}
-                <div className="relative p-3 bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm">
-                  <h3 className="text-sm font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-1">
-                    {project.name}
-                  </h3>
-                  <p className="text-gray-400 text-xs leading-relaxed group-hover:text-gray-300 transition-colors duration-300 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* Decorative line */}
-                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-cyan-500 to-cyan-600 group-hover:w-full transition-all duration-500"></div>
+                {/* View Details Button */}
+                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-90 z-10">
+                  <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gradient-to-r hover:from-cyan-400 hover:to-sky-400 transition-all duration-300 group/btn">
+                    <ExternalLink className="w-3 h-3 text-gray-900 group-hover/btn:text-black" />
+                  </button>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+
+              {/* Content */}
+              <div className="relative p-3 bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm">
+                <h3 className="text-sm font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-1">
+                  {project.name}
+                </h3>
+                <p className="text-gray-400 text-xs leading-relaxed group-hover:text-gray-300 transition-colors duration-300 line-clamp-2">
+                  {project.description}
+                </p>
+
+                {/* Decorative line */}
+                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-cyan-400 to-sky-400 group-hover:w-full transition-all duration-500"></div>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* View All Button */}
         <div className="text-center mt-10">
