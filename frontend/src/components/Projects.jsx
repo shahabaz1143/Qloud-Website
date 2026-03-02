@@ -146,7 +146,9 @@ const Projects = () => {
               <div className="relative h-40 overflow-hidden bg-gray-900">
                 <img
                   src={project.image}
-                  alt={project.name}
+                  alt={`${project.name} - ${project.category} Project by Qloud Tech Bangalore`}
+                  title={`${project.name} - ${project.category}`}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 
