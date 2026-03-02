@@ -9,6 +9,7 @@ import Process from './components/Process';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
+import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Toaster } from './components/ui/sonner';
@@ -29,6 +30,7 @@ function App() {
       <Projects />
       <Testimonials />
       <Gallery />
+      <Blog />
       <Contact />
       <Footer />
       <Toaster />
