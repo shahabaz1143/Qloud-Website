@@ -110,7 +110,9 @@ const Services = () => {
                 <div className="relative h-40 overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} - Qloud Tech ${service.title} Installation Services in Bangalore`}
+                    title={`${service.title} Services by Qloud Tech`}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
