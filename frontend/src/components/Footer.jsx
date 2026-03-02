@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
@@ -6,8 +7,8 @@ const Footer = () => {
     <footer className="bg-[#0a0e1a] border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-12 gap-8">
-          {/* Company Info - Takes 4 columns */}
-          <div className="col-span-12 md:col-span-4">
+          {/* Company Info - Takes 3 columns */}
+          <div className="col-span-12 md:col-span-3">
             <img 
               src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
               alt="Qloud Tech Logo" 
@@ -49,12 +50,25 @@ const Footer = () => {
           <div className="col-span-6 md:col-span-2">
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Services</h4>
             <ul className="space-y-2.5">
-              <li><a href="#services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Theatre</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Smart Switches</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Security Systems</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Automation</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Networking</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Door Locks</a></li>
+              <li><Link to="/services/home-theatre" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Theatre</Link></li>
+              <li><Link to="/services/smart-switches" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Smart Switches</Link></li>
+              <li><Link to="/services/security-systems" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Security Systems</Link></li>
+              <li><Link to="/services/home-automation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Automation</Link></li>
+              <li><Link to="/services/networking" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Networking</Link></li>
+              <li><Link to="/services/digital-door-locks" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Door Locks</Link></li>
+            </ul>
+          </div>
+
+          {/* Bangalore Services - Takes 2 columns (NEW) */}
+          <div className="col-span-6 md:col-span-2">
+            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Bangalore</h4>
+            <ul className="space-y-2.5">
+              <li><Link to="/home-theatre-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Theatre</Link></li>
+              <li><Link to="/home-automation-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Automation</Link></li>
+              <li><Link to="/security-systems-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Security Systems</Link></li>
+              <li><Link to="/smart-switches-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Smart Switches</Link></li>
+              <li><Link to="/digital-locks-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Digital Locks</Link></li>
+              <li><Link to="/video-doorbell-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Video Doorbells</Link></li>
             </ul>
           </div>
 
@@ -71,10 +85,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Spacer */}
-          <div className="hidden md:block md:col-span-1"></div>
-
-          {/* Contact - Takes 3 columns, pushed right */}
+          {/* Contact - Takes 3 columns */}
           <div className="col-span-12 md:col-span-3">
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Contact Us</h4>
             <div className="space-y-4">
