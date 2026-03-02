@@ -1,0 +1,609 @@
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { ArrowLeft, Calendar, Clock, User, Share2, MessageCircle } from 'lucide-react';
+import { Button } from '../components/ui/button';
+
+// Blog data with full content
+const blogData = {
+  'home-theatre-setup-bangalore-guide': {
+    title: 'Complete Guide to Home Theatre Setup in Bangalore 2024',
+    metaTitle: 'Home Theatre Setup Guide Bangalore 2024 | Qloud Tech',
+    metaDescription: 'Learn everything about setting up a home theatre in Bangalore. Room selection, Dolby Atmos, projectors, acoustics. Expert tips from Qloud Tech.',
+    category: 'Home Theatre',
+    author: 'Qloud Tech Team',
+    date: '2024-12-15',
+    readTime: '10 min read',
+    image: 'https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/g52fv2rb_adarsh%20tranquil.jpg',
+    content: `
+      <h2>Introduction to Home Theatre Systems</h2>
+      <p>Setting up a home theatre in Bangalore has become increasingly popular as more homeowners seek to recreate the cinematic experience at home. Whether you're in a villa in Whitefield or an apartment in Koramangala, this guide will help you understand everything you need to know.</p>
+      
+      <h2>Choosing the Right Room</h2>
+      <p>The first step in creating your home theatre is selecting the right room. Here are key factors to consider:</p>
+      <ul>
+        <li><strong>Size:</strong> Minimum 150 sq ft is recommended for a comfortable setup. Larger rooms (200-400 sq ft) are ideal.</li>
+        <li><strong>Shape:</strong> Rectangular rooms work best for acoustics. Avoid square rooms as they create standing waves.</li>
+        <li><strong>Windows:</strong> Fewer windows mean better light control. If windows exist, plan for blackout solutions.</li>
+        <li><strong>Location:</strong> Choose a room away from noisy areas like kitchens or main roads.</li>
+      </ul>
+      
+      <h2>Understanding Dolby Atmos</h2>
+      <p>Dolby Atmos is the gold standard for home theatre audio. Unlike traditional surround sound, Atmos adds height channels for a truly immersive 3D sound experience.</p>
+      <p><strong>Common Configurations:</strong></p>
+      <ul>
+        <li><strong>5.1.2:</strong> 5 speakers + 1 subwoofer + 2 height speakers - Great for medium rooms</li>
+        <li><strong>7.1.2:</strong> 7 speakers + 1 subwoofer + 2 height speakers - Ideal for larger rooms</li>
+        <li><strong>7.1.4:</strong> 7 speakers + 1 subwoofer + 4 height speakers - Ultimate immersion</li>
+      </ul>
+      
+      <h2>Choosing Your Display</h2>
+      <p>You have two main options for your home theatre display:</p>
+      <h3>Projector + Screen</h3>
+      <ul>
+        <li>Screen sizes from 100" to 150" possible</li>
+        <li>True cinema experience</li>
+        <li>4K laser projectors from Sony, Epson, BenQ</li>
+        <li>Requires controlled lighting</li>
+      </ul>
+      <h3>Large Screen TV</h3>
+      <ul>
+        <li>75" to 98" OLED/QLED TVs</li>
+        <li>Better for rooms with ambient light</li>
+        <li>Higher brightness and contrast</li>
+        <li>Easier installation</li>
+      </ul>
+      
+      <h2>Acoustic Treatment</h2>
+      <p>Professional acoustic treatment is crucial for optimal sound quality. Here's what we typically include:</p>
+      <ul>
+        <li><strong>Absorption panels:</strong> Control echo and reverb</li>
+        <li><strong>Bass traps:</strong> Manage low-frequency issues in corners</li>
+        <li><strong>Diffusers:</strong> Scatter sound for a more natural feel</li>
+        <li><strong>Soundproofing:</strong> Keep sound in and noise out</li>
+      </ul>
+      
+      <h2>Budget Planning</h2>
+      <p>Here's a realistic budget breakdown for Bangalore:</p>
+      <table>
+        <tr><th>Package</th><th>Price Range</th><th>What's Included</th></tr>
+        <tr><td>Entry Level</td><td>₹2-4 Lakhs</td><td>5.1 system, 4K projector, basic treatment</td></tr>
+        <tr><td>Mid Range</td><td>₹6-10 Lakhs</td><td>5.1.2 Atmos, laser projector, full acoustics</td></tr>
+        <tr><td>Premium</td><td>₹12-20 Lakhs</td><td>7.1.4 Atmos, premium brands, custom design</td></tr>
+      </table>
+      
+      <h2>Choosing the Right Partner</h2>
+      <p>When selecting a home theatre installation company in Bangalore, look for:</p>
+      <ul>
+        <li>Experience with various room sizes and budgets</li>
+        <li>Knowledge of multiple brands (not locked to one)</li>
+        <li>Proper acoustic assessment and treatment</li>
+        <li>After-sales support and warranty</li>
+        <li>Portfolio of completed projects</li>
+      </ul>
+      
+      <h2>Conclusion</h2>
+      <p>A well-designed home theatre is an investment in your entertainment and your home's value. With the right planning, equipment, and professional installation, you can enjoy a cinema-quality experience in the comfort of your Bangalore home.</p>
+      <p>Ready to start your home theatre journey? Contact Qloud Tech for a free consultation!</p>
+    `,
+    relatedServices: ['home-theatre', 'home-automation']
+  },
+  'smart-home-automation-guide': {
+    title: 'Smart Home Automation: Complete Buyer\'s Guide for Indian Homes',
+    metaTitle: 'Smart Home Automation Guide India 2024 | Qloud Tech',
+    metaDescription: 'Everything you need to know about home automation in India. Costs, benefits, brands, ROI. Expert guide from Qloud Tech Bangalore.',
+    category: 'Home Automation',
+    author: 'Qloud Tech Team',
+    date: '2024-12-10',
+    readTime: '12 min read',
+    image: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    content: `
+      <h2>What is Home Automation?</h2>
+      <p>Home automation, also known as smart home technology, allows you to control your home's lighting, climate, security, and appliances remotely or automatically. In India, this technology has evolved from a luxury to an accessible upgrade for modern homes.</p>
+      
+      <h2>Benefits of Home Automation</h2>
+      <ul>
+        <li><strong>Convenience:</strong> Control everything from your phone or voice</li>
+        <li><strong>Energy Savings:</strong> Reduce electricity bills by 20-30%</li>
+        <li><strong>Security:</strong> Real-time monitoring and alerts</li>
+        <li><strong>Comfort:</strong> Perfect climate and lighting always</li>
+        <li><strong>Property Value:</strong> Increases home resale value</li>
+      </ul>
+      
+      <h2>Key Components of Smart Homes</h2>
+      <h3>1. Smart Lighting</h3>
+      <p>Control lights with touch, voice, or app. Create scenes for movie time, dinner, or bedtime. Schedule lights to turn on/off automatically.</p>
+      
+      <h3>2. Climate Control</h3>
+      <p>Automate AC, fans, and curtains based on temperature, time, or occupancy. Save energy while maintaining comfort.</p>
+      
+      <h3>3. Security Systems</h3>
+      <p>Smart cameras, door locks, and sensors that alert you to any suspicious activity. Monitor your home from anywhere.</p>
+      
+      <h3>4. Voice Assistants</h3>
+      <p>Alexa, Google Home, or Siri integration for hands-free control of your entire home.</p>
+      
+      <h2>Costs in India</h2>
+      <ul>
+        <li><strong>Basic (1-2 rooms):</strong> ₹50,000 - ₹1,00,000</li>
+        <li><strong>Standard (whole home):</strong> ₹1,50,000 - ₹3,00,000</li>
+        <li><strong>Premium (luxury):</strong> ₹5,00,000 - ₹15,00,000+</li>
+      </ul>
+      
+      <h2>Popular Brands in India</h2>
+      <p>We work with multiple brands to find the best fit for your needs:</p>
+      <ul>
+        <li><strong>BuildTrack:</strong> Indian brand, great support</li>
+        <li><strong>Schneider Electric:</strong> Global reliability</li>
+        <li><strong>KNX:</strong> Premium European standard</li>
+        <li><strong>ABB:</strong> Industrial-grade quality</li>
+      </ul>
+      
+      <h2>Is It Worth the Investment?</h2>
+      <p>Yes! Here's why:</p>
+      <ul>
+        <li>Energy savings of ₹3,000-5,000/month in average homes</li>
+        <li>Payback period of 3-5 years</li>
+        <li>Increased property value by 5-10%</li>
+        <li>Improved quality of life (priceless!)</li>
+      </ul>
+      
+      <h2>Getting Started</h2>
+      <p>Start small and expand gradually. Begin with smart lighting in living areas, then add climate control and security. A professional consultation will help you plan the best approach for your home and budget.</p>
+    `,
+    relatedServices: ['home-automation', 'smart-switches']
+  },
+  'security-systems-guide': {
+    title: 'Top 10 Home Security Systems for Indian Homes in 2024',
+    metaTitle: 'Best Home Security Systems India 2024 | CCTV | Smart Locks | Qloud Tech',
+    metaDescription: 'Compare the best home security systems in India. CCTV cameras, smart locks, video doorbells. Expert recommendations from Qloud Tech.',
+    category: 'Security',
+    author: 'Qloud Tech Team',
+    date: '2024-12-05',
+    readTime: '8 min read',
+    image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/d3e2luzr_download.avif',
+    content: `
+      <h2>Why Home Security Matters</h2>
+      <p>With increasing urbanization in cities like Bangalore, home security has become a top priority for homeowners. Modern security systems offer more than just surveillance – they provide peace of mind.</p>
+      
+      <h2>Types of Security Systems</h2>
+      
+      <h3>1. CCTV Camera Systems</h3>
+      <p>The backbone of any security setup. Modern options include:</p>
+      <ul>
+        <li>HD/4K resolution cameras</li>
+        <li>Night vision capabilities</li>
+        <li>AI-powered motion detection</li>
+        <li>Cloud and local storage options</li>
+      </ul>
+      
+      <h3>2. Smart Door Locks</h3>
+      <p>Keyless entry with multiple access options:</p>
+      <ul>
+        <li>Fingerprint recognition</li>
+        <li>PIN codes</li>
+        <li>RFID cards</li>
+        <li>Smartphone app control</li>
+      </ul>
+      
+      <h3>3. Video Door Phones</h3>
+      <p>See and speak to visitors remotely:</p>
+      <ul>
+        <li>HD video quality</li>
+        <li>Two-way audio</li>
+        <li>Motion-triggered recording</li>
+        <li>Smartphone notifications</li>
+      </ul>
+      
+      <h2>Top Brands We Recommend</h2>
+      <ol>
+        <li><strong>Hikvision:</strong> Best value for money CCTV</li>
+        <li><strong>CP Plus:</strong> Indian brand, good support</li>
+        <li><strong>Yale:</strong> Premium smart locks</li>
+        <li><strong>Godrej:</strong> Trusted Indian security brand</li>
+        <li><strong>Samsung:</strong> High-end digital locks</li>
+      </ol>
+      
+      <h2>Budget Guide</h2>
+      <ul>
+        <li><strong>Basic CCTV (4 cameras):</strong> ₹25,000 - ₹40,000</li>
+        <li><strong>Smart Lock:</strong> ₹15,000 - ₹50,000</li>
+        <li><strong>Video Doorbell:</strong> ₹8,000 - ₹25,000</li>
+        <li><strong>Complete System:</strong> ₹75,000 - ₹2,00,000</li>
+      </ul>
+      
+      <h2>Installation Tips</h2>
+      <ul>
+        <li>Cover all entry points with cameras</li>
+        <li>Position cameras at 9-10 feet height</li>
+        <li>Ensure proper lighting for night vision</li>
+        <li>Use a combination of wired and wireless</li>
+        <li>Always have local backup storage</li>
+      </ul>
+    `,
+    relatedServices: ['security-systems', 'digital-door-locks', 'video-door-phones']
+  },
+  'dolby-atmos-guide': {
+    title: 'Dolby Atmos vs Traditional Surround Sound: Which is Better?',
+    metaTitle: 'Dolby Atmos vs Surround Sound | Complete Comparison | Qloud Tech',
+    metaDescription: 'Understand the difference between Dolby Atmos and 5.1/7.1 surround sound. Which is right for your home theatre? Expert analysis.',
+    category: 'Home Theatre',
+    author: 'Qloud Tech Team',
+    date: '2024-11-28',
+    readTime: '7 min read',
+    image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    content: `
+      <h2>Understanding Audio Formats</h2>
+      <p>When setting up a home theatre, choosing the right audio system is crucial. Let's compare the two main options.</p>
+      
+      <h2>Traditional Surround Sound (5.1/7.1)</h2>
+      <p>The tried-and-tested format that has been around for decades.</p>
+      <ul>
+        <li><strong>5.1:</strong> 5 speakers + 1 subwoofer (front L/R, center, surround L/R)</li>
+        <li><strong>7.1:</strong> Adds 2 rear surround speakers</li>
+        <li>Sound is channel-based (fixed to speakers)</li>
+        <li>Works well for most content</li>
+        <li>More affordable setup</li>
+      </ul>
+      
+      <h2>Dolby Atmos</h2>
+      <p>The next generation of immersive audio.</p>
+      <ul>
+        <li>Adds height/overhead speakers (5.1.2, 7.1.4, etc.)</li>
+        <li>Object-based audio (sound moves in 3D space)</li>
+        <li>Sounds can come from anywhere, including above</li>
+        <li>More immersive movie experience</li>
+        <li>Future-proof technology</li>
+      </ul>
+      
+      <h2>Key Differences</h2>
+      <table>
+        <tr><th>Feature</th><th>Traditional 5.1/7.1</th><th>Dolby Atmos</th></tr>
+        <tr><td>Sound Dimension</td><td>Horizontal only</td><td>Full 3D (including height)</td></tr>
+        <tr><td>Audio Type</td><td>Channel-based</td><td>Object-based</td></tr>
+        <tr><td>Immersion Level</td><td>Good</td><td>Excellent</td></tr>
+        <tr><td>Cost</td><td>Lower</td><td>Higher</td></tr>
+        <tr><td>Content Availability</td><td>All content</td><td>Growing library</td></tr>
+      </table>
+      
+      <h2>Which Should You Choose?</h2>
+      <p><strong>Choose Traditional 5.1/7.1 if:</strong></p>
+      <ul>
+        <li>You have a limited budget</li>
+        <li>Room height is under 9 feet</li>
+        <li>You mainly watch TV shows and older movies</li>
+      </ul>
+      <p><strong>Choose Dolby Atmos if:</strong></p>
+      <ul>
+        <li>You want the best possible experience</li>
+        <li>Room height is 9+ feet</li>
+        <li>You watch a lot of new movies and streaming content</li>
+        <li>You're building a dedicated theatre room</li>
+      </ul>
+      
+      <h2>Our Recommendation</h2>
+      <p>For most new installations, we recommend Dolby Atmos (at least 5.1.2) as it's becoming the standard for modern content. The price difference is worth the significant improvement in immersion.</p>
+    `,
+    relatedServices: ['home-theatre']
+  },
+  'smart-switches-guide': {
+    title: 'How to Choose the Right Smart Switches for Your Home',
+    metaTitle: 'Smart Switches Guide India | WiFi vs Zigbee vs Z-Wave | Qloud Tech',
+    metaDescription: 'Complete guide to choosing smart switches in India. Compare WiFi, Zigbee, Z-Wave. Best brands and prices. Expert recommendations.',
+    category: 'Home Automation',
+    author: 'Qloud Tech Team',
+    date: '2024-11-20',
+    readTime: '6 min read',
+    image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/99fx1zh1_keypads-bg-design-mob%20%281%29.webp',
+    content: `
+      <h2>Introduction to Smart Switches</h2>
+      <p>Smart switches are the foundation of any home automation system. They replace your traditional switches while adding remote control, scheduling, and integration capabilities.</p>
+      
+      <h2>Types of Smart Switches</h2>
+      
+      <h3>1. WiFi Smart Switches</h3>
+      <ul>
+        <li>Connect directly to your home WiFi</li>
+        <li>No hub required</li>
+        <li>Easy to install and set up</li>
+        <li>May cause WiFi congestion with many devices</li>
+      </ul>
+      
+      <h3>2. Zigbee/Z-Wave Switches</h3>
+      <ul>
+        <li>Require a hub/bridge</li>
+        <li>Very reliable mesh network</li>
+        <li>Don't interfere with WiFi</li>
+        <li>Better for whole-home automation</li>
+      </ul>
+      
+      <h3>3. Bluetooth Switches</h3>
+      <ul>
+        <li>Limited range</li>
+        <li>Best for single room use</li>
+        <li>No internet required</li>
+      </ul>
+      
+      <h2>Features to Look For</h2>
+      <ul>
+        <li><strong>Touch Panel:</strong> Glass or capacitive touch surface</li>
+        <li><strong>Dimming:</strong> If you want adjustable brightness</li>
+        <li><strong>Scheduling:</strong> Set on/off times automatically</li>
+        <li><strong>Scene Support:</strong> Combine multiple switches in one action</li>
+        <li><strong>Voice Control:</strong> Alexa/Google compatibility</li>
+        <li><strong>Manual Control:</strong> Should work without internet too</li>
+      </ul>
+      
+      <h2>Top Brands in India</h2>
+      <ol>
+        <li><strong>BuildTrack:</strong> Best for whole-home, Indian support</li>
+        <li><strong>Schneider (Wiser):</strong> Premium quality, reliable</li>
+        <li><strong>Anchor Roma:</strong> Budget-friendly WiFi switches</li>
+        <li><strong>Philips Hue:</strong> Great for lighting-focused setup</li>
+      </ol>
+      
+      <h2>Price Guide</h2>
+      <ul>
+        <li><strong>Basic WiFi switch:</strong> ₹1,500 - ₹2,500 per switch</li>
+        <li><strong>Touch panel (4 module):</strong> ₹3,000 - ₹5,000</li>
+        <li><strong>Premium touch panel:</strong> ₹6,000 - ₹12,000</li>
+        <li><strong>Smart dimmer:</strong> ₹3,500 - ₹7,000</li>
+      </ul>
+      
+      <h2>Installation Considerations</h2>
+      <ul>
+        <li>Most switches need neutral wire (check your wiring)</li>
+        <li>Replace one room at a time</li>
+        <li>Consider hiring a professional for safety</li>
+        <li>Ensure strong WiFi coverage near switches</li>
+      </ul>
+    `,
+    relatedServices: ['smart-switches', 'home-automation']
+  },
+  'video-door-phone-guide': {
+    title: 'Video Door Phone Installation: Complete Buyer\'s Guide',
+    metaTitle: 'Video Door Phone Guide India | Best Video Doorbells 2024 | Qloud Tech',
+    metaDescription: 'Everything about video door phones in India. Compare wired vs wireless, features, prices. Expert installation tips from Qloud Tech.',
+    category: 'Security',
+    author: 'Qloud Tech Team',
+    date: '2024-11-15',
+    readTime: '6 min read',
+    image: 'https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/suio62mb_Video%20Door%20Phone.png',
+    content: `
+      <h2>What is a Video Door Phone?</h2>
+      <p>A video door phone (also called video doorbell or video intercom) lets you see and speak to visitors at your door from inside your home or remotely via smartphone.</p>
+      
+      <h2>Types of Video Door Phones</h2>
+      
+      <h3>1. Wired Video Intercoms</h3>
+      <ul>
+        <li>Reliable connection, no battery concerns</li>
+        <li>Indoor monitor with screen</li>
+        <li>Best for new constructions</li>
+        <li>Professional installation required</li>
+      </ul>
+      
+      <h3>2. Wireless Video Doorbells</h3>
+      <ul>
+        <li>Easy DIY installation</li>
+        <li>View on smartphone app</li>
+        <li>Cloud storage for recordings</li>
+        <li>Battery or wired power options</li>
+      </ul>
+      
+      <h2>Key Features to Consider</h2>
+      <ul>
+        <li><strong>Video Quality:</strong> Minimum 1080p Full HD recommended</li>
+        <li><strong>Night Vision:</strong> Essential for 24/7 security</li>
+        <li><strong>Two-Way Audio:</strong> Speak to visitors</li>
+        <li><strong>Motion Detection:</strong> Alerts before doorbell press</li>
+        <li><strong>Cloud Storage:</strong> Access recordings anytime</li>
+        <li><strong>Smart Lock Integration:</strong> Open door remotely</li>
+      </ul>
+      
+      <h2>Best Brands in India</h2>
+      <ol>
+        <li><strong>Ring:</strong> Best smart doorbell (Amazon ecosystem)</li>
+        <li><strong>Godrej:</strong> Reliable wired intercoms</li>
+        <li><strong>Hikvision:</strong> Professional-grade systems</li>
+        <li><strong>CP Plus:</strong> Good value for money</li>
+        <li><strong>Panasonic:</strong> Quality wired systems</li>
+      </ol>
+      
+      <h2>Price Range</h2>
+      <ul>
+        <li><strong>Basic wired intercom:</strong> ₹5,000 - ₹10,000</li>
+        <li><strong>HD wired system:</strong> ₹12,000 - ₹25,000</li>
+        <li><strong>Smart doorbell (Ring/similar):</strong> ₹12,000 - ₹20,000</li>
+        <li><strong>Premium with multiple monitors:</strong> ₹30,000 - ₹60,000</li>
+      </ul>
+      
+      <h2>Installation Tips</h2>
+      <ul>
+        <li>Install at eye level (5-5.5 feet)</li>
+        <li>Ensure proper WiFi coverage at door</li>
+        <li>Consider weatherproofing for outdoor units</li>
+        <li>Test night vision capability</li>
+        <li>Set up cloud subscription for recordings</li>
+      </ul>
+    `,
+    relatedServices: ['video-door-phones', 'security-systems', 'digital-door-locks']
+  }
+};
+
+const BlogArticle = () => {
+  const { blogSlug } = useParams();
+  const article = blogData[blogSlug];
+
+  if (!article) {
+    return (
+      <div className="min-h-screen bg-[#0a0e1a] flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
+          <Link to="/" className="text-cyan-400 hover:text-cyan-300">← Back to Home</Link>
+        </div>
+      </div>
+    );
+  }
+
+  // Update page title and meta
+  React.useEffect(() => {
+    document.title = article.metaTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', article.metaDescription);
+  }, [article]);
+
+  const openWhatsApp = () => {
+    const message = `Hi, I read your article "${article.title}" and would like to learn more.`;
+    window.open(`https://wa.me/917204746043?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
+  const shareArticle = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: article.title,
+        url: window.location.href
+      });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#0a0e1a]">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e1a]/95 backdrop-blur-md shadow-lg">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+            <ArrowLeft className="w-5 h-5" />
+            <span>Back to Home</span>
+          </Link>
+          <div className="flex items-center gap-4">
+            <button onClick={shareArticle} className="text-gray-400 hover:text-white">
+              <Share2 className="w-5 h-5" />
+            </button>
+            <Button onClick={openWhatsApp} className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] text-black font-semibold px-6 py-2 rounded-lg">
+              Contact Us
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="pt-32 pb-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            {/* Category */}
+            <div className="mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full text-sm font-semibold text-black">
+                {article.category}
+              </span>
+            </div>
+            
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              {article.title}
+            </h1>
+            
+            {/* Meta */}
+            <div className="flex flex-wrap items-center gap-6 text-gray-400 mb-8">
+              <div className="flex items-center gap-2">
+                <User className="w-5 h-5" />
+                <span>{article.author}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5" />
+                <time dateTime={article.date}>
+                  {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5" />
+                <span>{article.readTime}</span>
+              </div>
+            </div>
+            
+            {/* Featured Image */}
+            <div className="rounded-2xl overflow-hidden mb-12">
+              <img 
+                src={article.image} 
+                alt={article.title}
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="pb-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <article 
+              className="prose prose-invert prose-lg max-w-none
+                prose-headings:text-white prose-headings:font-bold
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-cyan-400
+                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
+                prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
+                prose-ul:text-gray-300 prose-ul:my-6
+                prose-li:my-2
+                prose-strong:text-white
+                prose-table:border-collapse prose-table:w-full prose-table:my-8
+                prose-th:bg-gray-800 prose-th:p-4 prose-th:text-left prose-th:text-white prose-th:border prose-th:border-gray-700
+                prose-td:p-4 prose-td:border prose-td:border-gray-700 prose-td:text-gray-300"
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-[#0f1419]">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center p-12 bg-gradient-to-r from-cyan-500/10 to-cyan-600/5 rounded-3xl border border-cyan-500/30">
+            <h2 className="text-3xl font-bold text-white mb-4">Need Expert Help?</h2>
+            <p className="text-gray-400 mb-8">Our team is ready to help you with your smart home project</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button onClick={openWhatsApp} className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] text-black font-semibold px-8 py-6 rounded-full text-lg">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp Us
+              </Button>
+              <Button onClick={() => window.open('tel:+917204746043')} variant="outline" className="border-2 border-white/30 text-white px-8 py-6 rounded-full text-lg">
+                +91 72047 46043
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      {article.relatedServices && (
+        <section className="py-16">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-white mb-8">Related Services</h2>
+              <div className="flex flex-wrap gap-4">
+                {article.relatedServices.map((service) => (
+                  <Link 
+                    key={service}
+                    to={`/services/${service}`}
+                    className="px-6 py-3 bg-gradient-to-br from-gray-900/50 to-gray-900/30 border border-cyan-500/30 rounded-full text-cyan-400 hover:bg-cyan-500/10 transition-colors"
+                  >
+                    {service.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Footer */}
+      <footer className="py-8 border-t border-gray-800">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-gray-500">© 2024 Qloud Tech. All Rights Reserved. | Part of Qloud Smart Homes</p>
+          <Link to="/" className="text-cyan-400 hover:text-cyan-300 mt-2 inline-block">www.qloudsmarthomes.com</Link>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default BlogArticle;
