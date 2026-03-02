@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, User } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -17,8 +18,8 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "Smart Home Automation: Is It Worth the Investment?",
-    slug: "smart-home-automation-worth-investment",
+    title: "Smart Home Automation: Complete Buyer's Guide for Indian Homes",
+    slug: "smart-home-automation-guide",
     excerpt: "Discover the ROI of smart home automation. We break down costs, benefits, energy savings, and how automation adds value to your Bangalore home.",
     category: "Home Automation",
     author: "Qloud Tech Team",
@@ -28,8 +29,8 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Top 10 Security Systems for Indian Homes in 2024",
-    slug: "best-security-systems-india-2024",
+    title: "Top 10 Home Security Systems for Indian Homes in 2024",
+    slug: "security-systems-guide",
     excerpt: "Compare the best home security systems available in India. From smart cameras to digital locks, find the perfect security solution for your family.",
     category: "Security",
     author: "Qloud Tech Team",
@@ -40,7 +41,7 @@ const blogPosts = [
   {
     id: 4,
     title: "Dolby Atmos vs Traditional Surround Sound: Which is Better?",
-    slug: "dolby-atmos-vs-surround-sound",
+    slug: "dolby-atmos-guide",
     excerpt: "Understand the difference between Dolby Atmos and traditional 5.1/7.1 surround sound. Learn which system is right for your home theatre setup.",
     category: "Home Theatre",
     author: "Qloud Tech Team",
@@ -51,7 +52,7 @@ const blogPosts = [
   {
     id: 5,
     title: "How to Choose the Right Smart Switches for Your Home",
-    slug: "choosing-smart-switches-guide",
+    slug: "smart-switches-guide",
     excerpt: "A comprehensive guide to selecting smart switches. Compare touch switches, WiFi switches, and smart panels for your home automation needs.",
     category: "Home Automation",
     author: "Qloud Tech Team",
@@ -62,7 +63,7 @@ const blogPosts = [
   {
     id: 6,
     title: "Video Door Phone Installation: Complete Buyer's Guide",
-    slug: "video-door-phone-installation-guide",
+    slug: "video-door-phone-guide",
     excerpt: "Everything you need to know about video door phones. Features to look for, best brands in India, and professional installation tips.",
     category: "Security",
     author: "Qloud Tech Team",
@@ -163,13 +164,14 @@ const Blog = () => {
                     <span itemProp="author">{post.author}</span>
                   </div>
                   
-                  <Button
-                    variant="ghost"
-                    className="text-cyan-400 hover:text-cyan-300 p-0 h-auto text-sm font-semibold group/btn"
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="text-cyan-400 hover:text-cyan-300 p-0 h-auto text-sm font-semibold group/btn inline-flex items-center"
+                    data-testid={`blog-link-${post.slug}`}
                   >
                     Read More
                     <ArrowRight className="ml-1 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
+                  </Link>
                 </div>
               </div>
             </article>
@@ -178,11 +180,14 @@ const Blog = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button
-            className="bg-transparent border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-6 text-lg rounded-full transition-all duration-200"
-          >
-            View All Articles
-          </Button>
+          <Link to="/blog/home-theatre-setup-bangalore-guide">
+            <Button
+              className="bg-transparent border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-6 text-lg rounded-full transition-all duration-200"
+              data-testid="view-all-articles-btn"
+            >
+              View All Articles
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

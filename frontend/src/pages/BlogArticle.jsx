@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Share2, MessageCircle } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -434,6 +434,30 @@ const BlogArticle = () => {
   const { blogSlug } = useParams();
   const article = blogData[blogSlug];
 
+  // Update page title and meta - Must be before any conditional returns
+  useEffect(() => {
+    if (article) {
+      document.title = article.metaTitle;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', article.metaDescription);
+    }
+  }, [article]);
+
+  const openWhatsApp = () => {
+    if (!article) return;
+    const message = `Hi, I read your article "${article.title}" and would like to learn more.`;
+    window.open(`https://wa.me/917204746043?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
+  const shareArticle = () => {
+    if (navigator.share && article) {
+      navigator.share({
+        title: article.title,
+        url: window.location.href
+      });
+    }
+  };
+
   if (!article) {
     return (
       <div className="min-h-screen bg-[#0a0e1a] flex items-center justify-center">
@@ -444,27 +468,6 @@ const BlogArticle = () => {
       </div>
     );
   }
-
-  // Update page title and meta
-  React.useEffect(() => {
-    document.title = article.metaTitle;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', article.metaDescription);
-  }, [article]);
-
-  const openWhatsApp = () => {
-    const message = `Hi, I read your article "${article.title}" and would like to learn more.`;
-    window.open(`https://wa.me/917204746043?text=${encodeURIComponent(message)}`, '_blank');
-  };
-
-  const shareArticle = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: article.title,
-        url: window.location.href
-      });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-[#0a0e1a]">

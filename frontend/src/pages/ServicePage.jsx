@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Check, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -227,6 +227,21 @@ const ServicePage = () => {
   const { serviceSlug } = useParams();
   const service = servicesData[serviceSlug];
 
+  // Update page title and meta - Must be before any conditional returns
+  useEffect(() => {
+    if (service) {
+      document.title = service.metaTitle;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', service.metaDescription);
+    }
+  }, [service]);
+
+  const openWhatsApp = () => {
+    if (!service) return;
+    const message = `Hi, I'm interested in ${service.title}. Please provide more details.`;
+    window.open(`https://wa.me/917204746043?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
   if (!service) {
     return (
       <div className="min-h-screen bg-[#0a0e1a] flex items-center justify-center">
@@ -237,18 +252,6 @@ const ServicePage = () => {
       </div>
     );
   }
-
-  // Update page title and meta
-  React.useEffect(() => {
-    document.title = service.metaTitle;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', service.metaDescription);
-  }, [service]);
-
-  const openWhatsApp = () => {
-    const message = `Hi, I'm interested in ${service.title}. Please provide more details.`;
-    window.open(`https://wa.me/917204746043?text=${encodeURIComponent(message)}`, '_blank');
-  };
 
   return (
     <div className="min-h-screen bg-[#0a0e1a]">
