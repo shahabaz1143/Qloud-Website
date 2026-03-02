@@ -227,14 +227,82 @@ const ServicePage = () => {
   const { serviceSlug } = useParams();
   const service = servicesData[serviceSlug];
 
-  // Update page title and meta - Must be before any conditional returns
+  // Update page title, meta, and inject Schema.org structured data
   useEffect(() => {
     if (service) {
+      // Update title and meta description
       document.title = service.metaTitle;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute('content', service.metaDescription);
+
+      // Remove any existing service schema
+      const existingSchema = document.getElementById('service-schema');
+      if (existingSchema) existingSchema.remove();
+
+      // Create Service Schema.org structured data
+      const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Qloud Tech",
+          "image": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/h7afabwe_cropped-Untitled-design-6.png",
+          "telephone": "+91-7204746043",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          }
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Bangalore"
+        },
+        "url": `https://qloudsmarthomes.com/services/${serviceSlug}`,
+        "image": service.heroImage,
+        "offers": service.pricing.map(pkg => ({
+          "@type": "Offer",
+          "name": pkg.name,
+          "price": pkg.price.replace(/[₹,]/g, ''),
+          "priceCurrency": "INR",
+          "itemOffered": {
+            "@type": "Service",
+            "name": `${service.title} - ${pkg.name}`
+          }
+        }))
+      };
+
+      // Create FAQ Schema
+      const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": service.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      };
+
+      // Inject schema script
+      const script = document.createElement('script');
+      script.id = 'service-schema';
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify([serviceSchema, faqSchema]);
+      document.head.appendChild(script);
+
+      // Cleanup on unmount
+      return () => {
+        const schemaScript = document.getElementById('service-schema');
+        if (schemaScript) schemaScript.remove();
+      };
     }
-  }, [service]);
+  }, [service, serviceSlug]);
 
   const openWhatsApp = () => {
     if (!service) return;

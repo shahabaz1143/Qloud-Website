@@ -434,14 +434,89 @@ const BlogArticle = () => {
   const { blogSlug } = useParams();
   const article = blogData[blogSlug];
 
-  // Update page title and meta - Must be before any conditional returns
+  // Update page title, meta, and inject Schema.org structured data
   useEffect(() => {
     if (article) {
+      // Update title and meta description
       document.title = article.metaTitle;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute('content', article.metaDescription);
+
+      // Remove any existing blog schema
+      const existingSchema = document.getElementById('blog-schema');
+      if (existingSchema) existingSchema.remove();
+
+      // Create BlogPosting Schema.org structured data
+      const blogSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": article.title,
+        "description": article.metaDescription,
+        "image": article.image,
+        "author": {
+          "@type": "Organization",
+          "name": article.author,
+          "url": "https://qloudsmarthomes.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Qloud Tech",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/h7afabwe_cropped-Untitled-design-6.png"
+          }
+        },
+        "datePublished": article.date,
+        "dateModified": article.date,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://qloudsmarthomes.com/blog/${blogSlug}`
+        },
+        "articleSection": article.category,
+        "wordCount": article.content.split(/\s+/).length,
+        "url": `https://qloudsmarthomes.com/blog/${blogSlug}`
+      };
+
+      // Create BreadcrumbList Schema
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qloudsmarthomes.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://qloudsmarthomes.com/#blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": article.title,
+            "item": `https://qloudsmarthomes.com/blog/${blogSlug}`
+          }
+        ]
+      };
+
+      // Inject schema script
+      const script = document.createElement('script');
+      script.id = 'blog-schema';
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify([blogSchema, breadcrumbSchema]);
+      document.head.appendChild(script);
+
+      // Cleanup on unmount
+      return () => {
+        const schemaScript = document.getElementById('blog-schema');
+        if (schemaScript) schemaScript.remove();
+      };
     }
-  }, [article]);
+  }, [article, blogSlug]);
 
   const openWhatsApp = () => {
     if (!article) return;

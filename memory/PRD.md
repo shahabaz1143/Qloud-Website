@@ -65,7 +65,9 @@ A 100% static React website for Qloud Smart Homes featuring:
 ### ✅ Completed
 1. **Multi-page Architecture** - React Router with dedicated service & blog pages
 2. **SEO Optimization**:
-   - Schema.org markup (LocalBusiness, Services, FAQ, Reviews)
+   - Schema.org markup (LocalBusiness, Services, FAQ, Reviews) on homepage
+   - **Dynamic Service Schema** on each service page (Service + FAQPage types)
+   - **Dynamic BlogPosting Schema** on each blog page (BlogPosting + BreadcrumbList types)
    - Dynamic page titles for each route
    - Comprehensive sitemap with all URLs
    - Meta description updates per page
