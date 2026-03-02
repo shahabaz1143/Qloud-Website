@@ -37,17 +37,26 @@ A 100% static React website for Qloud Smart Homes featuring:
 
 ### Page Structure
 ```
-/                           → Homepage (single-page sections)
-/services/home-theatre      → Home Theatre Service Page
-/services/home-automation   → Home Automation Service Page
-/services/security-systems  → Security Systems Service Page
-/services/smart-switches    → Smart Switches Service Page
-/services/networking        → Networking Solutions Page
-/services/digital-door-locks→ Digital Door Locks Page
-/services/video-door-phones → Video Door Phones Page
-/services/motorised-gates   → Motorised Gates Page
-/blog/[article-slug]        → Individual Blog Article Pages (6 articles)
-/company-profile.html       → Downloadable Company Profile
+/                                → Homepage (single-page sections)
+/services/home-theatre           → Home Theatre Service Page
+/services/home-automation        → Home Automation Service Page
+/services/security-systems       → Security Systems Service Page
+/services/smart-switches         → Smart Switches Service Page
+/services/networking             → Networking Solutions Page
+/services/digital-door-locks     → Digital Door Locks Page
+/services/video-door-phones      → Video Door Phones Page
+/services/motorised-gates        → Motorised Gates Page
+/blog/[article-slug]             → Individual Blog Article Pages (6 articles)
+
+# Location-Specific Landing Pages (Local SEO)
+/home-theatre-bangalore          → Home Theatre in Bangalore
+/home-automation-bangalore       → Home Automation in Bangalore
+/security-systems-bangalore      → Security Systems in Bangalore
+/smart-switches-bangalore        → Smart Switches in Bangalore
+/digital-locks-bangalore         → Digital Locks in Bangalore
+/video-doorbell-bangalore        → Video Doorbells in Bangalore
+
+/company-profile.html            → Downloadable Company Profile
 ```
 
 ### Key Files
@@ -64,7 +73,14 @@ A 100% static React website for Qloud Smart Homes featuring:
 
 ### ✅ Completed
 1. **Multi-page Architecture** - React Router with dedicated service & blog pages
-2. **SEO Optimization**:
+2. **Location-Specific Landing Pages** - 6 Bangalore-targeted pages for local SEO:
+   - `/home-theatre-bangalore`
+   - `/home-automation-bangalore`
+   - `/security-systems-bangalore`
+   - `/smart-switches-bangalore`
+   - `/digital-locks-bangalore`
+   - `/video-doorbell-bangalore`
+3. **SEO Optimization**:
    - Schema.org markup (LocalBusiness, Services, FAQ, Reviews) on homepage
    - **Dynamic Service Schema** on each service page (Service + FAQPage types)
    - **Dynamic BlogPosting Schema** on each blog page (BlogPosting + BreadcrumbList types)

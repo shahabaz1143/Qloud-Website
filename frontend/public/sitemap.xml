@@ -8,6 +8,44 @@
     <priority>1.0</priority>
   </url>
   
+  <!-- Location-Specific Landing Pages (Local SEO) -->
+  <url>
+    <loc>https://qloudsmarthomes.com/home-theatre-bangalore</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://qloudsmarthomes.com/home-automation-bangalore</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://qloudsmarthomes.com/security-systems-bangalore</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://qloudsmarthomes.com/smart-switches-bangalore</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://qloudsmarthomes.com/digital-locks-bangalore</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://qloudsmarthomes.com/video-doorbell-bangalore</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
   <!-- Service Pages -->
   <url>
     <loc>https://qloudsmarthomes.com/services/home-theatre</loc>
