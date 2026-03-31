@@ -385,6 +385,235 @@ const locationData = {
       { name: 'Raj K.', area: 'HSR Layout', text: 'Professional installation, clean wiring. Very happy with the service.' }
     ],
     relatedService: 'security-systems'
+  },
+  // More Neighborhood Pages for Hyper-Local SEO
+  'home-theatre-hsr-layout': {
+    service: 'Home Theatre',
+    location: 'HSR Layout, Bangalore',
+    title: 'Home Theatre Installation in HSR Layout',
+    metaTitle: 'Home Theatre Installation HSR Layout | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Premium home theatre installation in HSR Layout, Bangalore. Dolby Atmos experts for apartments & villas in Sector 1-7. Starting ₹2.29L. Free consultation!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'HSR Layout is one of Bangalore\'s most sought-after residential areas, home to tech professionals who appreciate premium entertainment. Qloud Tech has installed 35+ home theatres in HSR Layout, from compact apartment setups to dedicated villa cinema rooms.',
+    areas: ['HSR Sector 1', 'HSR Sector 2', 'HSR Sector 3', 'HSR Sector 4', 'HSR Sector 5', 'HSR Sector 6', 'HSR Sector 7', 'BTM Layout', 'Bommanahalli', 'Koramangala'],
+    features: [
+      'Compact Dolby Atmos for apartments',
+      'In-wall & in-ceiling speakers',
+      '4K short-throw projectors',
+      'Acoustic treatment solutions',
+      'Sound isolation for flats',
+      'Smart home integration'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Apartment', price: '₹2.29L', desc: 'Space-optimized 5.1' },
+        { name: 'Premium', price: '₹7.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Villa', price: '₹12L+', desc: 'Full cinema room' }
+      ]
+    },
+    stats: [
+      { value: '35+', label: 'HSR Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '3 Days', label: 'Avg Installation' }
+    ],
+    testimonials: [
+      { name: 'Rohit S.', area: 'HSR Sector 2', text: 'Perfect setup for our 3BHK apartment. The sound is incredible!' },
+      { name: 'Anjali P.', area: 'HSR Sector 4', text: 'Neighbors don\'t complain thanks to proper acoustic treatment.' },
+      { name: 'Vikram T.', area: 'HSR Sector 7', text: 'Best investment for WFH entertainment. Movie nights are amazing!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-indiranagar': {
+    service: 'Home Theatre',
+    location: 'Indiranagar, Bangalore',
+    title: 'Home Theatre Installation in Indiranagar',
+    metaTitle: 'Home Theatre Installation Indiranagar | Premium AV | Qloud Tech',
+    metaDescription: 'Luxury home theatre installation in Indiranagar, Bangalore. Serving 100 Feet Road, Defence Colony, HAL areas. Dolby Atmos experts. Starting ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Indiranagar\'s upscale homes deserve premium home theatre installations. With many independent houses and luxury apartments, Indiranagar is perfect for high-end Dolby Atmos setups. Qloud Tech brings cinema-quality experiences to Indiranagar residents.',
+    areas: ['100 Feet Road', 'Defence Colony', 'HAL 2nd Stage', 'HAL 3rd Stage', 'Domlur', 'Cambridge Layout', 'Ulsoor', 'Old Airport Road', 'Jeevanbhima Nagar', 'New BEL Road'],
+    features: [
+      'Premium Dolby Atmos 7.1.4',
+      'Sony/Epson 4K laser projectors',
+      'JBL Synthesis speakers',
+      'Dedicated cinema rooms',
+      'Acoustic design & treatment',
+      'Custom seating solutions'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 surround system' },
+        { name: 'Premium', price: '₹9.99L', desc: '7.1.2 Dolby Atmos' },
+        { name: 'Luxury', price: '₹15L+', desc: 'Reference cinema' }
+      ]
+    },
+    stats: [
+      { value: '25+', label: 'Indiranagar Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '₹15L+', label: 'Avg Project Value' }
+    ],
+    testimonials: [
+      { name: 'Aditya M.', area: 'Defence Colony', text: 'The JBL Synthesis setup is phenomenal. Better than any cinema!' },
+      { name: 'Priya R.', area: '100 Feet Road', text: 'Transformed our basement into a proper cinema. Guests are amazed!' },
+      { name: 'Kiran B.', area: 'HAL 2nd Stage', text: 'Professional team, premium equipment, flawless installation.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-jp-nagar': {
+    service: 'Home Theatre',
+    location: 'JP Nagar, Bangalore',
+    title: 'Home Theatre Installation in JP Nagar',
+    metaTitle: 'Home Theatre Installation JP Nagar | Cinema Rooms | Qloud Tech',
+    metaDescription: 'Expert home theatre installation in JP Nagar, Bangalore. Serving all phases 1-9, Sarakki, Bannerghatta Road. Dolby Atmos. Starting ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'JP Nagar offers a perfect mix of independent houses and apartments, ideal for home theatre installations. Qloud Tech has extensive experience serving JP Nagar across all phases, delivering cinema experiences tailored to each home.',
+    areas: ['JP Nagar Phase 1', 'JP Nagar Phase 2', 'JP Nagar Phase 3', 'JP Nagar Phase 4', 'JP Nagar Phase 5', 'JP Nagar Phase 6', 'JP Nagar Phase 7', 'JP Nagar Phase 8', 'JP Nagar Phase 9', 'Sarakki'],
+    features: [
+      'Dolby Atmos configurations',
+      '4K projection systems',
+      'Quality speaker brands',
+      'Room acoustic design',
+      'Soundproofing solutions',
+      'Smart control integration'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Basic', price: '₹2.29L', desc: '5.1 HD system' },
+        { name: 'Standard', price: '₹6.99L', desc: '5.1.2 Atmos' },
+        { name: 'Premium', price: '₹10L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '40+', label: 'JP Nagar Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5 Days', label: 'Avg Installation' }
+    ],
+    testimonials: [
+      { name: 'Suresh N.', area: 'JP Nagar Phase 3', text: 'Excellent work! Our home theatre is the envy of the neighborhood.' },
+      { name: 'Lakshmi V.', area: 'JP Nagar Phase 6', text: 'Great value for money. Professional installation and support.' },
+      { name: 'Ramesh K.', area: 'Sarakki', text: 'The team understood exactly what we wanted. Perfect execution!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-electronic-city': {
+    service: 'Home Theatre',
+    location: 'Electronic City, Bangalore',
+    title: 'Home Theatre Installation in Electronic City',
+    metaTitle: 'Home Theatre Installation Electronic City | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Professional home theatre installation in Electronic City, Bangalore. Phase 1 & 2, Neeladri Nagar, Doddathogur. Starting ₹2.29L. Free site visit!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Electronic City is home to IT professionals who appreciate quality entertainment. With many gated communities and apartments, it\'s perfect for home theatre installations. Qloud Tech serves Electronic City Phase 1 & 2 with premium cinema solutions.',
+    areas: ['Electronic City Phase 1', 'Electronic City Phase 2', 'Neeladri Nagar', 'Doddathogur', 'Hebbagodi', 'Bommasandra', 'Chandapura', 'Hosa Road', 'Begur', 'Akshayanagar'],
+    features: [
+      'Apartment-optimized setups',
+      'Dolby Atmos 5.1.2/7.1.2',
+      'Weekend installation available',
+      'Minimal disruption',
+      'After-hours support',
+      'Remote troubleshooting'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Starter', price: '₹2.29L', desc: 'Apartment 5.1' },
+        { name: 'Pro', price: '₹5.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Elite', price: '₹9L+', desc: 'Premium 7.1.2' }
+      ]
+    },
+    stats: [
+      { value: '45+', label: 'EC Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: 'Weekend', label: 'Installation Available' }
+    ],
+    testimonials: [
+      { name: 'Naveen G.', area: 'Phase 1', text: 'Weekend installation was super convenient. No leave needed!' },
+      { name: 'Deepa S.', area: 'Neeladri Nagar', text: 'Perfect for our apartment. The acoustic treatment is excellent.' },
+      { name: 'Arjun M.', area: 'Phase 2', text: 'Best after-work relaxation. The Atmos experience is mind-blowing!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'smart-home-hsr-layout': {
+    service: 'Home Automation',
+    location: 'HSR Layout, Bangalore',
+    title: 'Smart Home Automation in HSR Layout',
+    metaTitle: 'Smart Home Automation HSR Layout | Home Automation | Qloud Tech',
+    metaDescription: 'Complete smart home automation in HSR Layout, Bangalore. Smart lighting, AC control, security for apartments. Serving all sectors. Starting ₹50K.',
+    heroImage: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    description: 'Transform your HSR Layout home into a smart home with Qloud Tech. We specialize in apartment-friendly automation solutions that integrate lighting, climate control, and security into one seamless system.',
+    areas: ['HSR Sector 1', 'HSR Sector 2', 'HSR Sector 3', 'HSR Sector 4', 'HSR Sector 5', 'HSR Sector 6', 'HSR Sector 7', 'BTM Layout', 'Bommanahalli', 'Koramangala'],
+    features: [
+      'Smart lighting scenes',
+      'AC & fan automation',
+      'Voice control (Alexa/Google)',
+      'Smart switches & panels',
+      'Security integration',
+      'App control anywhere'
+    ],
+    pricing: {
+      starting: '₹50,000',
+      packages: [
+        { name: '1-2 Rooms', price: '₹50K', desc: 'Basic automation' },
+        { name: 'Full Flat', price: '₹1.2L', desc: '2/3BHK complete' },
+        { name: 'Premium', price: '₹2L+', desc: 'Advanced features' }
+      ]
+    },
+    stats: [
+      { value: '60+', label: 'HSR Homes' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '25%', label: 'Energy Savings' }
+    ],
+    testimonials: [
+      { name: 'Anand K.', area: 'HSR Sector 3', text: 'Alexa controls everything now. So convenient!' },
+      { name: 'Meghna R.', area: 'HSR Sector 5', text: 'Energy savings are real. Bill reduced significantly.' },
+      { name: 'Sanjay P.', area: 'HSR Sector 1', text: 'The app control is amazing. Can manage home from office.' }
+    ],
+    relatedService: 'home-automation'
+  },
+  'dolby-atmos-bangalore': {
+    service: 'Dolby Atmos',
+    location: 'Bangalore',
+    title: 'Dolby Atmos Installation in Bangalore',
+    metaTitle: 'Dolby Atmos Installation Bangalore | 5.1.2, 7.1.2, 9.1.4 | Qloud Tech',
+    metaDescription: 'Certified Dolby Atmos installation in Bangalore. 5.1.2, 7.1.2, 9.1.4 configurations. Immersive 3D audio experience. Starting ₹4.5L. Free demo!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Experience true immersive audio with Dolby Atmos in Bangalore. Qloud Tech is a certified Dolby Atmos installer, delivering object-based 3D surround sound that puts you inside the action. From 5.1.2 entry-level to 9.1.4 reference systems.',
+    areas: ['Whitefield', 'Koramangala', 'Indiranagar', 'HSR Layout', 'JP Nagar', 'Jayanagar', 'Electronic City', 'Sarjapur Road', 'Marathahalli', 'Bannerghatta Road'],
+    features: [
+      '5.1.2 / 7.1.2 / 9.1.4 configs',
+      'Height/ceiling speakers',
+      'Dolby Atmos-enabled AVR',
+      'Acoustic room calibration',
+      'Object-based 3D audio',
+      'Atmos music support'
+    ],
+    pricing: {
+      starting: '₹4,50,000',
+      packages: [
+        { name: '5.1.2 Entry', price: '₹4.5L', desc: '2 height speakers' },
+        { name: '7.1.2 Standard', price: '₹8L', desc: '4 height speakers' },
+        { name: '9.1.4 Reference', price: '₹15L+', desc: 'Full Atmos experience' }
+      ]
+    },
+    stats: [
+      { value: '80+', label: 'Atmos Installs' },
+      { value: 'Certified', label: 'Dolby Partner' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '3D Audio', label: 'Immersive Sound' }
+    ],
+    testimonials: [
+      { name: 'Rajiv K.', area: 'Whitefield', text: 'The overhead effects are incredible. Rain actually sounds above you!' },
+      { name: 'Suma M.', area: 'Koramangala', text: '7.1.2 setup transformed our movie experience. Cinema quality!' },
+      { name: 'Prashanth B.', area: 'JP Nagar', text: 'Dolby Atmos music is a revelation. Didn\'t know stereo could sound this good!' }
+    ],
+    relatedService: 'home-theatre'
   }
 };
 

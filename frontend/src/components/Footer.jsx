@@ -61,14 +61,14 @@ const Footer = () => {
 
           {/* Bangalore Services - Takes 2 columns (NEW) */}
           <div className="col-span-6 md:col-span-2">
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Bangalore</h4>
+            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Locations</h4>
             <ul className="space-y-2.5">
-              <li><Link to="/home-theatre-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Theatre</Link></li>
-              <li><Link to="/home-automation-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Automation</Link></li>
-              <li><Link to="/security-systems-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Security Systems</Link></li>
               <li><Link to="/home-theatre-whitefield" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Whitefield</Link></li>
               <li><Link to="/home-theatre-koramangala" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Koramangala</Link></li>
-              <li><Link to="/cctv-installation-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">CCTV Installation</Link></li>
+              <li><Link to="/home-theatre-hsr-layout" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">HSR Layout</Link></li>
+              <li><Link to="/home-theatre-indiranagar" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Indiranagar</Link></li>
+              <li><Link to="/home-theatre-jp-nagar" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">JP Nagar</Link></li>
+              <li><Link to="/home-theatre-electronic-city" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Electronic City</Link></li>
             </ul>
           </div>
 
