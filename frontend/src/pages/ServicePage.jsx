@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Check, Phone, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Check, Phone, MessageCircle, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 // Service data
@@ -289,11 +289,37 @@ const ServicePage = () => {
         }))
       };
 
+      // Create BreadcrumbList Schema
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qloudsmarthomes.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://qloudsmarthomes.com/#services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": service.title,
+            "item": `https://qloudsmarthomes.com/services/${serviceSlug}`
+          }
+        ]
+      };
+
       // Inject schema script
       const script = document.createElement('script');
       script.id = 'service-schema';
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify([serviceSchema, faqSchema]);
+      script.textContent = JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]);
       document.head.appendChild(script);
 
       // Cleanup on unmount
@@ -344,6 +370,15 @@ const ServicePage = () => {
         </div>
         
         <div className="container mx-auto px-6 relative z-10 pt-16">
+          {/* Breadcrumbs */}
+          <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
+            <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
+            <ChevronRight className="w-4 h-4" />
+            <Link to="/#services" className="hover:text-cyan-400 transition-colors">Services</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-cyan-400">{service.title}</span>
+          </nav>
+          
           <div className="max-w-4xl">
             <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
               OUR SERVICES

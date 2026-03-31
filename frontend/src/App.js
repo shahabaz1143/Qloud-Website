@@ -11,6 +11,7 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Toaster } from './components/ui/sonner';
@@ -61,6 +62,7 @@ const HomePage = () => {
       <Testimonials />
       <Gallery />
       <Blog />
+      <FAQ />
       <Contact />
       <Footer />
       <WhatsAppButton />

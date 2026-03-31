@@ -232,6 +232,159 @@ const locationData = {
       { name: 'Mohan K.', area: 'Electronic City', text: 'Two-way audio is great for talking to visitors when not home.' }
     ],
     relatedService: 'video-door-phones'
+  },
+  // Neighborhood-specific pages for hyper-local SEO
+  'home-theatre-whitefield': {
+    service: 'Home Theatre',
+    location: 'Whitefield, Bangalore',
+    title: 'Home Theatre Installation in Whitefield',
+    metaTitle: 'Home Theatre Installation Whitefield | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Premium home theatre installation in Whitefield, Bangalore. Dolby Atmos experts for villas & apartments in ITPL, Brookefield, Kadugodi. Starting ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Whitefield is home to Bangalore\'s finest villas and luxury apartments - perfect for premium home theatre installations. Qloud Tech has installed 50+ home theatres in Whitefield, including projects in Prestige Lakeside Habitat, Brigade Cornerstone, Sobha Dream Acres, and Adarsh Palm Retreat.',
+    areas: ['ITPL', 'Brookefield', 'Kadugodi', 'Varthur', 'Hoodi', 'Kundalahalli', 'Mahadevapura', 'Hope Farm Junction', 'Prestige Shantiniketan', 'Palm Meadows'],
+    features: [
+      'Dolby Atmos 5.1.2 / 7.1.2 configurations',
+      '4K laser projectors from Sony & Epson',
+      'Premium JBL & Denon speakers',
+      'Full acoustic treatment',
+      'Custom theater seating',
+      'Smart home integration'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 system, 4K projector' },
+        { name: 'Silver', price: '₹9.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Gold', price: '₹12.39L', desc: '7.1.2 Premium setup' }
+      ]
+    },
+    stats: [
+      { value: '50+', label: 'Whitefield Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '24hr', label: 'Response Time' }
+    ],
+    testimonials: [
+      { name: 'Suresh V.', area: 'Prestige Lakeside', text: 'Best home theatre in our society! Everyone is amazed by the Dolby Atmos experience.' },
+      { name: 'Neha R.', area: 'Brigade Cornerstone', text: 'Professional installation, minimal disruption. The acoustic treatment is superb.' },
+      { name: 'Amit K.', area: 'Palm Meadows', text: 'Transformed our villa basement into a proper cinema. Worth every rupee!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-koramangala': {
+    service: 'Home Theatre',
+    location: 'Koramangala, Bangalore',
+    title: 'Home Theatre Installation in Koramangala',
+    metaTitle: 'Home Theatre Installation Koramangala | Cinema Room Experts | Qloud Tech',
+    metaDescription: 'Expert home theatre installation in Koramangala, Bangalore. Serving 1st-8th Block, HSR Layout adjacent areas. Dolby Atmos specialists. Starting ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Koramangala\'s premium apartments and independent houses deserve world-class home theatres. Qloud Tech specializes in compact home theatre solutions for Koramangala homes, maximizing space without compromising on audio-visual quality.',
+    areas: ['1st Block', '2nd Block', '3rd Block', '4th Block', '5th Block', '6th Block', '7th Block', '8th Block', 'Ejipura', 'Jakkasandra'],
+    features: [
+      'Space-optimized Dolby Atmos setups',
+      'In-ceiling & in-wall speakers',
+      '4K short-throw projectors',
+      'Acoustic panels for apartments',
+      'Sound isolation solutions',
+      'Voice control integration'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Compact', price: '₹2.29L', desc: 'Apartment-friendly 5.1' },
+        { name: 'Premium', price: '₹7.99L', desc: '5.1.2 space-optimized' },
+        { name: 'Ultra', price: '₹10L+', desc: 'Full Atmos experience' }
+      ]
+    },
+    stats: [
+      { value: '40+', label: 'Koramangala Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '2km', label: 'Service Radius' }
+    ],
+    testimonials: [
+      { name: 'Rahul S.', area: '4th Block', text: 'Didn\'t think our 3BHK could have a home theatre. Qloud made it happen!' },
+      { name: 'Deepa M.', area: '6th Block', text: 'The in-ceiling speakers are invisible but the sound is incredible.' },
+      { name: 'Karthik B.', area: 'Ejipura', text: 'Neighbors can\'t hear a thing thanks to the soundproofing. Perfect!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'smart-home-whitefield': {
+    service: 'Home Automation',
+    location: 'Whitefield, Bangalore',
+    title: 'Smart Home Automation in Whitefield',
+    metaTitle: 'Smart Home Automation Whitefield | Home Automation Experts | Qloud Tech',
+    metaDescription: 'Complete smart home automation in Whitefield, Bangalore. Smart lighting, AC control, security integration for villas & apartments. Starting ₹50K.',
+    heroImage: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    description: 'Make your Whitefield home smarter with Qloud Tech. We specialize in smart home automation for Whitefield\'s premium villas and apartments, integrating lighting, climate, security, and entertainment into one seamless system.',
+    areas: ['ITPL', 'Brookefield', 'Kadugodi', 'Varthur', 'Hoodi', 'Kundalahalli', 'Mahadevapura', 'Hope Farm Junction', 'Prestige Shantiniketan', 'Palm Meadows'],
+    features: [
+      'Smart lighting scenes',
+      'AC & fan automation',
+      'Motorized curtains',
+      'Security integration',
+      'Voice control (Alexa/Google)',
+      'Energy monitoring'
+    ],
+    pricing: {
+      starting: '₹50,000',
+      packages: [
+        { name: 'Starter', price: '₹50K', desc: '1-2 rooms automated' },
+        { name: 'Standard', price: '₹1.5L', desc: 'Whole home solution' },
+        { name: 'Villa', price: '₹3L+', desc: 'Complete smart villa' }
+      ]
+    },
+    stats: [
+      { value: '75+', label: 'Whitefield Homes' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '30%', label: 'Energy Savings' }
+    ],
+    testimonials: [
+      { name: 'Pradeep R.', area: 'Prestige Lakeside', text: 'Our 4BHK is fully automated now. The app control is amazing!' },
+      { name: 'Swati K.', area: 'Sobha Dream Acres', text: 'Voice control for lights and AC - feels like living in the future.' },
+      { name: 'Venkat M.', area: 'Palm Meadows', text: 'Energy bill reduced by 35% after automation. Great investment!' }
+    ],
+    relatedService: 'home-automation'
+  },
+  'cctv-installation-bangalore': {
+    service: 'CCTV Installation',
+    location: 'Bangalore',
+    title: 'CCTV Camera Installation in Bangalore',
+    metaTitle: 'CCTV Installation Bangalore | HD Security Cameras | Qloud Tech',
+    metaDescription: 'Professional CCTV camera installation in Bangalore. 2MP/4MP/4K cameras, night vision, mobile viewing. Serving all areas. Starting ₹15K. Free site survey!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/d3e2luzr_download.avif',
+    description: 'Secure your Bangalore property with professional CCTV installation from Qloud Tech. We install HD, Full HD, and 4K cameras from Hikvision, Dahua, and CP Plus with mobile app viewing, night vision, and cloud storage options.',
+    areas: ['Whitefield', 'Koramangala', 'Indiranagar', 'HSR Layout', 'Jayanagar', 'JP Nagar', 'Marathahalli', 'Sarjapur Road', 'Electronic City', 'Bannerghatta Road'],
+    features: [
+      '2MP/4MP/4K camera options',
+      'Night vision up to 30m',
+      'Mobile app live viewing',
+      'Motion detection alerts',
+      'Cloud & local storage',
+      'Weatherproof outdoor cameras'
+    ],
+    pricing: {
+      starting: '₹15,000',
+      packages: [
+        { name: '4 Camera', price: '₹15-25K', desc: 'HD cameras + DVR' },
+        { name: '8 Camera', price: '₹30-50K', desc: '4K cameras + NVR' },
+        { name: '16 Camera', price: '₹75K+', desc: 'Full property coverage' }
+      ]
+    },
+    stats: [
+      { value: '500+', label: 'CCTV Installations' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '1 Day', label: 'Installation Time' }
+    ],
+    testimonials: [
+      { name: 'Prakash G.', area: 'Electronic City', text: 'The 4K cameras are crystal clear. Can see license plates from 20 meters!' },
+      { name: 'Suma R.', area: 'Whitefield', text: 'Mobile viewing is so convenient. Check on home anytime from office.' },
+      { name: 'Raj K.', area: 'HSR Layout', text: 'Professional installation, clean wiring. Very happy with the service.' }
+    ],
+    relatedService: 'security-systems'
   }
 };
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User, Share2, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Share2, MessageCircle, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 // Blog data with full content
@@ -568,6 +568,15 @@ const BlogArticle = () => {
       <section className="pt-32 pb-12">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
+            {/* Breadcrumbs */}
+            <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
+              <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
+              <ChevronRight className="w-4 h-4" />
+              <Link to="/#blog" className="hover:text-cyan-400 transition-colors">Blog</Link>
+              <ChevronRight className="w-4 h-4" />
+              <span className="text-cyan-400 truncate max-w-[200px]">{article.title}</span>
+            </nav>
+            
             {/* Category */}
             <div className="mb-4">
               <span className="px-4 py-2 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full text-sm font-semibold text-black">

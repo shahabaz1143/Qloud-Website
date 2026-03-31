@@ -66,9 +66,9 @@ const Footer = () => {
               <li><Link to="/home-theatre-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Theatre</Link></li>
               <li><Link to="/home-automation-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Automation</Link></li>
               <li><Link to="/security-systems-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Security Systems</Link></li>
-              <li><Link to="/smart-switches-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Smart Switches</Link></li>
-              <li><Link to="/digital-locks-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Digital Locks</Link></li>
-              <li><Link to="/video-doorbell-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Video Doorbells</Link></li>
+              <li><Link to="/home-theatre-whitefield" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Whitefield</Link></li>
+              <li><Link to="/home-theatre-koramangala" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Koramangala</Link></li>
+              <li><Link to="/cctv-installation-bangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">CCTV Installation</Link></li>
             </ul>
           </div>
 
