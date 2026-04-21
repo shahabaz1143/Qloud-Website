@@ -614,6 +614,235 @@ const locationData = {
       { name: 'Prashanth B.', area: 'JP Nagar', text: 'Dolby Atmos music is a revelation. Didn\'t know stereo could sound this good!' }
     ],
     relatedService: 'home-theatre'
+  },
+  // More neighborhood pages
+  'home-theatre-jayanagar': {
+    service: 'Home Theatre',
+    location: 'Jayanagar, Bangalore',
+    title: 'Home Theatre Installation in Jayanagar',
+    metaTitle: 'Home Theatre Installation Jayanagar | Cinema Rooms | Qloud Tech',
+    metaDescription: 'Premium home theatre installation in Jayanagar, Bangalore. Serving all blocks 1-9, Basavanagudi. Dolby Atmos experts. Starting ₹2.29L. Free consultation!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Jayanagar is one of Bangalore\'s oldest and most prestigious residential areas. With spacious independent houses and premium apartments, it\'s ideal for home theatre installations. Qloud Tech has served Jayanagar families for over 8 years.',
+    areas: ['Jayanagar 1st Block', 'Jayanagar 2nd Block', 'Jayanagar 3rd Block', 'Jayanagar 4th Block', 'Jayanagar 5th Block', 'Jayanagar 9th Block', 'Basavanagudi', 'Hanumanthanagar', 'Banashankari', 'BTM Layout'],
+    features: [
+      'Dolby Atmos systems',
+      '4K laser projectors',
+      'Premium speaker brands',
+      'Acoustic room treatment',
+      'Custom seating options',
+      'Smart integration'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 surround' },
+        { name: 'Premium', price: '₹7.99L', desc: '5.1.2 Atmos' },
+        { name: 'Luxury', price: '₹12L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '30+', label: 'Jayanagar Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5 Days', label: 'Avg Installation' }
+    ],
+    testimonials: [
+      { name: 'Ramesh N.', area: '4th Block', text: 'Best decision we made! The home theatre is family\'s favorite spot now.' },
+      { name: 'Geetha S.', area: '3rd Block', text: 'Professional service from start to finish. Highly recommend!' },
+      { name: 'Suresh K.', area: '9th Block', text: 'The Dolby Atmos experience is unmatched. Better than any cinema!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-sarjapur': {
+    service: 'Home Theatre',
+    location: 'Sarjapur Road, Bangalore',
+    title: 'Home Theatre Installation in Sarjapur Road',
+    metaTitle: 'Home Theatre Installation Sarjapur Road | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Expert home theatre installation in Sarjapur Road, Bangalore. Serving Wipro Junction, Carmelaram, Bellandur. Starting ₹2.29L. Weekend installation available!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Sarjapur Road has emerged as a premium residential corridor with many gated communities and luxury apartments. Qloud Tech serves the entire Sarjapur stretch with premium home theatre solutions, offering weekend installation for IT professionals.',
+    areas: ['Wipro Junction', 'Carmelaram', 'Bellandur', 'Haralur', 'HSR Layout', 'Kasavanahalli', 'Dommasandra', 'Sarjapur', 'Kodathi', 'Harlur Road'],
+    features: [
+      'Weekend installation option',
+      'Dolby Atmos for apartments',
+      '4K/8K projection',
+      'Acoustic solutions',
+      'Smart control systems',
+      'Flexible EMI options'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Apartment', price: '₹2.29L', desc: 'Space-efficient 5.1' },
+        { name: 'Villa', price: '₹8.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Premium', price: '₹12L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '55+', label: 'Sarjapur Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: 'Weekend', label: 'Installation OK' }
+    ],
+    testimonials: [
+      { name: 'Anil P.', area: 'Carmelaram', text: 'Weekend installation was so convenient. No leave needed!' },
+      { name: 'Sneha K.', area: 'Bellandur', text: 'Amazing work in our 3BHK. The neighbors are jealous!' },
+      { name: 'Vivek R.', area: 'Wipro Junction', text: 'EMI option made it affordable. Great customer service!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-marathahalli': {
+    service: 'Home Theatre',
+    location: 'Marathahalli, Bangalore',
+    title: 'Home Theatre Installation in Marathahalli',
+    metaTitle: 'Home Theatre Installation Marathahalli | Cinema Experts | Qloud Tech',
+    metaDescription: 'Professional home theatre installation in Marathahalli, Bangalore. Serving Brookefield, AECS Layout, Kundalahalli. Starting ₹2.29L. Free site visit!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Marathahalli is a thriving IT hub with many residential complexes perfect for home theatre installations. Qloud Tech has extensive experience serving Marathahalli and surrounding areas with both apartment and villa home theatre solutions.',
+    areas: ['Marathahalli', 'Brookefield', 'AECS Layout', 'Kundalahalli', 'Doddanekkundi', 'Mahadevapura', 'Whitefield', 'Varthur', 'Kadugodi', 'ITPL'],
+    features: [
+      'Apartment-friendly designs',
+      'Dolby Atmos systems',
+      '4K projection solutions',
+      'Sound isolation',
+      'Smart home integration',
+      'After-sales support'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Starter', price: '₹2.29L', desc: '5.1 HD system' },
+        { name: 'Standard', price: '₹6.99L', desc: '5.1.2 Atmos' },
+        { name: 'Premium', price: '₹10L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '45+', label: 'Marathahalli Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '24hr', label: 'Support Available' }
+    ],
+    testimonials: [
+      { name: 'Prasad M.', area: 'Brookefield', text: 'Excellent installation in our apartment. Sound is theater-quality!' },
+      { name: 'Shweta R.', area: 'AECS Layout', text: 'Very professional team. Clean work, no mess left behind.' },
+      { name: 'Harish K.', area: 'Kundalahalli', text: 'Great value for money. The support team is very responsive.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-bannerghatta': {
+    service: 'Home Theatre',
+    location: 'Bannerghatta Road, Bangalore',
+    title: 'Home Theatre Installation in Bannerghatta Road',
+    metaTitle: 'Home Theatre Installation Bannerghatta Road | Qloud Tech',
+    metaDescription: 'Premium home theatre installation on Bannerghatta Road, Bangalore. Serving Arekere, Gottigere, Hulimavu. Dolby Atmos. Starting ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Bannerghatta Road corridor offers excellent residential options with many premium apartments and villas. Qloud Tech provides complete home theatre solutions for residents along Bannerghatta Road and surrounding areas.',
+    areas: ['Arekere', 'Gottigere', 'Hulimavu', 'Dollars Colony', 'Meenakshi Mall Area', 'JP Nagar 7th Phase', 'Bilekahalli', 'Begur', 'Hongasandra', 'Electronic City'],
+    features: [
+      'Villa cinema rooms',
+      'Apartment solutions',
+      'Dolby Atmos setups',
+      '4K projection',
+      'Acoustic treatment',
+      'Custom designs'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Basic', price: '₹2.29L', desc: '5.1 system' },
+        { name: 'Advanced', price: '₹7.49L', desc: '5.1.2 Atmos' },
+        { name: 'Premium', price: '₹11L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '35+', label: 'BG Road Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '4 Days', label: 'Avg Installation' }
+    ],
+    testimonials: [
+      { name: 'Anand S.', area: 'Arekere', text: 'Fantastic installation! Our villa theatre is the talk of the community.' },
+      { name: 'Priya G.', area: 'Gottigere', text: 'Great experience from consultation to installation. Highly professional!' },
+      { name: 'Mohan R.', area: 'Hulimavu', text: 'The acoustic treatment made a huge difference. Crystal clear sound!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'smart-home-indiranagar': {
+    service: 'Home Automation',
+    location: 'Indiranagar, Bangalore',
+    title: 'Smart Home Automation in Indiranagar',
+    metaTitle: 'Smart Home Automation Indiranagar | Premium Solutions | Qloud Tech',
+    metaDescription: 'Luxury smart home automation in Indiranagar, Bangalore. Smart lighting, voice control, security integration. Starting ₹50K. Free consultation!',
+    heroImage: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    description: 'Indiranagar\'s upscale homes deserve premium smart home automation. Qloud Tech brings cutting-edge home automation solutions to Indiranagar, integrating lighting, climate, entertainment, and security into one seamless experience.',
+    areas: ['100 Feet Road', 'Defence Colony', 'HAL 2nd Stage', 'HAL 3rd Stage', 'Domlur', 'Cambridge Layout', 'Ulsoor', 'Old Airport Road', 'Jeevanbhima Nagar', 'CMH Road'],
+    features: [
+      'Premium smart lighting',
+      'Whole-home audio',
+      'Climate automation',
+      'Security integration',
+      'Voice control',
+      'Custom scenes'
+    ],
+    pricing: {
+      starting: '₹75,000',
+      packages: [
+        { name: 'Essential', price: '₹75K', desc: '2-3 rooms' },
+        { name: 'Premium', price: '₹2L', desc: 'Whole home' },
+        { name: 'Luxury', price: '₹4L+', desc: 'Full integration' }
+      ]
+    },
+    stats: [
+      { value: '40+', label: 'Indiranagar Homes' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '35%', label: 'Energy Savings' }
+    ],
+    testimonials: [
+      { name: 'Aditya K.', area: 'Defence Colony', text: 'Our home is now fully voice controlled. Guests are always impressed!' },
+      { name: 'Meera S.', area: '100 Feet Road', text: 'Energy savings are substantial. The automation paid for itself!' },
+      { name: 'Raj B.', area: 'HAL 2nd Stage', text: 'Seamless integration of all systems. Truly a smart home now!' }
+    ],
+    relatedService: 'home-automation'
+  },
+  'smart-home-jp-nagar': {
+    service: 'Home Automation',
+    location: 'JP Nagar, Bangalore',
+    title: 'Smart Home Automation in JP Nagar',
+    metaTitle: 'Smart Home Automation JP Nagar | Home Automation | Qloud Tech',
+    metaDescription: 'Complete smart home automation in JP Nagar, Bangalore. Smart switches, voice control, security. All phases covered. Starting ₹50K.',
+    heroImage: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    description: 'JP Nagar residents can now enjoy the convenience of smart home automation with Qloud Tech. We serve all JP Nagar phases with customized automation solutions for apartments and independent houses.',
+    areas: ['JP Nagar Phase 1', 'JP Nagar Phase 2', 'JP Nagar Phase 3', 'JP Nagar Phase 4', 'JP Nagar Phase 5', 'JP Nagar Phase 6', 'JP Nagar Phase 7', 'Sarakki', 'Bannerghatta Road', 'BTM Layout'],
+    features: [
+      'Smart switch upgrades',
+      'AC automation',
+      'Lighting scenes',
+      'Voice control setup',
+      'Security cameras',
+      'App control'
+    ],
+    pricing: {
+      starting: '₹50,000',
+      packages: [
+        { name: 'Starter', price: '₹50K', desc: '1-2 rooms' },
+        { name: 'Standard', price: '₹1.2L', desc: 'Full apartment' },
+        { name: 'Premium', price: '₹2.5L+', desc: 'Villa automation' }
+      ]
+    },
+    stats: [
+      { value: '50+', label: 'JP Nagar Homes' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '28%', label: 'Energy Savings' }
+    ],
+    testimonials: [
+      { name: 'Sudha M.', area: 'Phase 3', text: 'Smart switches transformed our old apartment. So convenient!' },
+      { name: 'Vijay R.', area: 'Phase 6', text: 'Love the voice control. "Alexa, goodnight" handles everything!' },
+      { name: 'Asha K.', area: 'Sarakki', text: 'Energy bills reduced significantly. Great investment!' }
+    ],
+    relatedService: 'home-automation'
   }
 };
 

@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import { Toaster } from './components/ui/sonner';
 import ServicePage from './pages/ServicePage';
 import BlogArticle from './pages/BlogArticle';
+import BlogListPage from './pages/BlogListPage';
 import LocationPage from './pages/LocationPage';
 
 // Floating WhatsApp Button Component
@@ -77,6 +78,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services/:serviceSlug" element={<ServicePage />} />
+        <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:blogSlug" element={<BlogArticle />} />
         {/* Location-specific SEO landing pages */}
         <Route path="/:locationSlug" element={<LocationPage />} />
