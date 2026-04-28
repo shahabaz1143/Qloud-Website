@@ -21,25 +21,88 @@ import BlogArticle from './pages/BlogArticle';
 import BlogListPage from './pages/BlogListPage';
 import LocationPage from './pages/LocationPage';
 
-// Google Analytics 4 SPA page_view tracker
+// Google Analytics 4 SPA page_view tracker + lead-event auto-tracking
 const GA_MEASUREMENT_ID = 'G-G41DNBE1PK';
+
+// Helper to fire a lead/contact event reliably (no-op if gtag missing)
+const fireGAEvent = (eventName, params = {}) => {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
+  window.gtag('event', eventName, {
+    ...params,
+    send_to: GA_MEASUREMENT_ID,
+    page_location: window.location.href,
+    page_path: window.location.pathname + window.location.search
+  });
+};
+
+// Classify any URL into a lead channel
+const classifyLeadUrl = (url) => {
+  if (!url || typeof url !== 'string') return null;
+  if (url.includes('wa.me') || url.includes('whatsapp.com')) return 'whatsapp';
+  if (url.startsWith('tel:')) return 'phone';
+  if (url.startsWith('mailto:')) return 'email';
+  return null;
+};
 
 const GAListener = () => {
   const location = useLocation();
 
+  // SPA page_view tracking
   useEffect(() => {
-    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
-    // Defer so document.title (set by page useEffects) is up-to-date
     const timer = setTimeout(() => {
-      window.gtag('event', 'page_view', {
-        page_path: location.pathname + location.search,
-        page_location: window.location.href,
-        page_title: document.title,
-        send_to: GA_MEASUREMENT_ID
+      fireGAEvent('page_view', {
+        page_title: document.title
       });
     }, 50);
     return () => clearTimeout(timer);
   }, [location.pathname, location.search]);
+
+  // Auto-track lead clicks: <a href="wa.me/tel:/mailto:"> + window.open(...)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // 1) Capture-phase click listener for <a> tags pointing at lead URLs
+    const onClick = (e) => {
+      const path = e.composedPath ? e.composedPath() : [];
+      for (const el of path) {
+        if (!el || el.nodeType !== 1) continue;
+        if (el.tagName === 'A' && el.href) {
+          const channel = classifyLeadUrl(el.href);
+          if (channel) {
+            fireGAEvent('generate_lead', {
+              method: channel,
+              event_category: 'engagement',
+              event_label: (el.innerText || '').trim().slice(0, 80) || channel,
+              value: 1
+            });
+            return;
+          }
+        }
+      }
+    };
+
+    document.addEventListener('click', onClick, true);
+
+    // 2) Wrap window.open so wa.me / tel: opens fire GA too
+    const originalOpen = window.open;
+    window.open = function patchedOpen(url, ...rest) {
+      const channel = classifyLeadUrl(url);
+      if (channel) {
+        fireGAEvent('generate_lead', {
+          method: channel,
+          event_category: 'engagement',
+          event_label: typeof url === 'string' ? url.slice(0, 80) : 'window.open',
+          value: 1
+        });
+      }
+      return originalOpen.call(window, url, ...rest);
+    };
+
+    return () => {
+      document.removeEventListener('click', onClick, true);
+      window.open = originalOpen;
+    };
+  }, []);
 
   return null;
 };
