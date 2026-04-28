@@ -117,6 +117,7 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Added **HowTo Schema** + visible "How It Works" 5-step section on `ServicePage.jsx`
 - ✅ Fixed breadcrumbs on Blog & Service pages to link to real `/blog` and `/services` routes
 - ✅ Added **Table of Contents** (sticky sidebar on desktop, collapsible on mobile) with IntersectionObserver scrollspy + auto-generated anchor IDs for every `<h2>` in blog articles
+- ✅ **Google Analytics 4 (GA4)** integrated — Measurement ID `G-G41DNBE1PK`; gtag.js loaded in `index.html` with `send_page_view: false`, and `<GAListener>` in `App.js` fires manual `page_view` events on every SPA route change (50ms defer so `document.title` is accurate). Verified via network beacons to `google-analytics.com/g/collect`.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
 
 ---
@@ -124,11 +125,12 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 ## Roadmap
 
 ### P1 — Upcoming
-- **Google Analytics (GA4)** integration — needs `G-XXXXXXXXXX` Measurement ID from user
 - Refactor large `LocationPage.jsx` / `BlogArticle.jsx` into separate `src/data/*.js` files for maintainability
+- GA4 custom events: track WhatsApp button clicks, phone-call clicks, "Get Quote" button clicks, and blog TOC link clicks for funnel visibility
 
 ### P2 — Backlog
 - Per-page Open Graph / Twitter image overrides
 - XML image sitemap for richer Google Images indexing
 - Image alt-text audit across all pages
 - Author profile page for E-E-A-T signal
+- "Last updated" timestamp + auto-bumped `dateModified` on blog articles

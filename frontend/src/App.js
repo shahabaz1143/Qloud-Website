@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -20,6 +20,29 @@ import ServicesPage from './pages/ServicesPage';
 import BlogArticle from './pages/BlogArticle';
 import BlogListPage from './pages/BlogListPage';
 import LocationPage from './pages/LocationPage';
+
+// Google Analytics 4 SPA page_view tracker
+const GA_MEASUREMENT_ID = 'G-G41DNBE1PK';
+
+const GAListener = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
+    // Defer so document.title (set by page useEffects) is up-to-date
+    const timer = setTimeout(() => {
+      window.gtag('event', 'page_view', {
+        page_path: location.pathname + location.search,
+        page_location: window.location.href,
+        page_title: document.title,
+        send_to: GA_MEASUREMENT_ID
+      });
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [location.pathname, location.search]);
+
+  return null;
+};
 
 // Floating WhatsApp Button Component
 const WhatsAppButton = () => {
@@ -76,6 +99,7 @@ function App() {
   return (
     <BrowserRouter>
       <Toaster />
+      <GAListener />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
