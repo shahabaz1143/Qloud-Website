@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User, Share2, MessageCircle, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Share2, MessageCircle, ChevronRight, List } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 // Blog data with full content
@@ -971,6 +971,69 @@ const BlogArticle = () => {
     return [...sameCategory, ...others].slice(0, 3);
   }, [article, blogSlug]);
 
+  // Parse article HTML once to inject slug IDs into <h2> elements and build a TOC
+  const { processedContent, toc } = useMemo(() => {
+    if (!article) return { processedContent: '', toc: [] };
+    const slugify = (str) =>
+      str
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-');
+
+    const items = [];
+    const used = new Set();
+    const html = article.content.replace(/<h2(\s[^>]*)?>([\s\S]*?)<\/h2>/gi, (match, attrs, inner) => {
+      const text = inner.replace(/<[^>]+>/g, '').trim();
+      let id = slugify(text);
+      if (!id) return match;
+      let suffix = 1;
+      let finalId = id;
+      while (used.has(finalId)) {
+        suffix += 1;
+        finalId = `${id}-${suffix}`;
+      }
+      used.add(finalId);
+      items.push({ id: finalId, text });
+      const attrStr = attrs || '';
+      return `<h2${attrStr} id="${finalId}">${inner}</h2>`;
+    });
+    return { processedContent: html, toc: items };
+  }, [article]);
+
+  const [activeId, setActiveId] = useState('');
+
+  // Scrollspy for the TOC
+  useEffect(() => {
+    if (!toc.length) return;
+    const elements = toc
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.target.offsetTop - b.target.offsetTop);
+        if (visible[0]) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [toc, processedContent]);
+
+  const scrollToSection = (id) => (e) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   // Update page title, meta, and inject Schema.org structured data
   useEffect(() => {
     if (article) {
@@ -1159,22 +1222,99 @@ const BlogArticle = () => {
       {/* Content */}
       <section className="pb-16">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <article 
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10">
+            <article
               className="prose prose-invert prose-lg max-w-none
                 prose-headings:text-white prose-headings:font-bold
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-cyan-400
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-cyan-400 prose-h2:scroll-mt-28
                 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
                 prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
                 prose-ul:text-gray-300 prose-ul:my-6
                 prose-li:my-2
                 prose-strong:text-white
+                prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline
                 prose-table:border-collapse prose-table:w-full prose-table:my-8
                 prose-th:bg-gray-800 prose-th:p-4 prose-th:text-left prose-th:text-white prose-th:border prose-th:border-gray-700
                 prose-td:p-4 prose-td:border prose-td:border-gray-700 prose-td:text-gray-300"
-              dangerouslySetInnerHTML={{ __html: article.content }}
+              dangerouslySetInnerHTML={{ __html: processedContent }}
             />
+
+            {/* Table of Contents - desktop sticky sidebar */}
+            {toc.length > 1 && (
+              <aside
+                className="hidden lg:block"
+                aria-label="Table of contents"
+                data-testid="blog-toc-sidebar"
+              >
+                <div className="sticky top-28">
+                  <div className="p-5 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-900/20 border border-gray-800">
+                    <div className="flex items-center gap-2 mb-4 text-cyan-400">
+                      <List className="w-4 h-4" />
+                      <span className="text-xs font-semibold tracking-wider uppercase">
+                        On this page
+                      </span>
+                    </div>
+                    <nav>
+                      <ul className="space-y-2 text-sm">
+                        {toc.map((item) => {
+                          const isActive = activeId === item.id;
+                          return (
+                            <li key={item.id}>
+                              <a
+                                href={`#${item.id}`}
+                                onClick={scrollToSection(item.id)}
+                                data-testid={`toc-link-${item.id}`}
+                                className={`block border-l-2 pl-3 py-1 transition-colors ${
+                                  isActive
+                                    ? 'border-cyan-400 text-cyan-400 font-medium'
+                                    : 'border-gray-800 text-gray-400 hover:text-white hover:border-gray-600'
+                                }`}
+                              >
+                                {item.text}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </aside>
+            )}
           </div>
+
+          {/* Table of Contents - mobile collapsible */}
+          {toc.length > 1 && (
+            <div className="lg:hidden max-w-4xl mx-auto -mt-6 mb-10">
+              <details
+                className="group rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/20 border border-gray-800 overflow-hidden"
+                data-testid="blog-toc-mobile"
+              >
+                <summary className="flex items-center justify-between cursor-pointer p-4 list-none">
+                  <span className="flex items-center gap-2 text-cyan-400 text-sm font-semibold tracking-wider uppercase">
+                    <List className="w-4 h-4" />
+                    On this page
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-gray-400 transition-transform group-open:rotate-90" />
+                </summary>
+                <nav className="px-4 pb-4">
+                  <ul className="space-y-1 text-sm">
+                    {toc.map((item) => (
+                      <li key={item.id}>
+                        <a
+                          href={`#${item.id}`}
+                          onClick={scrollToSection(item.id)}
+                          className="block py-2 text-gray-300 hover:text-cyan-400 border-b border-gray-800/60 last:border-0"
+                        >
+                          {item.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </details>
+            </div>
+          )}
         </div>
       </section>
 

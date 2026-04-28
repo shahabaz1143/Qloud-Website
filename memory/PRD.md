@@ -116,6 +116,7 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Added **Related Posts** section in `BlogArticle.jsx` with same-category preference + fallback
 - ✅ Added **HowTo Schema** + visible "How It Works" 5-step section on `ServicePage.jsx`
 - ✅ Fixed breadcrumbs on Blog & Service pages to link to real `/blog` and `/services` routes
+- ✅ Added **Table of Contents** (sticky sidebar on desktop, collapsible on mobile) with IntersectionObserver scrollspy + auto-generated anchor IDs for every `<h2>` in blog articles
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
 
 ---
