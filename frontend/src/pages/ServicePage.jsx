@@ -304,7 +304,7 @@ const ServicePage = () => {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": "https://qloudsmarthomes.com/#services"
+            "item": "https://qloudsmarthomes.com/services"
           },
           {
             "@type": "ListItem",
@@ -315,11 +315,70 @@ const ServicePage = () => {
         ]
       };
 
+      // Create HowTo Schema for installation process
+      const howToSchema = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": `How to Get ${service.title} Installed`,
+        "description": `Step-by-step process for booking and installing ${service.title} with Qloud Tech in Bangalore.`,
+        "image": service.heroImage,
+        "totalTime": "P3DT0H",
+        "estimatedCost": {
+          "@type": "MonetaryAmount",
+          "currency": "INR",
+          "value": (service.pricing && service.pricing[0] ? service.pricing[0].price.replace(/[₹,]/g, '') : "0")
+        },
+        "supply": [
+          { "@type": "HowToSupply", "name": "Existing space or room" },
+          { "@type": "HowToSupply", "name": "Power supply & internet connection" }
+        ],
+        "tool": [
+          { "@type": "HowToTool", "name": "Professional installation tools" }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Free Consultation",
+            "text": "Contact Qloud Tech via WhatsApp or phone to schedule a free on-site consultation in Bangalore. Our experts assess your space and requirements.",
+            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#consultation`
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Custom Design & Quote",
+            "text": "Receive a tailored design proposal with brand recommendations, layout, and a transparent quotation within 48 hours.",
+            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#design`
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Approval & Scheduling",
+            "text": "Approve the design and book your installation date. Pay an initial advance to confirm.",
+            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#scheduling`
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Professional Installation",
+            "text": "Our certified technicians complete the installation with minimal disruption, typically within 3-7 days depending on the package.",
+            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#installation`
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Demo, Handover & Support",
+            "text": "Get a complete walkthrough of your new system. We provide warranty, after-sales support, and lifetime guidance.",
+            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#support`
+          }
+        ]
+      };
+
       // Inject schema script
       const script = document.createElement('script');
       script.id = 'service-schema';
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]);
+      script.textContent = JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema, howToSchema]);
       document.head.appendChild(script);
 
       // Cleanup on unmount
@@ -374,7 +433,7 @@ const ServicePage = () => {
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
             <ChevronRight className="w-4 h-4" />
-            <Link to="/#services" className="hover:text-cyan-400 transition-colors">Services</Link>
+            <Link to="/services" className="hover:text-cyan-400 transition-colors">Services</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-cyan-400">{service.title}</span>
           </nav>
@@ -455,6 +514,44 @@ const ServicePage = () => {
                 <p className="text-gray-400">{faq.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works (matches HowTo schema) */}
+      <section className="py-16 bg-[#0a0e1a]">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                How It <span className="text-cyan-400">Works</span>
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                A transparent, hassle-free 5-step process from consultation to handover.
+              </p>
+            </div>
+
+            <ol className="grid md:grid-cols-5 gap-4">
+              {[
+                { t: 'Free Consultation', d: 'On-site visit to assess your space & needs.' },
+                { t: 'Custom Design', d: 'Tailored proposal & quote within 48 hours.' },
+                { t: 'Approval', d: 'Confirm design and book installation date.' },
+                { t: 'Installation', d: 'Certified technicians complete in 3-7 days.' },
+                { t: 'Handover & Support', d: 'Demo, warranty & lifetime guidance.' }
+              ].map((step, idx) => (
+                <li
+                  key={idx}
+                  className="relative p-5 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/20 border border-gray-800 hover:border-cyan-500/40 transition-colors"
+                  data-testid={`howto-step-${idx + 1}`}
+                >
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-r from-cyan-400 to-sky-400 text-black font-bold flex items-center justify-center mb-3">
+                    {idx + 1}
+                  </div>
+                  <h3 className="text-white font-semibold mb-1">{step.t}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{step.d}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>

@@ -952,6 +952,25 @@ const BlogArticle = () => {
   const { blogSlug } = useParams();
   const article = blogData[blogSlug];
 
+  // Compute related posts (same category, fallback to most recent across categories)
+  const relatedPosts = React.useMemo(() => {
+    if (!article) return [];
+    const allEntries = Object.entries(blogData)
+      .filter(([slug]) => slug !== blogSlug)
+      .map(([slug, data]) => ({ slug, ...data }));
+
+    const sameCategory = allEntries
+      .filter((p) => p.category === article.category)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    if (sameCategory.length >= 3) return sameCategory.slice(0, 3);
+
+    const others = allEntries
+      .filter((p) => p.category !== article.category)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+    return [...sameCategory, ...others].slice(0, 3);
+  }, [article, blogSlug]);
+
   // Update page title, meta, and inject Schema.org structured data
   useEffect(() => {
     if (article) {
@@ -1010,7 +1029,7 @@ const BlogArticle = () => {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://qloudsmarthomes.com/#blog"
+            "item": "https://qloudsmarthomes.com/blog"
           },
           {
             "@type": "ListItem",
@@ -1090,7 +1109,7 @@ const BlogArticle = () => {
             <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
               <ChevronRight className="w-4 h-4" />
-              <Link to="/#blog" className="hover:text-cyan-400 transition-colors">Blog</Link>
+              <Link to="/blog" className="hover:text-cyan-400 transition-colors">Blog</Link>
               <ChevronRight className="w-4 h-4" />
               <span className="text-cyan-400 truncate max-w-[200px]">{article.title}</span>
             </nav>
@@ -1192,6 +1211,70 @@ const BlogArticle = () => {
                     className="px-6 py-3 bg-gradient-to-br from-gray-900/50 to-gray-900/30 border border-cyan-500/30 rounded-full text-cyan-400 hover:bg-cyan-500/10 transition-colors"
                   >
                     {service.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+        <section className="py-16 bg-[#0a0e1a] border-t border-gray-900">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    Related <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400">Articles</span>
+                  </h2>
+                  <p className="text-gray-400 mt-2">More reads you might enjoy</p>
+                </div>
+                <Link
+                  to="/blog"
+                  className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold inline-flex items-center gap-1"
+                  data-testid="view-all-articles-link"
+                >
+                  View All Articles
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    to={`/blog/${post.slug}`}
+                    className="group bg-gradient-to-br from-gray-900/60 to-gray-900/30 rounded-2xl border border-gray-800/60 overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
+                    data-testid={`related-post-${post.slug}`}
+                  >
+                    <div className="relative h-44 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent"></div>
+                      <span className="absolute top-3 left-3 px-3 py-1 bg-black/60 backdrop-blur-sm rounded-full text-xs font-semibold text-cyan-400 border border-cyan-500/30">
+                        {post.category}
+                      </span>
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <time dateTime={post.date}>
+                          {new Date(post.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </time>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {post.readTime}
+                        </span>
+                      </div>
+                    </div>
                   </Link>
                 ))}
               </div>
