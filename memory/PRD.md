@@ -117,7 +117,12 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Added **HowTo Schema** + visible "How It Works" 5-step section on `ServicePage.jsx`
 - ✅ Fixed breadcrumbs on Blog & Service pages to link to real `/blog` and `/services` routes
 - ✅ Added **Table of Contents** (sticky sidebar on desktop, collapsible on mobile) with IntersectionObserver scrollspy + auto-generated anchor IDs for every `<h2>` in blog articles
-- ✅ **Google Analytics 4 (GA4)** integrated — Measurement ID `G-G41DNBE1PK`; gtag.js loaded in `index.html` with `send_page_view: false`, and `<GAListener>` in `App.js` fires manual `page_view` events on every SPA route change (50ms defer so `document.title` is accurate). Verified via network beacons to `google-analytics.com/g/collect`.
+- ✅ **Google Analytics 4 (GA4)** integrated — Measurement ID `G-G41DNBE1PK`; gtag.js loaded in `index.html` with `send_page_view: false`, and `<GAListener>` in `App.js` fires manual `page_view` events on every SPA route change.
+- ✅ **GA4 conversion tracking** via global event delegation — auto-fires `generate_lead` events for every `<a wa.me/tel:>` click and every `window.open(wa.me/tel:)` call without per-button instrumentation. Verified end-to-end (3 events fired correctly).
+- ✅ **`<ScrollToTop />`** in `App.js` — resets scrollY=0 on every SPA route change (fixes "page opens at bottom" UX bug). Honors `#anchor` hashes for blog TOC.
+- ✅ **Logo redesign** — replaced "Back to Home" links with the Qloud logo on all sub-pages; added cyan `drop-shadow` glow on hover + auto-cycling 10s shine sweep animation.
+- ✅ **PRERENDERING IMPLEMENTED (P0 SEO unlock)** — Custom puppeteer script `/app/frontend/scripts/prerender.js` runs as `postbuild`, parses sitemap.xml, crawls all 53 routes, writes static HTML files into `/build/<route>/index.html`. Result: Googlebot now sees **2,199 words on homepage / 849 on services / 1,158 on blog articles** (was 33-42 words before). All 11 schemas baked in. `index.js` switched to hydrateRoot when DOM is prerendered.
+- ✅ **SEO Launch Checklist** created at `/app/SEO_LAUNCH_CHECKLIST.md` — covers off-site work needed (GSC submission, Google Business Profile, citations, backlinks, reviews) — the single biggest lever for actual rankings.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
 
 ---
