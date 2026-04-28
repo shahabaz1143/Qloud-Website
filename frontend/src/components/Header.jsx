@@ -62,7 +62,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex-shrink-0 group" aria-label="Qloud Tech Home">
+          <Link to="/" className="flex-shrink-0 group logo-shine" aria-label="Qloud Tech Home">
             <img 
               src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
               alt="Qloud Tech Logo" 

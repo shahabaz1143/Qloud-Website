@@ -32,3 +32,49 @@ html {
     visibility: hidden !important;
     opacity: 0 !important;
 }
+
+/* ============================================
+   Logo shine sweep — premium watch-face feel
+   Sweeps a translucent cyan highlight across
+   the logo every 10 seconds.
+   ============================================ */
+.logo-shine {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.logo-shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent 0%,
+        transparent 30%,
+        rgba(0, 212, 255, 0.25) 45%,
+        rgba(255, 255, 255, 0.55) 50%,
+        rgba(0, 212, 255, 0.25) 55%,
+        transparent 70%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    pointer-events: none;
+    animation: logo-shine-sweep 10s ease-in-out infinite;
+}
+
+@keyframes logo-shine-sweep {
+    0%   { left: -75%; opacity: 0; }
+    8%   { opacity: 1; }
+    18%  { left: 125%; opacity: 0; }
+    100% { left: 125%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-shine::after {
+        animation: none;
+    }
+}
