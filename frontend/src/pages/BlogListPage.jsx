@@ -114,10 +114,65 @@ const allBlogPosts = [
     date: "2024-10-20",
     readTime: "7 min",
     image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/emph1fnm_1_d41ba0ee-d7c8-4526-bcb2-c9b3c69a7090%20%284%29.webp"
+  },
+  {
+    id: 11,
+    title: "Home Theatre Room Size Guide: Minimum Requirements",
+    slug: "home-theatre-room-size-guide",
+    excerpt: "Learn the minimum room dimensions needed for different home theatre setups.",
+    category: "Planning",
+    author: "Qloud Tech Team",
+    date: "2024-10-15",
+    readTime: "6 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
+  },
+  {
+    id: 12,
+    title: "Alexa vs Google Home: Which is Better for Indian Smart Homes?",
+    slug: "alexa-google-home-comparison",
+    excerpt: "Comparing Amazon Alexa and Google Home for Indian smart home setups.",
+    category: "Comparison",
+    author: "Qloud Tech Team",
+    date: "2024-10-10",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800"
+  },
+  {
+    id: 13,
+    title: "Soundbar vs Home Theatre: Which Should You Buy?",
+    slug: "soundbar-vs-home-theatre",
+    excerpt: "Detailed comparison between soundbars and traditional home theatre systems.",
+    category: "Buying Guide",
+    author: "Qloud Tech Team",
+    date: "2024-10-05",
+    readTime: "7 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
+  },
+  {
+    id: 14,
+    title: "Smart Home Setup for Rental Apartments: No Damage Guide",
+    slug: "smart-home-for-rental-apartment",
+    excerpt: "Set up a smart home in your rental apartment without making permanent changes.",
+    category: "Tips",
+    author: "Qloud Tech Team",
+    date: "2024-09-28",
+    readTime: "6 min",
+    image: "https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800"
+  },
+  {
+    id: 15,
+    title: "Best Projectors Under 2 Lakhs in India 2024",
+    slug: "best-projector-under-2-lakh",
+    excerpt: "Our top projector picks under ₹2 lakhs for home theatre in India.",
+    category: "Buying Guide",
+    author: "Qloud Tech Team",
+    date: "2024-09-20",
+    readTime: "9 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
   }
 ];
 
-const categories = ['All', 'Home Theatre', 'Home Automation', 'Security', 'Buying Guide', 'Pricing', 'Comparison'];
+const categories = ['All', 'Home Theatre', 'Home Automation', 'Security', 'Buying Guide', 'Pricing', 'Comparison', 'Planning', 'Tips'];
 
 const BlogListPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');

@@ -653,6 +653,298 @@ const blogData = {
       <p>Qloud Tech installs both brands. Contact us for a demo at your home.</p>
     `,
     relatedServices: ['digital-door-locks', 'security-systems', 'home-automation']
+  },
+  // New blog articles for more keyword targeting
+  'home-theatre-room-size-guide': {
+    title: 'Home Theatre Room Size Guide: Minimum Requirements',
+    slug: 'home-theatre-room-size-guide',
+    metaTitle: 'Home Theatre Room Size Guide | Minimum Space Required | Qloud Tech',
+    metaDescription: 'What\'s the minimum room size for a home theatre? Learn ideal dimensions for 5.1, 7.1, Dolby Atmos setups. Room planning guide for Bangalore homes.',
+    date: 'October 15, 2024',
+    author: 'Qloud Tech',
+    readTime: '6 min read',
+    category: 'Planning',
+    image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    excerpt: 'Planning a home theatre? Learn the minimum room dimensions needed for different setups.',
+    content: `
+      <p>One of the most common questions we get is "How much space do I need for a home theatre?" Here's our comprehensive room size guide.</p>
+      
+      <h2>Minimum Room Sizes by Setup Type</h2>
+      
+      <h3>Basic 5.1 System</h3>
+      <ul>
+        <li><strong>Minimum:</strong> 10' x 12' (120 sq ft)</li>
+        <li><strong>Recommended:</strong> 12' x 15' (180 sq ft)</li>
+        <li><strong>Screen size:</strong> 100-110 inches</li>
+        <li><strong>Seating:</strong> 2-4 people</li>
+      </ul>
+      
+      <h3>5.1.2 Dolby Atmos</h3>
+      <ul>
+        <li><strong>Minimum:</strong> 12' x 14' (168 sq ft)</li>
+        <li><strong>Recommended:</strong> 14' x 18' (252 sq ft)</li>
+        <li><strong>Ceiling height:</strong> Minimum 9 feet</li>
+        <li><strong>Screen size:</strong> 110-120 inches</li>
+      </ul>
+      
+      <h3>7.1.2/7.1.4 Reference Theatre</h3>
+      <ul>
+        <li><strong>Minimum:</strong> 15' x 20' (300 sq ft)</li>
+        <li><strong>Recommended:</strong> 18' x 24' (432 sq ft)</li>
+        <li><strong>Ceiling height:</strong> 10+ feet ideal</li>
+        <li><strong>Screen size:</strong> 120-150 inches</li>
+      </ul>
+      
+      <h2>Room Shape Matters</h2>
+      <p>Rectangular rooms work best for home theatres. Avoid square rooms as they create acoustic problems. The ideal ratio is 1:1.6 (width to length).</p>
+      
+      <h2>What About Apartments?</h2>
+      <p>Even a 10' x 12' bedroom can be converted into a great home theatre. We've installed many systems in Bangalore apartments with excellent results. Key is proper acoustic treatment and equipment selection.</p>
+      
+      <h2>Ceiling Height Requirements</h2>
+      <ul>
+        <li><strong>5.1 system:</strong> 8 feet minimum</li>
+        <li><strong>Dolby Atmos:</strong> 9 feet minimum (for ceiling speakers)</li>
+        <li><strong>Reference theatre:</strong> 10+ feet recommended</li>
+      </ul>
+      
+      <p>Contact Qloud Tech for a free site visit. We'll assess your room and recommend the perfect setup.</p>
+    `,
+    relatedServices: ['home-theatre']
+  },
+  'alexa-google-home-comparison': {
+    title: 'Alexa vs Google Home: Which is Better for Indian Smart Homes?',
+    slug: 'alexa-google-home-comparison',
+    metaTitle: 'Alexa vs Google Home India | Smart Speaker Comparison | Qloud Tech',
+    metaDescription: 'Alexa vs Google Home comparison for Indian homes. Hindi support, smart home compatibility, pricing. Which voice assistant should you choose?',
+    date: 'October 10, 2024',
+    author: 'Qloud Tech',
+    readTime: '8 min read',
+    category: 'Comparison',
+    image: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    excerpt: 'Comparing Amazon Alexa and Google Home for Indian smart home setups.',
+    content: `
+      <p>Choosing between Alexa and Google Home for your smart home? Here's our detailed comparison based on Indian usage scenarios.</p>
+      
+      <h2>Language Support</h2>
+      <h3>Alexa</h3>
+      <ul>
+        <li>Hindi support: Good</li>
+        <li>Hinglish understanding: Excellent</li>
+        <li>Regional languages: Limited</li>
+      </ul>
+      
+      <h3>Google Home</h3>
+      <ul>
+        <li>Hindi support: Excellent</li>
+        <li>Hinglish understanding: Excellent</li>
+        <li>Regional languages: Better (9 Indian languages)</li>
+      </ul>
+      
+      <h2>Smart Home Device Compatibility</h2>
+      <p>Both work with most smart home devices available in India including:</p>
+      <ul>
+        <li>Philips Hue, Syska, Wipro smart bulbs</li>
+        <li>Smart switches from most brands</li>
+        <li>Smart TVs (Samsung, LG, Sony)</li>
+        <li>AC controllers (Cielo, Sensibo)</li>
+      </ul>
+      
+      <h2>Price Comparison (India)</h2>
+      <ul>
+        <li><strong>Echo Dot:</strong> ₹3,499 - ₹4,499</li>
+        <li><strong>Google Nest Mini:</strong> ₹3,499 - ₹4,499</li>
+        <li><strong>Echo Show:</strong> ₹8,999 - ₹22,999</li>
+        <li><strong>Google Nest Hub:</strong> ₹6,999 - ₹9,999</li>
+      </ul>
+      
+      <h2>Our Recommendation</h2>
+      <p><strong>Choose Alexa if:</strong> You want more smart home skills, shop on Amazon frequently, or prefer the Echo Show display.</p>
+      <p><strong>Choose Google if:</strong> You need better Hindi/regional language support, use Google services heavily, or want better general knowledge answers.</p>
+      
+      <p>At Qloud Tech, we integrate both platforms seamlessly with your smart home setup.</p>
+    `,
+    relatedServices: ['home-automation', 'smart-switches']
+  },
+  'soundbar-vs-home-theatre': {
+    title: 'Soundbar vs Home Theatre: Which Should You Buy?',
+    slug: 'soundbar-vs-home-theatre',
+    metaTitle: 'Soundbar vs Home Theatre System | Complete Guide | Qloud Tech',
+    metaDescription: 'Soundbar or home theatre system - which is right for you? Compare sound quality, price, space requirements. Expert advice from Bangalore\'s AV specialists.',
+    date: 'October 5, 2024',
+    author: 'Qloud Tech',
+    readTime: '7 min read',
+    category: 'Buying Guide',
+    image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    excerpt: 'Detailed comparison between soundbars and traditional home theatre systems.',
+    content: `
+      <p>Should you buy a soundbar or invest in a proper home theatre system? Let's break it down.</p>
+      
+      <h2>Sound Quality Comparison</h2>
+      
+      <h3>Soundbar</h3>
+      <ul>
+        <li>Good for dialogue clarity</li>
+        <li>Simulated surround sound</li>
+        <li>Limited bass without subwoofer</li>
+        <li>Dolby Atmos soundbars exist but aren't true Atmos</li>
+      </ul>
+      
+      <h3>Home Theatre System</h3>
+      <ul>
+        <li>True surround sound from multiple speakers</li>
+        <li>Real Dolby Atmos with height channels</li>
+        <li>Powerful dedicated subwoofer</li>
+        <li>Room-filling immersive experience</li>
+      </ul>
+      
+      <h2>Price Comparison</h2>
+      <table>
+        <tr><th>Type</th><th>Price Range</th><th>Sound Quality</th></tr>
+        <tr><td>Basic Soundbar</td><td>₹5,000 - ₹15,000</td><td>Better than TV</td></tr>
+        <tr><td>Premium Soundbar</td><td>₹30,000 - ₹1,00,000</td><td>Good</td></tr>
+        <tr><td>5.1 Home Theatre</td><td>₹50,000 - ₹2,00,000</td><td>Very Good</td></tr>
+        <tr><td>Dolby Atmos System</td><td>₹2,00,000+</td><td>Excellent</td></tr>
+      </table>
+      
+      <h2>Space Requirements</h2>
+      <p><strong>Soundbar:</strong> Minimal - sits below TV or mounts on wall</p>
+      <p><strong>Home Theatre:</strong> Needs space for 5-7 speakers + subwoofer</p>
+      
+      <h2>Our Verdict</h2>
+      <p><strong>Buy a Soundbar if:</strong> You have limited space, budget under ₹50K, or just want better TV audio.</p>
+      <p><strong>Buy a Home Theatre if:</strong> You're a movie enthusiast, have a dedicated room, and want the cinematic experience.</p>
+    `,
+    relatedServices: ['home-theatre']
+  },
+  'smart-home-for-rental-apartment': {
+    title: 'Smart Home Setup for Rental Apartments: No Damage Guide',
+    slug: 'smart-home-for-rental-apartment',
+    metaTitle: 'Smart Home for Rental Apartment | No Damage Solutions | Qloud Tech',
+    metaDescription: 'How to set up a smart home in a rental apartment without damaging walls. Wireless solutions, portable devices, renter-friendly automation tips.',
+    date: 'September 28, 2024',
+    author: 'Qloud Tech',
+    readTime: '6 min read',
+    category: 'Tips',
+    image: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    excerpt: 'Set up a smart home in your rental apartment without making permanent changes.',
+    content: `
+      <p>Living in a rental but want smart home features? Here's how to automate without drilling holes or making permanent changes.</p>
+      
+      <h2>Wireless Smart Switches</h2>
+      <p>Replace existing switches with wireless smart switches. They fit in the same switchboard - no new wiring needed. When you move, swap back the original switches.</p>
+      <ul>
+        <li>WiFi switches from BuildTrack, Oakter</li>
+        <li>Zigbee switches (need hub)</li>
+        <li>Easy 15-minute installation</li>
+      </ul>
+      
+      <h2>Smart Plugs</h2>
+      <p>The easiest entry to smart home. Control any appliance:</p>
+      <ul>
+        <li>Table lamps and floor lamps</li>
+        <li>Fans and air purifiers</li>
+        <li>Coffee makers and kettles</li>
+        <li>TV and entertainment systems</li>
+      </ul>
+      
+      <h2>Wireless Sensors</h2>
+      <ul>
+        <li>Door/window sensors (stick-on)</li>
+        <li>Motion sensors (battery powered)</li>
+        <li>Temperature/humidity sensors</li>
+        <li>Water leak detectors</li>
+      </ul>
+      
+      <h2>Smart Lighting</h2>
+      <ul>
+        <li>Smart bulbs (just screw in)</li>
+        <li>LED strip lights (adhesive backed)</li>
+        <li>Smart table/floor lamps</li>
+      </ul>
+      
+      <h2>What to Avoid</h2>
+      <ul>
+        <li>Hardwired cameras (use battery/wireless)</li>
+        <li>Smart door locks (check with landlord first)</li>
+        <li>Ceiling speakers (use soundbar instead)</li>
+        <li>Motorized curtains (unless rod-mounted)</li>
+      </ul>
+      
+      <h2>Budget for Rental Smart Home</h2>
+      <ul>
+        <li><strong>Basic (1 room):</strong> ₹10,000 - ₹20,000</li>
+        <li><strong>Standard (2-3 rooms):</strong> ₹30,000 - ₹50,000</li>
+        <li><strong>Advanced (full home):</strong> ₹75,000 - ₹1,00,000</li>
+      </ul>
+    `,
+    relatedServices: ['home-automation', 'smart-switches', 'security-systems']
+  },
+  'best-projector-under-2-lakh': {
+    title: 'Best Projectors Under 2 Lakhs in India 2024',
+    slug: 'best-projector-under-2-lakh',
+    metaTitle: 'Best Projector Under 2 Lakh India 2024 | Top 5 Picks | Qloud Tech',
+    metaDescription: 'Top 5 best projectors under ₹2 lakhs in India. 4K, laser, short-throw options compared. BenQ, Epson, Optoma recommendations for home theatre.',
+    date: 'September 20, 2024',
+    author: 'Qloud Tech',
+    readTime: '9 min read',
+    category: 'Buying Guide',
+    image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    excerpt: 'Our top projector picks under ₹2 lakhs for home theatre in India.',
+    content: `
+      <p>Looking for a quality projector without breaking the bank? Here are our top 5 picks under ₹2 lakhs.</p>
+      
+      <h2>1. BenQ TK700STi - Best Overall</h2>
+      <ul>
+        <li><strong>Price:</strong> ₹1,75,000</li>
+        <li><strong>Resolution:</strong> True 4K</li>
+        <li><strong>Type:</strong> Short-throw</li>
+        <li><strong>Best for:</strong> Gaming + Movies</li>
+        <li><strong>Pros:</strong> Low input lag, Android TV built-in</li>
+      </ul>
+      
+      <h2>2. Epson EH-TW7100 - Best Color Accuracy</h2>
+      <ul>
+        <li><strong>Price:</strong> ₹1,85,000</li>
+        <li><strong>Resolution:</strong> 4K PRO-UHD</li>
+        <li><strong>Brightness:</strong> 3000 lumens</li>
+        <li><strong>Best for:</strong> Movie purists</li>
+        <li><strong>Pros:</strong> Excellent HDR, lens shift</li>
+      </ul>
+      
+      <h2>3. Optoma UHD38 - Best Value</h2>
+      <ul>
+        <li><strong>Price:</strong> ₹1,45,000</li>
+        <li><strong>Resolution:</strong> 4K UHD</li>
+        <li><strong>Brightness:</strong> 4000 lumens</li>
+        <li><strong>Best for:</strong> Bright rooms</li>
+        <li><strong>Pros:</strong> High brightness, competitive price</li>
+      </ul>
+      
+      <h2>4. BenQ W2700i - Best for Dark Rooms</h2>
+      <ul>
+        <li><strong>Price:</strong> ₹1,95,000</li>
+        <li><strong>Resolution:</strong> True 4K</li>
+        <li><strong>Technology:</strong> DLP with HDR-PRO</li>
+        <li><strong>Best for:</strong> Dedicated theatres</li>
+        <li><strong>Pros:</strong> CinematicColor, Android TV</li>
+      </ul>
+      
+      <h2>5. ViewSonic PX748-4K - Budget Pick</h2>
+      <ul>
+        <li><strong>Price:</strong> ₹1,20,000</li>
+        <li><strong>Resolution:</strong> 4K UHD</li>
+        <li><strong>Brightness:</strong> 4000 lumens</li>
+        <li><strong>Best for:</strong> Budget-conscious buyers</li>
+        <li><strong>Pros:</strong> Great value, bright image</li>
+      </ul>
+      
+      <h2>Our Recommendation</h2>
+      <p>For most home theatres in Bangalore, we recommend the <strong>BenQ TK700STi</strong> for its versatility. If you have a dedicated dark room, the <strong>BenQ W2700i</strong> offers better black levels.</p>
+      
+      <p>Visit our experience center to see these projectors in action before buying.</p>
+    `,
+    relatedServices: ['home-theatre']
   }
 };
 

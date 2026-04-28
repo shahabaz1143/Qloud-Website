@@ -16,6 +16,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Toaster } from './components/ui/sonner';
 import ServicePage from './pages/ServicePage';
+import ServicesPage from './pages/ServicesPage';
 import BlogArticle from './pages/BlogArticle';
 import BlogListPage from './pages/BlogListPage';
 import LocationPage from './pages/LocationPage';
@@ -77,6 +78,7 @@ function App() {
       <Toaster />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/:serviceSlug" element={<ServicePage />} />
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:blogSlug" element={<BlogArticle />} />

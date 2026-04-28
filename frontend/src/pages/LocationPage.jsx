@@ -843,6 +843,197 @@ const locationData = {
       { name: 'Asha K.', area: 'Sarakki', text: 'Energy bills reduced significantly. Great investment!' }
     ],
     relatedService: 'home-automation'
+  },
+  // More neighborhood pages for comprehensive coverage
+  'home-theatre-yelahanka': {
+    service: 'Home Theatre',
+    location: 'Yelahanka, Bangalore',
+    title: 'Home Theatre Installation in Yelahanka',
+    metaTitle: 'Home Theatre Installation Yelahanka | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Professional home theatre installation in Yelahanka, Bangalore. Serving New Town, Air Force Station area, Kogilu. Starting ₹2.29L. Free consultation!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Yelahanka has grown into a major residential hub with excellent villas and apartments. Qloud Tech serves Yelahanka and surrounding areas with premium home theatre installations, from compact apartment setups to full villa cinema rooms.',
+    areas: ['Yelahanka New Town', 'Yelahanka Old Town', 'Kogilu', 'Jakkur', 'Sahakara Nagar', 'Hebbal', 'Kempapura', 'Attur Layout', 'Allalasandra', 'Bagalur'],
+    features: [
+      'Dolby Atmos systems',
+      '4K laser projectors',
+      'Acoustic treatment',
+      'Custom seating',
+      'Smart integration',
+      'EMI options available'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 system' },
+        { name: 'Premium', price: '₹7.99L', desc: '5.1.2 Atmos' },
+        { name: 'Villa', price: '₹12L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '25+', label: 'Yelahanka Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5 Days', label: 'Avg Installation' }
+    ],
+    testimonials: [
+      { name: 'Naveen S.', area: 'New Town', text: 'Excellent home theatre setup! The Dolby Atmos is incredible.' },
+      { name: 'Anitha R.', area: 'Kogilu', text: 'Very professional team. Installation was clean and quick.' },
+      { name: 'Suresh K.', area: 'Jakkur', text: 'Best decision for our new villa. Movie nights are amazing now!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-hebbal': {
+    service: 'Home Theatre',
+    location: 'Hebbal, Bangalore',
+    title: 'Home Theatre Installation in Hebbal',
+    metaTitle: 'Home Theatre Installation Hebbal | Cinema Rooms | Qloud Tech',
+    metaDescription: 'Expert home theatre installation in Hebbal, Bangalore. Serving Manyata Tech Park area, Kempapura, Nagawara. Dolby Atmos. Starting ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Hebbal is a prime residential location near Manyata Tech Park with many premium apartments and villas. Qloud Tech has served numerous Hebbal residents with world-class home theatre installations.',
+    areas: ['Hebbal', 'Kempapura', 'Nagawara', 'Manyata Tech Park', 'Thanisandra', 'Rachenahalli', 'Byatarayanapura', 'RT Nagar', 'Mathikere', 'Sadashivanagar'],
+    features: [
+      '4K/8K projection',
+      'Dolby Atmos audio',
+      'Premium speakers',
+      'Acoustic design',
+      'Home automation ready',
+      'Lifetime support'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Basic', price: '₹2.29L', desc: '5.1 HD system' },
+        { name: 'Standard', price: '₹6.99L', desc: '5.1.2 Atmos' },
+        { name: 'Premium', price: '₹10L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '30+', label: 'Hebbal Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '24hr', label: 'Response Time' }
+    ],
+    testimonials: [
+      { name: 'Ravi M.', area: 'Manyata area', text: 'Great installation! Perfect for unwinding after work.' },
+      { name: 'Priya K.', area: 'Nagawara', text: 'The team was very professional. Highly recommended!' },
+      { name: 'Arun S.', area: 'Kempapura', text: 'Excellent sound quality. Better than any cinema!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-malleshwaram': {
+    service: 'Home Theatre',
+    location: 'Malleshwaram, Bangalore',
+    title: 'Home Theatre Installation in Malleshwaram',
+    metaTitle: 'Home Theatre Installation Malleshwaram | Qloud Tech',
+    metaDescription: 'Premium home theatre installation in Malleshwaram, Bangalore. Serving Rajajinagar, Vyalikaval, Sadashivanagar. Starting ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Malleshwaram is one of Bangalore\'s heritage neighborhoods with beautiful independent houses. Qloud Tech specializes in installing home theatres that blend modern technology with the classic charm of Malleshwaram homes.',
+    areas: ['Malleshwaram', 'Rajajinagar', 'Vyalikaval', 'Sadashivanagar', 'Sanjaynagar', 'Mathikere', 'Yeshwanthpur', 'Mahalakshmi Layout', 'Basaveshwaranagar', 'Nandini Layout'],
+    features: [
+      'Heritage home specialists',
+      'Dolby Atmos systems',
+      '4K projection',
+      'Discreet installation',
+      'Period-appropriate design',
+      'Smart integration'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Classic', price: '₹2.29L', desc: '5.1 system' },
+        { name: 'Premium', price: '₹8.49L', desc: '5.1.2 Atmos' },
+        { name: 'Bespoke', price: '₹12L+', desc: 'Custom design' }
+      ]
+    },
+    stats: [
+      { value: '20+', label: 'Malleshwaram Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: 'Heritage', label: 'Home Experts' }
+    ],
+    testimonials: [
+      { name: 'Raghav N.', area: '8th Cross', text: 'They understood our heritage home perfectly. Discreet installation!' },
+      { name: 'Suma V.', area: 'Vyalikaval', text: 'Beautiful integration with our traditional home. Excellent work!' },
+      { name: 'Krishna M.', area: 'Rajajinagar', text: 'Modern technology, classic design. Exactly what we wanted.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'home-theatre-banashankari': {
+    service: 'Home Theatre',
+    location: 'Banashankari, Bangalore',
+    title: 'Home Theatre Installation in Banashankari',
+    metaTitle: 'Home Theatre Installation Banashankari | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Expert home theatre installation in Banashankari, Bangalore. All stages covered - 1st to 6th. Starting ₹2.29L. Free site visit!',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Banashankari is a well-established residential area with a mix of apartments and independent houses. Qloud Tech serves all stages of Banashankari with customized home theatre solutions.',
+    areas: ['Banashankari 1st Stage', 'Banashankari 2nd Stage', 'Banashankari 3rd Stage', 'Banashankari 6th Stage', 'Kathriguppe', 'Uttarahalli', 'Kengeri', 'RR Nagar', 'ISRO Layout', 'Judicial Layout'],
+    features: [
+      'All Banashankari stages',
+      'Dolby Atmos setups',
+      '4K projection',
+      'Acoustic treatment',
+      'Budget to premium',
+      'EMI available'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 system' },
+        { name: 'Plus', price: '₹5.99L', desc: '5.1.2 Atmos' },
+        { name: 'Premium', price: '₹9L+', desc: '7.1.2 Reference' }
+      ]
+    },
+    stats: [
+      { value: '35+', label: 'BSK Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '4 Days', label: 'Avg Installation' }
+    ],
+    testimonials: [
+      { name: 'Mahesh P.', area: '2nd Stage', text: 'Great home theatre at reasonable price. Very satisfied!' },
+      { name: 'Kavitha R.', area: '3rd Stage', text: 'Professional installation. The team was courteous and skilled.' },
+      { name: 'Raghu S.', area: 'Kathriguppe', text: 'EMI option made it affordable. Enjoying movies every weekend!' }
+    ],
+    relatedService: 'home-theatre'
+  },
+  'smart-home-electronic-city': {
+    service: 'Home Automation',
+    location: 'Electronic City, Bangalore',
+    title: 'Smart Home Automation in Electronic City',
+    metaTitle: 'Smart Home Automation Electronic City | Qloud Tech',
+    metaDescription: 'Complete smart home automation in Electronic City, Bangalore. Smart lighting, AC control, security. Phase 1 & 2. Starting ₹50K.',
+    heroImage: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800',
+    description: 'Electronic City IT professionals deserve smart homes that simplify their busy lives. Qloud Tech provides complete automation solutions for apartments and villas in Electronic City Phase 1, 2, and surrounding areas.',
+    areas: ['Electronic City Phase 1', 'Electronic City Phase 2', 'Neeladri Nagar', 'Doddathogur', 'Hebbagodi', 'Bommasandra', 'Chandapura', 'Infosys Area', 'Wipro Campus Area', 'Velankani Area'],
+    features: [
+      'Smart lighting scenes',
+      'AC & fan automation',
+      'Security integration',
+      'Voice control',
+      'App control anywhere',
+      'Weekend installation'
+    ],
+    pricing: {
+      starting: '₹50,000',
+      packages: [
+        { name: 'Starter', price: '₹50K', desc: '1-2 rooms' },
+        { name: 'Standard', price: '₹1.2L', desc: 'Full apartment' },
+        { name: 'Premium', price: '₹2.5L+', desc: 'Complete solution' }
+      ]
+    },
+    stats: [
+      { value: '70+', label: 'EC Homes' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '4.9/5', label: 'Customer Rating' },
+      { value: 'Weekend', label: 'Installation OK' }
+    ],
+    testimonials: [
+      { name: 'Anil K.', area: 'Phase 1', text: 'Weekend installation was perfect. No leave needed!' },
+      { name: 'Deepika S.', area: 'Neeladri', text: 'Love controlling home from office. Great convenience!' },
+      { name: 'Sunil R.', area: 'Phase 2', text: 'Energy savings are real. Smart investment!' }
+    ],
+    relatedService: 'home-automation'
   }
 };
 
