@@ -236,17 +236,18 @@ const BlogListPage = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e1a]/95 backdrop-blur-md shadow-lg">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-            <ArrowLeft className="w-5 h-5" />
-            <span>Back to Home</span>
-          </Link>
-          <Link to="/">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
-              alt="Qloud Tech Logo" 
+          <Link to="/" aria-label="Qloud Tech Home" data-testid="header-logo" className="flex-shrink-0">
+            <img
+              src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png"
+              alt="Qloud Tech Logo"
               className="h-6 brightness-0 invert"
             />
           </Link>
+          <a href="https://wa.me/917204746043" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] text-black font-semibold px-6 py-2 rounded-lg">
+              Contact Us
+            </Button>
+          </a>
         </div>
       </header>
 
