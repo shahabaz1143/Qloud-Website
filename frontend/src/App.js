@@ -44,6 +44,26 @@ const GAListener = () => {
   return null;
 };
 
+// Scroll to top on every route change (respects #anchor hashes)
+const ScrollToTop = () => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      // Let anchor-scrolling handle it (e.g. TOC links on blog articles)
+      const el = document.getElementById(hash.replace('#', ''));
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - 96;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  }, [pathname, hash]);
+
+  return null;
+};
+
 // Floating WhatsApp Button Component
 const WhatsAppButton = () => {
   const openWhatsApp = () => {
@@ -99,6 +119,7 @@ function App() {
   return (
     <BrowserRouter>
       <Toaster />
+      <ScrollToTop />
       <GAListener />
       <Routes>
         <Route path="/" element={<HomePage />} />
