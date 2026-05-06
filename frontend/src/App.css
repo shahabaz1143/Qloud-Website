@@ -34,24 +34,22 @@ html {
 }
 
 /* ============================================
-   Logo letter-by-letter beam scan
+   Logo snake of light
    ----------------------------------------------
-   A thin vertical bright cyan beam sweeps from
-   left to right across the logo. The beam is
-   masked to the logo shape (mask-image: logo.png)
-   so it only "lights up" when it's inside a
-   letter — passing through Q → L → O → U → D
-   one at a time, with dark gaps between letters.
-   The logo IMG itself stays untouched and crisp.
+   A small bright cyan dot snakes left-to-right
+   across the logo, wiggling vertically (sine
+   wave) so it weaves through each letter
+   Q → L → O → U → D like a serpent of light.
+   The logo IMG itself stays untouched.
    ============================================ */
 .logo-shine {
     position: relative;
     display: inline-block;
-    padding: 2px 4px;
+    padding: 6px 8px;
 }
 
 .logo-shine img {
-    /* Logo stays perfectly crisp — no filter animation */
+    /* Logo stays perfectly crisp */
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     z-index: 1;
@@ -72,10 +70,10 @@ html {
     transform: translate(-50%, -50%);
     background: radial-gradient(
         ellipse at center,
-        rgba(0, 212, 255, 0.4),
+        rgba(0, 212, 255, 0.3),
         rgba(0, 212, 255, 0) 70%
     );
-    filter: blur(10px);
+    filter: blur(8px);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -86,46 +84,46 @@ html {
     opacity: 1;
 }
 
-/* The vertical scanning beam — masked to logo shape */
+/* The snake — a small bright cyan dot weaving across */
 .logo-shine::after {
     content: "";
     position: absolute;
-    top: 2px;
-    bottom: 2px;
-    left: 4px;
-    right: 4px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        transparent 46%,
-        rgba(0, 212, 255, 0.55) 48%,
-        rgba(220, 252, 255, 1) 50%,
-        rgba(0, 212, 255, 0.55) 52%,
-        transparent 54%,
-        transparent 100%
-    );
-    background-size: 260% 100%;
-    background-position: 220% center;
-    -webkit-mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
-    mask-size: 100% 100%;
-    mask-position: center;
-    mask-repeat: no-repeat;
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(220, 252, 255, 1);
+    box-shadow:
+        0 0 3px rgba(220, 252, 255, 1),
+        0 0 6px rgba(0, 212, 255, 1),
+        0 0 12px rgba(0, 212, 255, 0.8),
+        0 0 18px rgba(103, 232, 249, 0.5);
+    transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 2;
-    animation: logo-beam-scan 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    animation: logo-snake-weave 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
 
 .logo-shine:hover::after {
-    animation-duration: 2s;
+    animation-duration: 1.6s;
 }
 
-@keyframes logo-beam-scan {
-    0%, 8%    { background-position: 220% center; }
-    100%      { background-position: -120% center; }
+/* Snake path — wiggles up & down through each letter slot */
+@keyframes logo-snake-weave {
+    0%, 100% { left: -6px;  top: 50%; opacity: 0; }
+    5%       { opacity: 1; }
+    14%      { left: 18%;   top: 22%; }   /* peak over Q */
+    23%      { left: 28%;   top: 78%; }   /* trough between Q and L */
+    32%      { left: 38%;   top: 22%; }   /* peak over L */
+    41%      { left: 48%;   top: 78%; }   /* trough */
+    50%      { left: 58%;   top: 22%; }   /* peak over O */
+    59%      { left: 68%;   top: 78%; }   /* trough */
+    68%      { left: 78%;   top: 22%; }   /* peak over U */
+    77%      { left: 88%;   top: 78%; }   /* trough */
+    86%      { left: 98%;   top: 22%; }   /* peak over D */
+    95%      { opacity: 1; left: 105%; top: 50%; }
+    100%     { opacity: 0; left: 110%; top: 50%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
