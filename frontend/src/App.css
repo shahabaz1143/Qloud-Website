@@ -34,25 +34,16 @@ html {
 }
 
 /* ============================================
-   Logo digital magic glow
+   Logo digital magic glow (crisp version)
    ----------------------------------------------
-   No box / border. The glow is drawn ONLY on
-   the logo letters using CSS mask-image so the
-   wrapper stays invisible.
-
-   Two layered effects:
-   1. A continuous breathing cyan halo on the
-      letter shapes (drop-shadow keyframes).
-   2. A bright cyan→white→cyan wave that sweeps
-      across, masked to the logo letters so it
-      looks like electricity flowing through the
-      glyphs.
+   Single tight drop-shadow keeps the letters
+   sharp; subtle masked wave adds a moving glint
+   without softening the logo.
    ============================================ */
 .logo-shine {
     position: relative;
     display: inline-block;
     padding: 4px 6px;
-    /* No border, no border-radius, no box-shadow */
 }
 
 .logo-shine img {
@@ -60,14 +51,17 @@ html {
     z-index: 1;
     filter:
         brightness(0) invert(1)
-        drop-shadow(0 0 2px rgba(0, 212, 255, 0.45));
-    animation: logo-breathing-glow 2.6s ease-in-out infinite;
+        drop-shadow(0 0 2px rgba(0, 212, 255, 0.55));
+    animation: logo-breathing-glow 3s ease-in-out infinite;
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Keep edges crisp regardless of zoom level */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .logo-shine:hover img {
-    transform: scale(1.07);
-    animation-duration: 1.4s;
+    transform: scale(1.06);
+    animation-duration: 1.6s;
 }
 
 /* Wave layer — masked to logo shape so it only
@@ -81,13 +75,9 @@ html {
     right: 6px;
     background: linear-gradient(
         100deg,
-        transparent 0%,
-        transparent 38%,
-        rgba(103, 232, 249, 0.55) 46%,
-        rgba(220, 252, 255, 1) 50%,
-        rgba(103, 232, 249, 0.55) 54%,
-        transparent 62%,
-        transparent 100%
+        transparent 40%,
+        rgba(180, 250, 255, 0.55) 50%,
+        transparent 60%
     );
     background-size: 220% 100%;
     background-position: 200% center;
@@ -101,29 +91,28 @@ html {
     mask-repeat: no-repeat;
     pointer-events: none;
     z-index: 2;
-    animation: logo-wave-sweep 3s ease-in-out infinite;
+    animation: logo-wave-sweep 3.5s ease-in-out infinite;
 }
 
 .logo-shine:hover::after {
-    animation-duration: 1.6s;
+    animation-duration: 1.8s;
 }
 
 @keyframes logo-breathing-glow {
     0%, 100% {
         filter:
             brightness(0) invert(1)
-            drop-shadow(0 0 2px rgba(0, 212, 255, 0.45));
+            drop-shadow(0 0 2px rgba(0, 212, 255, 0.4));
     }
     50% {
         filter:
             brightness(0) invert(1)
-            drop-shadow(0 0 4px rgba(0, 212, 255, 0.85))
-            drop-shadow(0 0 10px rgba(103, 232, 249, 0.55));
+            drop-shadow(0 0 4px rgba(0, 212, 255, 0.75));
     }
 }
 
 @keyframes logo-wave-sweep {
-    0%, 5%   { background-position: 200% center; }
+    0%, 8%   { background-position: 200% center; }
     100%     { background-position: -100% center; }
 }
 
