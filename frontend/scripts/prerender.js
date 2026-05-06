@@ -17,13 +17,43 @@ const path = require("path");
 const http = require("http");
 const handler = require("serve-handler");
 
-// Use puppeteer-core + @sparticuz/chromium to keep the dependency footprint
-// small enough for serverless build environments (Vercel, etc.).
-const puppeteer = require("puppeteer");
+// Auto-detect serverless environment (Vercel, AWS Lambda, etc.)
+// On serverless: use @sparticuz/chromium + puppeteer-core (system libs bundled)
+// On dev/local:  use full puppeteer (manages its own Chrome)
+const IS_SERVERLESS = !!process.env.VERCEL || !!process.env.AWS_LAMBDA_FUNCTION_VERSION;
 
 const BUILD_DIR = path.resolve(__dirname, "..", "build");
 const SITEMAP_PATH = path.join(BUILD_DIR, "sitemap.xml");
 const PORT = 4567;
+
+async function launchBrowser() {
+  if (IS_SERVERLESS) {
+    const chromium = require("@sparticuz/chromium");
+    const puppeteer = require("puppeteer-core");
+    return puppeteer.launch({
+      args: [
+        ...chromium.args,
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage"
+      ],
+      defaultViewport: { width: 1280, height: 800 },
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless
+    });
+  }
+  // Local dev path
+  const puppeteer = require("puppeteer");
+  return puppeteer.launch({
+    headless: "new",
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu"
+    ]
+  });
+}
 
 function parseRoutesFromSitemap(sitemapXml) {
   const matches = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)];
@@ -64,15 +94,7 @@ async function prerender() {
   await new Promise((resolve) => server.listen(PORT, resolve));
   console.log(`[prerender] Static server running at http://localhost:${PORT}`);
 
-  const browser = await puppeteer.launch({
-    headless: "new",
-    args: [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-      "--disable-gpu"
-    ]
-  });
+  const browser = await launchBrowser();
 
   let success = 0;
   let failed = 0;
