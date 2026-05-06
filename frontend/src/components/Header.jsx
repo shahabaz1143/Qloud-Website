@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
-import LogoMark from './LogoMark';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -64,7 +63,7 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex-shrink-0 group logo-shine" aria-label="Qloud Tech Home">
-            <LogoMark />
+            <img src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" alt="Qloud Tech Logo" className="h-6 brightness-0 invert" />
           </Link>
 
           {/* Desktop Navigation */}
