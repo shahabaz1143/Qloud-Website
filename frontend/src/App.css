@@ -34,90 +34,90 @@ html {
 }
 
 /* ============================================
-   Logo digital magic glow (crisp version)
+   Logo accent line — premium tech-brand effect
    ----------------------------------------------
-   Single tight drop-shadow keeps the letters
-   sharp; subtle masked wave adds a moving glint
-   without softening the logo.
+   The logo IMG itself stays untouched and crisp.
+   All visual interest comes from a thin animated
+   cyan line that pulses below the logo, like a
+   status/connection indicator. Looks like the
+   logo is "live" / connected without any blur
+   on the letters themselves.
    ============================================ */
 .logo-shine {
     position: relative;
     display: inline-block;
-    padding: 4px 6px;
+    padding: 2px 4px 6px 4px;
 }
 
 .logo-shine img {
-    position: relative;
-    z-index: 1;
-    filter:
-        brightness(0) invert(1)
-        drop-shadow(0 0 2px rgba(0, 212, 255, 0.55));
-    animation: logo-breathing-glow 3s ease-in-out infinite;
+    /* Keep the logo perfectly crisp - no filters that could blur */
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    /* Keep edges crisp regardless of zoom level */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
 }
 
 .logo-shine:hover img {
-    transform: scale(1.06);
-    animation-duration: 1.6s;
+    transform: scale(1.05);
 }
 
-/* Wave layer — masked to logo shape so it only
-   "energizes" the letters, never showing as a box */
+/* The animated underline */
 .logo-shine::after {
     content: "";
     position: absolute;
-    top: 4px;
-    bottom: 4px;
-    left: 6px;
-    right: 6px;
+    left: 50%;
+    bottom: 0;
+    height: 1.5px;
+    width: 70%;
+    transform: translateX(-50%);
     background: linear-gradient(
-        100deg,
-        transparent 40%,
-        rgba(180, 250, 255, 0.55) 50%,
-        transparent 60%
+        90deg,
+        transparent 0%,
+        rgba(0, 212, 255, 0.9) 30%,
+        rgba(220, 252, 255, 1) 50%,
+        rgba(0, 212, 255, 0.9) 70%,
+        transparent 100%
     );
     background-size: 220% 100%;
     background-position: 200% center;
-    -webkit-mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
-    mask-size: 100% 100%;
-    mask-position: center;
-    mask-repeat: no-repeat;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.7);
     pointer-events: none;
-    z-index: 2;
-    animation: logo-wave-sweep 3.5s ease-in-out infinite;
+    animation: logo-line-sweep 2.8s ease-in-out infinite;
+}
+
+/* Soft radial glow behind logo on hover only */
+.logo-shine::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 212, 255, 0.35),
+        rgba(0, 212, 255, 0) 70%
+    );
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.logo-shine:hover::before {
+    opacity: 1;
 }
 
 .logo-shine:hover::after {
-    animation-duration: 1.8s;
+    animation-duration: 1.4s;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 1);
 }
 
-@keyframes logo-breathing-glow {
-    0%, 100% {
-        filter:
-            brightness(0) invert(1)
-            drop-shadow(0 0 2px rgba(0, 212, 255, 0.4));
-    }
-    50% {
-        filter:
-            brightness(0) invert(1)
-            drop-shadow(0 0 4px rgba(0, 212, 255, 0.75));
-    }
-}
-
-@keyframes logo-wave-sweep {
-    0%, 8%   { background-position: 200% center; }
+@keyframes logo-line-sweep {
+    0%, 5%   { background-position: 200% center; }
     100%     { background-position: -100% center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .logo-shine img,
     .logo-shine::after {
         animation: none;
     }
