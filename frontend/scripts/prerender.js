@@ -30,15 +30,36 @@ async function launchBrowser() {
   if (IS_SERVERLESS) {
     const chromium = require("@sparticuz/chromium");
     const puppeteer = require("puppeteer-core");
+
+    // Extract the bundled Chromium + libs to /tmp and get the binary path.
+    // @sparticuz/chromium auto-extracts al2/al2023 libs (libnss3, libnspr4,
+    // libfontconfig, etc.) into the same directory as the binary.
+    const executablePath = await chromium.executablePath();
+
+    // Make absolutely sure the bundled libs can be found by the binary.
+    // Some build runtimes (notably Vercel's build container) don't have
+    // libnss3 / libnspr4 in their default LD search path.
+    const binDir = path.dirname(executablePath);
+    process.env.LD_LIBRARY_PATH = [
+      binDir,
+      "/tmp",
+      "/tmp/al2",
+      "/tmp/al2023",
+      process.env.LD_LIBRARY_PATH || ""
+    ]
+      .filter(Boolean)
+      .join(":");
+
     return puppeteer.launch({
       args: [
         ...chromium.args,
         "--no-sandbox",
         "--disable-setuid-sandbox",
-        "--disable-dev-shm-usage"
+        "--disable-dev-shm-usage",
+        "--single-process"
       ],
       defaultViewport: { width: 1280, height: 800 },
-      executablePath: await chromium.executablePath(),
+      executablePath,
       headless: chromium.headless
     });
   }
@@ -76,11 +97,12 @@ function parseRoutesFromSitemap(sitemapXml) {
 async function prerender() {
   if (!fs.existsSync(SITEMAP_PATH)) {
     console.error(`[prerender] Sitemap not found at ${SITEMAP_PATH}. Skipping.`);
-    process.exit(0);
+    return;
   }
 
   const sitemap = fs.readFileSync(SITEMAP_PATH, "utf-8");
   const routes = parseRoutesFromSitemap(sitemap);
+  console.log(`[prerender] Mode: ${IS_SERVERLESS ? "serverless (@sparticuz/chromium)" : "local (puppeteer)"}`);
   console.log(`[prerender] Found ${routes.length} routes to prerender`);
 
   // Static file server
@@ -94,7 +116,15 @@ async function prerender() {
   await new Promise((resolve) => server.listen(PORT, resolve));
   console.log(`[prerender] Static server running at http://localhost:${PORT}`);
 
-  const browser = await launchBrowser();
+  let browser;
+  try {
+    browser = await launchBrowser();
+  } catch (err) {
+    console.error(`[prerender] Browser failed to launch: ${err.message}`);
+    console.warn(`[prerender] Skipping prerendering — site will deploy as SPA. Investigate the error above.`);
+    await new Promise((resolve) => server.close(resolve));
+    return;
+  }
 
   let success = 0;
   let failed = 0;
@@ -153,10 +183,11 @@ async function prerender() {
   await new Promise((resolve) => server.close(resolve));
 
   console.log(`[prerender] Done: ${success} succeeded, ${failed} failed`);
-  if (failed > 0 && success === 0) process.exit(1);
+  // Non-fatal: even if some routes fail, let the deploy succeed.
+  // SPA fallback handles uncovered routes via the Vercel rewrite rule.
 }
 
 prerender().catch((err) => {
-  console.error("[prerender] Fatal:", err);
-  process.exit(1);
+  console.error("[prerender] Unexpected error (non-fatal):", err);
+  process.exit(0);
 });
