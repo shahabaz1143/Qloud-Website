@@ -34,79 +34,101 @@ html {
 }
 
 /* ============================================
-   Logo digital magic wave
+   Logo digital magic glow
    ----------------------------------------------
-   1. Continuous ambient cyan aura pulse around
-      the logo wrapper (box-shadow keyframes).
+   No box / border. The glow is drawn ONLY on
+   the logo letters using CSS mask-image so the
+   wrapper stays invisible.
+
+   Two layered effects:
+   1. A continuous breathing cyan halo on the
+      letter shapes (drop-shadow keyframes).
    2. A bright cyan→white→cyan wave that sweeps
-      across the logo. mix-blend-mode: screen
-      makes it momentarily "energize" the white
-      logo letters with electric cyan light.
-   The two animations run at different periods
-   (2.8s vs 3.2s) so the combined effect feels
-   organic + magical, not robotic.
+      across, masked to the logo letters so it
+      looks like electricity flowing through the
+      glyphs.
    ============================================ */
 .logo-shine {
     position: relative;
-    overflow: hidden;
     display: inline-block;
-    padding: 6px 12px;
-    border-radius: 6px;
-    animation: logo-aura-pulse 2.8s ease-in-out infinite;
+    padding: 4px 6px;
+    /* No border, no border-radius, no box-shadow */
 }
 
+.logo-shine img {
+    position: relative;
+    z-index: 1;
+    filter:
+        brightness(0) invert(1)
+        drop-shadow(0 0 2px rgba(0, 212, 255, 0.45));
+    animation: logo-breathing-glow 2.6s ease-in-out infinite;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo-shine:hover img {
+    transform: scale(1.07);
+    animation-duration: 1.4s;
+}
+
+/* Wave layer — masked to logo shape so it only
+   "energizes" the letters, never showing as a box */
 .logo-shine::after {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -55%;
-    width: 50%;
+    top: 4px;
+    bottom: 4px;
+    left: 6px;
+    right: 6px;
     background: linear-gradient(
         100deg,
         transparent 0%,
-        transparent 25%,
-        rgba(103, 232, 249, 0.35) 40%,
-        rgba(0, 212, 255, 0.6) 47%,
-        rgba(180, 250, 255, 0.95) 50%,
-        rgba(0, 212, 255, 0.6) 53%,
-        rgba(103, 232, 249, 0.35) 60%,
-        transparent 75%,
+        transparent 38%,
+        rgba(103, 232, 249, 0.55) 46%,
+        rgba(220, 252, 255, 1) 50%,
+        rgba(103, 232, 249, 0.55) 54%,
+        transparent 62%,
         transparent 100%
     );
-    filter: blur(1px);
-    mix-blend-mode: screen;
+    background-size: 220% 100%;
+    background-position: 200% center;
+    -webkit-mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    mask-size: 100% 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
     pointer-events: none;
-    animation: logo-wave-sweep 3.2s cubic-bezier(0.55, 0.085, 0.45, 0.95) infinite;
+    z-index: 2;
+    animation: logo-wave-sweep 3s ease-in-out infinite;
 }
 
-@keyframes logo-aura-pulse {
+.logo-shine:hover::after {
+    animation-duration: 1.6s;
+}
+
+@keyframes logo-breathing-glow {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+        filter:
+            brightness(0) invert(1)
+            drop-shadow(0 0 2px rgba(0, 212, 255, 0.45));
     }
     50% {
-        box-shadow:
-            0 0 14px 2px rgba(0, 212, 255, 0.28),
-            0 0 28px 0 rgba(103, 232, 249, 0.12);
+        filter:
+            brightness(0) invert(1)
+            drop-shadow(0 0 4px rgba(0, 212, 255, 0.85))
+            drop-shadow(0 0 10px rgba(103, 232, 249, 0.55));
     }
 }
 
 @keyframes logo-wave-sweep {
-    0%, 8%    { left: -55%; }
-    60%, 100% { left: 150%; }
-}
-
-/* Hover boosts both the aura and the wave intensity */
-.logo-shine:hover {
-    animation-duration: 1.6s;
-}
-
-.logo-shine:hover::after {
-    animation-duration: 2s;
+    0%, 5%   { background-position: 200% center; }
+    100%     { background-position: -100% center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .logo-shine,
+    .logo-shine img,
     .logo-shine::after {
         animation: none;
     }
