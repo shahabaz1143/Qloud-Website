@@ -34,52 +34,31 @@ html {
 }
 
 /* ============================================
-   Logo accent line — premium tech-brand effect
+   Logo letter-by-letter beam scan
    ----------------------------------------------
+   A thin vertical bright cyan beam sweeps from
+   left to right across the logo. The beam is
+   masked to the logo shape (mask-image: logo.png)
+   so it only "lights up" when it's inside a
+   letter — passing through Q → L → O → U → D
+   one at a time, with dark gaps between letters.
    The logo IMG itself stays untouched and crisp.
-   All visual interest comes from a thin animated
-   cyan line that pulses below the logo, like a
-   status/connection indicator. Looks like the
-   logo is "live" / connected without any blur
-   on the letters themselves.
    ============================================ */
 .logo-shine {
     position: relative;
     display: inline-block;
-    padding: 2px 4px 6px 4px;
+    padding: 2px 4px;
 }
 
 .logo-shine img {
-    /* Keep the logo perfectly crisp - no filters that could blur */
+    /* Logo stays perfectly crisp — no filter animation */
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
 }
 
 .logo-shine:hover img {
     transform: scale(1.05);
-}
-
-/* The animated underline */
-.logo-shine::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    height: 1.5px;
-    width: 70%;
-    transform: translateX(-50%);
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(0, 212, 255, 0.9) 30%,
-        rgba(220, 252, 255, 1) 50%,
-        rgba(0, 212, 255, 0.9) 70%,
-        transparent 100%
-    );
-    background-size: 220% 100%;
-    background-position: 200% center;
-    box-shadow: 0 0 8px rgba(0, 212, 255, 0.7);
-    pointer-events: none;
-    animation: logo-line-sweep 2.8s ease-in-out infinite;
 }
 
 /* Soft radial glow behind logo on hover only */
@@ -88,15 +67,15 @@ html {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 80%;
-    height: 70%;
+    width: 90%;
+    height: 80%;
     transform: translate(-50%, -50%);
     background: radial-gradient(
         ellipse at center,
-        rgba(0, 212, 255, 0.35),
+        rgba(0, 212, 255, 0.4),
         rgba(0, 212, 255, 0) 70%
     );
-    filter: blur(8px);
+    filter: blur(10px);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -107,14 +86,46 @@ html {
     opacity: 1;
 }
 
-.logo-shine:hover::after {
-    animation-duration: 1.4s;
-    box-shadow: 0 0 12px rgba(0, 212, 255, 1);
+/* The vertical scanning beam — masked to logo shape */
+.logo-shine::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 4px;
+    right: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 46%,
+        rgba(0, 212, 255, 0.55) 48%,
+        rgba(220, 252, 255, 1) 50%,
+        rgba(0, 212, 255, 0.55) 52%,
+        transparent 54%,
+        transparent 100%
+    );
+    background-size: 260% 100%;
+    background-position: 220% center;
+    -webkit-mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    mask-size: 100% 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 2;
+    animation: logo-beam-scan 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
-@keyframes logo-line-sweep {
-    0%, 5%   { background-position: 200% center; }
-    100%     { background-position: -100% center; }
+.logo-shine:hover::after {
+    animation-duration: 2s;
+}
+
+@keyframes logo-beam-scan {
+    0%, 8%    { background-position: 220% center; }
+    100%      { background-position: -120% center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
