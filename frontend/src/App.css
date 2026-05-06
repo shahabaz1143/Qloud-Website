@@ -1,3 +1,7 @@
+/* Russo One — used by the LogoMark SVG overlay to approximate
+   the outline of the existing PNG wordmark for the snake-trace effect */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -34,46 +38,53 @@ html {
 }
 
 /* ============================================
-   Logo snake of light
+   Logo snake — traces around letter outlines
    ----------------------------------------------
-   A small bright cyan dot snakes left-to-right
-   across the logo, wiggling vertically (sine
-   wave) so it weaves through each letter
-   Q → L → O → U → D like a serpent of light.
-   The logo IMG itself stays untouched.
+   The wordmark is pure SVG using "Russo One".
+   3 stacked <text> layers in the same position:
+   1. White fill = the visible logo
+   2. Cyan trail stroke = fading comet tail
+   3. Bright snake head stroke = bright dot racing
+      around the outline.
+   stroke-dashoffset animates so the visible
+   stroke segment travels around Q → L → O → U → D
+   in sequence, looping forever.
    ============================================ */
 .logo-shine {
     position: relative;
     display: inline-block;
-    padding: 6px 8px;
+    padding: 4px 6px;
 }
 
-.logo-shine img {
-    /* Logo stays perfectly crisp */
+.logo-shine .logo-mark-svg {
+    display: block;
+    height: 28px;
+    width: auto;
+    overflow: visible;
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     z-index: 1;
 }
 
-.logo-shine:hover img {
+.logo-shine:hover .logo-mark-svg {
     transform: scale(1.05);
 }
 
-/* Soft radial glow behind logo on hover only */
+/* Soft cyan radial glow on hover only */
 .logo-shine::before {
     content: "";
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 90%;
+    width: 95%;
     height: 80%;
     transform: translate(-50%, -50%);
     background: radial-gradient(
         ellipse at center,
-        rgba(0, 212, 255, 0.3),
+        rgba(0, 212, 255, 0.35),
         rgba(0, 212, 255, 0) 70%
     );
-    filter: blur(8px);
+    filter: blur(10px);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -84,50 +95,24 @@ html {
     opacity: 1;
 }
 
-/* The snake — a small bright cyan dot weaving across */
-.logo-shine::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: rgba(220, 252, 255, 1);
-    box-shadow:
-        0 0 3px rgba(220, 252, 255, 1),
-        0 0 6px rgba(0, 212, 255, 1),
-        0 0 12px rgba(0, 212, 255, 0.8),
-        0 0 18px rgba(103, 232, 249, 0.5);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 2;
-    animation: logo-snake-weave 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+/* Cyan electric outline — marching ants around every letter */
+.logo-mark-snake {
+    stroke-dasharray: 4 6;
+    stroke-dashoffset: 0;
+    animation: snake-trace 0.8s linear infinite;
 }
 
-.logo-shine:hover::after {
-    animation-duration: 1.6s;
+@keyframes snake-trace {
+    from { stroke-dashoffset: 10; }
+    to   { stroke-dashoffset: 0; }
 }
 
-/* Snake path — wiggles up & down through each letter slot */
-@keyframes logo-snake-weave {
-    0%, 100% { left: -6px;  top: 50%; opacity: 0; }
-    5%       { opacity: 1; }
-    14%      { left: 18%;   top: 22%; }   /* peak over Q */
-    23%      { left: 28%;   top: 78%; }   /* trough between Q and L */
-    32%      { left: 38%;   top: 22%; }   /* peak over L */
-    41%      { left: 48%;   top: 78%; }   /* trough */
-    50%      { left: 58%;   top: 22%; }   /* peak over O */
-    59%      { left: 68%;   top: 78%; }   /* trough */
-    68%      { left: 78%;   top: 22%; }   /* peak over U */
-    77%      { left: 88%;   top: 78%; }   /* trough */
-    86%      { left: 98%;   top: 22%; }   /* peak over D */
-    95%      { opacity: 1; left: 105%; top: 50%; }
-    100%     { opacity: 0; left: 110%; top: 50%; }
+.logo-shine:hover .logo-mark-snake {
+    animation-duration: 0.5s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .logo-shine::after {
+    .logo-mark-snake {
         animation: none;
     }
 }

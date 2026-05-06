@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Share2, MessageCircle, ChevronRight, List } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import LogoMark from '../components/LogoMark';
 
 // Blog data with full content
 const blogData = {
@@ -1150,11 +1151,7 @@ const BlogArticle = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e1a]/95 backdrop-blur-md shadow-lg">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" aria-label="Qloud Tech Home" data-testid="header-logo" className="flex-shrink-0 group logo-shine">
-            <img
-              src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png"
-              alt="Qloud Tech Logo"
-              className="h-6 brightness-0 invert"
-            />
+            <LogoMark />
           </Link>
           <div className="flex items-center gap-4">
             <button onClick={shareArticle} className="text-gray-400 hover:text-white">
