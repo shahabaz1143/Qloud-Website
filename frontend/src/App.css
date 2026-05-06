@@ -34,9 +34,17 @@ html {
 }
 
 /* ============================================
-   Logo shine sweep — premium watch-face feel
-   Sweeps a translucent cyan highlight across
-   the logo every ~4 seconds.
+   Logo digital magic wave
+   ----------------------------------------------
+   1. Continuous ambient cyan aura pulse around
+      the logo wrapper (box-shadow keyframes).
+   2. A bright cyan→white→cyan wave that sweeps
+      across the logo. mix-blend-mode: screen
+      makes it momentarily "energize" the white
+      logo letters with electric cyan light.
+   The two animations run at different periods
+   (2.8s vs 3.2s) so the combined effect feels
+   organic + magical, not robotic.
    ============================================ */
 .logo-shine {
     position: relative;
@@ -44,6 +52,7 @@ html {
     display: inline-block;
     padding: 6px 12px;
     border-radius: 6px;
+    animation: logo-aura-pulse 2.8s ease-in-out infinite;
 }
 
 .logo-shine::after {
@@ -51,31 +60,53 @@ html {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -60%;
-    width: 45%;
+    left: -55%;
+    width: 50%;
     background: linear-gradient(
-        105deg,
+        100deg,
         transparent 0%,
-        transparent 35%,
-        rgba(103, 232, 249, 0.18) 45%,
-        rgba(0, 212, 255, 0.35) 50%,
-        rgba(103, 232, 249, 0.18) 55%,
-        transparent 65%,
+        transparent 25%,
+        rgba(103, 232, 249, 0.35) 40%,
+        rgba(0, 212, 255, 0.6) 47%,
+        rgba(180, 250, 255, 0.95) 50%,
+        rgba(0, 212, 255, 0.6) 53%,
+        rgba(103, 232, 249, 0.35) 60%,
+        transparent 75%,
         transparent 100%
     );
-    transform: skewX(-15deg);
+    filter: blur(1px);
+    mix-blend-mode: screen;
     pointer-events: none;
-    animation: logo-shine-sweep 4.5s ease-in-out infinite;
+    animation: logo-wave-sweep 3.2s cubic-bezier(0.55, 0.085, 0.45, 0.95) infinite;
 }
 
-@keyframes logo-shine-sweep {
-    0%   { left: -60%; opacity: 0; }
-    8%   { opacity: 1; }
-    35%  { left: 160%; opacity: 0; }
-    100% { left: 160%; opacity: 0; }
+@keyframes logo-aura-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+    }
+    50% {
+        box-shadow:
+            0 0 14px 2px rgba(0, 212, 255, 0.28),
+            0 0 28px 0 rgba(103, 232, 249, 0.12);
+    }
+}
+
+@keyframes logo-wave-sweep {
+    0%, 8%    { left: -55%; }
+    60%, 100% { left: 150%; }
+}
+
+/* Hover boosts both the aura and the wave intensity */
+.logo-shine:hover {
+    animation-duration: 1.6s;
+}
+
+.logo-shine:hover::after {
+    animation-duration: 2s;
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .logo-shine,
     .logo-shine::after {
         animation: none;
     }
