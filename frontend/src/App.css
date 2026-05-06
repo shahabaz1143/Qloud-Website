@@ -34,18 +34,19 @@ html {
 }
 
 /* ============================================
-   Logo snake — orbits the outline of each letter
+   Logo letter-by-letter beam scan
    ----------------------------------------------
-   The PNG logo stays untouched. A small bright
-   cyan dot uses CSS offset-path to orbit around
-   the perimeter of each letter (Q → L → O → U → D)
-   in turn — circling the outer edge of every
-   glyph like a tiny satellite.
+   A bright cyan→white→cyan vertical beam sweeps
+   left-to-right across the logo. The beam is
+   masked to the logo's letter shapes (mask-image:
+   logo.png), so it only "lights up" each letter
+   in sequence: Q → L → O → U → D, with dark gaps
+   between them. The PNG logo stays untouched.
    ============================================ */
 .logo-shine {
     position: relative;
     display: inline-block;
-    padding: 6px 8px;
+    padding: 2px 4px;
 }
 
 .logo-shine img {
@@ -58,7 +59,7 @@ html {
     transform: scale(1.05);
 }
 
-/* Soft radial cyan glow on hover only */
+/* Soft cyan radial glow on hover only */
 .logo-shine::before {
     content: "";
     position: absolute;
@@ -69,10 +70,10 @@ html {
     transform: translate(-50%, -50%);
     background: radial-gradient(
         ellipse at center,
-        rgba(0, 212, 255, 0.3),
+        rgba(0, 212, 255, 0.4),
         rgba(0, 212, 255, 0) 70%
     );
-    filter: blur(8px);
+    filter: blur(10px);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -83,39 +84,46 @@ html {
     opacity: 1;
 }
 
-/* The orbiting cyan dot — follows letter outlines via offset-path */
+/* Vertical scanning beam — masked to logo shape */
 .logo-shine::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 5px;
-    margin: -2.5px 0 0 -2.5px;
-    border-radius: 50%;
-    background: rgba(220, 252, 255, 1);
-    box-shadow:
-        0 0 3px rgba(220, 252, 255, 1),
-        0 0 6px rgba(0, 212, 255, 1),
-        0 0 12px rgba(0, 212, 255, 0.8),
-        0 0 18px rgba(103, 232, 249, 0.5);
-    /* Path traces an ellipse around each letter, with brief link
-       segments between them. Coordinates are in pixels relative to
-       .logo-shine (which is always 178.77 × 36px when img is h-6). */
-    offset-path: path("M 12 18 A 12 14 0 1 1 36 18 A 12 14 0 1 1 12 18 L 49 18 A 8 14 0 1 1 65 18 A 8 14 0 1 1 49 18 L 77 18 A 12 14 0 1 1 101 18 A 12 14 0 1 1 77 18 L 111 18 A 11 14 0 1 1 133 18 A 11 14 0 1 1 111 18 L 142 18 A 12 14 0 1 1 166 18 A 12 14 0 1 1 142 18 L 12 18");
-    offset-distance: 0%;
+    top: 2px;
+    bottom: 2px;
+    left: 4px;
+    right: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 46%,
+        rgba(0, 212, 255, 0.55) 48%,
+        rgba(220, 252, 255, 1) 50%,
+        rgba(0, 212, 255, 0.55) 52%,
+        transparent 54%,
+        transparent 100%
+    );
+    background-size: 260% 100%;
+    background-position: 220% center;
+    -webkit-mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    mask-size: 100% 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
     pointer-events: none;
     z-index: 2;
-    animation: logo-snake-orbit 8s linear infinite;
+    animation: logo-beam-scan 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
 .logo-shine:hover::after {
-    animation-duration: 4s;
+    animation-duration: 2s;
 }
 
-@keyframes logo-snake-orbit {
-    from { offset-distance: 0%; }
-    to   { offset-distance: 100%; }
+@keyframes logo-beam-scan {
+    0%, 8%   { background-position: 220% center; }
+    100%     { background-position: -120% center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
