@@ -141,7 +141,7 @@ const ServicesPage = () => {
             <img
               src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png"
               alt="Qloud Tech Logo"
-              className="h-6 brightness-0 invert transition-all duration-300 group-hover:scale-105 group-hover:[filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(0,212,255,0.7))]"
+              className="h-6 brightness-0 invert transition-all duration-300 group-hover:scale-105 group-hover:[filter:brightness(0)_invert(1)_drop-shadow(0_0_6px_rgba(0,212,255,0.85))]"
             />
           </Link>
           <a href="https://wa.me/917204746043" target="_blank" rel="noopener noreferrer">
