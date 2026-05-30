@@ -119,8 +119,8 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white text-sm font-medium">Bharatiya City, Bangalore</div>
-                  <div className="text-gray-500 text-xs">Karnataka, India</div>
+                  <div className="text-white text-sm font-medium">Kothanur, Byrathi</div>
+                  <div className="text-gray-500 text-xs">Bangalore, Karnataka 560077</div>
                 </div>
               </div>
             </div>

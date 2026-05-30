@@ -124,10 +124,10 @@ const ContactPage = () => {
               <div className="text-gray-400 text-sm mt-2">30-min average response</div>
             </button>
 
-            <a href="mailto:hello@qloudsmarthomes.com" className="text-left p-6 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/30 border border-gray-800 hover:border-cyan-500/40 transition-colors block">
+            <a href="mailto:contact@qloudsmarthomes.com" className="text-left p-6 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/30 border border-gray-800 hover:border-cyan-500/40 transition-colors block">
               <Mail className="w-6 h-6 text-cyan-400 mb-3" />
               <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Email</div>
-              <div className="text-white font-semibold text-base break-all">hello@qloudsmarthomes.com</div>
+              <div className="text-white font-semibold text-base break-all">contact@qloudsmarthomes.com</div>
               <div className="text-gray-400 text-sm mt-2">2-hour response in office hours</div>
             </a>
           </div>

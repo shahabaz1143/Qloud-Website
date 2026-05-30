@@ -166,8 +166,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-white mb-0.5">Office</h3>
-                    <p className="text-cyan-400 text-sm font-semibold">Bharatiya City, Bangalore</p>
-                    <p className="text-gray-500 text-xs">Karnataka, India</p>
+                    <p className="text-cyan-400 text-sm font-semibold">Kothanur, Byrathi, Bangalore</p>
+                    <p className="text-gray-500 text-xs">Karnataka 560077, India</p>
                   </div>
                 </div>
               </div>
@@ -179,12 +179,8 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-black" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-white mb-1">Experience Centers</h3>
-                    <div className="flex gap-4">
-                      <p className="text-cyan-400 text-sm font-semibold">Bharatiya City</p>
-                      <span className="text-gray-600">•</span>
-                      <p className="text-cyan-400 text-sm font-semibold">MG Road</p>
-                    </div>
+                    <h3 className="text-base font-bold text-white mb-1">Visit Us</h3>
+                    <p className="text-cyan-400 text-sm font-semibold leading-tight">First Floor 11, 102/1, above Sufyan, Geddalahalli, Rammana Layout</p>
                   </div>
                 </div>
               </div>

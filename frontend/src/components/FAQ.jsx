@@ -37,7 +37,7 @@ const faqs = [
   {
     id: 6,
     question: "What areas in Bangalore do you serve?",
-    answer: "We serve all areas in Bangalore including Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Electronic City, Sarjapur Road, Marathahalli, and more. We have experience centers in Bharatiya City and MG Road.",
+    answer: "We serve all areas in Bangalore including Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Electronic City, Sarjapur Road, Marathahalli, and more. Our office is located in Kothanur, Byrathi (Pin 560077).",
     category: "Coverage"
   },
   {
