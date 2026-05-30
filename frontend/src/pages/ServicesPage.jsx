@@ -186,7 +186,7 @@ const ServicesPage = () => {
               <li className="text-white">Services</li>
             </ol>
           </nav>
-          <div className="max-w-4xl">
+          <div className="max-w-6xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-4">
               Our Services
             </span>
@@ -266,10 +266,10 @@ const ServicesPage = () => {
       {/* Why Qloud Tech */}
       <section className="py-16 bg-[#070a13] border-t border-gray-900">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Why Bangalore Chooses <span className="text-cyan-400">Qloud Tech</span>
           </h2>
-          <p className="text-gray-400 mb-10">After 500+ installations across the city, here's what consistently sets us apart from generic AV contractors.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">After 500+ installations across the city, here's what consistently sets us apart from generic AV contractors.</p>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl bg-gray-900/40 border border-gray-800">
@@ -309,10 +309,10 @@ const ServicesPage = () => {
       {/* Buyer's Guide */}
       <section className="py-16 bg-[#0a0e1a]">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Which Service Is <span className="text-cyan-400">Right for You?</span>
           </h2>
-          <p className="text-gray-400 mb-10">A quick decision-tree based on what 500+ Bangalore customers have done.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">A quick decision-tree based on what 500+ Bangalore customers have done.</p>
 
           <div className="space-y-4">
             <div className="p-5 rounded-xl bg-gray-900/40 border border-gray-800">
@@ -338,10 +338,10 @@ const ServicesPage = () => {
       {/* FAQ */}
       <section className="py-16 bg-[#070a13]">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Services <span className="text-cyan-400">FAQs</span>
           </h2>
-          <p className="text-gray-400 mb-10">Common questions Bangalore homeowners ask before booking.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">Common questions Bangalore homeowners ask before booking.</p>
 
           <div className="grid md:grid-cols-2 gap-5">
             {SERVICES_FAQS.map((faq, i) => (

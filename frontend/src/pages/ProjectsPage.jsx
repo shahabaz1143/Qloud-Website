@@ -73,7 +73,7 @@ const ProjectsPage = () => {
               <li className="text-white">Projects</li>
             </ol>
           </nav>
-          <div className="max-w-4xl">
+          <div className="max-w-6xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-4">
               Our Portfolio
             </span>
@@ -114,10 +114,10 @@ const ProjectsPage = () => {
       {/* Project categories */}
       <section className="py-16 bg-[#070a13] border-t border-gray-900">
         <div className="container mx-auto px-6 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Project <span className="text-cyan-400">Categories</span>
           </h2>
-          <p className="text-gray-400 mb-10">Our 500+ Bangalore installations span six categories. Click any to see real customer work, pricing, and case studies.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">Our 500+ Bangalore installations span six categories. Click any to see real customer work, pricing, and case studies.</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -148,10 +148,10 @@ const ProjectsPage = () => {
       {/* By neighbourhood */}
       <section className="py-16 bg-[#0a0e1a]">
         <div className="container mx-auto px-6 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Projects <span className="text-cyan-400">By Neighbourhood</span>
           </h2>
-          <p className="text-gray-400 mb-10">We've installed home theatres and smart home systems in 17+ Bangalore neighbourhoods. See real customer work and locally relevant pricing.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">We've installed home theatres and smart home systems in 17+ Bangalore neighbourhoods. See real customer work and locally relevant pricing.</p>
 
           {Object.entries(NEIGHBOURHOODS_BY_TYPE).map(([type, locations]) => (
             <div key={type} className="mb-10">

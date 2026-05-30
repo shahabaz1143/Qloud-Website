@@ -92,7 +92,7 @@ const PackagesPage = () => {
               <li className="text-white">Packages</li>
             </ol>
           </nav>
-          <div className="max-w-4xl">
+          <div className="max-w-6xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-4">
               Transparent Pricing
             </span>
@@ -123,10 +123,10 @@ const PackagesPage = () => {
       {/* What's included matrix */}
       <section className="py-16 bg-[#0a0e1a] border-t border-gray-900">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             What's Included in Every <span className="text-cyan-400">Package</span>
           </h2>
-          <p className="text-gray-400 mb-10">No matter which tier you choose, every Qloud Tech installation comes with these standards baked in.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">No matter which tier you choose, every Qloud Tech installation comes with these standards baked in.</p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -154,10 +154,10 @@ const PackagesPage = () => {
       {/* How to choose */}
       <section className="py-16 bg-[#070a13]">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             How to Choose the Right <span className="text-cyan-400">Package</span>
           </h2>
-          <p className="text-gray-400 mb-10">A quick guide based on what 500+ Bangalore customers have done over the past 5 years.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">A quick guide based on what 500+ Bangalore customers have done over the past 5 years.</p>
 
           <div className="space-y-6">
             <div className="p-6 rounded-xl bg-gray-900/40 border border-gray-800">
@@ -193,10 +193,10 @@ const PackagesPage = () => {
       {/* FAQ */}
       <section className="py-16 bg-[#0a0e1a]">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Frequently Asked <span className="text-cyan-400">Questions</span>
           </h2>
-          <p className="text-gray-400 mb-10">Quick answers to the questions our Bangalore customers ask most.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">Quick answers to the questions our Bangalore customers ask most.</p>
 
           <div className="grid md:grid-cols-2 gap-5">
             {PACKAGE_FAQS.map((faq, i) => (

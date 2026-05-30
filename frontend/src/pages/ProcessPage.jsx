@@ -92,7 +92,7 @@ const ProcessPage = () => {
               <li className="text-white">Process</li>
             </ol>
           </nav>
-          <div className="max-w-4xl">
+          <div className="max-w-6xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-4">
               Transparent Workflow
             </span>
@@ -129,10 +129,10 @@ const ProcessPage = () => {
       {/* Why our process is different */}
       <section className="py-16 bg-[#070a13]">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Why Bangalore Customers <span className="text-cyan-400">Trust Our Process</span>
           </h2>
-          <p className="text-gray-400 mb-10">After 500+ home theatre and home automation installations across Bangalore, we've refined every step to eliminate the friction that plagues most AV/electrical contractors.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">After 500+ home theatre and home automation installations across Bangalore, we've refined every step to eliminate the friction that plagues most AV/electrical contractors.</p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -155,10 +155,10 @@ const ProcessPage = () => {
       {/* Pre-installation checklist */}
       <section className="py-16 bg-[#0a0e1a]">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             What You Need to <span className="text-cyan-400">Prepare</span>
           </h2>
-          <p className="text-gray-400 mb-10">A simple 6-point checklist to ensure your installation in Bangalore goes smoothly. We handle 95% of the work — you handle these basics.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">A simple 6-point checklist to ensure your installation in Bangalore goes smoothly. We handle 95% of the work — you handle these basics.</p>
 
           <ol className="space-y-4">
             {[
@@ -186,10 +186,10 @@ const ProcessPage = () => {
       {/* FAQ */}
       <section className="py-16 bg-[#070a13]">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Process <span className="text-cyan-400">FAQs</span>
           </h2>
-          <p className="text-gray-400 mb-10">The questions Bangalore customers most often ask before booking.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">The questions Bangalore customers most often ask before booking.</p>
 
           <div className="grid md:grid-cols-2 gap-5">
             {PROCESS_FAQS.map((faq, i) => (

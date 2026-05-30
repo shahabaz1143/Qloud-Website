@@ -92,7 +92,7 @@ const ContactPage = () => {
               <li className="text-white">Contact</li>
             </ol>
           </nav>
-          <div className="max-w-4xl">
+          <div className="max-w-6xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-4">
               We're Here to Help
             </span>
@@ -109,7 +109,7 @@ const ContactPage = () => {
       {/* Quick contact cards */}
       <section className="py-8 bg-[#0a0e1a]">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <button onClick={() => window.open('tel:+917204746043')} className="text-left p-6 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/30 border border-gray-800 hover:border-cyan-500/40 transition-colors">
               <Phone className="w-6 h-6 text-cyan-400 mb-3" />
               <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Call us</div>
@@ -140,10 +140,10 @@ const ContactPage = () => {
       {/* Service area */}
       <section className="py-16 bg-[#070a13]">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Bangalore Service <span className="text-cyan-400">Area</span>
           </h2>
-          <p className="text-gray-400 mb-10">We provide on-site installation, consultation, and after-sales support across all of Bangalore and a 50 km radius.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">We provide on-site installation, consultation, and after-sales support across all of Bangalore and a 50 km radius.</p>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -174,10 +174,10 @@ const ContactPage = () => {
       {/* FAQ */}
       <section className="py-16 bg-[#0a0e1a]">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Common <span className="text-cyan-400">Questions</span>
           </h2>
-          <p className="text-gray-400 mb-10">Quick answers before you reach out.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">Quick answers before you reach out.</p>
 
           <div className="grid md:grid-cols-2 gap-5">
             {CONTACT_FAQS.map((faq, i) => (
