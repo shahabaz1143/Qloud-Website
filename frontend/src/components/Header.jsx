@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
 
@@ -7,8 +7,6 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,41 +16,20 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    if (!isHomePage) {
-      // Navigate to home page with hash
-      navigate(`/#${sectionId}`);
-      return;
-    }
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setMobileMenuOpen(false);
-  };
-
-  // Handle hash navigation after page load
-  useEffect(() => {
-    if (location.hash && isHomePage) {
-      const sectionId = location.hash.replace('#', '');
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, [location, isHomePage]);
-
   const navItems = [
-    { label: 'Home', id: 'home' },
-    { label: 'Services', id: 'services' },
-    { label: 'Packages', id: 'packages' },
-    { label: 'Process', id: 'process' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Blog', id: 'blog' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Home', to: '/' },
+    { label: 'Services', to: '/services' },
+    { label: 'Packages', to: '/packages' },
+    { label: 'Process', to: '/process' },
+    { label: 'Projects', to: '/projects' },
+    { label: 'Blog', to: '/blog' },
+    { label: 'Contact', to: '/contact' },
   ];
+
+  const isActive = (to) => {
+    if (to === '/') return location.pathname === '/';
+    return location.pathname === to || location.pathname.startsWith(`${to}/`);
+  };
 
   return (
     <header
@@ -70,14 +47,18 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-8">
             <nav className="flex items-center space-x-6">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  data-testid={`nav-${item.id}`}
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={`text-sm transition-colors duration-200 ${
+                    isActive(item.to)
+                      ? 'text-cyan-400 font-medium'
+                      : 'text-gray-300 hover:text-cyan-400'
+                  }`}
+                  data-testid={`nav-${item.label.toLowerCase()}`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </nav>
 
@@ -113,13 +94,18 @@ const Header = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-gray-800 pt-4 bg-[#0a0e1a]">
             <nav className="flex flex-col space-y-3">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left py-2 text-base"
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-left py-2 text-base transition-colors duration-200 ${
+                    isActive(item.to)
+                      ? 'text-cyan-400 font-medium'
+                      : 'text-gray-300 hover:text-cyan-400'
+                  }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </nav>
           </div>

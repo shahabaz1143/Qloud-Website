@@ -20,6 +20,10 @@ import ServicesPage from './pages/ServicesPage';
 import BlogArticle from './pages/BlogArticle';
 import BlogListPage from './pages/BlogListPage';
 import LocationPage from './pages/LocationPage';
+import PackagesPage from './pages/PackagesPage';
+import ProcessPage from './pages/ProcessPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ContactPage from './pages/ContactPage';
 
 // Google Analytics 4 SPA page_view tracker + lead-event auto-tracking
 const GA_MEASUREMENT_ID = 'G-G41DNBE1PK';
@@ -188,6 +192,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/:serviceSlug" element={<ServicePage />} />
+        <Route path="/packages" element={<PackagesPage />} />
+        <Route path="/process" element={<ProcessPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:blogSlug" element={<BlogArticle />} />
         {/* Location-specific SEO landing pages */}
