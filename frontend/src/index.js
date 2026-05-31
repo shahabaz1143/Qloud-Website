@@ -3,21 +3,13 @@ import ReactDOM from "react-dom/client";
 import "@/index.css";
 import App from "@/App";
 
+// SEO fallback content (injected by scripts/seo-build.js into <div id="root">)
+// is meant for Googlebot's first-paint indexing. createRoot.render() clears
+// the container before mounting, so users never see a flash of SEO content
+// mid-load, and there is no hydration mismatch.
 const rootEl = document.getElementById("root");
-
-// If the page was prerendered (root already has children), hydrate.
-// Otherwise, perform a normal client-side render.
-if (rootEl.hasChildNodes()) {
-  ReactDOM.hydrateRoot(
-    rootEl,
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-} else {
-  ReactDOM.createRoot(rootEl).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-}
+ReactDOM.createRoot(rootEl).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

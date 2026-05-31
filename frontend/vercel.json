@@ -2,6 +2,8 @@
   "buildCommand": "yarn install && yarn build",
   "outputDirectory": "build",
   "installCommand": "yarn install",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     { "source": "/((?!static|.*\\..*).*)", "destination": "/index.html" }
   ]

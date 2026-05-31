@@ -121,8 +121,14 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ **GA4 conversion tracking** via global event delegation — auto-fires `generate_lead` events for every `<a wa.me/tel:>` click and every `window.open(wa.me/tel:)` call without per-button instrumentation. Verified end-to-end (3 events fired correctly).
 - ✅ **`<ScrollToTop />`** in `App.js` — resets scrollY=0 on every SPA route change (fixes "page opens at bottom" UX bug). Honors `#anchor` hashes for blog TOC.
 - ✅ **Logo redesign** — replaced "Back to Home" links with the Qloud logo on all sub-pages; added cyan `drop-shadow` glow on hover + auto-cycling 10s shine sweep animation.
-- ✅ **PRERENDERING IMPLEMENTED (P0 SEO unlock)** — Custom puppeteer script `/app/frontend/scripts/prerender.js` runs as `postbuild`, parses sitemap.xml, crawls all 53 routes, writes static HTML files into `/build/<route>/index.html`. Result: Googlebot now sees **2,199 words on homepage / 849 on services / 1,158 on blog articles** (was 33-42 words before). All 11 schemas baked in. `index.js` switched to hydrateRoot when DOM is prerendered.
-- ✅ **SEO Launch Checklist** created at `/app/SEO_LAUNCH_CHECKLIST.md` — covers off-site work needed (GSC submission, Google Business Profile, citations, backlinks, reviews) — the single biggest lever for actual rankings.
+- ✅ **NEW Feb 2026 — Node-only per-route SEO HTML generation (P0 SEO unlock)** — Replaced fragile puppeteer prerender with `scripts/seo-build.js` (pure Node, runs on Vercel/anywhere). Generates static `build/<route>/index.html` for all 57 sitemap routes with:
+   - Route-specific `<title>`, `<meta description>`, canonical, OG, Twitter tags
+   - BreadcrumbList + Service/Article/LocalBusiness schemas (in addition to global LocalBusiness/FAQ)
+   - Visible SEO content block (H1, intro, NAP, internal links) injected inside `<div id="root">` — React's `createRoot()` clears it on mount, so no flash and no hydration mismatch
+   - Updated `vercel.json` to `cleanUrls: true` + `trailingSlash: false` so Vercel serves the per-route HTML
+   - Switched `src/index.js` to always use `createRoot` (was conditionally hydrating broken prerender output)
+- ✅ **SEO Launch Checklist** at `/app/SEO_LAUNCH_CHECKLIST.md` — covers off-site work (GSC submission, Google Business Profile, citations, backlinks, reviews).
+- ✅ Fixed Vercel `cleanUrls` 404 bug and updated 103 canonical URLs to `www.qloudsmarthomes.com`.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
 
 ---

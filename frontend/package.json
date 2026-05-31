@@ -59,7 +59,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "node scripts/prerender.js",
+    "postbuild": "node scripts/seo-build.js",
     "test": "craco test"
   },
   "engines": {
