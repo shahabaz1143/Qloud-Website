@@ -1062,7 +1062,7 @@ const LocationPage = () => {
         "description": pageData.description,
         "image": pageData.heroImage,
         "telephone": "+91-7204746043",
-        "url": `https://qloudsmarthomes.com/${locationSlug}`,
+        "url": `https://www.qloudsmarthomes.com/${locationSlug}`,
         "address": {
           "@type": "PostalAddress",
           "addressLocality": pageData.location,

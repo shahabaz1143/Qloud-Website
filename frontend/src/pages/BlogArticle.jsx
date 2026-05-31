@@ -1057,7 +1057,7 @@ const BlogArticle = () => {
         "author": {
           "@type": "Organization",
           "name": article.author,
-          "url": "https://qloudsmarthomes.com"
+          "url": "https://www.qloudsmarthomes.com"
         },
         "publisher": {
           "@type": "Organization",
@@ -1071,11 +1071,11 @@ const BlogArticle = () => {
         "dateModified": article.date,
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `https://qloudsmarthomes.com/blog/${blogSlug}`
+          "@id": `https://www.qloudsmarthomes.com/blog/${blogSlug}`
         },
         "articleSection": article.category,
         "wordCount": article.content.split(/\s+/).length,
-        "url": `https://qloudsmarthomes.com/blog/${blogSlug}`
+        "url": `https://www.qloudsmarthomes.com/blog/${blogSlug}`
       };
 
       // Create BreadcrumbList Schema
@@ -1087,19 +1087,19 @@ const BlogArticle = () => {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://qloudsmarthomes.com"
+            "item": "https://www.qloudsmarthomes.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://qloudsmarthomes.com/blog"
+            "item": "https://www.qloudsmarthomes.com/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": article.title,
-            "item": `https://qloudsmarthomes.com/blog/${blogSlug}`
+            "item": `https://www.qloudsmarthomes.com/blog/${blogSlug}`
           }
         ]
       };

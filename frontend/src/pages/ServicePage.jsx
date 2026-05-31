@@ -262,7 +262,7 @@ const ServicePage = () => {
           "@type": "City",
           "name": "Bangalore"
         },
-        "url": `https://qloudsmarthomes.com/services/${serviceSlug}`,
+        "url": `https://www.qloudsmarthomes.com/services/${serviceSlug}`,
         "image": service.heroImage,
         "offers": service.pricing.map(pkg => ({
           "@type": "Offer",
@@ -299,19 +299,19 @@ const ServicePage = () => {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://qloudsmarthomes.com"
+            "item": "https://www.qloudsmarthomes.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": "https://qloudsmarthomes.com/services"
+            "item": "https://www.qloudsmarthomes.com/services"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": service.title,
-            "item": `https://qloudsmarthomes.com/services/${serviceSlug}`
+            "item": `https://www.qloudsmarthomes.com/services/${serviceSlug}`
           }
         ]
       };
@@ -342,35 +342,35 @@ const ServicePage = () => {
             "position": 1,
             "name": "Free Consultation",
             "text": "Contact Qloud Tech via WhatsApp or phone to schedule a free on-site consultation in Bangalore. Our experts assess your space and requirements.",
-            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#consultation`
+            "url": `https://www.qloudsmarthomes.com/services/${serviceSlug}#consultation`
           },
           {
             "@type": "HowToStep",
             "position": 2,
             "name": "Custom Design & Quote",
             "text": "Receive a tailored design proposal with brand recommendations, layout, and a transparent quotation within 48 hours.",
-            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#design`
+            "url": `https://www.qloudsmarthomes.com/services/${serviceSlug}#design`
           },
           {
             "@type": "HowToStep",
             "position": 3,
             "name": "Approval & Scheduling",
             "text": "Approve the design and book your installation date. Pay an initial advance to confirm.",
-            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#scheduling`
+            "url": `https://www.qloudsmarthomes.com/services/${serviceSlug}#scheduling`
           },
           {
             "@type": "HowToStep",
             "position": 4,
             "name": "Professional Installation",
             "text": "Our certified technicians complete the installation with minimal disruption, typically within 3-7 days depending on the package.",
-            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#installation`
+            "url": `https://www.qloudsmarthomes.com/services/${serviceSlug}#installation`
           },
           {
             "@type": "HowToStep",
             "position": 5,
             "name": "Demo, Handover & Support",
             "text": "Get a complete walkthrough of your new system. We provide warranty, after-sales support, and lifetime guidance.",
-            "url": `https://qloudsmarthomes.com/services/${serviceSlug}#support`
+            "url": `https://www.qloudsmarthomes.com/services/${serviceSlug}#support`
           }
         ]
       };

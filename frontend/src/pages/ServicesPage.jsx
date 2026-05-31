@@ -140,7 +140,7 @@ const ServicesPage = () => {
           "@type": "Service",
           "name": service.title,
           "description": service.description,
-          "url": `https://qloudsmarthomes.com/services/${service.slug}`,
+          "url": `https://www.qloudsmarthomes.com/services/${service.slug}`,
           "provider": {
             "@type": "LocalBusiness",
             "name": "Qloud Tech"

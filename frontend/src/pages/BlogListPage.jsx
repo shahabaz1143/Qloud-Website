@@ -195,7 +195,7 @@ const BlogListPage = () => {
       "@type": "Blog",
       "name": "Qloud Tech Blog",
       "description": "Expert guides on home theatre, smart home automation, and security systems",
-      "url": "https://qloudsmarthomes.com/blog",
+      "url": "https://www.qloudsmarthomes.com/blog",
       "publisher": {
         "@type": "Organization",
         "name": "Qloud Tech",
@@ -207,7 +207,7 @@ const BlogListPage = () => {
       "blogPost": allBlogPosts.map(post => ({
         "@type": "BlogPosting",
         "headline": post.title,
-        "url": `https://qloudsmarthomes.com/blog/${post.slug}`,
+        "url": `https://www.qloudsmarthomes.com/blog/${post.slug}`,
         "datePublished": post.date,
         "author": { "@type": "Organization", "name": post.author }
       }))

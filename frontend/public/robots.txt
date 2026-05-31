@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qloudsmarthomes.com/sitemap.xml
+Sitemap: https://www.qloudsmarthomes.com/sitemap.xml
