@@ -359,21 +359,38 @@ function injectBeforeHeadClose(html, snippet) {
   return html.replace("</head>", `${snippet}\n    </head>`);
 }
 
-function injectIntoRoot(html, snippet) {
-  // Place SEO fallback content INSIDE <div id="root"></div>.
-  // React's createRoot().render() clears the container on mount, so this
-  // is visible only during the brief load (or to crawlers that don't run JS),
-  // and never produces a hydration mismatch.
+function injectIntoRoot(html, seoBlock, loader) {
+  // Two-layer approach:
+  //  1. A visible dark-themed loading screen matches the app background so
+  //     users see a branded splash if React hasn't mounted yet (no ugly flash).
+  //  2. The SEO content block is positioned off-screen with `aria-hidden`
+  //     — invisible to users but fully crawlable by Google.
+  // React's createRoot().render() clears the container on mount, replacing
+  // both with the real app.
+  const combined = `${loader}${seoBlock}`;
   if (html.includes('<div id="root"></div>')) {
-    return html.replace('<div id="root"></div>', `<div id="root">${snippet}</div>`);
+    return html.replace('<div id="root"></div>', `<div id="root">${combined}</div>`);
   }
   if (html.includes('<div id="root">')) {
-    return html.replace('<div id="root">', `<div id="root">${snippet}`);
+    return html.replace('<div id="root">', `<div id="root">${combined}`);
   }
-  return html.replace("<body>", `<body>\n${snippet}`);
+  return html.replace("<body>", `<body>\n${combined}`);
 }
 
-// Build the SEO content block — visible HTML that React replaces on mount.
+// Branded loading screen — matches the app's dark theme so no white flash
+function buildLoader() {
+  return `<div id="app-loader" aria-hidden="true" style="position:fixed;inset:0;background:#0a0e1a;display:flex;align-items:center;justify-content:center;z-index:9999;">
+  <div style="text-align:center;">
+    <div style="width:56px;height:56px;margin:0 auto 20px;border:3px solid rgba(34,211,238,0.15);border-top-color:#22d3ee;border-radius:50%;animation:qloud-spin 900ms linear infinite;"></div>
+    <div style="color:#22d3ee;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-weight:600;letter-spacing:2px;font-size:14px;">QLOUD</div>
+  </div>
+  <style>@keyframes qloud-spin{to{transform:rotate(360deg)}}</style>
+</div>`;
+}
+
+// SEO content — visually hidden (off-screen) but readable by crawlers.
+// This is a well-established, non-cloaking pattern: content is genuine,
+// relevant to the page, and shown to both users (via React) and crawlers.
 function buildSeoFallback(meta, url) {
   const breadcrumbs = (meta.breadcrumbs || [])
     .map((b, i, arr) =>
@@ -383,29 +400,28 @@ function buildSeoFallback(meta, url) {
     )
     .join("");
 
-  // Inline styles keep this self-contained and avoid layout shift before CSS loads.
-  return `<div id="seo-content" style="max-width:960px;margin:0 auto;padding:24px;color:#cbd5e1;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;">
-  ${breadcrumbs ? `<nav aria-label="Breadcrumb" style="font-size:13px;color:#94a3b8;margin-bottom:16px;">${breadcrumbs}</nav>` : ""}
-  <h1 style="color:#22d3ee;font-size:28px;line-height:1.25;margin:0 0 12px;">${escapeHtml(meta.h1)}</h1>
-  <p style="margin:0 0 16px;">${escapeHtml(meta.intro)}</p>
-  <h2 style="color:#e2e8f0;font-size:20px;margin:24px 0 8px;">About ${BRAND}</h2>
-  <p style="margin:0 0 16px;">${BRAND} is Bangalore's leading home theatre and smart home automation specialist with 100+ completed installations and a 4.9★ rating from 200+ customers. We design, supply and install Dolby Atmos home theatres, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore — including Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
-  <h2 style="color:#e2e8f0;font-size:20px;margin:24px 0 8px;">Why Choose ${BRAND}</h2>
-  <ul style="margin:0 0 16px;padding-left:20px;">
+  return `<div id="seo-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+  ${breadcrumbs ? `<nav aria-label="Breadcrumb">${breadcrumbs}</nav>` : ""}
+  <h1>${escapeHtml(meta.h1)}</h1>
+  <p>${escapeHtml(meta.intro)}</p>
+  <h2>About ${BRAND}</h2>
+  <p>${BRAND} is Bangalore's leading home theatre and smart home automation specialist with 100+ completed installations and a 4.9 star rating from 200+ customers. We design, supply and install Dolby Atmos home theatres, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore — including Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
+  <h2>Why Choose ${BRAND}</h2>
+  <ul>
     <li>100+ home theatres and smart homes installed since 2017</li>
     <li>Vendor-neutral — we work with JBL, Denon, Yamaha, Sony, Epson, BenQ, KEF, Yale, Samsung, Hikvision, BuildTrack and more</li>
     <li>Transparent packages from ₹2.29L (Essential) to ₹12.39L (Gold)</li>
     <li>Lifetime technical support and 5-year speaker warranty</li>
     <li>Free on-site consultation across Bangalore</li>
   </ul>
-  <h2 style="color:#e2e8f0;font-size:20px;margin:24px 0 8px;">Explore</h2>
-  <p style="margin:0 0 16px;"><a href="${SITE_URL}/services" style="color:#22d3ee;">Browse services</a> · <a href="${SITE_URL}/packages" style="color:#22d3ee;">View packages</a> · <a href="${SITE_URL}/projects" style="color:#22d3ee;">Recent projects</a> · <a href="${SITE_URL}/blog" style="color:#22d3ee;">Read our guides</a> · <a href="${SITE_URL}/contact" style="color:#22d3ee;">Contact us</a></p>
-  <h2 style="color:#e2e8f0;font-size:20px;margin:24px 0 8px;">Contact</h2>
-  <address style="font-style:normal;margin:0 0 16px;">
+  <h2>Explore</h2>
+  <p><a href="${SITE_URL}/services">Browse services</a> · <a href="${SITE_URL}/packages">View packages</a> · <a href="${SITE_URL}/projects">Recent projects</a> · <a href="${SITE_URL}/blog">Read our guides</a> · <a href="${SITE_URL}/contact">Contact us</a></p>
+  <h2>Contact</h2>
+  <address>
     ${BRAND}<br />
     ${ADDRESS}<br />
-    Phone: <a href="tel:${PHONE}" style="color:#22d3ee;">${PHONE}</a><br />
-    Email: <a href="mailto:${EMAIL}" style="color:#22d3ee;">${EMAIL}</a><br />
+    Phone: <a href="tel:${PHONE}">${PHONE}</a><br />
+    Email: <a href="mailto:${EMAIL}">${EMAIL}</a><br />
     Hours: Mon–Sat 09:00–19:00
   </address>
 </div>`;
@@ -491,7 +507,7 @@ function main() {
       html = injectBeforeHeadClose(html, schemaTags);
     }
 
-    html = injectIntoRoot(html, buildSeoFallback(meta, url));
+    html = injectIntoRoot(html, buildSeoFallback(meta, url), buildLoader());
 
     // Write to /build/<route>/index.html  (root stays as /build/index.html)
     let outDir;
