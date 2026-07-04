@@ -178,19 +178,37 @@
         }
         </script>
         
+        <!-- Site Navigation Schema (helps Google generate Sitelinks) -->
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "SiteNavigationElement",
-            "name": ["Home", "Services", "Packages", "Process", "Projects", "Designs", "Contact"],
+            "name": ["Home", "Services", "Packages", "Process", "Projects", "Blog", "Contact"],
             "url": [
-                "https://www.qloudsmarthomes.com/#home",
-                "https://www.qloudsmarthomes.com/#services",
-                "https://www.qloudsmarthomes.com/#packages",
-                "https://www.qloudsmarthomes.com/#process",
-                "https://www.qloudsmarthomes.com/#projects",
-                "https://www.qloudsmarthomes.com/#designs",
-                "https://www.qloudsmarthomes.com/#contact"
+                "https://www.qloudsmarthomes.com/",
+                "https://www.qloudsmarthomes.com/services",
+                "https://www.qloudsmarthomes.com/packages",
+                "https://www.qloudsmarthomes.com/process",
+                "https://www.qloudsmarthomes.com/projects",
+                "https://www.qloudsmarthomes.com/blog",
+                "https://www.qloudsmarthomes.com/contact"
+            ]
+        }
+        </script>
+
+        <!-- WebPage schema with primary Sitelinks candidates -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Main Site Sections",
+            "itemListElement": [
+                { "@type": "SiteNavigationElement", "position": 1, "name": "Services", "description": "Home theatre, smart home automation, security, smart switches, digital locks and more", "url": "https://www.qloudsmarthomes.com/services" },
+                { "@type": "SiteNavigationElement", "position": 2, "name": "Packages", "description": "Transparent home theatre pricing from ₹2.29L (Essential) to ₹12.39L (Gold Dolby Atmos)", "url": "https://www.qloudsmarthomes.com/packages" },
+                { "@type": "SiteNavigationElement", "position": 3, "name": "Process", "description": "Our proven 6-step home theatre and smart home installation workflow", "url": "https://www.qloudsmarthomes.com/process" },
+                { "@type": "SiteNavigationElement", "position": 4, "name": "Projects", "description": "100+ completed home theatre and smart home projects across Bangalore villas and apartments", "url": "https://www.qloudsmarthomes.com/projects" },
+                { "@type": "SiteNavigationElement", "position": 5, "name": "Blog", "description": "Expert guides on Dolby Atmos, smart home automation, projectors, smart locks and more", "url": "https://www.qloudsmarthomes.com/blog" },
+                { "@type": "SiteNavigationElement", "position": 6, "name": "Contact", "description": "Free consultation across Bangalore. Call +91 7204746043 or WhatsApp for a quote", "url": "https://www.qloudsmarthomes.com/contact" }
             ]
         }
         </script>

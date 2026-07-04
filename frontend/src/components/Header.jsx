@@ -45,7 +45,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <nav className="flex items-center space-x-6">
+            <nav className="flex items-center space-x-6" aria-label="Main navigation">
               {navItems.map((item) => (
                 <Link
                   key={item.to}
