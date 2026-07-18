@@ -109,12 +109,12 @@ const STATIC_ROUTES = {
     type: "blog-index"
   },
   "/lp/home-theatre-bangalore": {
-    title: "Home Theatre Installation Bangalore | Dolby Atmos from ₹2.29L | Qloud Tech",
+    title: "Dedicated Home Theatre Installation Bangalore | Dolby Atmos from ₹2.29L | Qloud Tech",
     description:
-      "Premium home theatre installation in Bangalore. Dolby Atmos 5.1.2 / 7.1.2 packages from ₹2.29L. Free consultation, 5-year warranty, EMI available. Call +91 7204746043.",
-    h1: "Turn Your Living Room into a Dolby Atmos Cinema",
+      "Build a dedicated home theatre in Bangalore. Purpose-built cinema rooms with Dolby Atmos 5.1.2 / 7.1.2, 4K projection, acoustic treatment & premium recliners. Packages from ₹2.29L. Free consultation.",
+    h1: "Build Your Dedicated Home Theatre in Bangalore",
     intro:
-      "Premium home theatre design, supply and installation across Bangalore. Transparent packages from ₹2.29 Lakhs. Free on-site consultation. 5-year warranty. Lifetime support. 100+ theatres delivered.",
+      "Purpose-built cinema rooms with Dolby Atmos, 4K projection, acoustic treatment and premium recliners. Transparent packages from ₹2.29 Lakhs. Free on-site consultation. 5-year warranty. Lifetime support. 100+ dedicated home theatres delivered.",
     type: "landing",
     noindex: true // Ad landing page — do not compete with organic /services/home-theatre
   }

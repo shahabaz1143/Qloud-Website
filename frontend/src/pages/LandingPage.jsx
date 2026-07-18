@@ -83,44 +83,44 @@ const PACKAGES = [
 
 const GALLERY = [
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/g52fv2rb_adarsh%20tranquil.jpg",
-    label: "Adarsh Tranquil — Whitefield",
-    config: "7.1.2 Dolby Atmos"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/rxbr16ev_3f53009e-1b0b-4acf-853c-64bdafa7f505.JPG",
+    label: "7.1.2 Dolby Atmos Theatre",
+    config: "Whitefield Villa"
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/kjtm3bvq_prestige%20lake%20side%20habitat.webp",
-    label: "Prestige Lakeside Habitat",
-    config: "5.1.2 Dolby Atmos"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/eglex7eg_7c3ac259-d705-4d0f-b6c6-cbba791d580f.JPG",
+    label: "Dedicated Cinema Room",
+    config: "Gold Package · Koramangala"
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/f82kgy6b_orchid%20picadily.jpg",
-    label: "Orchid Picadily — Sarjapur",
-    config: "5.1.2 + 4K Projector"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/yzqwcagp_8e20a366-093c-4b22-84af-0e64382c047c.JPG",
+    label: "4K Projector Setup",
+    config: "Silver Package · HSR Layout"
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/529o4d5j_DSR%20Elixir.avif",
-    label: "DSR Elixir — HSR",
-    config: "Gold Package"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/u0j3l0gh_060a9a8a-0cf4-4dec-b559-d3fc24928ccc.JPG",
+    label: "Acoustic-Treated Theatre",
+    config: "6-Layer Acoustics"
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/x8pg0gdw_NCC%20Retreat.jpg",
-    label: "NCC Retreat — Bannerghatta",
-    config: "Silver Package"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/diawcire_98ff289b-206b-4109-bc93-b20ff099aaee.JPG",
+    label: "5.1.2 Atmos Configuration",
+    config: "Indiranagar Villa"
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/gfdgg2zf_RR%20Signature.jpg",
-    label: "RR Signature — Marathahalli",
-    config: "7.1.2 Atmos"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/170qqqsz_2368418d-b426-4c6e-9ab1-c46d0a54c815%202.JPG",
+    label: "Premium Recliner Theatre",
+    config: "Gold Package · Sarjapur"
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/qp4rbl2t_leela%20residency.jpg",
-    label: "Leela Residency",
-    config: "Custom Cinema Room"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/kheqwtbv_a9c61c26-9b2d-4534-bc56-0a3a8d82ab3d.JPG",
+    label: "Custom Cinema Room",
+    config: "JP Nagar Villa"
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/vz9t4rbo_Nikoo%20Homes.jpg",
-    label: "Nikoo Homes — Yelahanka",
-    config: "5.1.2 Dolby Atmos"
+    src: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/wm8df44x_c7ed42f0-a87d-405c-8132-2199f4e5c8fe.JPG",
+    label: "Edge-less Screen Setup",
+    config: "Silver Package · Electronic City"
   }
 ];
 
@@ -403,7 +403,7 @@ const QuoteForm = () => {
 export default function LandingPage() {
   useEffect(() => {
     document.title =
-      "Home Theatre Installation Bangalore | Dolby Atmos from ₹2.29L | Qloud Tech";
+      "Dedicated Home Theatre Installation Bangalore | Dolby Atmos from ₹2.29L | Qloud Tech";
     // Preload hero image
     const link = document.createElement("link");
     link.rel = "preload";
@@ -422,7 +422,7 @@ export default function LandingPage() {
         <div className="absolute inset-0">
           <img
             src={HERO_IMG}
-            alt="Luxury Dolby Atmos home theatre installation in Bangalore"
+            alt="Dedicated Dolby Atmos home theatre installation in Bangalore"
             className="w-full h-full object-cover opacity-40"
             loading="eager"
           />
@@ -440,15 +440,16 @@ export default function LandingPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
-                Turn your living room into a{" "}
+                Build your{" "}
                 <span className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] bg-clip-text text-transparent">
-                  Dolby Atmos cinema
-                </span>
+                  dedicated home theatre
+                </span>{" "}
+                in Bangalore
               </h1>
 
               <p className="mt-6 text-base md:text-lg text-gray-300 max-w-xl leading-relaxed">
-                Premium home theatre design, supply and installation across Bangalore.
-                Transparent packages from{" "}
+                Purpose-built cinema rooms with Dolby Atmos, 4K projection, acoustic
+                treatment and premium recliners. Transparent packages from{" "}
                 <span className="text-cyan-300 font-semibold">₹2.29 Lakhs</span>. Free
                 on-site consultation. 5-year warranty. Lifetime support.
               </p>
@@ -540,7 +541,7 @@ export default function LandingPage() {
               </span>
             </h2>
             <p className="text-gray-400 mt-4">
-              Four packages, one goal: cinema-quality entertainment tailored to your budget.
+              Four packages, one goal: dedicated cinema-quality theatres tailored to your budget.
               All prices include design, supply, installation and calibration.
             </p>
           </div>
@@ -607,13 +608,13 @@ export default function LandingPage() {
               Recent Projects
             </div>
             <h2 className="text-3xl md:text-5xl font-bold">
-              100+ Bangalore Homes,{" "}
+              100+ Dedicated Home Theatres,{" "}
               <span className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] bg-clip-text text-transparent">
-                Turned into Cinemas
+                Built Across Bangalore
               </span>
             </h2>
             <p className="text-gray-400 mt-4 text-base">
-              Real installations. Real customers. Real results.
+              Real cinema rooms. Real customers. Real Dolby Atmos.
             </p>
           </div>
 
