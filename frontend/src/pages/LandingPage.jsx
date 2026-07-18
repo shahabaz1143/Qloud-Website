@@ -158,18 +158,18 @@ const BRANDS = [
 const TESTIMONIALS = [
   {
     name: "Pallav Godeswar",
-    area: "Whitefield",
+    area: "Whitefield, Bangalore",
     text: "Custom home theatre delivered exactly what I envisioned. Feels like a mini-cinema at home. The Dolby Atmos setup is incredible."
   },
   {
     name: "Anusha S.",
-    area: "Koramangala",
+    area: "Koramangala, Bangalore",
     text: "Professional team, delivered on time. Acoustic treatment made a huge difference. Highly recommend Qloud Tech."
   },
   {
     name: "Arun M.",
-    area: "HSR Layout",
-    text: "Exceeded expectations. The 4K projector and 7.1.2 sound system are truly theater-quality. Worth every rupee."
+    area: "Mysuru",
+    text: "Travelled all the way to Mysuru and delivered a stunning 7.1.2 Atmos setup. Truly theatre-quality. Worth every rupee."
   }
 ];
 
@@ -188,7 +188,7 @@ const FAQS = [
   },
   {
     q: "Do you serve areas outside Bangalore?",
-    a: "Yes — we've delivered projects in Mysuru, Hyderabad, Chennai and Goa. Free consultation for Bangalore; nominal travel for outstation."
+    a: "Yes — we serve all of Karnataka including Mysuru, Mangalore, Hubballi–Dharwad, Belgavi, Udupi, Manipal, Shivamogga, Davangere, Tumakuru and beyond. We've also delivered projects in Hyderabad, Chennai and Goa. Free consultation across Karnataka; nominal travel charges outside the state."
   }
 ];
 
@@ -234,10 +234,10 @@ const MiniHeader = () => (
       </Link>
       <div className="hidden sm:flex items-center gap-2 text-xs text-gray-400">
         <MapPin className="w-3.5 h-3.5 text-cyan-400" />
-        Bangalore
+        Bangalore &amp; Karnataka
         <span className="mx-2 text-gray-600">·</span>
         <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
-        5 / 5 (70+ reviews)
+        5 / 5 (450+ reviews)
       </div>
       <div className="flex items-center gap-2">
         <a
@@ -399,7 +399,7 @@ const QuoteForm = () => {
 export default function LandingPage() {
   useEffect(() => {
     document.title =
-      "Dedicated Home Theatre Installation Bangalore | Dolby Atmos from ₹2.29L | Qloud Tech";
+      "Dedicated Home Theatre Installation Bangalore & Karnataka | Dolby Atmos from ₹2.29L | Qloud Tech";
     // Preload hero image
     const link = document.createElement("link");
     link.rel = "preload";
@@ -445,7 +445,8 @@ export default function LandingPage() {
 
               <p className="mt-6 text-base md:text-lg text-gray-300 max-w-xl leading-relaxed">
                 Purpose-built cinema rooms with Dolby Atmos, 4K projection, acoustic
-                treatment and premium recliners. Transparent packages from{" "}
+                treatment and premium recliners. Serving Bangalore &amp; all of Karnataka
+                — Mysuru, Mangalore, Hubballi, Belgavi, Udupi &amp; beyond. Packages from{" "}
                 <span className="text-cyan-300 font-semibold">₹2.29 Lakhs</span>. Free
                 on-site consultation. 5-year warranty. Lifetime support.
               </p>
@@ -454,7 +455,7 @@ export default function LandingPage() {
               <div className="mt-6 flex flex-wrap gap-2 text-xs md:text-sm">
                 {[
                   { icon: Award, label: "100+ theatres built" },
-                  { icon: Star, label: "5★ (70+ reviews)" },
+                  { icon: Star, label: "5★ (450+ reviews)" },
                   { icon: Shield, label: "5-year warranty" },
                   { icon: Clock, label: "8+ years experience" }
                 ].map((c, i) => (
@@ -507,7 +508,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 md:px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { v: "100+", l: "Home Theatres Delivered" },
-            { v: "70+", l: "Happy Customers" },
+            { v: "450+", l: "Happy Customers" },
             { v: "8+", l: "Years of Experience" },
             { v: "5★", l: "Average Rating" }
           ].map((s, i) => (
@@ -533,7 +534,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
               Home Theatre Packages{" "}
               <span className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] bg-clip-text text-transparent">
-                Built for Bangalore Homes
+                Built for Karnataka Homes
               </span>
             </h2>
             <p className="text-gray-400 mt-4">
@@ -606,7 +607,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-5xl font-bold">
               100+ Dedicated Home Theatres,{" "}
               <span className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] bg-clip-text text-transparent">
-                Built Across Bangalore
+                Built Across Karnataka
               </span>
             </h2>
             <p className="text-gray-400 mt-4 text-base">
@@ -769,7 +770,7 @@ export default function LandingPage() {
               What Customers Say
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">
-              Loved by 70+ Bangalore families
+              Loved by 450+ families across Karnataka
             </h2>
           </div>
 
@@ -788,7 +789,7 @@ export default function LandingPage() {
                 <p className="text-gray-300 text-sm leading-relaxed italic">&ldquo;{t.text}&rdquo;</p>
                 <div className="mt-4 pt-4 border-t border-white/5">
                   <div className="text-white font-semibold text-sm">{t.name}</div>
-                  <div className="text-xs text-cyan-300">{t.area}, Bangalore</div>
+                  <div className="text-xs text-cyan-300">{t.area}</div>
                 </div>
               </div>
             ))}
