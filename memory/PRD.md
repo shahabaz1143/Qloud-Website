@@ -124,9 +124,22 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ **NEW Feb 2026 — Node-only per-route SEO HTML generation (P0 SEO unlock)** — Replaced fragile puppeteer prerender with `scripts/seo-build.js` (pure Node, runs on Vercel/anywhere). Generates static `build/<route>/index.html` for all 57 sitemap routes with:
    - Route-specific `<title>`, `<meta description>`, canonical, OG, Twitter tags
    - BreadcrumbList + Service/Article/LocalBusiness schemas (in addition to global LocalBusiness/FAQ)
-   - Visible SEO content block (H1, intro, NAP, internal links) injected inside `<div id="root">` — React's `createRoot()` clears it on mount, so no flash and no hydration mismatch
+   - Branded dark loading screen (QLOUD spinner) + off-screen SEO content block for crawlers — no flash of raw content on slow connections
    - Updated `vercel.json` to `cleanUrls: true` + `trailingSlash: false` so Vercel serves the per-route HTML
    - Switched `src/index.js` to always use `createRoot` (was conditionally hydrating broken prerender output)
+- ✅ **NEW Feb 2026 — Ad Landing Page** at `/lp/home-theatre-bangalore` (single-purpose, conversion-optimized, `noindex`):
+   - Hero with headline + inline quote form + trust chips + dual CTAs (Quote / WhatsApp)
+   - Stats strip (100+, 200+, 8+, 4.9★)
+   - 4-package pricing grid with "MOST POPULAR" callout on Silver
+   - 8-image project gallery with location + config labels
+   - Why-us section + 10 authorised AV brand chips
+   - "Beyond Home Theatre" secondary services (Smart Home, CCTV, Locks, Switches)
+   - 3 testimonials + 5 FAQs (accordion)
+   - Final CTA + minimal footer
+   - Sticky mobile CTA bar (Call / WhatsApp / Quote) always visible on phones
+   - `noindex, follow` — does not compete with organic `/services/home-theatre`
+   - Form submits via WhatsApp pre-filled with lead data + fires GA4 `generate_lead` event
+- ✅ **Sitelinks preparation** — Fixed broken `SiteNavigationElement` schema (was pointing to `/#services` anchors), added `ItemList` schema with per-page descriptions, added `aria-label="Main navigation"` to header nav
 - ✅ **SEO Launch Checklist** at `/app/SEO_LAUNCH_CHECKLIST.md` — covers off-site work (GSC submission, Google Business Profile, citations, backlinks, reviews).
 - ✅ Fixed Vercel `cleanUrls` 404 bug and updated 103 canonical URLs to `www.qloudsmarthomes.com`.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots

@@ -107,6 +107,16 @@ const STATIC_ROUTES = {
     intro:
       "Long-form, vendor-neutral guides from our installation team — covering Dolby Atmos configurations, projector vs TV, Yale vs Samsung smart locks, Alexa vs Google Home and more.",
     type: "blog-index"
+  },
+  "/lp/home-theatre-bangalore": {
+    title: "Home Theatre Installation Bangalore | Dolby Atmos from ₹2.29L | Qloud Tech",
+    description:
+      "Premium home theatre installation in Bangalore. Dolby Atmos 5.1.2 / 7.1.2 packages from ₹2.29L. Free consultation, 5-year warranty, EMI available. Call +91 7204746043.",
+    h1: "Turn Your Living Room into a Dolby Atmos Cinema",
+    intro:
+      "Premium home theatre design, supply and installation across Bangalore. Transparent packages from ₹2.29 Lakhs. Free on-site consultation. 5-year warranty. Lifetime support. 100+ theatres delivered.",
+    type: "landing",
+    noindex: true // Ad landing page — do not compete with organic /services/home-theatre
   }
 };
 
@@ -462,14 +472,20 @@ function main() {
   const dynamicMeta = buildDynamicMeta();
   const allMeta = { ...STATIC_ROUTES, ...dynamicMeta };
 
-  console.log(`[seo-build] Generating per-route SEO HTML for ${routes.length} routes`);
+  // Add extra routes not in sitemap (e.g. ad landing pages with noindex)
+  const extraRoutes = Object.keys(STATIC_ROUTES).filter(
+    (r) => !routes.includes(r) && STATIC_ROUTES[r].noindex
+  );
+  const allRoutes = [...routes, ...extraRoutes];
+
+  console.log(`[seo-build] Generating per-route SEO HTML for ${allRoutes.length} routes (${extraRoutes.length} noindex)`);
 
   let ok = 0;
   let skipped = 0;
   let warnings = 0;
   const missing = [];
 
-  for (const route of routes) {
+  for (const route of allRoutes) {
     const meta = allMeta[route];
     if (!meta) {
       // Skip — falls back to default SPA index.html
@@ -483,6 +499,10 @@ function main() {
 
     html = replaceTitle(html, meta.title);
     html = replaceMeta(html, "description", meta.description);
+    // Ad landing pages: noindex (don't compete with organic SEO pages)
+    if (meta.noindex) {
+      html = replaceMeta(html, "robots", "noindex, follow");
+    }
     html = replaceMeta(html, "og:title", meta.title, true);
     html = replaceMeta(html, "og:description", meta.description, true);
     html = replaceMeta(html, "og:url", url, true);

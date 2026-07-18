@@ -24,6 +24,7 @@ import PackagesPage from './pages/PackagesPage';
 import ProcessPage from './pages/ProcessPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
+import LandingPage from './pages/LandingPage';
 
 // Google Analytics 4 SPA page_view tracker + lead-event auto-tracking
 const GA_MEASUREMENT_ID = 'G-G41DNBE1PK';
@@ -196,6 +197,8 @@ function App() {
         <Route path="/process" element={<ProcessPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        {/* Ad landing page (single-purpose, no nav) */}
+        <Route path="/lp/home-theatre-bangalore" element={<LandingPage />} />
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:blogSlug" element={<BlogArticle />} />
         {/* Location-specific SEO landing pages */}
