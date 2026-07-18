@@ -180,11 +180,7 @@ const FAQS = [
   },
   {
     q: "How long does installation take?",
-    a: "Essential Package: 2–3 days. Silver/Gold with acoustic treatment: 5–7 days. We share a day-wise timeline before starting."
-  },
-  {
-    q: "Is EMI available?",
-    a: "Yes — 0% and low-interest EMI options via HDFC, Bajaj Finserv and ICICI. Standard tenures: 3, 6, 9, 12 months."
+    a: "Essential Package: 2–3 days. Silver/Gold with full acoustic treatment: 15+ days for design, panelling, wiring, calibration and final QA. We share a day-wise timeline before starting."
   },
   {
     q: "What warranty do I get?",
@@ -241,7 +237,7 @@ const MiniHeader = () => (
         Bangalore
         <span className="mx-2 text-gray-600">·</span>
         <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
-        4.9 / 5 (200+ reviews)
+        5 / 5 (70+ reviews)
       </div>
       <div className="flex items-center gap-2">
         <a
@@ -458,7 +454,7 @@ export default function LandingPage() {
               <div className="mt-6 flex flex-wrap gap-2 text-xs md:text-sm">
                 {[
                   { icon: Award, label: "100+ theatres built" },
-                  { icon: Star, label: "4.9★ (200+ reviews)" },
+                  { icon: Star, label: "5★ (70+ reviews)" },
                   { icon: Shield, label: "5-year warranty" },
                   { icon: Clock, label: "8+ years experience" }
                 ].map((c, i) => (
@@ -511,9 +507,9 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 md:px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { v: "100+", l: "Home Theatres Delivered" },
-            { v: "200+", l: "Happy Customers" },
+            { v: "70+", l: "Happy Customers" },
             { v: "8+", l: "Years of Experience" },
-            { v: "4.9★", l: "Average Rating" }
+            { v: "5★", l: "Average Rating" }
           ].map((s, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] bg-clip-text text-transparent">
@@ -595,7 +591,7 @@ export default function LandingPage() {
           </div>
 
           <p className="text-center text-xs text-gray-500 mt-8">
-            0% & low-interest EMI available via HDFC, Bajaj Finserv, ICICI · GST included · Free on-site visit
+            All-inclusive pricing · GST included · Free on-site visit · Transparent bill of materials
           </p>
         </div>
       </section>
@@ -680,7 +676,7 @@ export default function LandingPage() {
                   },
                   {
                     icon: Play,
-                    title: "4K/8K laser projection",
+                    title: "4K laser projection",
                     desc: "Sony, Epson, BenQ authorised — HDR10+ and Dolby Vision ready"
                   },
                   {
@@ -773,7 +769,7 @@ export default function LandingPage() {
               What Customers Say
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">
-              Loved by 200+ Bangalore families
+              Loved by 70+ Bangalore families
             </h2>
           </div>
 
