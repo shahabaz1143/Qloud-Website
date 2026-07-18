@@ -237,7 +237,7 @@ const MiniHeader = () => (
         Bangalore &amp; Karnataka
         <span className="mx-2 text-gray-600">·</span>
         <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
-        5 / 5 (450+ reviews)
+        5 / 5 (70+ reviews)
       </div>
       <div className="flex items-center gap-2">
         <a
@@ -455,7 +455,7 @@ export default function LandingPage() {
               <div className="mt-6 flex flex-wrap gap-2 text-xs md:text-sm">
                 {[
                   { icon: Award, label: "100+ theatres built" },
-                  { icon: Star, label: "5★ (450+ reviews)" },
+                  { icon: Star, label: "5★ (70+ reviews)" },
                   { icon: Shield, label: "5-year warranty" },
                   { icon: Clock, label: "8+ years experience" }
                 ].map((c, i) => (
