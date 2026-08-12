@@ -59,9 +59,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Bangalore Services - Takes 2 columns (NEW) */}
+          {/* Bangalore Services - Takes 2 columns */}
           <div className="col-span-6 md:col-span-2">
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Locations</h4>
+            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Bangalore</h4>
             <ul className="space-y-2.5">
               <li><Link to="/home-theatre-whitefield" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Whitefield</Link></li>
               <li><Link to="/home-theatre-koramangala" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Koramangala</Link></li>
@@ -72,16 +72,16 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links - Takes 2 columns */}
+          {/* Karnataka Cities - Takes 2 columns */}
           <div className="col-span-6 md:col-span-2">
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Karnataka</h4>
             <ul className="space-y-2.5">
-              <li><a href="#home" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home</a></li>
-              <li><a href="#packages" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Packages</a></li>
-              <li><a href="#process" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Our Process</a></li>
-              <li><a href="#projects" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Portfolio</a></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blog</Link></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Contact</a></li>
+              <li><Link to="/home-theatre-mysuru" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Mysuru</Link></li>
+              <li><Link to="/home-theatre-mangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Mangalore</Link></li>
+              <li><Link to="/home-theatre-hubballi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Hubballi–Dharwad</Link></li>
+              <li><Link to="/home-theatre-belgavi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Belgavi</Link></li>
+              <li><Link to="/home-theatre-udupi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Udupi &amp; Manipal</Link></li>
+              <li><Link to="/home-theatre-tumakuru" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Tumakuru</Link></li>
             </ul>
           </div>
 

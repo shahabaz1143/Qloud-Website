@@ -19,8 +19,8 @@ const PACKAGE_FAQS = [
     a: 'Yes — every package is a starting point. We re-design speaker placement, projector throw, screen size, seating layout, acoustic panels, and automation scenes based on your room, lifestyle, and budget. The price you see is what most customers pay, but we can scale up or down by ±40%.'
   },
   {
-    q: 'Do you offer EMI or financing?',
-    a: 'Yes. We have tie-ups with HDFC, Bajaj Finserv, and ICICI for 6–24 month no-cost EMI on packages above ₹3 lakhs. We can also split payments into 3 milestones: 30% advance, 50% on installation start, 20% on handover.'
+    q: 'How do payments work?',
+    a: 'We split payments into 3 clear milestones: 30% advance to lock the installation date, 50% on installation start (equipment unboxing), 20% on handover after demo & calibration. GST included, no hidden charges.'
   },
   {
     q: 'What warranty do I get?',
@@ -48,7 +48,7 @@ const PackagesPage = () => {
 
     ensureMeta(
       'description',
-      'Transparent home theatre & home automation pricing in Bangalore. Essential (₹2.29L), Budget (₹6.99L), Silver (₹9.99L), Gold (₹12.39L) packages. Free consultation, EMI available.'
+      'Transparent home theatre & home automation pricing in Bangalore & Karnataka. Essential (₹2.29L), Budget (₹6.99L), Silver (₹9.99L), Gold (₹12.39L) packages. Free consultation. Milestone-based payments.'
     );
 
     // FAQ Schema
@@ -133,7 +133,7 @@ const PackagesPage = () => {
               { icon: <Check className="w-5 h-5" />, t: 'Free on-site consultation', d: 'A senior designer visits your home in Bangalore to measure, photograph, and recommend the right system size.' },
               { icon: <Shield className="w-5 h-5" />, t: 'Manufacturer + workmanship warranty', d: '1–5 year brand warranty + 1-year Qloud workmanship + 5-year speaker installation guarantee.' },
               { icon: <Wrench className="w-5 h-5" />, t: 'Professional certified installation', d: 'Our in-house technicians are trained on Dolby, Sony, JBL, Denon, and Crestron systems — no third-party labour.' },
-              { icon: <CreditCard className="w-5 h-5" />, t: 'No-cost EMI on ₹3L+ packages', d: 'Tie-ups with HDFC, Bajaj Finserv, ICICI for 6–24 month plans. Or split into 3 milestone payments.' },
+              { icon: <CreditCard className="w-5 h-5" />, t: 'Milestone-based payments', d: '30% advance to book, 50% on installation start, 20% on handover. GST included, no hidden charges.' },
               { icon: <Check className="w-5 h-5" />, t: 'Acoustic & cable planning', d: 'Every package includes pre-wiring plan, conduit routing, and acoustic damping recommendations.' },
               { icon: <Check className="w-5 h-5" />, t: 'Full system demo & training', d: 'Before handover, we walk your family through the remote, voice commands, app scenes, and maintenance basics.' }
             ].map((item, i) => (

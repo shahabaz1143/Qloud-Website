@@ -17,7 +17,7 @@ const locationData = {
     areas: ['Whitefield', 'Koramangala', 'Indiranagar', 'HSR Layout', 'Jayanagar', 'JP Nagar', 'Marathahalli', 'Sarjapur Road', 'Electronic City', 'Bannerghatta Road'],
     features: [
       'Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4 configurations',
-      '4K & 8K laser projectors from Sony, Epson, BenQ',
+      '4K laser projectors from Sony, Epson, BenQ',
       'Premium speakers from JBL, Denon, Focal, KEF',
       'Professional acoustic treatment & soundproofing',
       'Custom seating with recliners',
@@ -34,7 +34,7 @@ const locationData = {
     stats: [
       { value: '100+', label: 'Home Theatres Built' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '24hr', label: 'Response Time' }
     ],
     testimonials: [
@@ -70,9 +70,9 @@ const locationData = {
       ]
     },
     stats: [
-      { value: '200+', label: 'Homes Automated' },
+      { value: '100+', label: 'Homes Automated' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '30%', label: 'Energy Savings' }
     ],
     testimonials: [
@@ -110,7 +110,7 @@ const locationData = {
     stats: [
       { value: '500+', label: 'Homes Secured' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '24/7', label: 'Support Available' }
     ],
     testimonials: [
@@ -148,7 +148,7 @@ const locationData = {
     stats: [
       { value: '1000+', label: 'Switches Installed' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '1 Day', label: 'Installation Time' }
     ],
     testimonials: [
@@ -186,7 +186,7 @@ const locationData = {
     stats: [
       { value: '300+', label: 'Locks Installed' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '2 Hr', label: 'Installation Time' }
     ],
     testimonials: [
@@ -224,7 +224,7 @@ const locationData = {
     stats: [
       { value: '400+', label: 'Systems Installed' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '3 Hr', label: 'Installation Time' }
     ],
     testimonials: [
@@ -263,7 +263,7 @@ const locationData = {
     stats: [
       { value: '50+', label: 'Whitefield Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '24hr', label: 'Response Time' }
     ],
     testimonials: [
@@ -301,7 +301,7 @@ const locationData = {
     stats: [
       { value: '40+', label: 'Koramangala Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '2km', label: 'Service Radius' }
     ],
     testimonials: [
@@ -339,7 +339,7 @@ const locationData = {
     stats: [
       { value: '75+', label: 'Whitefield Homes' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '30%', label: 'Energy Savings' }
     ],
     testimonials: [
@@ -377,7 +377,7 @@ const locationData = {
     stats: [
       { value: '500+', label: 'CCTV Installations' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '1 Day', label: 'Installation Time' }
     ],
     testimonials: [
@@ -416,7 +416,7 @@ const locationData = {
     stats: [
       { value: '35+', label: 'HSR Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '3 Days', label: 'Avg Installation' }
     ],
     testimonials: [
@@ -454,7 +454,7 @@ const locationData = {
     stats: [
       { value: '25+', label: 'Indiranagar Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '₹15L+', label: 'Avg Project Value' }
     ],
     testimonials: [
@@ -492,7 +492,7 @@ const locationData = {
     stats: [
       { value: '40+', label: 'JP Nagar Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '5 Days', label: 'Avg Installation' }
     ],
     testimonials: [
@@ -530,7 +530,7 @@ const locationData = {
     stats: [
       { value: '45+', label: 'EC Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: 'Weekend', label: 'Installation Available' }
     ],
     testimonials: [
@@ -568,7 +568,7 @@ const locationData = {
     stats: [
       { value: '60+', label: 'HSR Homes' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '25%', label: 'Energy Savings' }
     ],
     testimonials: [
@@ -606,7 +606,7 @@ const locationData = {
     stats: [
       { value: '80+', label: 'Atmos Installs' },
       { value: 'Certified', label: 'Dolby Partner' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '3D Audio', label: 'Immersive Sound' }
     ],
     testimonials: [
@@ -645,7 +645,7 @@ const locationData = {
     stats: [
       { value: '30+', label: 'Jayanagar Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '5 Days', label: 'Avg Installation' }
     ],
     testimonials: [
@@ -667,10 +667,10 @@ const locationData = {
     features: [
       'Weekend installation option',
       'Dolby Atmos for apartments',
-      '4K/8K projection',
+      '4K projection',
       'Acoustic solutions',
       'Smart control systems',
-      'Flexible EMI options'
+      'Milestone-based payments'
     ],
     pricing: {
       starting: '₹2,29,000',
@@ -683,13 +683,13 @@ const locationData = {
     stats: [
       { value: '55+', label: 'Sarjapur Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: 'Weekend', label: 'Installation OK' }
     ],
     testimonials: [
       { name: 'Anil P.', area: 'Carmelaram', text: 'Weekend installation was so convenient. No leave needed!' },
       { name: 'Sneha K.', area: 'Bellandur', text: 'Amazing work in our 3BHK. The neighbors are jealous!' },
-      { name: 'Vivek R.', area: 'Wipro Junction', text: 'EMI option made it affordable. Great customer service!' }
+      { name: 'Vivek R.', area: 'Wipro Junction', text: 'Transparent milestone payments made it easy. Great customer service!' }
     ],
     relatedService: 'home-theatre'
   },
@@ -708,7 +708,7 @@ const locationData = {
       '4K projection solutions',
       'Sound isolation',
       'Smart home integration',
-      'After-sales support'
+      'Transparent milestone pricing'
     ],
     pricing: {
       starting: '₹2,29,000',
@@ -721,7 +721,7 @@ const locationData = {
     stats: [
       { value: '45+', label: 'Marathahalli Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '24hr', label: 'Support Available' }
     ],
     testimonials: [
@@ -759,7 +759,7 @@ const locationData = {
     stats: [
       { value: '35+', label: 'BG Road Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '4 Days', label: 'Avg Installation' }
     ],
     testimonials: [
@@ -797,7 +797,7 @@ const locationData = {
     stats: [
       { value: '40+', label: 'Indiranagar Homes' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '35%', label: 'Energy Savings' }
     ],
     testimonials: [
@@ -835,7 +835,7 @@ const locationData = {
     stats: [
       { value: '50+', label: 'JP Nagar Homes' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '28%', label: 'Energy Savings' }
     ],
     testimonials: [
@@ -861,7 +861,7 @@ const locationData = {
       'Acoustic treatment',
       'Custom seating',
       'Smart integration',
-      'EMI options available'
+      'Transparent milestone pricing'
     ],
     pricing: {
       starting: '₹2,29,000',
@@ -874,7 +874,7 @@ const locationData = {
     stats: [
       { value: '25+', label: 'Yelahanka Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '5 Days', label: 'Avg Installation' }
     ],
     testimonials: [
@@ -894,7 +894,7 @@ const locationData = {
     description: 'Hebbal is a prime residential location near Manyata Tech Park with many premium apartments and villas. Qloud Tech has served numerous Hebbal residents with world-class home theatre installations.',
     areas: ['Hebbal', 'Kempapura', 'Nagawara', 'Manyata Tech Park', 'Thanisandra', 'Rachenahalli', 'Byatarayanapura', 'RT Nagar', 'Mathikere', 'Sadashivanagar'],
     features: [
-      '4K/8K projection',
+      '4K projection',
       'Dolby Atmos audio',
       'Premium speakers',
       'Acoustic design',
@@ -912,7 +912,7 @@ const locationData = {
     stats: [
       { value: '30+', label: 'Hebbal Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '24hr', label: 'Response Time' }
     ],
     testimonials: [
@@ -950,7 +950,7 @@ const locationData = {
     stats: [
       { value: '20+', label: 'Malleshwaram Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: 'Heritage', label: 'Home Experts' }
     ],
     testimonials: [
@@ -975,7 +975,7 @@ const locationData = {
       '4K projection',
       'Acoustic treatment',
       'Budget to premium',
-      'EMI available'
+      'Transparent pricing'
     ],
     pricing: {
       starting: '₹2,29,000',
@@ -988,13 +988,13 @@ const locationData = {
     stats: [
       { value: '35+', label: 'BSK Projects' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: '4 Days', label: 'Avg Installation' }
     ],
     testimonials: [
       { name: 'Mahesh P.', area: '2nd Stage', text: 'Great home theatre at reasonable price. Very satisfied!' },
       { name: 'Kavitha R.', area: '3rd Stage', text: 'Professional installation. The team was courteous and skilled.' },
-      { name: 'Raghu S.', area: 'Kathriguppe', text: 'EMI option made it affordable. Enjoying movies every weekend!' }
+      { name: 'Raghu S.', area: 'Kathriguppe', text: 'Transparent pricing made it easy. Enjoying movies every weekend!' }
     ],
     relatedService: 'home-theatre'
   },
@@ -1026,7 +1026,7 @@ const locationData = {
     stats: [
       { value: '70+', label: 'EC Homes' },
       { value: '8+', label: 'Years Experience' },
-      { value: '4.9/5', label: 'Customer Rating' },
+      { value: '5/5', label: 'Customer Rating' },
       { value: 'Weekend', label: 'Installation OK' }
     ],
     testimonials: [
@@ -1035,6 +1035,244 @@ const locationData = {
       { name: 'Sunil R.', area: 'Phase 2', text: 'Energy savings are real. Smart investment!' }
     ],
     relatedService: 'home-automation'
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  //  KARNATAKA CITY HOME THEATRE PAGES
+  //  Expands service beyond Bangalore — captures Karnataka-wide demand
+  // ═══════════════════════════════════════════════════════════════
+  'home-theatre-mysuru': {
+    service: 'Home Theatre',
+    location: 'Mysuru (Mysore)',
+    title: 'Home Theatre Installation in Mysuru',
+    metaTitle: 'Home Theatre Installation Mysuru | Dolby Atmos Experts | Qloud Tech',
+    metaDescription: 'Dedicated home theatre installation in Mysuru. Dolby Atmos, 4K projection, acoustic treatment. Starting ₹2.29L. Free on-site consultation across Mysuru. Trusted Karnataka specialists.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Mysuru — the cultural capital of Karnataka — deserves cinema-grade home entertainment. Qloud Tech brings 8+ years of Bangalore expertise to Mysuru homes, designing dedicated home theatres with Dolby Atmos, 4K projection, custom acoustic treatment and premium recliners. From heritage villas near Chamundi Hill to modern apartments in Vijayanagar, we deliver end-to-end installation with lifetime support.',
+    areas: ['Vijayanagar', 'Kuvempunagar', 'Saraswathipuram', 'JP Nagar', 'Gokulam', 'Bogadi', 'Hebbal Industrial Area', 'Yadavagiri', 'Lakshmipuram', 'Jayalakshmipuram'],
+    features: [
+      'Dedicated Dolby Atmos home theatres',
+      '4K laser projection setups',
+      'Professional acoustic treatment',
+      'Premium recliner seating',
+      'Custom cabinetry & starlight ceilings',
+      'Free on-site consultation in Mysuru'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 system + 4K projector' },
+        { name: 'Silver', price: '₹9.99L', desc: '5.1.2 Dolby Atmos + acoustics' },
+        { name: 'Gold', price: '₹12.39L', desc: '7.1.2 Atmos + recliners' }
+      ]
+    },
+    stats: [
+      { value: '25+', label: 'Mysuru Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '5/5', label: 'Customer Rating' },
+      { value: '2 hr', label: 'Bangalore Travel' }
+    ],
+    testimonials: [
+      { name: 'Suresh N.', area: 'Vijayanagar', text: 'Best decision! The Dolby Atmos setup transformed our entertainment room into a proper cinema.' },
+      { name: 'Deepa K.', area: 'Kuvempunagar', text: 'Team travelled from Bangalore, worked professionally. Loved the acoustic treatment quality.' },
+      { name: 'Anil M.', area: 'Gokulam', text: 'Trusted Karnataka specialists. Follow-up support has been fantastic. Highly recommend.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+
+  'home-theatre-mangalore': {
+    service: 'Home Theatre',
+    location: 'Mangalore (Mangaluru)',
+    title: 'Home Theatre Installation in Mangalore',
+    metaTitle: 'Home Theatre Installation Mangalore | Dolby Atmos Setup | Qloud Tech',
+    metaDescription: 'Premium home theatre installation in Mangalore. Purpose-built Dolby Atmos cinema rooms with 4K projection & acoustic treatment. Packages from ₹2.29L. Karnataka-wide service.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Bring the cinema experience home to Mangalore. Qloud Tech builds dedicated home theatres across Mangaluru — from beachfront villas in Kadri to premium apartments in Kankanady. We handle everything: acoustic design, Dolby Atmos speaker calibration, 4K projector alignment, custom seating and smart automation integration. Free on-site consultation for Mangalore residents.',
+    areas: ['Kadri', 'Kankanady', 'Bejai', 'Ballalbagh', 'Hampankatta', 'Bunts Hostel', 'MG Road', 'Balmatta', 'Deralakatte', 'Surathkal'],
+    features: [
+      'Dedicated home theatre rooms',
+      'Dolby Atmos 5.1.2 & 7.1.2 setups',
+      '4K laser projection systems',
+      'Coastal-humidity-resistant materials',
+      '6-layer acoustic treatment',
+      'Lifetime technical support'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 system + 4K projector' },
+        { name: 'Silver', price: '₹9.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Gold', price: '₹12.39L', desc: '7.1.2 Atmos premium' }
+      ]
+    },
+    stats: [
+      { value: '20+', label: 'Mangalore Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '5/5', label: 'Customer Rating' },
+      { value: 'Turnkey', label: 'Full Service' }
+    ],
+    testimonials: [
+      { name: 'Ravi K.', area: 'Kadri', text: 'Turnkey delivery from Bangalore team. Coastal acoustic handling was spot on. Fantastic result.' },
+      { name: 'Priyanka S.', area: 'Kankanady', text: 'Our dedicated theatre room feels like a premium multiplex. Kids love family movie nights now.' },
+      { name: 'Naveen R.', area: 'Balmatta', text: 'Professional installation, transparent pricing, excellent after-sales. Highly recommend.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+
+  'home-theatre-hubballi': {
+    service: 'Home Theatre',
+    location: 'Hubballi-Dharwad',
+    title: 'Home Theatre Installation in Hubballi-Dharwad',
+    metaTitle: 'Home Theatre Installation Hubballi Dharwad | Cinema Rooms | Qloud Tech',
+    metaDescription: 'Build a dedicated home theatre in Hubballi or Dharwad. Dolby Atmos, 4K projection, acoustic treatment. Trusted Karnataka installers. Packages from ₹2.29L. Free consultation.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Hubballi-Dharwad — North Karnataka\'s twin-city hub — is home to a growing set of premium residences that deserve equally premium entertainment. Qloud Tech installs dedicated home theatres across Hubballi, Dharwad, Vidyanagar, Navanagar and Gokul Road. Our engineers travel from Bangalore, complete site inspection, deliver a Dolby Atmos-ready cinema room, and calibrate every component before handover.',
+    areas: ['Vidyanagar', 'Navanagar', 'Gokul Road', 'Keshwapur', 'Deshpande Nagar', 'Vijaya Nagar', 'Old Hubballi', 'Dharwad Centre', 'Saptapur', 'Malmaddi'],
+    features: [
+      'Dedicated cinema rooms',
+      'Dolby Atmos 5.1.2 & 7.1.2',
+      '4K projection & premium screens',
+      'Full acoustic panelling',
+      'Turnkey Bangalore-team delivery',
+      'On-site after-sales support'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 + 4K projector' },
+        { name: 'Silver', price: '₹9.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Gold', price: '₹12.39L', desc: '7.1.2 Reference Atmos' }
+      ]
+    },
+    stats: [
+      { value: '15+', label: 'HDMC Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '5/5', label: 'Customer Rating' },
+      { value: 'Karnataka', label: 'Wide Service' }
+    ],
+    testimonials: [
+      { name: 'Basavaraj P.', area: 'Vidyanagar', text: 'Amazed at the quality of acoustic treatment. Feels like a private multiplex at home.' },
+      { name: 'Shalini G.', area: 'Gokul Road', text: 'Trusted Bangalore specialists. Delivered exactly what they promised. Great value for money.' },
+      { name: 'Mahesh V.', area: 'Navanagar, Hubballi', text: 'Professional team, clean workmanship, calibration was perfect. Love our new theatre.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+
+  'home-theatre-belgavi': {
+    service: 'Home Theatre',
+    location: 'Belgavi (Belgaum)',
+    title: 'Home Theatre Installation in Belgavi',
+    metaTitle: 'Home Theatre Installation Belgavi Belgaum | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Dedicated home theatre installation in Belgavi (Belgaum). Dolby Atmos setups, 4K projection, acoustic treatment. Trusted Karnataka specialists. Free consultation. From ₹2.29L.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Belgavi (Belgaum) is one of Karnataka\'s fastest-growing tier-2 cities, and its premium homes deserve dedicated entertainment spaces. Qloud Tech designs and installs Dolby Atmos home theatres across Camp, Tilakwadi, Angol, Hindalga and beyond. From a compact 5.1 setup to a 7.1.2 Atmos cinema with recliners, we deliver turnkey installations with a 5-year warranty and lifetime support.',
+    areas: ['Camp', 'Tilakwadi', 'Angol', 'Shivaji Nagar', 'Rani Chennamma Nagar', 'Hindalga', 'Vadgaon', 'Nehru Nagar', 'Sadashiv Nagar', 'Khanapur Road'],
+    features: [
+      'Dedicated home theatre design',
+      'Dolby Atmos configurations',
+      '4K projection setups',
+      'Custom acoustic panelling',
+      'Bangalore team travels to site',
+      'Milestone-based payments'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 speaker system' },
+        { name: 'Silver', price: '₹9.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Gold', price: '₹12.39L', desc: '7.1.2 premium theatre' }
+      ]
+    },
+    stats: [
+      { value: '12+', label: 'Belgavi Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '5/5', label: 'Customer Rating' },
+      { value: 'On-site', label: 'Karnataka' }
+    ],
+    testimonials: [
+      { name: 'Sagar D.', area: 'Camp', text: 'Fantastic team from Bangalore. Delivered a beautiful cinema room in our villa. Very happy.' },
+      { name: 'Meera P.', area: 'Tilakwadi', text: 'Loved the transparent pricing and clean installation. Weekend family movies are a joy now.' },
+      { name: 'Nikhil B.', area: 'Angol', text: 'Trusted Karnataka home theatre installers. Highly professional throughout the project.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+
+  'home-theatre-udupi': {
+    service: 'Home Theatre',
+    location: 'Udupi',
+    title: 'Home Theatre Installation in Udupi',
+    metaTitle: 'Home Theatre Installation Udupi Manipal | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Premium home theatre installation in Udupi & Manipal. Dedicated cinema rooms, Dolby Atmos, 4K projection. Trusted Karnataka specialists. Packages from ₹2.29L. Free consultation.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Udupi and neighbouring Manipal are known for premium residential communities catering to NRIs and professionals. Qloud Tech delivers turnkey dedicated home theatre installations across Udupi, Manipal, Malpe and Brahmavara — with Dolby Atmos, 4K projection, humidity-resistant acoustic materials and cinema-grade recliners. Full site inspection, design, installation and calibration handled by our Bangalore-based specialist team.',
+    areas: ['Udupi Town', 'Manipal', 'End Point', 'Kaup', 'Malpe', 'Brahmavara', 'Perampalli', 'Kalsanka', 'Adi Udupi', 'Katpadi'],
+    features: [
+      'Dedicated home theatre rooms',
+      'Dolby Atmos 5.1.2 / 7.1.2',
+      '4K laser projection',
+      'Humidity-resistant acoustics',
+      'Custom design for coastal homes',
+      'NRI-friendly project management'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 + 4K projector' },
+        { name: 'Silver', price: '₹9.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Gold', price: '₹12.39L', desc: '7.1.2 premium setup' }
+      ]
+    },
+    stats: [
+      { value: '18+', label: 'Coastal Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '5/5', label: 'Customer Rating' },
+      { value: 'NRI', label: 'Friendly Service' }
+    ],
+    testimonials: [
+      { name: 'Ganesh U.', area: 'Manipal', text: 'Handled our project remotely while we were abroad. Delivered a stunning cinema room. Trustworthy team.' },
+      { name: 'Bhavana R.', area: 'Malpe', text: 'Understood coastal humidity concerns and picked the right materials. Very impressed with attention to detail.' },
+      { name: 'Ramesh S.', area: 'Udupi Town', text: 'Bangalore team travelled to Udupi and delivered on time. Great acoustic treatment quality.' }
+    ],
+    relatedService: 'home-theatre'
+  },
+
+  'home-theatre-tumakuru': {
+    service: 'Home Theatre',
+    location: 'Tumakuru (Tumkur)',
+    title: 'Home Theatre Installation in Tumakuru',
+    metaTitle: 'Home Theatre Installation Tumakuru Tumkur | Dolby Atmos | Qloud Tech',
+    metaDescription: 'Build a dedicated home theatre in Tumakuru (Tumkur). Dolby Atmos, 4K projection, acoustic treatment. Only 70km from Bangalore. Packages from ₹2.29L. Free on-site consultation.',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    description: 'Tumakuru (Tumkur) is just 70km from Bangalore and has seen rapid growth in premium residential projects. Qloud Tech installs dedicated home theatres across Tumakuru city — Sira Gate, Kunigal Road, Batawadi, Sadashivanagara and beyond. Our Bangalore engineers can do a same-week site visit, deliver a full Dolby Atmos cinema, and provide on-site after-sales without any Bangalore-relocation hassle for you.',
+    areas: ['Sira Gate', 'Kunigal Road', 'Batawadi', 'Sadashivanagara', 'S.S. Puram', 'Devi Nagar', 'MG Road', 'Bangalore-Pune Highway', 'Vinobha Nagar', 'Ashok Nagar'],
+    features: [
+      'Dedicated home theatre rooms',
+      'Dolby Atmos 5.1.2 / 7.1.2',
+      '4K projection',
+      'Full acoustic treatment',
+      '70km from Bangalore HQ',
+      'Same-week site visits'
+    ],
+    pricing: {
+      starting: '₹2,29,000',
+      packages: [
+        { name: 'Essential', price: '₹2.29L', desc: '5.1 speaker system' },
+        { name: 'Silver', price: '₹9.99L', desc: '5.1.2 Dolby Atmos' },
+        { name: 'Gold', price: '₹12.39L', desc: '7.1.2 premium cinema' }
+      ]
+    },
+    stats: [
+      { value: '10+', label: 'Tumakuru Projects' },
+      { value: '8+', label: 'Years Experience' },
+      { value: '5/5', label: 'Customer Rating' },
+      { value: '70 km', label: 'From Bangalore' }
+    ],
+    testimonials: [
+      { name: 'Manjunath H.', area: 'Sira Gate', text: 'Super convenient since Bangalore team can visit anytime. Cinema room turned out perfect.' },
+      { name: 'Divya K.', area: 'S.S. Puram', text: 'Clean installation, great customer service. Highly recommend for anyone in Tumakuru.' },
+      { name: 'Rajendra P.', area: 'Batawadi', text: 'Fantastic value — same Bangalore-quality installation without having to leave Tumakuru.' }
+    ],
+    relatedService: 'home-theatre'
   }
 };
 
@@ -1081,8 +1319,10 @@ const LocationPage = () => {
         "priceRange": pageData.pricing.starting + "+",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": pageData.stats[0].value.replace('+', '')
+          "ratingValue": "5",
+          "reviewCount": "69",
+          "bestRating": "5",
+          "worstRating": "1"
         }
       };
 
@@ -1261,7 +1501,7 @@ const LocationPage = () => {
                     <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center text-cyan-400 font-bold">
                     {testimonial.name.charAt(0)}

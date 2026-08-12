@@ -87,11 +87,11 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex flex-wrap items-center gap-8 md:gap-16">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">200+</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">450+</div>
               <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
-                HOMES MADE
+                HAPPY
                 <br />
-                SMARTER
+                CUSTOMERS
               </div>
             </div>
             <div>
@@ -111,7 +111,7 @@ const Hero = () => {
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">4.9/5</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">5/5</div>
               <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide leading-tight">
                 CUSTOMER
                 <br />
@@ -124,12 +124,12 @@ const Hero = () => {
           <div className="mt-8">
             <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm">
               <Award className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 font-medium text-sm">Bangalore's #1 Home Theatre & Automation Specialists</span>
+              <span className="text-cyan-400 font-medium text-sm">Bangalore & Karnataka's #1 Home Theatre & Automation Specialists</span>
               <div className="flex items-center gap-0.5 ml-2">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                 ))}
-                <span className="text-white ml-1 text-sm">4.9/5</span>
+                <span className="text-white ml-1 text-sm">5/5</span>
               </div>
             </div>
           </div>

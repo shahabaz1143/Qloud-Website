@@ -28,7 +28,7 @@ const PROCESS_FAQS = [
   },
   {
     q: 'When do I pay? Is there an advance amount?',
-    a: 'We follow a transparent 3-stage milestone payment: 30% advance to lock the installation date, 50% on installation start (equipment unboxing), 20% on handover after demo & calibration. No-cost EMI is available on packages ₹3L+ through HDFC, Bajaj Finserv, and ICICI.'
+    a: 'We follow a transparent 3-stage milestone payment: 30% advance to lock the installation date, 50% on installation start (equipment unboxing), 20% on handover after demo & calibration. GST included, no hidden charges.'
   }
 ];
 

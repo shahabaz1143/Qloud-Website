@@ -48,7 +48,7 @@ const STATIC_ROUTES = {
   "/": {
     title: "Qloud Tech | Home Theatre & Smart Home Automation in Bangalore",
     description:
-      "Bangalore's #1 Home Theatre & Smart Home Automation specialists. Dolby Atmos cinema rooms, smart lighting, CCTV, digital locks. 100+ installs, 4.9★ rated. Free consultation.",
+      "Bangalore & Karnataka's #1 Home Theatre & Smart Home Automation specialists. Dolby Atmos cinema rooms, smart lighting, CCTV, digital locks. 100+ installs, 5★ rated (69 verified reviews). Free consultation.",
     h1: "Bangalore's #1 Home Theatre & Smart Home Automation Specialists",
     intro:
       "Qloud Tech designs and installs premium home theatres (Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4), smart home automation, smart switches, CCTV security systems, digital door locks, video door phones and motorised gates across Bangalore — including Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Sarjapur, Electronic City and Yelahanka.",
@@ -330,7 +330,7 @@ function localBusinessSchema(meta, url) {
     },
     areaServed: { "@type": "City", name: meta.location || "Bangalore" },
     priceRange: "₹₹",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "200" }
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "69" }
   };
 }
 
@@ -415,7 +415,7 @@ function buildSeoFallback(meta, url) {
   <h1>${escapeHtml(meta.h1)}</h1>
   <p>${escapeHtml(meta.intro)}</p>
   <h2>About ${BRAND}</h2>
-  <p>${BRAND} is Bangalore's leading home theatre and smart home automation specialist with 100+ completed installations and a 4.9 star rating from 200+ customers. We design, supply and install Dolby Atmos home theatres, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore — including Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
+  <p>${BRAND} is Bangalore &amp; Karnataka's leading home theatre and smart home automation specialist with 100+ completed installations, 450+ happy customers and a perfect 5-star rating from 69 verified reviews. We design, supply and install dedicated home theatres with Dolby Atmos, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore, Karnataka — Mysuru, Mangalore, Hubballi, Belgavi, Udupi, Tumakuru and beyond — plus Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
   <h2>Why Choose ${BRAND}</h2>
   <ul>
     <li>100+ home theatres and smart homes installed since 2017</li>
