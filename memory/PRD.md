@@ -149,6 +149,7 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ **SEO Launch Checklist** at `/app/SEO_LAUNCH_CHECKLIST.md` — covers off-site work (GSC submission, Google Business Profile, citations, backlinks, reviews).
 - ✅ Fixed Vercel `cleanUrls` 404 bug and updated 103 canonical URLs to `www.qloudsmarthomes.com`.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
+- ✅ **NEW Jun 2026 — Google Ads tag** — Added `gtag('config', 'AW-17179787891')` to the existing gtag.js instance in `public/index.html` (reuses the GA4 library, no duplicate script). Propagates to all prerendered pages via seo-build.js template.
 
 ---
 
