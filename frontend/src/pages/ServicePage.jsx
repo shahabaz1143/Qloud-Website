@@ -224,9 +224,61 @@ const servicesData = {
   }
 };
 
+// Related blog guides per service — internal links to funnel ranking power
+// into high-intent guides (new cost/comparison posts prioritised first).
+const relatedGuidesMap = {
+  'home-theatre': [
+    { title: 'Home Theatre Cost in Bangalore 2026: Complete Price Breakdown', slug: 'home-theatre-cost-bangalore', tag: 'Pricing' },
+    { title: 'How to Soundproof a Home Theatre Room in India', slug: 'home-theatre-soundproofing-guide', tag: 'Guide' },
+    { title: 'Best Home Theatre Company in Bangalore 2026 (Top 7)', slug: 'best-home-theatre-company-bangalore', tag: 'Comparison' },
+    { title: 'Complete Guide to Home Theatre Setup in Bangalore', slug: 'home-theatre-setup-bangalore-guide', tag: 'Guide' },
+  ],
+  'home-automation': [
+    { title: 'KNX vs Zigbee vs Wi-Fi: Best Automation Protocol 2026', slug: 'knx-vs-zigbee-vs-wifi', tag: 'Comparison' },
+    { title: 'Home Automation Cost in Bangalore 2026', slug: 'home-automation-cost-bangalore', tag: 'Pricing' },
+    { title: 'Best Home Automation Company in Bangalore 2026 (Top 6)', slug: 'best-home-automation-company-bangalore', tag: 'Comparison' },
+    { title: 'Smart Home Automation: Complete Buyer\u2019s Guide', slug: 'smart-home-automation-guide', tag: 'Guide' },
+  ],
+  'security-systems': [
+    { title: 'CCTV Installation Cost in Bangalore 2026', slug: 'cctv-installation-cost-bangalore', tag: 'Pricing' },
+    { title: 'Best Smart Door Locks in India 2026', slug: 'best-smart-door-locks-india', tag: 'Buying Guide' },
+    { title: 'Top 10 Home Security Systems for Indian Homes', slug: 'security-systems-guide', tag: 'Guide' },
+    { title: 'Video Door Phone Installation Guide', slug: 'video-door-phone-guide', tag: 'Guide' },
+  ],
+  'smart-switches': [
+    { title: 'How to Choose the Right Smart Switches', slug: 'smart-switches-guide', tag: 'Guide' },
+    { title: 'KNX vs Zigbee vs Wi-Fi: Best Automation Protocol 2026', slug: 'knx-vs-zigbee-vs-wifi', tag: 'Comparison' },
+    { title: 'Home Automation Cost in Bangalore 2026', slug: 'home-automation-cost-bangalore', tag: 'Pricing' },
+    { title: 'Smart Home Automation: Complete Buyer\u2019s Guide', slug: 'smart-home-automation-guide', tag: 'Guide' },
+  ],
+  'networking': [
+    { title: 'Smart Home Automation: Complete Buyer\u2019s Guide', slug: 'smart-home-automation-guide', tag: 'Guide' },
+    { title: 'KNX vs Zigbee vs Wi-Fi: Best Automation Protocol 2026', slug: 'knx-vs-zigbee-vs-wifi', tag: 'Comparison' },
+    { title: 'Home Automation Cost in Bangalore 2026', slug: 'home-automation-cost-bangalore', tag: 'Pricing' },
+  ],
+  'digital-door-locks': [
+    { title: 'Best Smart Door Locks in India 2026', slug: 'best-smart-door-locks-india', tag: 'Buying Guide' },
+    { title: 'Yale vs Samsung Smart Lock: Complete Comparison', slug: 'yale-vs-samsung-smart-lock', tag: 'Comparison' },
+    { title: 'CCTV Installation Cost in Bangalore 2026', slug: 'cctv-installation-cost-bangalore', tag: 'Pricing' },
+    { title: 'Top 10 Home Security Systems for Indian Homes', slug: 'security-systems-guide', tag: 'Guide' },
+  ],
+  'video-door-phones': [
+    { title: 'Video Door Phone Installation Guide', slug: 'video-door-phone-guide', tag: 'Guide' },
+    { title: 'CCTV Installation Cost in Bangalore 2026', slug: 'cctv-installation-cost-bangalore', tag: 'Pricing' },
+    { title: 'Best Smart Door Locks in India 2026', slug: 'best-smart-door-locks-india', tag: 'Buying Guide' },
+    { title: 'Top 10 Home Security Systems for Indian Homes', slug: 'security-systems-guide', tag: 'Guide' },
+  ],
+  'motorised-gates': [
+    { title: 'Home Automation Cost in Bangalore 2026', slug: 'home-automation-cost-bangalore', tag: 'Pricing' },
+    { title: 'Top 10 Home Security Systems for Indian Homes', slug: 'security-systems-guide', tag: 'Guide' },
+    { title: 'Smart Home Automation: Complete Buyer\u2019s Guide', slug: 'smart-home-automation-guide', tag: 'Guide' },
+  ],
+};
+
 const ServicePage = () => {
   const { serviceSlug } = useParams();
   const service = servicesData[serviceSlug];
+  const relatedGuides = relatedGuidesMap[serviceSlug] || [];
 
   // Update page title, meta, and inject Schema.org structured data
   useEffect(() => {
@@ -545,6 +597,56 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Guides — internal links to high-intent blog articles */}
+      {relatedGuides.length > 0 && (
+        <section className="py-16 bg-[#0f1419]" data-testid="related-guides-section">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                  Related <span className="text-cyan-400">Guides</span>
+                </h2>
+                <p className="text-gray-400 max-w-2xl mx-auto">
+                  Expert reads to help you plan, budget and choose with confidence.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-5">
+                {relatedGuides.map((guide, idx) => (
+                  <Link
+                    key={idx}
+                    to={`/blog/${guide.slug}`}
+                    data-testid={`related-guide-${guide.slug}`}
+                    className="group flex items-center justify-between gap-4 p-5 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/20 border border-gray-800 hover:border-cyan-500/50 transition-colors"
+                  >
+                    <div>
+                      <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-cyan-400 mb-2">
+                        {guide.tag}
+                      </span>
+                      <h3 className="text-white font-semibold leading-snug group-hover:text-cyan-300 transition-colors">
+                        {guide.title}
+                      </h3>
+                    </div>
+                    <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 flex-shrink-0 transition-colors" />
+                  </Link>
+                ))}
+              </div>
+
+              <div className="text-center mt-10">
+                <Link
+                  to="/blog"
+                  data-testid="view-all-guides-link"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                >
+                  View all guides
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16">

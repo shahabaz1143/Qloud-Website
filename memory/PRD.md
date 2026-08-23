@@ -159,6 +159,7 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
    - `/blog/home-theatre-soundproofing-guide` (Home Theatre) — targets "how to soundproof home theatre india"
    - All use AI-friendly structure: bold quick-answer lead, comparison tables, FAQ with exact-match questions, internal links, Bangalore/Karnataka focus, consistent 5★/69-reviews/450+-customers metrics.
    - Also surfaced the 2 existing listicle blogs (best-home-theatre-company / best-home-automation-company) on the `/blog` list page (were previously in blogData + sitemap but missing from the list). Blog total now 22 articles.
+- ✅ **NEW Jun 2026 — Internal link boost ("Related Guides")** — Added a "Related Guides" section to all 8 service pages (`ServicePage.jsx` via `relatedGuidesMap`), linking each service to 3–4 relevant high-intent blogs (new cost/comparison posts prioritised). Also injected the same crawlable guide links into the off-screen SEO fallback block in `seo-build.js` (`SERVICE_RELATED_GUIDES` + `GUIDE_TITLES`) so the internal links appear in the static prerendered HTML — funnelling link equity to the new ranking-target guides even without JS execution.
 
 ---
 

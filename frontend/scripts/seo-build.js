@@ -41,6 +41,36 @@ const EMAIL = "contact@qloudsmarthomes.com";
 const ADDRESS = "First Floor 11, 102/1, above Sufyan, Geddalahalli, Rammana Layout, Kothanur, Byrathi, Bangalore 560077";
 const DEFAULT_OG = "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/h7afabwe_cropped-Untitled-design-6.png";
 
+// Related blog guides per service — crawlable internal links injected into
+// the SEO fallback of each service page to funnel ranking power to guides.
+const SERVICE_RELATED_GUIDES = {
+  "home-theatre": ["home-theatre-cost-bangalore", "home-theatre-soundproofing-guide", "best-home-theatre-company-bangalore", "home-theatre-setup-bangalore-guide"],
+  "home-automation": ["knx-vs-zigbee-vs-wifi", "home-automation-cost-bangalore", "best-home-automation-company-bangalore", "smart-home-automation-guide"],
+  "security-systems": ["cctv-installation-cost-bangalore", "best-smart-door-locks-india", "security-systems-guide", "video-door-phone-guide"],
+  "smart-switches": ["smart-switches-guide", "knx-vs-zigbee-vs-wifi", "home-automation-cost-bangalore", "smart-home-automation-guide"],
+  "networking": ["smart-home-automation-guide", "knx-vs-zigbee-vs-wifi", "home-automation-cost-bangalore"],
+  "digital-door-locks": ["best-smart-door-locks-india", "yale-vs-samsung-smart-lock", "cctv-installation-cost-bangalore", "security-systems-guide"],
+  "video-door-phones": ["video-door-phone-guide", "cctv-installation-cost-bangalore", "best-smart-door-locks-india", "security-systems-guide"],
+  "motorised-gates": ["home-automation-cost-bangalore", "security-systems-guide", "smart-home-automation-guide"]
+};
+
+const GUIDE_TITLES = {
+  "home-theatre-cost-bangalore": "Home Theatre Cost in Bangalore 2026",
+  "home-theatre-soundproofing-guide": "How to Soundproof a Home Theatre Room in India",
+  "best-home-theatre-company-bangalore": "Best Home Theatre Company in Bangalore 2026",
+  "home-theatre-setup-bangalore-guide": "Complete Guide to Home Theatre Setup in Bangalore",
+  "knx-vs-zigbee-vs-wifi": "KNX vs Zigbee vs Wi-Fi: Best Automation Protocol 2026",
+  "home-automation-cost-bangalore": "Home Automation Cost in Bangalore 2026",
+  "best-home-automation-company-bangalore": "Best Home Automation Company in Bangalore 2026",
+  "smart-home-automation-guide": "Smart Home Automation: Complete Buyer's Guide",
+  "cctv-installation-cost-bangalore": "CCTV Installation Cost in Bangalore 2026",
+  "best-smart-door-locks-india": "Best Smart Door Locks in India 2026",
+  "security-systems-guide": "Top 10 Home Security Systems for Indian Homes",
+  "video-door-phone-guide": "Video Door Phone Installation Guide",
+  "smart-switches-guide": "How to Choose the Right Smart Switches",
+  "yale-vs-samsung-smart-lock": "Yale vs Samsung Smart Lock: Complete Comparison"
+};
+
 // --------------------------------------------------------------------------
 // Static (non-dynamic) routes meta — covers all top-level pages
 // --------------------------------------------------------------------------
@@ -426,6 +456,19 @@ function buildSeoFallback(meta, url) {
   </ul>
   <h2>Explore</h2>
   <p><a href="${SITE_URL}/services">Browse services</a> · <a href="${SITE_URL}/packages">View packages</a> · <a href="${SITE_URL}/projects">Recent projects</a> · <a href="${SITE_URL}/blog">Read our guides</a> · <a href="${SITE_URL}/contact">Contact us</a></p>
+  ${
+    meta.type === "service" && SERVICE_RELATED_GUIDES[meta.slug]
+      ? `<h2>Related Guides</h2>
+  <ul>
+    ${SERVICE_RELATED_GUIDES[meta.slug]
+      .map(
+        (s) =>
+          `<li><a href="${SITE_URL}/blog/${s}">${escapeHtml(GUIDE_TITLES[s] || s)}</a></li>`
+      )
+      .join("\n    ")}
+  </ul>`
+      : ""
+  }
   <h2>Contact</h2>
   <address>
     ${BRAND}<br />
