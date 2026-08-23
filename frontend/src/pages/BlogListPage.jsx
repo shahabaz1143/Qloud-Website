@@ -7,6 +7,83 @@ import Header from '../components/Header';
 // All blog posts data
 const allBlogPosts = [
   {
+    id: 16,
+    title: "Home Theatre Cost in Bangalore 2026: Complete Price Breakdown",
+    slug: "home-theatre-cost-bangalore",
+    excerpt: "A transparent 2026 breakdown of home theatre costs in Bangalore by room size, speaker config and brand — from ₹2.29L to ₹15L+.",
+    category: "Pricing",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-10",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1724061409979-420a38c25bcc?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 17,
+    title: "CCTV Installation Cost in Bangalore 2026: Camera Price Guide",
+    slug: "cctv-installation-cost-bangalore",
+    excerpt: "Complete 2026 price guide for CCTV installation in Bangalore — 2, 4 and 8 camera packages, IP vs analog, and real installation charges.",
+    category: "Security",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-09",
+    readTime: "8 min",
+    image: "https://images.pexels.com/photos/5966513/pexels-photo-5966513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    id: 18,
+    title: "Best Smart Door Locks in India 2026: Complete Buying Guide",
+    slug: "best-smart-door-locks-india",
+    excerpt: "The best smart door locks in India 2026 — Yale, Godrej, Samsung, Qubo and more compared on access methods, security and price.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-08",
+    readTime: "9 min",
+    image: "https://images.pexels.com/photos/20901468/pexels-photo-20901468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    id: 19,
+    title: "KNX vs Zigbee vs Wi-Fi: Best Home Automation Protocol in 2026",
+    slug: "knx-vs-zigbee-vs-wifi",
+    excerpt: "A clear 2026 comparison of the three main home automation protocols on reliability, cost and scalability — and which to choose.",
+    category: "Comparison",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-07",
+    readTime: "8 min",
+    image: "https://images.pexels.com/photos/16423104/pexels-photo-16423104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    id: 20,
+    title: "How to Soundproof a Home Theatre Room in India: 2026 Guide",
+    slug: "home-theatre-soundproofing-guide",
+    excerpt: "A practical 2026 guide to soundproofing a home theatre in India — soundproofing vs acoustic treatment, materials, costs and mistakes.",
+    category: "Home Theatre",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-06",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1710131459450-7c384b8be18f?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 21,
+    title: "Best Home Theatre Company in Bangalore 2026: Top 7 Compared",
+    slug: "best-home-theatre-company-bangalore",
+    excerpt: "The definitive 2026 guide to the best home theatre companies in Bangalore, ranked on installations, warranty, Dolby Atmos expertise and ratings.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-02-12",
+    readTime: "11 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
+  },
+  {
+    id: 22,
+    title: "Best Home Automation Company in Bangalore 2026: Top 6 Reviewed",
+    slug: "best-home-automation-company-bangalore",
+    excerpt: "The definitive 2026 guide to the best home automation companies in Bangalore, compared on protocol support, integration, warranty and pricing.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-02-12",
+    readTime: "10 min",
+    image: "https://images.pexels.com/photos/16423104/pexels-photo-16423104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
     id: 1,
     title: "Complete Guide to Home Theatre Setup in Bangalore 2024",
     slug: "home-theatre-setup-bangalore-guide",

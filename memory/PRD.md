@@ -150,6 +150,15 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Fixed Vercel `cleanUrls` 404 bug and updated 103 canonical URLs to `www.qloudsmarthomes.com`.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
 - ✅ **NEW Jun 2026 — Google Ads tag** — Added `gtag('config', 'AW-17179787891')` to the existing gtag.js instance in `public/index.html` (reuses the GA4 library, no duplicate script). Propagates to all prerendered pages via seo-build.js template.
+- ✅ **NEW Jun 2026 — Branded favicon** — Replaced transparent dark-Q favicon with a proper multi-size set (favicon.ico 16/32/48/64, 96/32/16 PNGs, apple-touch-icon 180) — cyan-to-teal Q on dark rounded square, meets Google's 48px-multiple spec. Wired in `public/index.html`.
+- ✅ **NEW Jun 2026 — 5 new SEO blogs (high commercial intent)** — Added to `BlogArticle.jsx` + `BlogListPage.jsx` + `sitemap.xml`:
+   - `/blog/home-theatre-cost-bangalore` (Pricing) — targets "home theatre cost/price bangalore"
+   - `/blog/cctv-installation-cost-bangalore` (Security) — targets "cctv installation cost bangalore"
+   - `/blog/best-smart-door-locks-india` (Buying Guide) — targets "best smart door locks india"
+   - `/blog/knx-vs-zigbee-vs-wifi` (Comparison) — targets "best home automation protocol"
+   - `/blog/home-theatre-soundproofing-guide` (Home Theatre) — targets "how to soundproof home theatre india"
+   - All use AI-friendly structure: bold quick-answer lead, comparison tables, FAQ with exact-match questions, internal links, Bangalore/Karnataka focus, consistent 5★/69-reviews/450+-customers metrics.
+   - Also surfaced the 2 existing listicle blogs (best-home-theatre-company / best-home-automation-company) on the `/blog` list page (were previously in blogData + sitemap but missing from the list). Blog total now 22 articles.
 
 ---
 
