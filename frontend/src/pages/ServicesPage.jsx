@@ -4,6 +4,7 @@ import { ArrowRight, Film, Lightbulb, Shield, Home, Wifi, Lock, Video, DoorOpen,
 import { Button } from '../components/ui/button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SeoKeywordSection from '../components/SeoKeywordSection';
 
 const SERVICES_FAQS = [
   {
@@ -384,6 +385,8 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
+
+      <SeoKeywordSection variant="services" />
 
       <Footer />
     </div>

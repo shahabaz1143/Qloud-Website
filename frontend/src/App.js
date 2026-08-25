@@ -9,6 +9,7 @@ import Pricing from './components/Pricing';
 import Process from './components/Process';
 import Projects from './components/Projects';
 import BrandsWeCarry from './components/BrandsWeCarry';
+import SeoKeywordSection from './components/SeoKeywordSection';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
@@ -179,6 +180,7 @@ const HomePage = () => {
       <Gallery />
       <Blog />
       <FAQ />
+      <SeoKeywordSection variant="home" />
       <Contact />
       <Footer />
       <WhatsAppButton />
