@@ -449,7 +449,7 @@ function buildSeoFallback(meta, url) {
   <h2>Why Choose ${BRAND}</h2>
   <ul>
     <li>100+ home theatres and smart homes installed since 2017</li>
-    <li>Vendor-neutral — we work with JBL, Denon, Yamaha, Sony, Epson, BenQ, KEF, Yale, Samsung, Hikvision, BuildTrack and more</li>
+    <li>Vendor-neutral — authorised dealer &amp; installer of JBL, Polk Audio, Monitor Audio, KEF, Klipsch, Denon, Marantz, Yamaha, Focal, Bowers &amp; Wilkins, Sony, Epson, BenQ, Yale, Samsung, Hikvision, BuildTrack and more</li>
     <li>Transparent packages from ₹2.29L (Essential) to ₹12.39L (Gold)</li>
     <li>Lifetime technical support and 5-year speaker warranty</li>
     <li>Free on-site consultation across Bangalore</li>

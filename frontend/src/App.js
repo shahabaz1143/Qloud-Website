@@ -8,6 +8,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Pricing from './components/Pricing';
 import Process from './components/Process';
 import Projects from './components/Projects';
+import BrandsWeCarry from './components/BrandsWeCarry';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
@@ -172,6 +173,7 @@ const HomePage = () => {
       <Pricing />
       <Process />
       <Projects />
+      <BrandsWeCarry />
       <Testimonials />
       <Gallery />
       <Blog />

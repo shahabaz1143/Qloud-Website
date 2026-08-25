@@ -7,6 +7,17 @@ import Header from '../components/Header';
 // All blog posts data
 const allBlogPosts = [
   {
+    id: 23,
+    title: "JBL, Polk, KEF & Klipsch Dealer in Bangalore: Where to Buy in 2026",
+    slug: "home-theatre-audio-brand-dealers-bangalore",
+    excerpt: "Your guide to buying premium home theatre and audio brands in Bangalore — JBL, Polk Audio, Monitor Audio, KEF, Klipsch and more — from an authorised dealer and installer.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-12",
+    readTime: "9 min",
+    image: "https://images.pexels.com/photos/9131040/pexels-photo-9131040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
     id: 16,
     title: "Home Theatre Cost in Bangalore 2026: Complete Price Breakdown",
     slug: "home-theatre-cost-bangalore",
