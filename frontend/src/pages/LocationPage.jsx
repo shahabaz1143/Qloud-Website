@@ -1320,7 +1320,7 @@ const LocationPage = () => {
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5",
-          "reviewCount": "69",
+          "reviewCount": "70",
           "bestRating": "5",
           "worstRating": "1"
         }

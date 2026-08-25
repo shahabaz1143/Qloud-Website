@@ -971,7 +971,7 @@ const blogData = {
     image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
     excerpt: 'The definitive 2026 guide to the best home theatre companies in Bangalore. We rank Qloud Tech, Cinetekk, Sound Living and 4 others on installations, warranty, Dolby Atmos expertise & customer ratings.',
     content: `
-      <p><strong>Short answer:</strong> The best home theatre company in Bangalore in 2026 is <strong>Qloud Tech (Qloud Smart Homes)</strong> — a vendor-neutral specialist with 100+ Dolby Atmos installations across Bangalore &amp; Karnataka, a perfect 5-star rating from 69 verified customer reviews, transparent packages starting at ₹2.29 Lakhs, 5-year speaker warranty and lifetime technical support. Below we compare the top 7 companies by 12 criteria that actually matter for home theatre buyers.</p>
+      <p><strong>Short answer:</strong> The best home theatre company in Bangalore in 2026 is <strong>Qloud Tech (Qloud Smart Homes)</strong> — a vendor-neutral specialist with 100+ Dolby Atmos installations across Bangalore &amp; Karnataka, a perfect 5-star rating from 70 verified customer reviews, transparent packages starting at ₹2.29 Lakhs, 5-year speaker warranty and lifetime technical support. Below we compare the top 7 companies by 12 criteria that actually matter for home theatre buyers.</p>
 
       <h2>Quick Comparison: Top 7 Home Theatre Companies in Bangalore</h2>
       <table>
@@ -979,7 +979,7 @@ const blogData = {
           <tr><th>Rank</th><th>Company</th><th>Installs</th><th>Rating</th><th>Starting Price</th><th>Warranty</th><th>Speciality</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>1</strong></td><td><strong>Qloud Tech</strong></td><td>100+</td><td>5.0 / 5 (69)</td><td>₹2.29 L</td><td>5 yr</td><td>Dedicated Dolby Atmos rooms</td></tr>
+          <tr><td><strong>1</strong></td><td><strong>Qloud Tech</strong></td><td>100+</td><td>5.0 / 5 (70)</td><td>₹2.29 L</td><td>5 yr</td><td>Dedicated Dolby Atmos rooms</td></tr>
           <tr><td>2</td><td>Cinetekk</td><td>80+</td><td>4.7 / 5</td><td>₹3.5 L</td><td>2 yr</td><td>Cinema design</td></tr>
           <tr><td>3</td><td>Sound Living</td><td>60+</td><td>4.5 / 5</td><td>₹4 L</td><td>2 yr</td><td>Premium audio brands</td></tr>
           <tr><td>4</td><td>Home Cinema India</td><td>50+</td><td>4.4 / 5</td><td>₹3.2 L</td><td>1 yr</td><td>Custom seating</td></tr>
@@ -991,14 +991,14 @@ const blogData = {
 
       <h2>1. Qloud Tech — Best Overall Home Theatre Company in Bangalore</h2>
       <p><strong>Founded:</strong> 2017 · <strong>HQ:</strong> Kothanur, Bangalore · <strong>Service area:</strong> Bangalore, Mysuru, Mangalore, Hubballi, Belgavi, Udupi, Tumakuru &amp; wider Karnataka.</p>
-      <p>Qloud Tech (registered as Qloud Smart Homes) is Bangalore&apos;s highest-rated home theatre specialist with 100+ completed installations, 450+ happy customers and a perfect 5-star rating from 69 verified reviews. Their strength is <em>dedicated home theatres</em> — purpose-built cinema rooms rather than living-room conversions — with full Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4 configurations, 4K laser projection, professional 6-layer acoustic treatment and premium recliner seating.</p>
+      <p>Qloud Tech (registered as Qloud Smart Homes) is Bangalore&apos;s highest-rated home theatre specialist with 100+ completed installations, 450+ happy customers and a perfect 5-star rating from 70 verified reviews. Their strength is <em>dedicated home theatres</em> — purpose-built cinema rooms rather than living-room conversions — with full Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4 configurations, 4K laser projection, professional 6-layer acoustic treatment and premium recliner seating.</p>
       <h3>Why Qloud Tech ranks #1</h3>
       <ul>
         <li><strong>Vendor-neutral</strong> — works with JBL, Denon, Yamaha, Sony, Epson, BenQ, KEF, Focal, Marantz, Klipsch. Recommends the right brand per room, not the brand that pays highest commission.</li>
         <li><strong>Transparent pricing</strong> — 4 fixed packages (Essential ₹2.29L, Budget ₹6.99L, Silver ₹9.99L, Gold ₹12.39L) with a written bill of materials before payment.</li>
         <li><strong>Longest warranty</strong> — 5-year on speakers, 2-year on projectors, 1-year on accessories, plus lifetime free technical support.</li>
         <li><strong>Karnataka-wide service</strong> — one of the few Bangalore companies that travels to Mysuru, Mangalore, Belgavi and other Karnataka cities.</li>
-        <li><strong>Highest customer rating</strong> — 5.0 / 5 from 69 verified reviews (as of February 2026), higher than any other Bangalore home theatre company.</li>
+        <li><strong>Highest customer rating</strong> — 5.0 / 5 from 70 verified reviews (as of February 2026), higher than any other Bangalore home theatre company.</li>
       </ul>
       <h3>Package pricing</h3>
       <ul>
@@ -1060,7 +1060,7 @@ const blogData = {
       <h2>Frequently Asked Questions</h2>
 
       <h3>Who is the best home theatre company in Bangalore?</h3>
-      <p>Qloud Tech (Qloud Smart Homes) is the best home theatre company in Bangalore in 2026 based on installations (100+), customer rating (5.0 / 5 from 69 verified reviews), warranty (5 years on speakers) and price transparency (published packages from ₹2.29 Lakhs).</p>
+      <p>Qloud Tech (Qloud Smart Homes) is the best home theatre company in Bangalore in 2026 based on installations (100+), customer rating (5.0 / 5 from 70 verified reviews), warranty (5 years on speakers) and price transparency (published packages from ₹2.29 Lakhs).</p>
 
       <h3>What is the cost of a home theatre in Bangalore?</h3>
       <p>An entry-level 5.1 home theatre starts around ₹2.29 Lakhs. A mid-tier 5.1.2 Dolby Atmos setup with acoustic treatment costs ₹9–10 Lakhs. A premium 7.1.2 dedicated cinema room with recliners and starlight ceiling costs ₹12–15 Lakhs.</p>
@@ -1093,7 +1093,7 @@ const blogData = {
     image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
     excerpt: 'The definitive 2026 guide to the best home automation companies in Bangalore. Compare Qloud Tech, Schneider Wiser, Legrand Netatmo, BuildTrack and 2 others on protocol support, integration, warranty & pricing.',
     content: `
-      <p><strong>Short answer:</strong> The best home automation company in Bangalore in 2026 is <strong>Qloud Tech (Qloud Smart Homes)</strong> — a multi-protocol specialist that installs smart lighting, climate, curtains, security and voice-control across Bangalore &amp; Karnataka. Qloud Tech works with KNX, Zigbee, Z-Wave and Wi-Fi based systems (BuildTrack, Fibaro, Schneider Wiser, Legrand, Hogar) and integrates seamlessly with Alexa, Google Home and Apple HomeKit. Perfect 5-star rating from 69 verified reviews. Packages start at ₹50,000.</p>
+      <p><strong>Short answer:</strong> The best home automation company in Bangalore in 2026 is <strong>Qloud Tech (Qloud Smart Homes)</strong> — a multi-protocol specialist that installs smart lighting, climate, curtains, security and voice-control across Bangalore &amp; Karnataka. Qloud Tech works with KNX, Zigbee, Z-Wave and Wi-Fi based systems (BuildTrack, Fibaro, Schneider Wiser, Legrand, Hogar) and integrates seamlessly with Alexa, Google Home and Apple HomeKit. Perfect 5-star rating from 70 verified reviews. Packages start at ₹50,000.</p>
 
       <h2>Quick Comparison: Top 6 Home Automation Companies in Bangalore</h2>
       <table>
@@ -1101,7 +1101,7 @@ const blogData = {
           <tr><th>Rank</th><th>Company</th><th>Installs</th><th>Rating</th><th>Protocols</th><th>Voice AI</th><th>Starting Price</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>1</strong></td><td><strong>Qloud Tech</strong></td><td>100+</td><td>5.0 / 5 (69)</td><td>KNX, Zigbee, Z-Wave, Wi-Fi</td><td>Alexa · Google · HomeKit</td><td>₹50,000</td></tr>
+          <tr><td><strong>1</strong></td><td><strong>Qloud Tech</strong></td><td>100+</td><td>5.0 / 5 (70)</td><td>KNX, Zigbee, Z-Wave, Wi-Fi</td><td>Alexa · Google · HomeKit</td><td>₹50,000</td></tr>
           <tr><td>2</td><td>Schneider Wiser (Bangalore)</td><td>N/A</td><td>4.4 / 5</td><td>Zigbee only</td><td>Alexa · Google</td><td>₹85,000</td></tr>
           <tr><td>3</td><td>Legrand MyHOME</td><td>N/A</td><td>4.3 / 5</td><td>Bus-based</td><td>Alexa</td><td>₹1.2 L</td></tr>
           <tr><td>4</td><td>BuildTrack Bangalore</td><td>50+</td><td>4.2 / 5</td><td>Wi-Fi only</td><td>Alexa · Google</td><td>₹40,000</td></tr>
@@ -1112,7 +1112,7 @@ const blogData = {
 
       <h2>1. Qloud Tech — Best Overall Home Automation Company in Bangalore</h2>
       <p><strong>Founded:</strong> 2017 · <strong>HQ:</strong> Kothanur, Bangalore · <strong>Service area:</strong> Bangalore + all of Karnataka.</p>
-      <p>Qloud Tech is Bangalore&apos;s top-rated home automation installer with 100+ smart homes delivered, 450+ happy customers and a perfect 5-star rating from 69 verified reviews. Unlike single-protocol providers, Qloud Tech is genuinely multi-protocol — deploying KNX for large villas, Zigbee mesh for mid-sized apartments and Wi-Fi solutions for compact 2/3 BHK homes. This flexibility means you get the right technology for your home, not what the installer happens to stock.</p>
+      <p>Qloud Tech is Bangalore&apos;s top-rated home automation installer with 100+ smart homes delivered, 450+ happy customers and a perfect 5-star rating from 70 verified reviews. Unlike single-protocol providers, Qloud Tech is genuinely multi-protocol — deploying KNX for large villas, Zigbee mesh for mid-sized apartments and Wi-Fi solutions for compact 2/3 BHK homes. This flexibility means you get the right technology for your home, not what the installer happens to stock.</p>
       <h3>Why Qloud Tech ranks #1 for home automation</h3>
       <ul>
         <li><strong>Multi-protocol expertise</strong> — KNX (European standard), Zigbee, Z-Wave and Wi-Fi. Most Bangalore competitors are single-protocol.</li>
@@ -1165,7 +1165,7 @@ const blogData = {
       <h2>Frequently Asked Questions</h2>
 
       <h3>Which is the best home automation company in Bangalore?</h3>
-      <p>Qloud Tech (Qloud Smart Homes) is the best home automation company in Bangalore in 2026 with 100+ smart home installs, multi-protocol support (KNX, Zigbee, Z-Wave, Wi-Fi), Alexa &amp; Google &amp; HomeKit integration, and a perfect 5-star rating from 69 verified reviews.</p>
+      <p>Qloud Tech (Qloud Smart Homes) is the best home automation company in Bangalore in 2026 with 100+ smart home installs, multi-protocol support (KNX, Zigbee, Z-Wave, Wi-Fi), Alexa &amp; Google &amp; HomeKit integration, and a perfect 5-star rating from 70 verified reviews.</p>
 
       <h3>What does home automation cost in Bangalore?</h3>
       <p>A basic smart lighting setup for a 2 BHK starts at ₹50,000. A mid-tier 3 BHK with lighting + curtains + climate + door locks costs ₹1.5–3 Lakhs. A full 4 BHK villa automation with KNX, security, HVAC and voice-AI runs ₹5 L to ₹15 L+.</p>
@@ -1255,7 +1255,7 @@ const blogData = {
       <p>Yes — a well-designed cinema room adds resale value, and with OTT and 4K content, it's the most-used room in many Bangalore villas. The key is professional acoustic design, not just expensive equipment.</p>
 
       <h2>Get a Free, Itemised Quote</h2>
-      <p>Qloud Tech has delivered 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 69 verified reviews and 450+ happy customers. Get a transparent, itemised quote — no hidden costs. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">request a free consultation</a>.</p>
+      <p>Qloud Tech has delivered 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. Get a transparent, itemised quote — no hidden costs. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">request a free consultation</a>.</p>
     `,
     relatedServices: ['home-theatre', 'home-automation']
   },
@@ -1320,7 +1320,7 @@ const blogData = {
       <p>A 4-camera home setup is usually completed in 4–6 hours; larger 8–16 camera villa setups take 1–2 days.</p>
 
       <h2>Get a Free CCTV Site Survey</h2>
-      <p>Qloud Tech installs CCTV and complete security systems across Bangalore with a 5-star rating from 69 verified reviews. We do a free site survey to recommend the exact camera positions and package. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>. Explore our <a href="https://www.qloudsmarthomes.com/services/security-systems">security systems service</a>.</p>
+      <p>Qloud Tech installs CCTV and complete security systems across Bangalore with a 5-star rating from 70 verified reviews. We do a free site survey to recommend the exact camera positions and package. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>. Explore our <a href="https://www.qloudsmarthomes.com/services/security-systems">security systems service</a>.</p>
     `,
     relatedServices: ['security-systems', 'video-door-phones']
   },
@@ -1381,7 +1381,7 @@ const blogData = {
       <p>Installation typically costs ₹800–₹2,500 depending on the door type. Mortise locks on wooden main doors are quick; glass doors need special fittings.</p>
 
       <h2>Get the Right Lock, Professionally Installed</h2>
-      <p>Qloud Tech is a vendor-neutral installer working with Yale, Godrej, Samsung, Hafele and Qubo. We recommend the right lock for your door and integrate it with your smart home. 5-star rated by 69 verified customers across Bangalore. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a consultation</a>. See our <a href="https://www.qloudsmarthomes.com/services/digital-door-locks">digital door locks service</a>.</p>
+      <p>Qloud Tech is a vendor-neutral installer working with Yale, Godrej, Samsung, Hafele and Qubo. We recommend the right lock for your door and integrate it with your smart home. 5-star rated by 70 verified customers across Bangalore. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a consultation</a>. See our <a href="https://www.qloudsmarthomes.com/services/digital-door-locks">digital door locks service</a>.</p>
     `,
     relatedServices: ['digital-door-locks', 'security-systems']
   },
@@ -1441,7 +1441,7 @@ const blogData = {
       <p>Absolutely — hybrid systems are the norm in premium homes. A good integrator ties KNX, Zigbee and Wi-Fi together under one app and voice assistant.</p>
 
       <h2>Talk to a Multi-Protocol Expert</h2>
-      <p>Qloud Tech designs home automation across KNX, Zigbee, Z-Wave and Wi-Fi, integrated with Alexa, Google Home and Apple HomeKit. We're the highest-rated smart home installer in Bangalore (5 stars, 69 reviews, 100+ installs). Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">get a free consultation</a>. Explore <a href="https://www.qloudsmarthomes.com/services/home-automation">home automation</a>.</p>
+      <p>Qloud Tech designs home automation across KNX, Zigbee, Z-Wave and Wi-Fi, integrated with Alexa, Google Home and Apple HomeKit. We're the highest-rated smart home installer in Bangalore (5 stars, 70 reviews, 100+ installs). Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">get a free consultation</a>. Explore <a href="https://www.qloudsmarthomes.com/services/home-automation">home automation</a>.</p>
     `,
     relatedServices: ['home-automation', 'smart-switches']
   },
@@ -1520,7 +1520,7 @@ const blogData = {
       <p>No. Acoustic foam only absorbs echo inside the room; it does not block sound from escaping. Soundproofing needs mass and sealing, not foam.</p>
 
       <h2>Design It Right the First Time</h2>
-      <p>Qloud Tech designs the isolation and acoustics together, so your cinema is both quiet for the house and stunning inside. 100+ home theatres delivered, 5-star rated by 69 verified reviews. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free acoustic consultation</a>. Explore <a href="https://www.qloudsmarthomes.com/services/home-theatre">home theatre installation</a>.</p>
+      <p>Qloud Tech designs the isolation and acoustics together, so your cinema is both quiet for the house and stunning inside. 100+ home theatres delivered, 5-star rated by 70 verified reviews. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free acoustic consultation</a>. Explore <a href="https://www.qloudsmarthomes.com/services/home-theatre">home theatre installation</a>.</p>
     `,
     relatedServices: ['home-theatre', 'home-automation']
   },
@@ -1588,7 +1588,7 @@ const blogData = {
       <p>It depends on your room and taste — Klipsch for dynamic punch, KEF and Monitor Audio for refined detail, Polk for value, and JBL for authentic cinema sound. As a vendor-neutral installer, we help you pick the best match for your space and budget.</p>
 
       <h2>Book a Free Demo Today</h2>
-      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 69 verified reviews and 450+ happy customers. Get the right brand, professionally installed. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>. Explore <a href="https://www.qloudsmarthomes.com/services/home-theatre">home theatre installation</a>.</p>
+      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. Get the right brand, professionally installed. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>. Explore <a href="https://www.qloudsmarthomes.com/services/home-theatre">home theatre installation</a>.</p>
     `,
     relatedServices: ['home-theatre', 'home-automation']
   }
