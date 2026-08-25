@@ -171,6 +171,43 @@ const ContactPage = () => {
         </div>
       </section>
 
+      {/* Find us on the map */}
+      <section className="py-16 bg-[#0a0e1a]" data-testid="contact-map-section">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
+            Find Us on <span className="text-cyan-400">Google Maps</span>
+          </h2>
+          <p className="text-gray-400 mb-8 text-center max-w-3xl mx-auto">
+            Visit our office in Kothanur, Byrathi, Bangalore — or get directions with one tap.
+          </p>
+          <div className="rounded-2xl overflow-hidden border border-gray-800 shadow-lg">
+            <iframe
+              title="Qloud Tech — Home Theatre & Smart Home Company, Bangalore"
+              src="https://www.google.com/maps?q=Qloud%20Smart%20Homes%2C%20Kothanur%2C%20Byrathi%2C%20Bangalore%20560077&output=embed"
+              width="100%"
+              height="420"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              data-testid="contact-map-iframe"
+            />
+          </div>
+          <div className="text-center mt-6">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Qloud%20Smart%20Homes%2C%20Kothanur%2C%20Byrathi%2C%20Bangalore%20560077"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="get-directions-btn"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] text-black font-semibold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+            >
+              <MapPin className="w-4 h-4" />
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 bg-[#0a0e1a]">
         <div className="container mx-auto px-6 max-w-4xl">
