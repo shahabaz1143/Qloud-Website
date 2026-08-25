@@ -6,11 +6,11 @@ import { ChevronRight } from 'lucide-react';
 // Rendered as crawlable text (not just logos) so Google indexes brand keywords
 // like "JBL dealer Bangalore", "KEF dealer Bangalore", etc.
 const brands = [
-  { name: 'JBL', tagline: 'Cinema & Synthesis speakers' },
-  { name: 'Polk Audio', tagline: 'American hi-fi value' },
-  { name: 'Monitor Audio', tagline: 'British audiophile sound' },
-  { name: 'KEF', tagline: 'Uni-Q reference speakers' },
-  { name: 'Klipsch', tagline: 'Horn-loaded high efficiency' },
+  { name: 'JBL', tagline: 'Cinema & Synthesis speakers', href: '/jbl-dealer-bangalore' },
+  { name: 'Polk Audio', tagline: 'American hi-fi value', href: '/polk-audio-dealer-bangalore' },
+  { name: 'Monitor Audio', tagline: 'British audiophile sound', href: '/monitor-audio-dealer-bangalore' },
+  { name: 'KEF', tagline: 'Uni-Q reference speakers', href: '/kef-dealer-bangalore' },
+  { name: 'Klipsch', tagline: 'Horn-loaded high efficiency', href: '/klipsch-dealer-bangalore' },
   { name: 'Denon', tagline: 'AV receivers & processors' },
   { name: 'Marantz', tagline: 'Reference-grade AVRs' },
   { name: 'Yamaha', tagline: 'Aventage AV receivers' },
@@ -42,18 +42,30 @@ const BrandsWeCarry = () => {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-          {brands.map((brand) => (
-            <div
-              key={brand.name}
-              data-testid={`brand-${brand.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-              className="group p-5 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/20 border border-gray-800 hover:border-cyan-500/50 transition-colors text-center"
-            >
-              <h3 className="text-white font-semibold group-hover:text-cyan-300 transition-colors">
-                {brand.name}
-              </h3>
-              <p className="text-gray-500 text-xs mt-1">{brand.tagline}</p>
-            </div>
-          ))}
+          {brands.map((brand) => {
+            const testId = `brand-${brand.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+            const cardClass = "group p-5 rounded-xl bg-gradient-to-br from-gray-900/60 to-gray-900/20 border border-gray-800 hover:border-cyan-500/50 transition-colors text-center block";
+            const inner = (
+              <>
+                <h3 className="text-white font-semibold group-hover:text-cyan-300 transition-colors">
+                  {brand.name}
+                </h3>
+                <p className="text-gray-500 text-xs mt-1">{brand.tagline}</p>
+                {brand.href && (
+                  <span className="text-cyan-400 text-[11px] font-semibold mt-2 inline-block">Dealer in Bangalore →</span>
+                )}
+              </>
+            );
+            return brand.href ? (
+              <Link key={brand.name} to={brand.href} data-testid={testId} className={cardClass}>
+                {inner}
+              </Link>
+            ) : (
+              <div key={brand.name} data-testid={testId} className={cardClass}>
+                {inner}
+              </div>
+            );
+          })}
         </div>
 
         <div className="text-center mt-12">

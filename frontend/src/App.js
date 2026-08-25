@@ -26,6 +26,7 @@ import ProcessPage from './pages/ProcessPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import LandingPage from './pages/LandingPage';
+import BrandPage from './pages/BrandPage';
 
 // Google Analytics 4 SPA page_view tracker + lead-event auto-tracking
 const GA_MEASUREMENT_ID = 'G-G41DNBE1PK';
@@ -203,6 +204,13 @@ function App() {
         <Route path="/lp/home-theatre-bangalore" element={<LandingPage />} />
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:blogSlug" element={<BlogArticle />} />
+
+        {/* Brand dealer landing pages */}
+        <Route path="/jbl-dealer-bangalore" element={<BrandPage slug="jbl" />} />
+        <Route path="/polk-audio-dealer-bangalore" element={<BrandPage slug="polk-audio" />} />
+        <Route path="/monitor-audio-dealer-bangalore" element={<BrandPage slug="monitor-audio" />} />
+        <Route path="/kef-dealer-bangalore" element={<BrandPage slug="kef" />} />
+        <Route path="/klipsch-dealer-bangalore" element={<BrandPage slug="klipsch" />} />
         {/* Location-specific SEO landing pages */}
         <Route path="/:locationSlug" element={<LocationPage />} />
       </Routes>

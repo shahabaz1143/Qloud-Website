@@ -150,6 +150,30 @@ const STATIC_ROUTES = {
   }
 };
 
+// Brand dealer landing pages — generated with LocalBusiness schema (type: location)
+const BRAND_DEALER_ROUTES = {
+  "jbl-dealer-bangalore": { name: "JBL", desc: "Stage, Studio & JBL Synthesis home theatre systems" },
+  "polk-audio-dealer-bangalore": { name: "Polk Audio", desc: "Reserve, Signature Elite & Monitor XT speakers" },
+  "monitor-audio-dealer-bangalore": { name: "Monitor Audio", desc: "Bronze, Silver, Gold & architectural speakers" },
+  "kef-dealer-bangalore": { name: "KEF", desc: "Q, R and Reference series Uni-Q speakers" },
+  "klipsch-dealer-bangalore": { name: "Klipsch", desc: "Reference, Reference Premiere & Heritage speakers" }
+};
+for (const [slug, b] of Object.entries(BRAND_DEALER_ROUTES)) {
+  STATIC_ROUTES[`/${slug}`] = {
+    title: `${b.name} Dealer & Home Theatre Installer in Bangalore | Qloud Tech`,
+    description: `Looking for a ${b.name} dealer in Bangalore? Qloud Tech supplies & professionally installs ${b.name} — ${b.desc}. Free demo, transparent pricing & lifetime support. Call +91 72047 46043.`,
+    h1: `${b.name} Dealer in Bangalore`,
+    intro: `Qloud Tech is your trusted ${b.name} dealer and professional home theatre installer in Bangalore. We supply, demo, install and calibrate the full ${b.name} range — ${b.desc} — across Bangalore & Karnataka. 5-star rated by 70 verified reviews.`,
+    type: "location",
+    location: "Bangalore",
+    slug,
+    breadcrumbs: [
+      { name: "Home", url: SITE_URL },
+      { name: `${b.name} Dealer in Bangalore`, url: `${SITE_URL}/${slug}` }
+    ]
+  };
+}
+
 // --------------------------------------------------------------------------
 // Extract dynamic page data from JSX files via regex
 // --------------------------------------------------------------------------
