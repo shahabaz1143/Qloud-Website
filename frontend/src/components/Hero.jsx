@@ -29,7 +29,7 @@ const Hero = () => {
             <span className="text-[11px] uppercase tracking-[0.2em] text-neutral-300">Bangalore &amp; Karnataka's #1 Home Theatre &amp; Automation Specialists</span>
             <span className="flex items-center gap-0.5">
               {[0, 1, 2, 3, 4].map((i) => (
-                <Star key={i} className="w-3 h-3 fill-[#E23B3B] text-[#E23B3B]" />
+                <Star key={i} className="w-3 h-3 fill-[#E5E7EB] text-[#E5E7EB]" />
               ))}
             </span>
           </div>
@@ -39,7 +39,7 @@ const Hero = () => {
             Where Smart Living
             <br />
             Meets{' '}
-            <span className="font-serif-accent italic text-[#E23B3B]">Cinematic Magic</span>
+            <span className="font-serif-accent italic text-[#E5E7EB]">Cinematic Magic</span>
           </h1>
 
           <p className="text-base sm:text-lg text-neutral-300 font-light leading-relaxed max-w-xl mb-10">

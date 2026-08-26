@@ -57,7 +57,7 @@ const Header = () => {
                 >
                   {item.label}
                   {isActive(item.to) && (
-                    <span className="absolute -bottom-1.5 left-0 right-0 h-px bg-[#E23B3B]" />
+                    <span className="absolute -bottom-1.5 left-0 right-0 h-px bg-[#E5E7EB]" />
                   )}
                 </Link>
               ))}
@@ -116,7 +116,7 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <a href="tel:+917204746043" className="text-left py-2.5 text-base text-[#E23B3B] flex items-center gap-2">
+              <a href="tel:+917204746043" className="text-left py-2.5 text-base text-[#E5E7EB] flex items-center gap-2">
                 <Phone className="w-4 h-4" /> +91 72047 46043
               </a>
             </nav>

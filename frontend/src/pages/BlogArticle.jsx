@@ -1856,13 +1856,13 @@ const BlogArticle = () => {
             <article
               className="prose prose-invert prose-lg max-w-none
                 prose-headings:text-white prose-headings:font-bold
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-cyan-400 prose-h2:scroll-mt-28
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-[#E5E7EB] prose-h2:scroll-mt-28
                 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
                 prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
                 prose-ul:text-gray-300 prose-ul:my-6
                 prose-li:my-2
                 prose-strong:text-white
-                prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline
+                prose-a:text-[#E5E7EB] prose-a:underline prose-a:decoration-white/30 hover:prose-a:decoration-white
                 prose-table:border-collapse prose-table:w-full prose-table:my-8
                 prose-th:bg-gray-800 prose-th:p-4 prose-th:text-left prose-th:text-white prose-th:border prose-th:border-gray-700
                 prose-td:p-4 prose-td:border prose-td:border-gray-700 prose-td:text-gray-300"
