@@ -12,7 +12,7 @@ const Footer = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
               alt="Qloud Tech Logo" 
-              className="h-6 brightness-0 mb-2"
+              className="h-6 brightness-0 invert mb-2"
             />
             <p className="text-cyan-400 text-xs font-medium mb-4">Part of Qloud Smart Homes</p>
             <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">

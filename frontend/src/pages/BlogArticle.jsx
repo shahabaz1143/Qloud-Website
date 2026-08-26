@@ -1854,18 +1854,18 @@ const BlogArticle = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10">
             <article
-              className="prose prose-lg max-w-none
-                prose-headings:text-[#0B0C0E] prose-headings:font-bold
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-[#D62828] prose-h2:scroll-mt-28
-                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-[#0B0C0E]
-                prose-p:text-neutral-600 prose-p:leading-relaxed prose-p:mb-6
-                prose-ul:text-neutral-600 prose-ul:my-6
-                prose-li:my-2 prose-li:text-neutral-600
-                prose-strong:text-[#0B0C0E]
-                prose-a:text-[#D62828] prose-a:no-underline hover:prose-a:underline
+              className="prose prose-invert prose-lg max-w-none
+                prose-headings:text-white prose-headings:font-bold
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-cyan-400 prose-h2:scroll-mt-28
+                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
+                prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
+                prose-ul:text-gray-300 prose-ul:my-6
+                prose-li:my-2
+                prose-strong:text-white
+                prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline
                 prose-table:border-collapse prose-table:w-full prose-table:my-8
-                prose-th:bg-neutral-100 prose-th:p-4 prose-th:text-left prose-th:text-[#0B0C0E] prose-th:border prose-th:border-neutral-200
-                prose-td:p-4 prose-td:border prose-td:border-neutral-200 prose-td:text-neutral-600"
+                prose-th:bg-gray-800 prose-th:p-4 prose-th:text-left prose-th:text-white prose-th:border prose-th:border-gray-700
+                prose-td:p-4 prose-td:border prose-td:border-gray-700 prose-td:text-gray-300"
               dangerouslySetInnerHTML={{ __html: processedContent }}
             />
 
