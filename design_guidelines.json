@@ -1,0 +1,148 @@
+{
+  "project_name": "Qloud Smart Homes / Qloud Tech - Cinetekk Editorial Redesign Blueprint",
+  "archetype": "LUXURY_AND_ENGINEERING_EDITORIAL",
+  "reference_aesthetic": "cinetekk.co.in (Minimalist, Editorial, Engineering-Led AV Prestige)",
+  "core_philosophy": {
+    "intent": "Precision Engineering, Architectural Whitespace, Cinematic Mood, and Intent-Driven AV Performance",
+    "rule_of_thumb": "Eliminate aggressive cyan glow/gradient overload; transition to deep obsidian, warm charcoal, platinum borders, surgical typography, and generous negative space.",
+    "seo_preservation_guarantee": "100% of existing copy, keywords, routes, schemas, tables, FAQs, pricing, reviews, area chips, and brand names are preserved verbatim. Only design, layout, typography, surface treatment, and spacing change."
+  },
+  "color_palette": {
+    "background_base": "#0B0C0E",
+    "background_surface_elevated": "#121417",
+    "background_surface_subtle": "#17191E",
+    "background_card": "#111317",
+    "background_input": "#0F1115",
+    "text_primary": "#F7F8F9",
+    "text_secondary": "#9BA1A6",
+    "text_muted": "#687076",
+    "border_subtle": "rgba(255, 255, 255, 0.08)",
+    "border_highlight": "rgba(255, 255, 255, 0.16)",
+    "border_active": "rgba(255, 255, 255, 0.28)",
+    "accent_primary": "#E2E8F0",
+    "accent_warm_gold": "#D4AF37",
+    "accent_subtle_amber": "#C59B27",
+    "accent_tactical_red": "#E53E3E",
+    "whatsapp_brand": "#25D366",
+    "overlay_scrim": "rgba(11, 12, 14, 0.75)"
+  },
+  "typography": {
+    "headline_font": "Plus Jakarta Sans, Clash Display, Cabinet Grotesk, -apple-system, sans-serif",
+    "editorial_serif_accent": "Playfair Display, Cormorant Garamond, serif",
+    "body_font": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "mono_font": "JetBrains Mono, 'Courier New', monospace",
+    "scale": {
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.08] text-neutral-100",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-neutral-100",
+      "subsection_h3": "text-xl sm:text-2xl font-medium tracking-tight text-neutral-200",
+      "card_h4": "text-lg sm:text-xl font-medium text-neutral-100",
+      "body_lead": "text-base sm:text-lg text-neutral-400 leading-relaxed font-light",
+      "body_regular": "text-sm sm:text-base text-neutral-400 leading-relaxed",
+      "label_overline": "text-xs uppercase tracking-[0.2em] font-medium text-neutral-400",
+      "stat_number": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-100"
+    }
+  },
+  "layout_and_spacing": {
+    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_vertical_padding": "py-20 sm:py-28 lg:py-36",
+    "section_gap": "gap-12 lg:gap-16",
+    "grid_modes": {
+      "bento_asymmetric": "grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8",
+      "services_editorial": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8",
+      "stats_horizontal": "grid grid-cols-2 lg:grid-cols-4 gap-6 border-y border-white/10 py-10 my-12",
+      "process_vertical_stream": "space-y-12 max-w-4xl mx-auto"
+    },
+    "alignment_philosophy": "Left-aligned narrative storytelling with high-contrast overlines (e.g., 'OUR FOCUS // 01', 'PRECISION ACOUSTICS') and asymmetric image-to-text balance. Generous whitespace with 2x breathing room."
+  },
+  "component_specifications": {
+    "header_nav": {
+      "surface": "sticky top-0 z-50 backdrop-blur-xl bg-[#0B0C0E]/80 border-b border-white/10 transition-colors duration-300",
+      "desktop_nav": "Visible desktop navigation links with refined hover text states (`text-neutral-300 hover:text-white transition-colors duration-200`).",
+      "ctas": "Primary sleek pill or crisp-edge button `bg-white text-black hover:bg-neutral-200 px-5 py-2.5 text-sm font-medium transition-all` + Direct Call / WhatsApp quick triggers.",
+      "testing_attribute": "data-testid='main-header'"
+    },
+    "hero_section": {
+      "structure": "Editorial headline statement with overline tag ('BUILT FOR ACOUSTIC PURITY. DRIVEN BY ENGINEERING.'), high-contrast value prop, key social proof metrics in a refined single line, dual action CTAs ('Explore Systems' & 'Request Consultation'), and a cinematic framed focal showcase.",
+      "visuals": "Moody cinematic visual with subtle 1px border frame and ambient lighting, zero tacky full-screen neon cyan glow."
+    },
+    "cards_and_surfaces": {
+      "service_cards": "Dark graphite background (`bg-[#121417]`), delicate 1px border (`border-white/10 hover:border-white/30`), subtle image zoom on hover, inline icon badge in monochrome/platinum, structured feature list with micro-checks.",
+      "pricing_package_cards": "Clean architectural tier cards with prominent package name, transparent breakdown, highlighted 'Most Popular' tier with a platinum/gold accent stroke (`border-neutral-400`), transparent feature ticks, and primary 'Select Package' trigger.",
+      "stat_cards": "Minimalist borderless or clean hairline dividers with big light-weighted numbers and uppercase muted labels."
+    },
+    "buttons_and_ctas": {
+      "primary_btn": "bg-white text-black hover:bg-neutral-200 font-medium px-6 py-3 rounded-md text-sm transition-transform active:scale-95 shadow-sm",
+      "secondary_btn": "bg-transparent border border-white/20 text-white hover:bg-white/10 font-medium px-6 py-3 rounded-md text-sm transition-all",
+      "floating_whatsapp": "Refined floating button at bottom-right with subtle dark pill label 'Talk to AV Engineer 💬' and green WhatsApp icon (`data-testid='whatsapp-floating-btn'`).",
+      "inline_call_btn": "Clean white/10 pill with phone icon and phone number (`tel:917204746043`)."
+    },
+    "faq_accordion": {
+      "container": "border-t border-white/10 divide-y divide-white/10",
+      "trigger": "py-5 text-left text-lg font-medium text-neutral-200 hover:text-white flex justify-between items-center transition-colors",
+      "content": "pb-6 text-neutral-400 text-sm sm:text-base leading-relaxed"
+    },
+    "footer": {
+      "surface": "bg-[#08090B] border-t border-white/10 pt-20 pb-12 text-neutral-400",
+      "features": "Large brand wordmark/statement ('QLOUD // ENGINEERING ACOUSTIC PERFECTION'), multi-column service & location navigation, verified rating badge, contact direct links, and copyright."
+    }
+  },
+  "image_urls": {
+    "hero_cinema": {
+      "category": "Hero & Main Showcases",
+      "image_url": "https://images.unsplash.com/photo-1547426562-ffa17ebb4ca0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBob21lJTIwdGhlYXRlciUyMGNpbmVtYSUyMG1vb2R5JTIwZGFya3xlbnwwfHx8fDE3ODc3MzE3MzJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Moody, luxury home theater seating with leather recliners and ambient lighting."
+    },
+    "acoustic_panels": {
+      "category": "Acoustics and Architectural",
+      "image_url": "https://images.unsplash.com/photo-1695279392808-aa56ee47b6c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBob21lJTIwdGhlYXRlciUyMGNpbmVtYSUyMG1vb2R5JTIwZGFya3xlbnwwfHx8fDE3ODc3MzE3MzJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Architectural acoustic wood paneling and warm vertical lighting."
+    },
+    "home_theater_setup": {
+      "category": "Home Cinema Portfolio",
+      "image_url": "https://images.unsplash.com/photo-1724061409979-420a38c25bcc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBob21lJTIwdGhlYXRlciUyMGNpbmVtYSUyMG1vb2R5JTIwZGFya3xlbnwwfHx8fDE3ODc3MzE3MzJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Custom private screening room with Dolby Atmos speaker integration."
+    },
+    "modern_architectural_exterior": {
+      "category": "Smart Home Architecture",
+      "image_url": "https://images.unsplash.com/photo-1748063578185-3d68121b11ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwYWNvdXN0aWMlMjBob21lJTIwYXV0b21hdGlvbiUyMG1vZGVybnxlbnwwfHx8fDE3ODc3MzE3NDJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Architectural luxury villa with warm evening illumination."
+    },
+    "smart_automation_wall": {
+      "category": "Smart Home Automation Interface",
+      "image_url": "https://images.pexels.com/photos/27638181/pexels-photo-27638181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Minimalist flush wall automation controller on architectural stone."
+    },
+    "high_end_audio": {
+      "category": "Hi-Fi Audio Speaker",
+      "image_url": "https://images.pexels.com/photos/977296/pexels-photo-977296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Precision high-fidelity sound component in a minimalist setting."
+    }
+  },
+  "critical_code_rules": [
+    "BABEL PLUGIN SAFETY: The custom visual-edits babel plugin crashes if Lucide icons are passed as PROPS (e.g., `icon={<Layers />}`). ALL icons must be rendered inline in JSX.",
+    "ALL JSX files: Ensure all files remain valid JavaScript / JSX (.jsx or .js) without TypeScript types.",
+    "TESTING ATTRIBUTES: Every button, link, form input, modal trigger, card, and pricing tier MUST have a unique kebab-case `data-testid` attribute.",
+    "NO FULL TRANSPARENT BACKGROUNDS: Dropdowns, overlays, fixed headers, and mobile drawers must use `backdrop-blur-xl bg-[#0B0C0E]/90` or solid backgrounds to ensure 100% legibility.",
+    "COPY PRESERVATION: Keep all SEO copy, FAQ answers, area chips, brand partner names, package prices (₹2.29L - ₹12.39L), and customer count (450+ customers, 100+ home theatres, 5★ rating) EXACTLY AS IN EXISTING CODE."
+  ],
+  "page_by_page_redesign_strategy": {
+    "homepage": "Transform into the Cinetekk-style editorial narrative: Hero statement -> Heritage/Numbers bar -> Solutions by environment -> The Advantage -> Packages -> Process -> Brand Partners -> Reviews -> SEO Keyword Section (stat cards, Dolby Atmos config chips, area pills, FAQ) -> Contact & Consultation form.",
+    "services_hub_and_detail": "Editorial hero with technical specifications overview, architectural photography, step-by-step engineering deployment, related guides, and FAQ.",
+    "packages_page": "Tiered comparison with clear pricing (₹2.29L to ₹12.39L), component breakdown, room size suitability matrix, and lead booking trigger.",
+    "process_page": "Engineering timeline: Acoustic Simulation -> 3D Modeling -> Cabling & Concealment -> Calibration -> Handover.",
+    "projects_page": "High-impact editorial gallery spotlighting Bangalore villa installations with technical AV tags.",
+    "blog_list_and_article": "Clean editorial reading layout with left-aligned sticky Table of Contents, technical summary callouts, comparison tables, and conversion quote CTA.",
+    "contact_and_location_pages": "Monochrome architectural contact hub with direct engineer hotline, WhatsApp quick link, interactive area coverage tags, and Bangalore local business metadata."
+  },
+  "implementation_order": [
+    "1. Update global CSS variables in index.css and tailwind.config.js for obsidian surface and editorial typography tokens.",
+    "2. Restyle shared layout primitives: Header.jsx, Footer.jsx, WhatsAppButton, and button/card styling.",
+    "3. Redesign Homepage components: Hero, Services, WhyChooseUs, Pricing, Process, Projects, BrandsWeCarry, Testimonials, FAQ, SeoKeywordSection, Contact.",
+    "4. Redesign Services pages (/services and /services/:serviceSlug).",
+    "5. Redesign Packages, Process, Projects, Contact, and Brand dealer pages.",
+    "6. Redesign Blog list and Blog article template with editorial reading typography.",
+    "7. Redesign programmatic Location pages (/:locationSlug) and Ad Landing Page (/lp/home-theatre-bangalore).",
+    "8. Test all routes, forms, WhatsApp triggers, and responsive mobile viewports."
+  ],
+  "instructions_to_main_agent": "Adopt the complete Cinetekk editorial aesthetic across all pages. Maintain strict SEO content fidelity. Render all icons inline to prevent babel plugin issues. Ensure all interactive components have data-testid attributes."
+}
