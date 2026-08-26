@@ -87,6 +87,11 @@ code {
 .hover\:from-cyan-500:hover { --tw-gradient-from: #F3F4F6 var(--tw-gradient-from-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
 .hover\:to-sky-500:hover { --tw-gradient-to: #D1D5DB var(--tw-gradient-to-position) !important; }
 
+/* Gradient-clipped accent headings (from-cyan-400 to-sky-400) -> platinum */
+.from-cyan-400 { --tw-gradient-from: #E5E7EB var(--tw-gradient-from-position) !important; --tw-gradient-to: rgba(229,231,235,0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+.to-sky-400 { --tw-gradient-to: #F3F4F6 var(--tw-gradient-to-position) !important; }
+.via-cyan-400, .via-cyan-500 { --tw-gradient-stops: var(--tw-gradient-from), #E5E7EB var(--tw-gradient-via-position), var(--tw-gradient-to) !important; }
+
 /* Borders: cyan -> hairline white */
 .border-cyan-500\/30 { border-color: rgba(255,255,255,0.16) !important; }
 .border-cyan-500\/40 { border-color: rgba(255,255,255,0.22) !important; }
