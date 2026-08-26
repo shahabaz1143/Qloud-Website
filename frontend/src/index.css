@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-    background: rgba(201, 174, 114, 0.28);
+    background: rgba(226, 59, 59, 0.28);
     color: #ffffff;
 }
 
@@ -74,12 +74,12 @@ code {
 .bg-\[\#111827\] { background-color: #121417 !important; }
 
 /* Accent text: cyan -> muted champagne gold */
-.text-cyan-400 { color: #C9AE72 !important; }
-.text-cyan-300 { color: #D8C79A !important; }
-.text-cyan-500 { color: #B8975A !important; }
-.text-cyan-300\/90 { color: #D8C79A !important; }
-.text-cyan-400\/80 { color: rgba(201, 174, 114, 0.8) !important; }
-.text-cyan-400\/60 { color: rgba(201, 174, 114, 0.6) !important; }
+.text-cyan-400 { color: #E23B3B !important; }
+.text-cyan-300 { color: #EF6A6A !important; }
+.text-cyan-500 { color: #C42B2B !important; }
+.text-cyan-300\/90 { color: #EF6A6A !important; }
+.text-cyan-400\/80 { color: rgba(226, 59, 59, 0.8) !important; }
+.text-cyan-400\/60 { color: rgba(226, 59, 59, 0.6) !important; }
 
 /* Primary gradient CTAs: cyan -> platinum white (keeps black text readable) */
 .from-\[\#00D4FF\] { --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position) !important; --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
@@ -100,21 +100,21 @@ code {
 .border-gray-700 { border-color: rgba(255,255,255,0.10) !important; }
 
 /* Accent background tints: cyan -> warm/white subtle */
-.bg-cyan-500\/10 { background-color: rgba(201, 174, 114, 0.08) !important; }
+.bg-cyan-500\/10 { background-color: rgba(226, 59, 59, 0.08) !important; }
 .bg-cyan-500\/5 { background-color: rgba(255, 255, 255, 0.04) !important; }
 .bg-cyan-600\/5 { background-color: rgba(255, 255, 255, 0.03) !important; }
-.hover\:bg-cyan-500\/10:hover { background-color: rgba(201, 174, 114, 0.10) !important; }
-.hover\:bg-cyan-500\/20:hover { background-color: rgba(201, 174, 114, 0.16) !important; }
-.hover\:bg-cyan-500:hover { background-color: #C9AE72 !important; }
+.hover\:bg-cyan-500\/10:hover { background-color: rgba(226, 59, 59, 0.10) !important; }
+.hover\:bg-cyan-500\/20:hover { background-color: rgba(226, 59, 59, 0.16) !important; }
+.hover\:bg-cyan-500:hover { background-color: #E23B3B !important; }
 
 /* Gradient tint backgrounds using cyan stops */
-.from-cyan-500\/10 { --tw-gradient-from: rgba(201,174,114,0.10) var(--tw-gradient-from-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+.from-cyan-500\/10 { --tw-gradient-from: rgba(226,59,59,0.10) var(--tw-gradient-from-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
 .to-cyan-600\/5 { --tw-gradient-to: rgba(255,255,255,0.03) var(--tw-gradient-to-position) !important; }
 
 /* Stars / accent fills: amber+cyan -> champagne gold */
-.fill-amber-400 { fill: #C9AE72 !important; }
-.text-amber-400 { color: #C9AE72 !important; }
-.fill-cyan-400 { fill: #C9AE72 !important; }
+.fill-amber-400 { fill: #E23B3B !important; }
+.text-amber-400 { color: #E23B3B !important; }
+.fill-cyan-400 { fill: #E23B3B !important; }
 
 /* Shadows: kill neon cyan glow */
 .shadow-cyan-400\/30 { --tw-shadow-color: transparent !important; box-shadow: 0 8px 30px rgba(0,0,0,0.4) !important; }
