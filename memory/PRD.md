@@ -150,6 +150,7 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Fixed Vercel `cleanUrls` 404 bug and updated 103 canonical URLs to `www.qloudsmarthomes.com`.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
 - ✅ **NEW Jun 2026 — Google Ads tag** — Added `gtag('config', 'AW-17179787891')` to the existing gtag.js instance in `public/index.html` (reuses the GA4 library, no duplicate script). Propagates to all prerendered pages via seo-build.js template.
+- ✅ **NEW Jun 2026 — FAQPage schema on all blogs** — `BlogArticle.jsx` schema injector now auto-extracts H3 (question) + following paragraph from article content and adds FAQPage JSON-LD (alongside BlogPosting + Breadcrumb) — earns rich FAQ results. Also confirmed best-home-theatre-company blog title/meta already tuned to the exact query. Off-page SEO checklist saved at /app/memory/seo-backlink-checklist.md (citations, reviews, backlinks — the levers to rank #1).
 - ✅ **NEW Jun 2026 — Branded favicon** — Multi-size set (favicon.ico 16/32/48/64, 96/32/16 PNGs, apple-touch-icon 180). Updated to match the redesign: **platinum/silver "Q" gradient on obsidian (#0B0C0E) rounded square** (was cyan-teal). Wired in `public/index.html`.
 - ✅ **NEW Jun 2026 — 5 new SEO blogs (high commercial intent)** — Added to `BlogArticle.jsx` + `BlogListPage.jsx` + `sitemap.xml`:
    - `/blog/home-theatre-cost-bangalore` (Pricing) — targets "home theatre cost/price bangalore"

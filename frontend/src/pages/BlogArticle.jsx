@@ -1749,11 +1749,27 @@ const BlogArticle = () => {
         ]
       };
 
+      // Build FAQPage schema from the article's H3 questions + following paragraph
+      const faqMatches = [...article.content.matchAll(/<h3>([^<]*\?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)];
+      const faqSchema = faqMatches.length ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqMatches.map((m) => ({
+          "@type": "Question",
+          "name": m[1].replace(/&amp;/g, '&').trim(),
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": m[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim()
+          }
+        }))
+      } : null;
+      const schemas = faqSchema ? [blogSchema, breadcrumbSchema, faqSchema] : [blogSchema, breadcrumbSchema];
+
       // Inject schema script
       const script = document.createElement('script');
       script.id = 'blog-schema';
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify([blogSchema, breadcrumbSchema]);
+      script.textContent = JSON.stringify(schemas);
       document.head.appendChild(script);
 
       // Cleanup on unmount
