@@ -1,0 +1,133 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0e1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22D3EE;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06B6D4;
+}
+
+/* Remove default app centering */
+.App {
+    min-height: 100vh;
+}
+
+/* Hide Emergent badge */
+#emergent-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* ============================================
+   Logo letter-by-letter beam scan
+   ----------------------------------------------
+   A bright cyan→white→cyan vertical beam sweeps
+   left-to-right across the logo. The beam is
+   masked to the logo's letter shapes (mask-image:
+   logo.png), so it only "lights up" each letter
+   in sequence: Q → L → O → U → D, with dark gaps
+   between them. The PNG logo stays untouched.
+   ============================================ */
+.logo-shine {
+    position: relative;
+    display: inline-block;
+    padding: 2px 4px;
+}
+
+.logo-shine img {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.logo-shine:hover img {
+    transform: scale(1.05);
+}
+
+/* Soft cyan radial glow on hover only */
+.logo-shine::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 212, 255, 0.4),
+        rgba(0, 212, 255, 0) 70%
+    );
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.logo-shine:hover::before {
+    opacity: 1;
+}
+
+/* Vertical scanning beam — masked to logo shape */
+.logo-shine::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 4px;
+    right: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 46%,
+        rgba(0, 212, 255, 0.55) 48%,
+        rgba(220, 252, 255, 1) 50%,
+        rgba(0, 212, 255, 0.55) 52%,
+        transparent 54%,
+        transparent 100%
+    );
+    background-size: 260% 100%;
+    background-position: 220% center;
+    -webkit-mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url("https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png");
+    mask-size: 100% 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 2;
+    animation: logo-beam-scan 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.logo-shine:hover::after {
+    animation-duration: 2s;
+}
+
+@keyframes logo-beam-scan {
+    0%, 8%   { background-position: 220% center; }
+    100%     { background-position: -120% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-shine::after {
+        animation: none;
+    }
+}

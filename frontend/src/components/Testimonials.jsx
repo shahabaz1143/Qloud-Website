@@ -1,0 +1,221 @@
+import React, { useState, useEffect } from 'react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+
+// Static data - no backend required
+const testimonials = [
+  {
+    id: 1,
+    name: "Pallav Godeswar",
+    location: "Bangalore",
+    service: "Home Theatre Installation",
+    review: "Got my custom home theatre done, and it's amazing! The team was professional, listened to my needs, and delivered exactly what I envisioned. It feels like a mini-cinema at home. Highly recommend them!",
+    avatar: "P",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Anju",
+    location: "Bangalore",
+    service: "Home Networking Services",
+    review: "Fantastic job on the home networking services. Everything is now up to the speed!",
+    avatar: "A",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Anusha",
+    location: "Bangalore",
+    service: "Home Automation",
+    review: "The home automation solutions from Qloud Tech are impressive. They were quick and professional, and my home now has a seamless automation system. Highly recommend!",
+    avatar: "A",
+    rating: 5
+  },
+  {
+    id: 4,
+    name: "Soughandika",
+    location: "Bangalore",
+    service: "CCTV Installation",
+    review: "Great experience with Qloud tech for CCTV installation services. The team was efficient, and the cameras are working perfectly. My home feels much safer now.",
+    avatar: "S",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Harshit",
+    location: "Bangalore",
+    service: "Smart Lighting Solutions",
+    review: "Qloud Tech really provided smart lighting solutions. The setup was also quick and the lights look amazing. Great service overall!",
+    avatar: "H",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Himanshu",
+    location: "Bangalore",
+    service: "Home Theatre Installation",
+    review: "Excellent home theatre designing and installation. Professional and reliable team.",
+    avatar: "H",
+    rating: 5
+  },
+  {
+    id: 7,
+    name: "Mahi Sinha",
+    location: "Bangalore",
+    service: "Custom Home Automation",
+    review: "Qloud Tech's custom home automation systems were tailored perfectly to my needs. The installation was smooth, and everything is worked as expected. Their team were professional and the results are impressive.",
+    avatar: "M",
+    rating: 5
+  },
+  {
+    id: 8,
+    name: "Rohit",
+    location: "Bangalore",
+    service: "Home Theatre Setup",
+    review: "The team did a great job with our Home Theatre set up. Quick and efficient service😀",
+    avatar: "R",
+    rating: 5
+  }
+];
+
+const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const getVisibleTestimonials = () => {
+    const visible = [];
+    for (let i = 0; i < 4; i++) {
+      const index = (currentIndex + i) % testimonials.length;
+      visible.push(testimonials[index]);
+    }
+    return visible;
+  };
+
+  const visibleTestimonials = getVisibleTestimonials();
+
+  return (
+    <section className="py-24 bg-[#0a0e1a] relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <div className="text-cyan-400 text-sm font-semibold tracking-wider uppercase mb-4">
+            CLIENT TESTIMONIALS
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            What Our Clients Say
+          </h2>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            Don't just take our word for it—hear from homeowners who've transformed their spaces
+          </p>
+        </div>
+
+        {/* Carousel Container */}
+        <div className="relative max-w-7xl mx-auto">
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-6 h-6 text-black" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-6 h-6 text-black" />
+          </button>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {visibleTestimonials.map((testimonial, idx) => (
+              <div
+                key={`${testimonial.id}-${idx}`}
+                className="group p-6 bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 flex flex-col"
+              >
+                {/* Name and Avatar at Top */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center text-black font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="font-bold text-white text-base group-hover:text-cyan-400 transition-colors duration-300">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-xs text-gray-400">{testimonial.location}</div>
+                  </div>
+                </div>
+
+                {/* Stars */}
+                <div className="flex gap-1 mb-3">
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+
+                {/* Review at Bottom */}
+                <p className="text-gray-300 leading-relaxed italic text-sm flex-grow mb-3">
+                  "{testimonial.review}"
+                </p>
+
+                {/* Service Tag */}
+                <div className="text-xs text-cyan-400 mt-auto">
+                  {testimonial.service}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? 'w-8 bg-cyan-500'
+                    : 'bg-gray-600 hover:bg-gray-500'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Rating Summary */}
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/30">
+            <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
+            <span className="text-2xl font-bold text-white">5/5</span>
+            <span className="text-gray-400">From 57 Reviews on Google</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
