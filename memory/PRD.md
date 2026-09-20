@@ -164,6 +164,13 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Fixed unsupported CRA `<style jsx>` usage that produced a React console warning.
 - ✅ Cleaned remaining legacy claims so the site consistently uses 4K projection, 450+ happy customers, 100+ home theatres, 5/5 stars and 69 verified reviews.
 - ✅ Verification: production build compiled; all 66 SEO route files generated with zero missing metadata; JSON-LD parsed successfully; Qloud Audio homepage/catalog/build/image returned HTTP 200; desktop/mobile browser flow, new-tab destinations, responsive width and GA4 event passed.
+- ✅ **Theme regression resolved** — the fork contained older cyan-theme source while the deployed site was built from a newer monochrome editorial source set. Recovered the exact live theme from the deployed CSS/JS source maps and restored:
+  - Obsidian `#0B0C0E` surfaces with platinum/white accents across all routes.
+  - Plus Jakarta Sans headings, Inter body copy and Playfair Display italic accents.
+  - The current live editorial header, first-viewport hero layout, understated borders and white rectangular CTAs.
+  - Responsive desktop/mobile navigation without overflow.
+  - Restyled the new Qloud Audio navigation, homepage band and footer link to match the restored live theme rather than the older cyan treatment.
+- ✅ Theme verification: preview compared against `https://www.qloudsmarthomes.com`; representative routes (`/services`, `/packages`, `/projects`, `/contact`) passed; no old cyan-gradient appearance, blank pages, console errors or mobile overflow; frontend testing agent reported 100% pass in `iteration_5.json`.
 
 ---
 
