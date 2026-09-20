@@ -1,13 +1,11 @@
 import React from 'react';
-import { ArrowUpRight, Boxes, ShoppingCart, SlidersHorizontal } from 'lucide-react';
-import { Button } from './ui/button';
 
 const QLOUD_AUDIO_URL = 'https://www.qloudaudio.com';
 
 const highlights = [
-  { icon: Boxes, label: 'Compare exact models and listed prices' },
-  { icon: ShoppingCart, label: 'Add products to your cart' },
-  { icon: SlidersHorizontal, label: 'Build a complete home theatre quote' }
+  'Compare exact models and listed prices',
+  'Add products to your cart',
+  'Build a complete home theatre quote'
 ];
 
 const QloudAudioPromo = () => (
@@ -45,10 +43,10 @@ const QloudAudioPromo = () => (
         </p>
 
         <div className="mt-8 space-y-4">
-          {highlights.map(({ icon: Icon, label }) => (
+          {highlights.map((label, index) => (
             <div key={label} className="flex items-center gap-3 text-sm text-neutral-200">
               <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-white">
-                <Icon className="h-4 w-4" aria-hidden="true" />
+                <span className="text-[10px] font-medium tracking-[0.12em]">0{index + 1}</span>
               </span>
               <span>{label}</span>
             </div>
@@ -56,28 +54,26 @@ const QloudAudioPromo = () => (
         </div>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <Button asChild className="h-12 rounded-md bg-white px-6 font-medium text-black hover:bg-neutral-200">
-            <a
-              href={`${QLOUD_AUDIO_URL}/catalog`}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="qloud-audio-browse-products-button"
-            >
-              Browse Models & Prices
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-          </Button>
-          <Button asChild variant="outline" className="h-12 rounded-md border-white/20 bg-transparent px-6 text-white hover:bg-white/10 hover:text-white">
-            <a
-              href={`${QLOUD_AUDIO_URL}/build`}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="qloud-audio-build-quote-button"
-            >
-              Build Your Quote
-              <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
-            </a>
-          </Button>
+          <a
+            href={`${QLOUD_AUDIO_URL}/catalog`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-white px-6 text-sm font-medium text-black transition-colors hover:bg-neutral-200"
+            data-testid="qloud-audio-browse-products-button"
+          >
+            Browse Models & Prices
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            href={`${QLOUD_AUDIO_URL}/build`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-white/20 bg-transparent px-6 text-sm font-medium text-white transition-colors hover:bg-white/10"
+            data-testid="qloud-audio-build-quote-button"
+          >
+            Build Your Quote
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
         <p className="mt-4 text-xs text-neutral-600">Opens qloudaudio.com in a new tab.</p>
       </div>

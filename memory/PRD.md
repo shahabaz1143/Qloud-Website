@@ -171,6 +171,8 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
   - Responsive desktop/mobile navigation without overflow.
   - Restyled the new Qloud Audio navigation, homepage band and footer link to match the restored live theme rather than the older cyan treatment.
 - ✅ Theme verification: preview compared against `https://www.qloudsmarthomes.com`; representative routes (`/services`, `/packages`, `/projects`, `/contact`) passed; no old cyan-gradient appearance, blank pages, console errors or mobile overflow; frontend testing agent reported 100% pass in `iteration_5.json`.
+- ✅ **Preview opening/compile error fixed** — after the theme restore, the development-only visual-edits Babel metadata plugin crashed while traversing `QloudAudioPromo.jsx` (`Cannot read properties of null (reading 'traverse')`). Replaced the imported `Button asChild` wrapper and dynamically rendered Lucide icon component with native styled links, numeric markers and text arrows. This preserves the editorial design while avoiding the compiler bug.
+- ✅ Revalidated in `iteration_6.json`: preview HTTP 200, no webpack overlay, no traversal error, Qloud Audio desktop/mobile links and both destinations work, and the production build contains all 66 static route HTML files.
 
 ---
 
