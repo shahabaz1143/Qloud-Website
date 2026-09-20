@@ -98,13 +98,14 @@ const Process = () => {
           <Button
             onClick={() => window.open('https://wa.me/917204746043', '_blank')}
             className="bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] hover:from-cyan-500 hover:to-sky-500 text-black font-semibold px-8 py-6 text-lg rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-400/30"
+            data-testid="process-schedule-consultation-button"
           >
             Schedule Free Consultation
           </Button>
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes flowRight {
           0% {
             transform: translateX(-100%);

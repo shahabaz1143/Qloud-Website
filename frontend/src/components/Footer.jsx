@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,12 +18,27 @@ const Footer = () => {
             <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">
               Pioneers in Smart Home Automation & Immersive Home Theatre Solutions with best-in-class quality.
             </p>
+            <p className="text-gray-500 text-xs leading-relaxed mb-3 max-w-xs">
+              Looking for exact AV models and prices? Qloud Audio is our dedicated catalogue for shopping products and building a home theatre quote.
+            </p>
+            <a
+              href="https://www.qloudaudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-5 inline-flex items-center gap-1.5 text-sm font-semibold text-amber-300 transition-colors hover:text-amber-200"
+              data-testid="footer-qloud-audio-link"
+            >
+              Visit Qloud Audio
+              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </a>
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/p/qloudtech-100091642968091/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gray-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors duration-200"
+                aria-label="Qloud Tech on Facebook"
+                data-testid="footer-facebook-link"
               >
                 <Facebook className="w-4 h-4 text-white" />
               </a>
@@ -32,6 +47,8 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gray-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors duration-200"
+                aria-label="Qloud Tech on Instagram"
+                data-testid="footer-instagram-link"
               >
                 <Instagram className="w-4 h-4 text-white" />
               </a>
@@ -40,6 +57,8 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors duration-200"
+                aria-label="Chat with Qloud Tech on WhatsApp"
+                data-testid="footer-whatsapp-link"
               >
                 <MessageCircle className="w-4 h-4 text-white" />
               </a>
@@ -50,12 +69,12 @@ const Footer = () => {
           <div className="col-span-6 md:col-span-2">
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Services</h4>
             <ul className="space-y-2.5">
-              <li><Link to="/services/home-theatre" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Theatre</Link></li>
-              <li><Link to="/services/smart-switches" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Smart Switches</Link></li>
-              <li><Link to="/services/security-systems" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Security Systems</Link></li>
-              <li><Link to="/services/home-automation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Automation</Link></li>
-              <li><Link to="/services/networking" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Networking</Link></li>
-              <li><Link to="/services/digital-door-locks" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Door Locks</Link></li>
+              <li><Link to="/services/home-theatre" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-service-home-theatre-link">Home Theatre</Link></li>
+              <li><Link to="/services/smart-switches" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-service-smart-switches-link">Smart Switches</Link></li>
+              <li><Link to="/services/security-systems" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-service-security-systems-link">Security Systems</Link></li>
+              <li><Link to="/services/home-automation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-service-home-automation-link">Home Automation</Link></li>
+              <li><Link to="/services/networking" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-service-networking-link">Networking</Link></li>
+              <li><Link to="/services/digital-door-locks" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-service-door-locks-link">Door Locks</Link></li>
             </ul>
           </div>
 
@@ -63,12 +82,12 @@ const Footer = () => {
           <div className="col-span-6 md:col-span-2">
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Bangalore</h4>
             <ul className="space-y-2.5">
-              <li><Link to="/home-theatre-whitefield" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Whitefield</Link></li>
-              <li><Link to="/home-theatre-koramangala" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Koramangala</Link></li>
-              <li><Link to="/home-theatre-hsr-layout" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">HSR Layout</Link></li>
-              <li><Link to="/home-theatre-indiranagar" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Indiranagar</Link></li>
-              <li><Link to="/home-theatre-jp-nagar" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">JP Nagar</Link></li>
-              <li><Link to="/home-theatre-electronic-city" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Electronic City</Link></li>
+              <li><Link to="/home-theatre-whitefield" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-whitefield-link">Whitefield</Link></li>
+              <li><Link to="/home-theatre-koramangala" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-koramangala-link">Koramangala</Link></li>
+              <li><Link to="/home-theatre-hsr-layout" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-hsr-layout-link">HSR Layout</Link></li>
+              <li><Link to="/home-theatre-indiranagar" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-indiranagar-link">Indiranagar</Link></li>
+              <li><Link to="/home-theatre-jp-nagar" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-jp-nagar-link">JP Nagar</Link></li>
+              <li><Link to="/home-theatre-electronic-city" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-electronic-city-link">Electronic City</Link></li>
             </ul>
           </div>
 
@@ -76,12 +95,12 @@ const Footer = () => {
           <div className="col-span-6 md:col-span-2">
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Karnataka</h4>
             <ul className="space-y-2.5">
-              <li><Link to="/home-theatre-mysuru" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Mysuru</Link></li>
-              <li><Link to="/home-theatre-mangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Mangalore</Link></li>
-              <li><Link to="/home-theatre-hubballi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Hubballi–Dharwad</Link></li>
-              <li><Link to="/home-theatre-belgavi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Belgavi</Link></li>
-              <li><Link to="/home-theatre-udupi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Udupi &amp; Manipal</Link></li>
-              <li><Link to="/home-theatre-tumakuru" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Tumakuru</Link></li>
+              <li><Link to="/home-theatre-mysuru" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-mysuru-link">Mysuru</Link></li>
+              <li><Link to="/home-theatre-mangalore" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-mangalore-link">Mangalore</Link></li>
+              <li><Link to="/home-theatre-hubballi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-hubballi-link">Hubballi–Dharwad</Link></li>
+              <li><Link to="/home-theatre-belgavi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-belgavi-link">Belgavi</Link></li>
+              <li><Link to="/home-theatre-udupi" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-udupi-link">Udupi &amp; Manipal</Link></li>
+              <li><Link to="/home-theatre-tumakuru" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm" data-testid="footer-location-tumakuru-link">Tumakuru</Link></li>
             </ul>
           </div>
 
@@ -134,8 +153,8 @@ const Footer = () => {
               © 2026 Qloud Tech. All rights reserved.
             </div>
             <div className="flex gap-5">
-              <a href="#" className="text-gray-500 hover:text-cyan-400 text-xs transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-500 hover:text-cyan-400 text-xs transition-colors">Terms of Service</a>
+              <a href="#" className="text-gray-500 hover:text-cyan-400 text-xs transition-colors" data-testid="footer-privacy-link">Privacy Policy</a>
+              <a href="#" className="text-gray-500 hover:text-cyan-400 text-xs transition-colors" data-testid="footer-terms-link">Terms of Service</a>
             </div>
           </div>
         </div>

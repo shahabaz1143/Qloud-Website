@@ -97,6 +97,8 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - **Build**: craco
 - **Deployment**: Vercel
 - **Domain**: qloudsmarthomes.com
+- **Related Storefront**: [Qloud Audio](https://www.qloudaudio.com) — separate product catalogue, cart and home theatre quote builder
+- **Backend / Database**: None; the Qloud Smart Homes website remains 100% static
 
 ---
 
@@ -150,15 +152,33 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Fixed Vercel `cleanUrls` 404 bug and updated 103 canonical URLs to `www.qloudsmarthomes.com`.
 - ✅ Smoke-tested all routes (200 OK) and verified UI in screenshots
 
+### Completed — 20 September 2026
+- ✅ **Qloud Audio storefront integration** — connected the new `https://www.qloudaudio.com` shopping experience to Qloud Smart Homes without adding a new local route:
+  - Added a highlighted **Qloud Audio** external link to desktop and mobile main navigation; opens in a new tab.
+  - Added a dedicated homepage band introducing Qloud Audio as the product catalogue and package builder, with real store imagery.
+  - Added direct CTAs to `/catalog` for models/prices/cart and `/build` for building a home theatre quote.
+  - Added a sitewide footer company mention and storefront link.
+  - Added a `qloud_audio_click` GA4 event for every outbound Qloud Audio link.
+  - Added crawler-readable `subOrganization`, `OfferCatalog` and `CreateAction` structured data linking Qloud Tech to Qloud Audio.
+  - Updated the static SEO fallback so all generated route HTML mentions Qloud Audio and includes catalogue/quote-builder links.
+- ✅ Fixed unsupported CRA `<style jsx>` usage that produced a React console warning.
+- ✅ Cleaned remaining legacy claims so the site consistently uses 4K projection, 450+ happy customers, 100+ home theatres, 5/5 stars and 69 verified reviews.
+- ✅ Verification: production build compiled; all 66 SEO route files generated with zero missing metadata; JSON-LD parsed successfully; Qloud Audio homepage/catalog/build/image returned HTTP 200; desktop/mobile browser flow, new-tab destinations, responsive width and GA4 event passed.
+
 ---
 
 ## Roadmap
 
+### P0 — Blocked / Needs User Input
+- Wire Google Ads conversion tracking for Phone Click, WhatsApp Click and Quote Form once the user provides the Google Ads `AW-...` conversion IDs/labels.
+
 ### P1 — Upcoming
 - Refactor large `LocationPage.jsx` / `BlogArticle.jsx` into separate `src/data/*.js` files for maintainability
-- GA4 custom events: track WhatsApp button clicks, phone-call clicks, "Get Quote" button clicks, and blog TOC link clicks for funnel visibility
+- Extend funnel reporting with blog TOC events and a GA4 exploration comparing Qloud Audio catalogue clicks versus quote-builder clicks.
 
 ### P2 — Backlog
+- Add a dedicated `/reviews` page with 15–20 testimonials, Review schema and Google Review CTA.
+- Add UTM parameters to Qloud Audio and WhatsApp campaign links for source-level attribution.
 - Per-page Open Graph / Twitter image overrides
 - XML image sitemap for richer Google Images indexing
 - Image alt-text audit across all pages

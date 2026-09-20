@@ -25,6 +25,7 @@ import ProcessPage from './pages/ProcessPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import LandingPage from './pages/LandingPage';
+import QloudAudioPromo from './components/QloudAudioPromo';
 
 // Google Analytics 4 SPA page_view tracker + lead-event auto-tracking
 const GA_MEASUREMENT_ID = 'G-G41DNBE1PK';
@@ -47,6 +48,15 @@ const classifyLeadUrl = (url) => {
   if (url.startsWith('tel:')) return 'phone';
   if (url.startsWith('mailto:')) return 'email';
   return null;
+};
+
+const isQloudAudioUrl = (url) => {
+  if (!url || typeof url !== 'string') return false;
+  try {
+    return new URL(url, window.location.origin).hostname.replace(/^www\./, '') === 'qloudaudio.com';
+  } catch {
+    return false;
+  }
 };
 
 const GAListener = () => {
@@ -72,6 +82,14 @@ const GAListener = () => {
       for (const el of path) {
         if (!el || el.nodeType !== 1) continue;
         if (el.tagName === 'A' && el.href) {
+          if (isQloudAudioUrl(el.href)) {
+            fireGAEvent('qloud_audio_click', {
+              link_url: el.href,
+              link_text: (el.innerText || '').trim().slice(0, 80) || 'Qloud Audio',
+              outbound: true
+            });
+            return;
+          }
           const channel = classifyLeadUrl(el.href);
           if (channel) {
             fireGAEvent('generate_lead', {
@@ -91,6 +109,13 @@ const GAListener = () => {
     // 2) Wrap window.open so wa.me / tel: opens fire GA too
     const originalOpen = window.open;
     window.open = function patchedOpen(url, ...rest) {
+      if (isQloudAudioUrl(url)) {
+        fireGAEvent('qloud_audio_click', {
+          link_url: url,
+          link_text: 'window.open',
+          outbound: true
+        });
+      }
       const channel = classifyLeadUrl(url);
       if (channel) {
         fireGAEvent('generate_lead', {
@@ -168,6 +193,7 @@ const HomePage = () => {
       <Header />
       <Hero />
       <Services />
+      <QloudAudioPromo />
       <WhyChooseUs />
       <Pricing />
       <Process />

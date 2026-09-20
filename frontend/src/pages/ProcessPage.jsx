@@ -116,8 +116,8 @@ const ProcessPage = () => {
               </div>
               <div className="p-4 rounded-xl bg-gray-900/40 border border-gray-800">
                 <CheckCircle2 className="w-5 h-5 text-cyan-400 mb-2" />
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-sm text-gray-400">Successful Bangalore installations</div>
+                <div className="text-2xl font-bold text-white">450+</div>
+                <div className="text-sm text-gray-400">Happy customers across Karnataka</div>
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ const ProcessPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Why Bangalore Customers <span className="text-cyan-400">Trust Our Process</span>
           </h2>
-          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">After 500+ home theatre and home automation installations across Bangalore, we've refined every step to eliminate the friction that plagues most AV/electrical contractors.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">After serving 450+ happy customers across Bangalore and Karnataka, we've refined every step to eliminate the friction that plagues most AV/electrical contractors.</p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[

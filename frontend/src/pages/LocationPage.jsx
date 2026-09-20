@@ -108,7 +108,7 @@ const locationData = {
       ]
     },
     stats: [
-      { value: '500+', label: 'Homes Secured' },
+      { value: '450+', label: 'Happy Customers' },
       { value: '8+', label: 'Years Experience' },
       { value: '5/5', label: 'Customer Rating' },
       { value: '24/7', label: 'Support Available' }
@@ -375,7 +375,7 @@ const locationData = {
       ]
     },
     stats: [
-      { value: '500+', label: 'CCTV Installations' },
+      { value: '450+', label: 'Happy Customers' },
       { value: '8+', label: 'Years Experience' },
       { value: '5/5', label: 'Customer Rating' },
       { value: '1 Day', label: 'Installation Time' }

@@ -11,7 +11,7 @@ const servicesData = {
     metaTitle: 'Home Theatre Installation Bangalore | Dolby Atmos | Qloud Tech',
     metaDescription: 'Professional home theatre installation in Bangalore. Dolby Atmos, 4K projection, acoustic treatment. Starting ₹2.29 lakhs. Free consultation!',
     heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
-    description: 'Transform your living space into a cinematic paradise with our professional home theatre installation services in Bangalore. We specialize in creating immersive entertainment experiences with Dolby Atmos sound systems, 4K/8K projection, custom seating, and professional acoustic treatment.',
+    description: 'Transform your living space into a cinematic paradise with our professional home theatre installation services in Bangalore. We specialize in creating immersive entertainment experiences with Dolby Atmos sound systems, 4K projection, custom seating, and professional acoustic treatment.',
     features: [
       'Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4 configurations',
       '4K & 8K laser projectors from Sony, Epson, BenQ',

@@ -51,7 +51,7 @@ const STATIC_ROUTES = {
       "Bangalore & Karnataka's #1 Home Theatre & Smart Home Automation specialists. Dolby Atmos cinema rooms, smart lighting, CCTV, digital locks. 100+ installs, 5★ rated (69 verified reviews). Free consultation.",
     h1: "Bangalore's #1 Home Theatre & Smart Home Automation Specialists",
     intro:
-      "Qloud Tech designs and installs premium home theatres (Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4), smart home automation, smart switches, CCTV security systems, digital door locks, video door phones and motorised gates across Bangalore — including Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Sarjapur, Electronic City and Yelahanka.",
+      "Qloud Tech designs and installs premium home theatres (Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4), smart home automation, smart switches, CCTV security systems, digital door locks, video door phones and motorised gates across Bangalore and Karnataka. Customers can also visit Qloud Audio at qloudaudio.com to compare exact AV models, listed prices, add products to cart and build a home theatre quote.",
     type: "home"
   },
   "/services": {
@@ -416,6 +416,8 @@ function buildSeoFallback(meta, url) {
   <p>${escapeHtml(meta.intro)}</p>
   <h2>About ${BRAND}</h2>
   <p>${BRAND} is Bangalore &amp; Karnataka's leading home theatre and smart home automation specialist with 100+ completed installations, 450+ happy customers and a perfect 5-star rating from 69 verified reviews. We design, supply and install dedicated home theatres with Dolby Atmos, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore, Karnataka — Mysuru, Mangalore, Hubballi, Belgavi, Udupi, Tumakuru and beyond — plus Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
+  <h2>Shop Models and Build a Quote with Qloud Audio</h2>
+  <p><a href="https://www.qloudaudio.com">Qloud Audio</a> is our dedicated home theatre product catalogue. Compare projectors, screens, speakers, subwoofers and AV receivers with listed prices, add products to cart, or <a href="https://www.qloudaudio.com/build">build a complete home theatre quote online</a>.</p>
   <h2>Why Choose ${BRAND}</h2>
   <ul>
     <li>100+ home theatres and smart homes installed since 2017</li>
@@ -425,7 +427,7 @@ function buildSeoFallback(meta, url) {
     <li>Free on-site consultation across Bangalore</li>
   </ul>
   <h2>Explore</h2>
-  <p><a href="${SITE_URL}/services">Browse services</a> · <a href="${SITE_URL}/packages">View packages</a> · <a href="${SITE_URL}/projects">Recent projects</a> · <a href="${SITE_URL}/blog">Read our guides</a> · <a href="${SITE_URL}/contact">Contact us</a></p>
+  <p><a href="${SITE_URL}/services">Browse services</a> · <a href="${SITE_URL}/packages">View packages</a> · <a href="https://www.qloudaudio.com/catalog">Shop models &amp; prices</a> · <a href="https://www.qloudaudio.com/build">Build a quote</a> · <a href="${SITE_URL}/projects">Recent projects</a> · <a href="${SITE_URL}/blog">Read our guides</a> · <a href="${SITE_URL}/contact">Contact us</a></p>
   <h2>Contact</h2>
   <address>
     ${BRAND}<br />

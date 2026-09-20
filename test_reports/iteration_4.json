@@ -1,0 +1,54 @@
+{
+  "summary": "Frontend-only validation for Qloud Audio additions completed on public preview URL. Core nav/promo/footer links and GA4 qloud_audio_click tracking work. Two issues remain: homepage console error and missing crawler-readable /catalog and /build links in production HTML source.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "Homepage console/runtime",
+        "issue": "Console logs an error on load: 'Received `%s` for a non-boolean attribute `%s` ... jsx'. This violates the no-console-errors acceptance condition.",
+        "selector": "https://assets.emergent.sh/scripts/emergent-main.js:55:30 (trigger appears with <style jsx> usage in app)",
+        "priority": "HIGH"
+      }
+    ],
+    "integration_issues": [
+      {
+        "flow": "Crawler-readable production HTML validation",
+        "issue": "Root HTML source contains Qloud Audio relationship (subOrganization) but does not contain explicit crawler-readable https://www.qloudaudio.com/catalog or https://www.qloudaudio.com/build links.",
+        "affected_selectors": [
+          "HTML source of /",
+          "JSON-LD and prerendered SEO content"
+        ]
+      }
+    ],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/test_reports/homepage_response.html",
+    "/root/.emergent/automation_output/20260920_080933/console_20260920_080933.log",
+    "/root/.emergent/automation_output/20260920_081004/console_20260920_081004.log"
+  ],
+  "action_items": [
+    "Fix JSX attribute warning source (likely <style jsx> in /app/frontend/src/components/Process.jsx) so homepage loads cleanly without console errors.",
+    "Ensure deployed/served production HTML includes crawler-readable links to https://www.qloudaudio.com/catalog and https://www.qloudaudio.com/build (in JSON-LD or prerendered fallback content), not only the base qloudaudio.com URL."
+  ],
+  "critical_code_review_comments": [
+    "App currently uses <style jsx> pattern in a CRA React component (/app/frontend/src/components/Process.jsx). This is a Next.js-specific pattern and causes React DOM attribute warnings in this stack.",
+    "There is a build/runtime mismatch risk: seo-build.js includes fallback content with catalog/build links, but the served root HTML on preview does not expose these links to crawlers."
+  ],
+  "updated_files": [
+    "/app/test_reports/iteration_4.json",
+    "/app/test_reports/homepage_response.html"
+  ],
+  "success_rate": {
+    "backend": "N/A (skipped - frontend only static scope)",
+    "frontend": "80% (8/10 requested checks passed)"
+  },
+  "seed_data_creation": "None",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Use public URL from frontend/.env: https://qloud-seo-refactor.preview.emergentagent.com. Verified passing: desktop/mobile Qloud Audio nav links, promo CTA links (/catalog and /build), footer mention/link, GA4 qloud_audio_click event in dataLayer, and no horizontal overflow on 1920x800 and 390x800. Failing checks are console error and missing crawler-readable catalog/build links in root HTML source.",
+  "rca of the issue": "(1) Console error RCA: component code uses unsupported JSX attribute pattern (<style jsx>) in CRA React, producing non-boolean attribute warning rendered as console error. (2) Crawler HTML RCA: runtime served HTML appears to include only base Qloud Audio relationship URL; explicit catalog/build links expected from prerender/fallback are absent in delivered root source, indicating deployment path or template/content mismatch."
+}

@@ -48,7 +48,7 @@ const ProjectsPage = () => {
 
     ensureMeta(
       'description',
-      'Browse 500+ home theatre and smart home automation projects by Qloud Tech across Bangalore. Real installations in Whitefield, Koramangala, HSR Layout, Sarjapur, and more.'
+      'Browse real home theatre and smart home automation projects by Qloud Tech across Bangalore and Karnataka. 100+ home theatres designed for 450+ happy customers.'
     );
 
     return () => {
@@ -78,7 +78,7 @@ const ProjectsPage = () => {
               Our Portfolio
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              500+ Bangalore Homes <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400">Transformed</span>
+              Real Karnataka Homes <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400">Transformed</span>
             </h1>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               From 2BHK apartments in Marathahalli to ₹15-lakh dedicated media rooms in Whitefield villas — every Qloud Tech installation is custom-engineered for the room, the family, and the budget. Here's a curated look at our recent work.
@@ -87,8 +87,8 @@ const ProjectsPage = () => {
             <div className="grid grid-cols-3 gap-4 mt-8">
               <div className="p-4 rounded-xl bg-gray-900/40 border border-gray-800 text-center">
                 <Users className="w-5 h-5 text-cyan-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-xs text-gray-400">Projects delivered</div>
+                <div className="text-2xl font-bold text-white">450+</div>
+                <div className="text-xs text-gray-400">Happy customers</div>
               </div>
               <div className="p-4 rounded-xl bg-gray-900/40 border border-gray-800 text-center">
                 <MapPin className="w-5 h-5 text-cyan-400 mx-auto mb-2" />
@@ -117,7 +117,7 @@ const ProjectsPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Project <span className="text-cyan-400">Categories</span>
           </h2>
-          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">Our 500+ Bangalore installations span six categories. Click any to see real customer work, pricing, and case studies.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">Our work for 450+ happy customers spans six categories. Click any to see real installations, pricing, and case studies.</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[

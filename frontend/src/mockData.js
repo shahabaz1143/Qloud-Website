@@ -5,7 +5,7 @@ export const services = [
     description: "Transform your living space into a cinematic experience with immersive sound, stunning visuals, and personalized smart controls. From Dolby Atmos systems to 4K projection.",
     image: "https://images.unsplash.com/photo-1635788798247-92a15f830a3b?w=800",
     icon: "Film",
-    features: ["Dolby Atmos Sound", "4K/8K Projection", "Custom Seating", "Acoustic Treatment"]
+    features: ["Dolby Atmos Sound", "4K Projection", "Custom Seating", "Acoustic Treatment"]
   },
   {
     id: 2,

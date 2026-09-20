@@ -37,7 +37,7 @@ const services = [
     slug: 'home-theatre',
     title: 'Home Theatre',
     tagline: 'Cinema Experience at Home',
-    description: 'Transform any room into a cinematic experience with Dolby Atmos, 4K/8K projection, and premium audio systems.',
+    description: 'Transform any room into a cinematic experience with Dolby Atmos, 4K projection, and premium audio systems.',
     icon: Film,
     image: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
     startingPrice: '₹2.29L',
@@ -269,7 +269,7 @@ const ServicesPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Why Bangalore Chooses <span className="text-cyan-400">Qloud Tech</span>
           </h2>
-          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">After 500+ installations across the city, here's what consistently sets us apart from generic AV contractors.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">After serving 450+ happy customers across the city, here's what consistently sets us apart from generic AV contractors.</p>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="p-6 rounded-xl bg-gray-900/40 border border-gray-800">
@@ -312,7 +312,7 @@ const ServicesPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             Which Service Is <span className="text-cyan-400">Right for You?</span>
           </h2>
-          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">A quick decision-tree based on what 500+ Bangalore customers have done.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">A quick decision-tree based on what 450+ happy customers have done.</p>
 
           <div className="space-y-4">
             <div className="p-5 rounded-xl bg-gray-900/40 border border-gray-800">

@@ -157,7 +157,7 @@ const PackagesPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
             How to Choose the Right <span className="text-cyan-400">Package</span>
           </h2>
-          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">A quick guide based on what 500+ Bangalore customers have done over the past 5 years.</p>
+          <p className="text-gray-400 mb-10 text-center max-w-3xl mx-auto">A quick guide based on what 450+ happy customers have done.</p>
 
           <div className="space-y-6">
             <div className="p-6 rounded-xl bg-gray-900/40 border border-gray-800">
