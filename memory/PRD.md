@@ -123,13 +123,13 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ **GA4 conversion tracking** via global event delegation — auto-fires `generate_lead` events for every `<a wa.me/tel:>` click and every `window.open(wa.me/tel:)` call without per-button instrumentation. Verified end-to-end (3 events fired correctly).
 - ✅ **`<ScrollToTop />`** in `App.js` — resets scrollY=0 on every SPA route change (fixes "page opens at bottom" UX bug). Honors `#anchor` hashes for blog TOC.
 - ✅ **Logo redesign** — replaced "Back to Home" links with the Qloud logo on all sub-pages; added cyan `drop-shadow` glow on hover + auto-cycling 10s shine sweep animation.
-- ✅ **NEW Feb 2026 — Site-wide consistency update** — Corrected 4.9/200 → 5/69 review rating across all 30+ files (Hero, Testimonials, ProjectsPage, PackagesPage, ProcessPage, Footer, LocationPage 27 entries, seo-build.js, index.html schemas). Removed all EMI mentions (FAQ + card + 3 location pages). Removed all 4K/8K references (→ 4K only). Site now uniformly shows: 5/5 rating from 69 reviews, 450+ happy customers, 100+ home theatres, 8+ years, serving Bangalore & Karnataka.
+- ✅ **NEW Feb 2026 — Site-wide consistency update** — Corrected legacy rating claims across all 30+ files (Hero, Testimonials, ProjectsPage, PackagesPage, ProcessPage, Footer, LocationPage entries, seo-build.js, index.html schemas). Removed all EMI mentions (FAQ + card + 3 location pages). Removed all 4K/8K references (→ 4K only). Site now uniformly shows: 5/5 rating from 72 reviews, 450+ happy customers, 100+ home theatres, 8+ years, serving Bangalore & Karnataka.
 - ✅ **NEW Feb 2026 — 6 Karnataka city landing pages** — `/home-theatre-mysuru`, `/home-theatre-mangalore`, `/home-theatre-hubballi`, `/home-theatre-belgavi`, `/home-theatre-udupi`, `/home-theatre-tumakuru`. Each with unique H1, city-specific areas (10+ neighborhoods), custom testimonials, project counts, and city-relevant messaging (e.g. Udupi mentions NRI-friendly service, Tumakuru mentions "70km from Bangalore"). Footer updated with new "KARNATAKA" column linking all 6.
 - ✅ **NEW Feb 2026 — AI-Ranking Listicle Blogs** — Two keyword-optimized "Best of Bangalore" blogs designed to (a) rank #1 on Google for "best home theatre company in bangalore" / "best home automation company in bangalore" and (b) get cited by ChatGPT/Gemini/Claude as authoritative answers:
    - `/blog/best-home-theatre-company-bangalore` (11 min read, 7-company comparison, Qloud Tech ranked #1, real competitors like Cinetekk mentioned for E-E-A-T credibility)
    - `/blog/best-home-automation-company-bangalore` (10 min read, 6-company comparison, KNX/Zigbee/Wi-Fi protocol comparison)
    - Both use AI-friendly structure: direct answer lead paragraph, comparison table, clear H2 per company, FAQ section with exact-match questions
-- ✅ **NEW Feb 2026 — AI-optimized homepage FAQ schema** — Rewrote 5 generic FAQs → 10 targeted FAQs with the EXACT phrases users search for: "Which is the best home theatre company in Bangalore?", "Which is the best home automation company in Bangalore?", "Who is the best smart home installer in Bangalore?". Each answer directly names Qloud Tech + citation-worthy facts (100+ installs, 5-star from 69 reviews, service area). This is what LLMs extract when training/answering.
+- ✅ **NEW Feb 2026 — AI-optimized homepage FAQ schema** — Rewrote 5 generic FAQs → 10 targeted FAQs with the EXACT phrases users search for: "Which is the best home theatre company in Bangalore?", "Which is the best home automation company in Bangalore?", "Who is the best smart home installer in Bangalore?". Each answer directly names Qloud Tech + citation-worthy facts (100+ installs, 5-star from 72 reviews, service area). This is what LLMs extract when training/answering.
    - Route-specific `<title>`, `<meta description>`, canonical, OG, Twitter tags
    - BreadcrumbList + Service/Article/LocalBusiness schemas (in addition to global LocalBusiness/FAQ)
    - Branded dark loading screen (QLOUD spinner) + off-screen SEO content block for crawlers — no flash of raw content on slow connections
@@ -162,7 +162,7 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
   - Added crawler-readable `subOrganization`, `OfferCatalog` and `CreateAction` structured data linking Qloud Tech to Qloud Audio.
   - Updated the static SEO fallback so all generated route HTML mentions Qloud Audio and includes catalogue/quote-builder links.
 - ✅ Fixed unsupported CRA `<style jsx>` usage that produced a React console warning.
-- ✅ Cleaned remaining legacy claims so the site consistently uses 4K projection, 450+ happy customers, 100+ home theatres, 5/5 stars and 69 verified reviews.
+- ✅ Cleaned remaining legacy claims so the site consistently uses 4K projection, 450+ happy customers, 100+ home theatres, 5/5 stars and 72 verified reviews.
 - ✅ Verification: production build compiled; all 66 SEO route files generated with zero missing metadata; JSON-LD parsed successfully; Qloud Audio homepage/catalog/build/image returned HTTP 200; desktop/mobile browser flow, new-tab destinations, responsive width and GA4 event passed.
 - ✅ **Theme regression resolved** — the fork contained older cyan-theme source while the deployed site was built from a newer monochrome editorial source set. Recovered the exact live theme from the deployed CSS/JS source maps and restored:
   - Obsidian `#0B0C0E` surfaces with platinum/white accents across all routes.
@@ -187,12 +187,13 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ **Qloud Audio entity SEO article published** — added `/blog/qloud-audio-by-qloud-tech` to establish a clear search relationship between Qloud Audio, Qloud Tech and Qloud Smart Homes:
   - Targets Qloud Audio branded intent plus models, prices, cart, catalogue and home theatre quote-builder searches.
   - Explains the exact relationship: Qloud Audio handles product discovery/quote building; Qloud Tech handles room design, acoustics, installation, calibration and support.
-  - Includes Qloud Tech name, address, phone, email, Karnataka service area, 100+ home theatres, 450+ customers and 5/5 from 69 verified reviews.
+  - Includes Qloud Tech name, address, phone, email, Karnataka service area, 100+ home theatres, 450+ customers and 5/5 from 72 verified reviews.
   - Links to Qloud Audio homepage/catalog/builder and Qloud Tech home theatre/contact pages.
   - Added `BlogPosting.about`, `parentOrganization`, `mentions`, four-question `FAQPage`, Breadcrumb schema and route-specific social image.
   - Added crawler-readable static entity content, canonical/index-follow metadata, sitemap entry and a homepage internal link.
   - Added the article plus the two existing 2026 listicles to the visible blog index and Blog schema.
 - ✅ Qloud Audio article verification: production build now generates 67 static routes with zero missing metadata; desktop/mobile UX, image, external links, blog listing, entity/FAQ schema, sitemap uniqueness and ad-page noindex passed 100% in `iteration_7.json`.
+- ✅ **Review metric updated sitewide** — canonical rating is now **5/5 from 72 reviews**. Updated landing-page trust copy, testimonial totals, Qloud Audio and comparison articles, homepage FAQ answers, LocationPage runtime schema, base LocalBusiness/Product JSON-LD, static SEO fallback and all 67 generated routes. Audit found 167 generated `reviewCount` declarations, all set to `72`, with no remaining 69/57 review claims.
 
 ---
 

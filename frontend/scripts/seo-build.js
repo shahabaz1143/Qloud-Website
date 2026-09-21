@@ -49,7 +49,7 @@ const STATIC_ROUTES = {
   "/": {
     title: "Qloud Tech | Home Theatre & Smart Home Automation in Bangalore",
     description:
-      "Bangalore & Karnataka's #1 Home Theatre & Smart Home Automation specialists. Dolby Atmos cinema rooms, smart lighting, CCTV, digital locks. 100+ installs, 5★ rated (69 verified reviews). Free consultation.",
+      "Bangalore & Karnataka's #1 Home Theatre & Smart Home Automation specialists. Dolby Atmos cinema rooms, smart lighting, CCTV, digital locks. 100+ installs, 5★ rated (72 verified reviews). Free consultation.",
     h1: "Bangalore's #1 Home Theatre & Smart Home Automation Specialists",
     intro:
       "Qloud Tech designs and installs premium home theatres (Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4), smart home automation, smart switches, CCTV security systems, digital door locks, video door phones and motorised gates across Bangalore and Karnataka. Customers can also visit Qloud Audio at qloudaudio.com to compare exact AV models, listed prices, add products to cart and build a home theatre quote.",
@@ -371,7 +371,7 @@ function localBusinessSchema(meta, url) {
     },
     areaServed: { "@type": "City", name: meta.location || "Bangalore" },
     priceRange: "₹₹",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "69" }
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "72" }
   };
 }
 
@@ -458,7 +458,7 @@ function buildSeoFallback(meta, url) {
     <h2>How Qloud Audio and Qloud Tech Work Together</h2>
     <p>Qloud Audio handles product discovery, model comparison and online quote building. Qloud Tech provides room consultation, Dolby Atmos design, acoustic treatment, wiring, installation, calibration and ongoing support across Bangalore and Karnataka.</p>
     <h2>Qloud Tech Company Details</h2>
-    <p>Qloud Tech has designed 100+ home theatres for 450+ happy customers and has a 5/5 rating from 69 verified reviews. Contact Qloud Tech at <a href="tel:+917204746043">+91 72047 46043</a>, <a href="mailto:contact@qloudsmarthomes.com">contact@qloudsmarthomes.com</a>, or visit <a href="${SITE_URL}/contact">the consultation page</a>.</p>
+    <p>Qloud Tech has designed 100+ home theatres for 450+ happy customers and has a 5/5 rating from 72 verified reviews. Contact Qloud Tech at <a href="tel:+917204746043">+91 72047 46043</a>, <a href="mailto:contact@qloudsmarthomes.com">contact@qloudsmarthomes.com</a>, or visit <a href="${SITE_URL}/contact">the consultation page</a>.</p>
     <h2>Qloud Audio Questions</h2>
     <h3>Are Qloud Audio and Qloud Tech the same team?</h3>
     <p>Yes. Qloud Audio is Qloud Tech's product and quote-building website, while Qloud Tech handles design, installation and support.</p>
@@ -472,7 +472,7 @@ function buildSeoFallback(meta, url) {
   <p>${escapeHtml(meta.intro)}</p>
   ${qloudAudioEntityContent}
   <h2>About ${BRAND}</h2>
-  <p>${BRAND} is Bangalore &amp; Karnataka's leading home theatre and smart home automation specialist with 100+ completed installations, 450+ happy customers and a perfect 5-star rating from 69 verified reviews. We design, supply and install dedicated home theatres with Dolby Atmos, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore, Karnataka — Mysuru, Mangalore, Hubballi, Belgavi, Udupi, Tumakuru and beyond — plus Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
+  <p>${BRAND} is Bangalore &amp; Karnataka's leading home theatre and smart home automation specialist with 100+ completed installations, 450+ happy customers and a perfect 5-star rating from 72 verified reviews. We design, supply and install dedicated home theatres with Dolby Atmos, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore, Karnataka — Mysuru, Mangalore, Hubballi, Belgavi, Udupi, Tumakuru and beyond — plus Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
   <h2>Shop Models and Build a Quote with Qloud Audio</h2>
   <p><a href="https://www.qloudaudio.com">Qloud Audio</a> is our dedicated home theatre product catalogue. Compare projectors, screens, speakers, subwoofers and AV receivers with listed prices, add products to cart, or <a href="https://www.qloudaudio.com/build">build a complete home theatre quote online</a>.</p>
   <h2>Why Choose ${BRAND}</h2>
