@@ -183,6 +183,7 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Favicon verification: all icon files return HTTP 200, the preview publishes every required `<link>` size, the Q remains recognizable at 16px, and the production/SEO build still passes all 66 routes.
 - ✅ Increased the favicon Q monogram from 32% to approximately 60% tile coverage after user feedback, retaining the rounded tile and safe edge spacing. Regenerated all `.ico`, 16px, 32px, 180px and 512px variants; visual checks and the 66-route production build pass.
 - ✅ Per final user preference, restored the original Qloud Tech logo asset **for the browser favicon and Apple touch icon only**. The new QLOUD wordmark remains unchanged in the website header, footer, landing page, company profile, social preview and SEO schema. Original favicon asset returns HTTP 200; all 66 routes rebuild successfully.
+- ✅ Resolved favicon persistence: browsers were still preferring the previously generated `/favicon.ico`. Replaced the `.ico` fallback itself with the original Qloud mark and published the original PNG/Apple icon under new versioned filenames (`qloud-original-logo-*-v2`), forcing the preview to request the correct asset. Preview HTML and both icon URLs verified HTTP 200.
 
 ---
 
