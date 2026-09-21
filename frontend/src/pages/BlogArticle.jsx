@@ -1302,7 +1302,7 @@ const BlogArticle = () => {
           "name": "Qloud Tech",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/h7afabwe_cropped-Untitled-design-6.png"
+            "url": "https://www.qloudsmarthomes.com/qloud-tech-logo.webp"
           }
         },
         "datePublished": article.date,

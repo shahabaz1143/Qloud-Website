@@ -10,9 +10,10 @@ const Footer = () => {
           {/* Company Info - Takes 3 columns */}
           <div className="col-span-12 md:col-span-3">
             <img 
-              src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" 
-              alt="Qloud Tech Logo" 
-              className="h-6 brightness-0 invert mb-2"
+              src="/qloud-tech-logo-white.webp" 
+              alt="Qloud Tech" 
+              className="h-8 w-auto mb-3"
+              data-testid="footer-logo-image"
             />
             <p className="text-cyan-400 text-xs font-medium mb-4">Part of Qloud Smart Homes</p>
             <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">

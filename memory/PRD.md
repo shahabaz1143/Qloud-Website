@@ -173,6 +173,12 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Theme verification: preview compared against `https://www.qloudsmarthomes.com`; representative routes (`/services`, `/packages`, `/projects`, `/contact`) passed; no old cyan-gradient appearance, blank pages, console errors or mobile overflow; frontend testing agent reported 100% pass in `iteration_5.json`.
 - ✅ **Preview opening/compile error fixed** — after the theme restore, the development-only visual-edits Babel metadata plugin crashed while traversing `QloudAudioPromo.jsx` (`Cannot read properties of null (reading 'traverse')`). Replaced the imported `Button asChild` wrapper and dynamically rendered Lucide icon component with native styled links, numeric markers and text arrows. This preserves the editorial design while avoiding the compiler bug.
 - ✅ Revalidated in `iteration_6.json`: preview HTTP 200, no webpack overlay, no traversal error, Qloud Audio desktop/mobile links and both destinations work, and the production build contains all 66 static route HTML files.
+- ✅ **Brand logo updated** — processed the user-supplied transparent black QLOUD wordmark into optimized production assets:
+  - Tight transparent black and white wordmarks for light/dark placements.
+  - Dedicated square Q-mark favicon/apple-touch icon.
+  - 1200×630 white social-sharing image for Open Graph and Twitter.
+  - Replaced legacy logo URLs in the header, footer, Google Ads landing page, company profile, blog/service schema, LocalBusiness schema and static SEO generator.
+- ✅ Logo verification: desktop/mobile header, footer and landing-page placements load at correct aspect ratio without overflow; favicon resolves; production build and all 66 SEO route files pass; no legacy logo references remain.
 
 ---
 

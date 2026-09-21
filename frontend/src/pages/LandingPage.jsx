@@ -225,11 +225,12 @@ const MobileCTABar = () => (
 const MiniHeader = () => (
   <header className="sticky top-0 z-40 bg-[#0a0e1a]/85 backdrop-blur-md border-b border-white/5">
     <div className="container mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
-      <Link to="/" className="flex-shrink-0" aria-label="Qloud Tech Home">
+      <Link to="/" className="flex-shrink-0" aria-label="Qloud Tech Home" data-testid="landing-page-logo-link">
         <img
-          src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png"
+          src="/qloud-tech-logo-white.webp"
           alt="Qloud Tech"
-          className="h-5 brightness-0 invert"
+          className="h-6 w-auto"
+          data-testid="landing-page-logo-image"
         />
       </Link>
       <div className="hidden sm:flex items-center gap-2 text-xs text-gray-400">

@@ -40,7 +40,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex-shrink-0 group" aria-label="Qloud Tech Home" data-testid="header-logo-link">
-            <img src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" alt="Qloud Tech Logo" className="h-6 brightness-0 invert transition-opacity group-hover:opacity-80" />
+            <img src="/qloud-tech-logo-white.webp" alt="Qloud Tech" className="h-7 w-auto transition-opacity group-hover:opacity-80" data-testid="header-logo-image" />
           </Link>
 
           <div className="hidden xl:flex items-center gap-7">

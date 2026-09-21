@@ -39,7 +39,8 @@ const BRAND = "Qloud Tech";
 const PHONE = "+91-7204746043";
 const EMAIL = "contact@qloudsmarthomes.com";
 const ADDRESS = "First Floor 11, 102/1, above Sufyan, Geddalahalli, Rammana Layout, Kothanur, Byrathi, Bangalore 560077";
-const DEFAULT_OG = "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/h7afabwe_cropped-Untitled-design-6.png";
+const DEFAULT_OG = `${SITE_URL}/qloud-tech-logo-share.png`;
+const LOGO_URL = `${SITE_URL}/qloud-tech-logo.webp`;
 
 // --------------------------------------------------------------------------
 // Static (non-dynamic) routes meta — covers all top-level pages
@@ -280,7 +281,7 @@ function articleSchema(meta, url) {
     publisher: {
       "@type": "Organization",
       name: BRAND,
-      logo: { "@type": "ImageObject", url: DEFAULT_OG }
+      logo: { "@type": "ImageObject", url: LOGO_URL }
     },
     datePublished: meta.date || "2024-01-01",
     dateModified: meta.date || "2024-12-15",
