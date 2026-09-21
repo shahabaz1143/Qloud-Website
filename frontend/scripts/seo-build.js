@@ -171,6 +171,7 @@ function extractSlugBlocks(filePath) {
     const category = get("category");
     const author = get("author");
     const date = get("date");
+    const image = get("image");
 
     if (metaTitle || title) {
       out[slug] = {
@@ -182,7 +183,8 @@ function extractSlugBlocks(filePath) {
         location,
         category,
         author,
-        date
+        date,
+        image
       };
     }
   }
@@ -242,6 +244,7 @@ function buildDynamicMeta() {
       category: data.category,
       author: data.author || `${BRAND} Team`,
       date: data.date,
+      image: data.image,
       slug,
       breadcrumbs: [
         { name: "Home", url: SITE_URL },
@@ -272,7 +275,7 @@ function breadcrumbSchema(items) {
 }
 
 function articleSchema(meta, url) {
-  return {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: meta.h1,
@@ -286,8 +289,45 @@ function articleSchema(meta, url) {
     datePublished: meta.date || "2024-01-01",
     dateModified: meta.date || "2024-12-15",
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    image: DEFAULT_OG,
+    image: meta.image || DEFAULT_OG,
     articleSection: meta.category || "Smart Home"
+  };
+  if (meta.slug === "qloud-audio-by-qloud-tech") {
+    schema.about = {
+      "@type": "Organization",
+      name: "Qloud Audio",
+      url: "https://www.qloudaudio.com",
+      parentOrganization: {
+        "@type": "Organization",
+        name: BRAND,
+        alternateName: "Qloud Smart Homes",
+        url: SITE_URL
+      }
+    };
+    schema.mentions = [
+      { "@type": "Organization", name: BRAND, url: SITE_URL },
+      { "@type": "Service", name: "Home Theatre Design and Installation", url: `${SITE_URL}/services/home-theatre` },
+      { "@type": "ItemList", name: "Home Theatre Models and Prices", url: "https://www.qloudaudio.com/catalog" }
+    ];
+  }
+  return schema;
+}
+
+function qloudAudioFaqSchema() {
+  const faqs = [
+    ["What is Qloud Audio?", "Qloud Audio is Qloud Tech’s dedicated home theatre product catalogue and online quote builder for comparing exact AV models and listed prices, adding products to cart and assembling a room-specific quote."],
+    ["Are Qloud Audio and Qloud Tech the same team?", "Yes. Qloud Audio is the product-discovery and quote-building website from Qloud Tech, also known as Qloud Smart Homes. Qloud Tech provides consultation, room design, acoustic treatment, installation, calibration and support."],
+    ["Can I build a complete home theatre quote on Qloud Audio?", "Yes. Customers can choose products or use the package builder to create a home theatre quote, then work with Qloud Tech on room suitability, acoustics, installation and final calibration."],
+    ["Where does Qloud Tech install home theatres?", "Qloud Tech serves Bangalore and wider Karnataka, including Mysuru, Mangalore, Hubballi-Dharwad, Belgavi, Udupi, Manipal and Tumakuru."]
+  ];
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([name, text]) => ({
+      "@type": "Question",
+      name,
+      acceptedAnswer: { "@type": "Answer", text }
+    }))
   };
 }
 
@@ -411,10 +451,26 @@ function buildSeoFallback(meta, url) {
     )
     .join("");
 
+  const qloudAudioEntityContent = meta.slug === "qloud-audio-by-qloud-tech" ? `
+  <section>
+    <h2>What Is Qloud Audio?</h2>
+    <p>Qloud Audio is the dedicated home theatre product catalogue and online quote builder from Qloud Tech, also known as Qloud Smart Homes. Customers can compare exact projectors, screens, speakers, subwoofers and AV receivers, see listed prices, add products to cart and build a complete home theatre quote at <a href="https://www.qloudaudio.com">qloudaudio.com</a>.</p>
+    <h2>How Qloud Audio and Qloud Tech Work Together</h2>
+    <p>Qloud Audio handles product discovery, model comparison and online quote building. Qloud Tech provides room consultation, Dolby Atmos design, acoustic treatment, wiring, installation, calibration and ongoing support across Bangalore and Karnataka.</p>
+    <h2>Qloud Tech Company Details</h2>
+    <p>Qloud Tech has designed 100+ home theatres for 450+ happy customers and has a 5/5 rating from 69 verified reviews. Contact Qloud Tech at <a href="tel:+917204746043">+91 72047 46043</a>, <a href="mailto:contact@qloudsmarthomes.com">contact@qloudsmarthomes.com</a>, or visit <a href="${SITE_URL}/contact">the consultation page</a>.</p>
+    <h2>Qloud Audio Questions</h2>
+    <h3>Are Qloud Audio and Qloud Tech the same team?</h3>
+    <p>Yes. Qloud Audio is Qloud Tech's product and quote-building website, while Qloud Tech handles design, installation and support.</p>
+    <h3>Can I build a home theatre quote online?</h3>
+    <p>Yes. Visit the <a href="https://www.qloudaudio.com/build">Qloud Audio builder</a> to assemble a quote, then work with Qloud Tech to validate the system for your room.</p>
+  </section>` : "";
+
   return `<div id="seo-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
   ${breadcrumbs ? `<nav aria-label="Breadcrumb">${breadcrumbs}</nav>` : ""}
   <h1>${escapeHtml(meta.h1)}</h1>
   <p>${escapeHtml(meta.intro)}</p>
+  ${qloudAudioEntityContent}
   <h2>About ${BRAND}</h2>
   <p>${BRAND} is Bangalore &amp; Karnataka's leading home theatre and smart home automation specialist with 100+ completed installations, 450+ happy customers and a perfect 5-star rating from 69 verified reviews. We design, supply and install dedicated home theatres with Dolby Atmos, smart lighting, CCTV security systems, digital door locks, video door phones, motorised gates and structured networking across Bangalore, Karnataka — Mysuru, Mangalore, Hubballi, Belgavi, Udupi, Tumakuru and beyond — plus Whitefield, Koramangala, Indiranagar, HSR Layout, JP Nagar, Jayanagar, Sarjapur, Electronic City, Yelahanka, Hebbal, Marathahalli and Banashankari.</p>
   <h2>Shop Models and Build a Quote with Qloud Audio</h2>
@@ -512,6 +568,8 @@ function main() {
     html = replaceMeta(html, "twitter:title", meta.title, true);
     html = replaceMeta(html, "twitter:description", meta.description, true);
     html = replaceMeta(html, "twitter:url", url, true);
+    html = replaceMeta(html, "og:image", meta.image || DEFAULT_OG, true);
+    html = replaceMeta(html, "twitter:image", meta.image || DEFAULT_OG, true);
     html = replaceCanonical(html, url);
 
     // Add route-specific schema (in addition to the global schema already in template)
@@ -519,7 +577,10 @@ function main() {
     const bc = breadcrumbSchema(meta.breadcrumbs);
     if (bc) schemas.push(bc);
 
-    if (meta.type === "article") schemas.push(articleSchema(meta, url));
+    if (meta.type === "article") {
+      schemas.push(articleSchema(meta, url));
+      if (meta.slug === "qloud-audio-by-qloud-tech") schemas.push(qloudAudioFaqSchema());
+    }
     else if (meta.type === "service") schemas.push(serviceSchema(meta, url));
     else if (meta.type === "location") schemas.push(localBusinessSchema(meta, url));
 

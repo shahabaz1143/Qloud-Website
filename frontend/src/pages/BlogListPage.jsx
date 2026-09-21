@@ -7,6 +7,39 @@ import Header from '../components/Header';
 // All blog posts data
 const allBlogPosts = [
   {
+    id: 18,
+    title: "Qloud Audio by Qloud Tech: Models, Prices, Cart & Quote Builder",
+    slug: "qloud-audio-by-qloud-tech",
+    excerpt: "Meet Qloud Audio, Qloud Tech's dedicated product catalogue and home theatre quote builder for exact AV models, listed prices and complete-room planning.",
+    category: "Home Theatre",
+    author: "Qloud Tech Editorial",
+    date: "2026-09-21",
+    readTime: "8 min",
+    image: "https://www.qloudaudio.com/services/hero-shop.jpg?v=20"
+  },
+  {
+    id: 17,
+    title: "Best Home Theatre Company in Bangalore (2026): Top 7 Compared",
+    slug: "best-home-theatre-company-bangalore",
+    excerpt: "Compare Bangalore's top home theatre companies on installations, warranty, Dolby Atmos expertise, pricing and verified customer ratings.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-02-12",
+    readTime: "11 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
+  },
+  {
+    id: 16,
+    title: "Best Home Automation Company in Bangalore (2026): Top 6 Compared",
+    slug: "best-home-automation-company-bangalore",
+    excerpt: "Compare Bangalore home automation specialists on protocol support, voice integration, warranty, pricing and service coverage.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-02-12",
+    readTime: "10 min",
+    image: "https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=800"
+  },
+  {
     id: 1,
     title: "Complete Guide to Home Theatre Setup in Bangalore 2024",
     slug: "home-theatre-setup-bangalore-guide",
@@ -256,6 +289,7 @@ const BlogListPage = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500"
+                data-testid="blog-search-input"
               />
             </div>
 
@@ -270,6 +304,7 @@ const BlogListPage = () => {
                       ? 'bg-gradient-to-r from-cyan-400 to-sky-400 text-black'
                       : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
                   }`}
+                  data-testid={`blog-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   {category}
                 </button>
@@ -292,8 +327,9 @@ const BlogListPage = () => {
                 <article
                   key={post.id}
                   className="group bg-gradient-to-br from-gray-900/50 to-gray-900/30 rounded-2xl border border-gray-800/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
+                  data-testid={`blog-card-${post.slug}`}
                 >
-                  <Link to={`/blog/${post.slug}`}>
+                  <Link to={`/blog/${post.slug}`} data-testid={`blog-card-image-link-${post.slug}`}>
                     <div className="relative overflow-hidden aspect-video">
                       <img
                         src={post.image}
@@ -321,7 +357,7 @@ const BlogListPage = () => {
                       </span>
                     </div>
                     
-                    <Link to={`/blog/${post.slug}`}>
+                    <Link to={`/blog/${post.slug}`} data-testid={`blog-card-title-link-${post.slug}`}>
                       <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors line-clamp-2">
                         {post.title}
                       </h2>
@@ -334,6 +370,7 @@ const BlogListPage = () => {
                     <Link
                       to={`/blog/${post.slug}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold"
+                      data-testid={`blog-card-read-link-${post.slug}`}
                     >
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -368,7 +405,7 @@ const BlogListPage = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-gray-800">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-500">© 2024 Qloud Tech. All Rights Reserved.</p>
+          <p className="text-gray-500">© 2026 Qloud Tech. All Rights Reserved.</p>
           <Link to="/" className="text-cyan-400 hover:text-cyan-300 mt-2 inline-block">www.qloudsmarthomes.com</Link>
         </div>
       </footer>

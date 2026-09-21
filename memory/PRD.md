@@ -184,6 +184,15 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ Increased the favicon Q monogram from 32% to approximately 60% tile coverage after user feedback, retaining the rounded tile and safe edge spacing. Regenerated all `.ico`, 16px, 32px, 180px and 512px variants; visual checks and the 66-route production build pass.
 - ✅ Per final user preference, restored the original Qloud Tech logo asset **for the browser favicon and Apple touch icon only**. The new QLOUD wordmark remains unchanged in the website header, footer, landing page, company profile, social preview and SEO schema. Original favicon asset returns HTTP 200; all 66 routes rebuild successfully.
 - ✅ Resolved favicon persistence: browsers were still preferring the previously generated `/favicon.ico`. Replaced the `.ico` fallback itself with the original Qloud mark and published the original PNG/Apple icon under new versioned filenames (`qloud-original-logo-*-v2`), forcing the preview to request the correct asset. Preview HTML and both icon URLs verified HTTP 200.
+- ✅ **Qloud Audio entity SEO article published** — added `/blog/qloud-audio-by-qloud-tech` to establish a clear search relationship between Qloud Audio, Qloud Tech and Qloud Smart Homes:
+  - Targets Qloud Audio branded intent plus models, prices, cart, catalogue and home theatre quote-builder searches.
+  - Explains the exact relationship: Qloud Audio handles product discovery/quote building; Qloud Tech handles room design, acoustics, installation, calibration and support.
+  - Includes Qloud Tech name, address, phone, email, Karnataka service area, 100+ home theatres, 450+ customers and 5/5 from 69 verified reviews.
+  - Links to Qloud Audio homepage/catalog/builder and Qloud Tech home theatre/contact pages.
+  - Added `BlogPosting.about`, `parentOrganization`, `mentions`, four-question `FAQPage`, Breadcrumb schema and route-specific social image.
+  - Added crawler-readable static entity content, canonical/index-follow metadata, sitemap entry and a homepage internal link.
+  - Added the article plus the two existing 2026 listicles to the visible blog index and Blog schema.
+- ✅ Qloud Audio article verification: production build now generates 67 static routes with zero missing metadata; desktop/mobile UX, image, external links, blog listing, entity/FAQ schema, sitemap uniqueness and ad-page noindex passed 100% in `iteration_7.json`.
 
 ---
 

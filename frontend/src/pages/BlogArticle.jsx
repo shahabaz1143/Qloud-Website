@@ -948,6 +948,152 @@ const blogData = {
     relatedServices: ['home-theatre']
   },
 
+  'qloud-audio-by-qloud-tech': {
+    title: 'Qloud Audio by Qloud Tech: Models, Prices, Cart & Home Theatre Quote Builder',
+    slug: 'qloud-audio-by-qloud-tech',
+    metaTitle: 'Qloud Audio by Qloud Tech | Models, Prices & Quote Builder',
+    metaDescription: 'Qloud Audio is Qloud Tech’s home theatre catalogue. Compare projector, speaker, AVR, screen and subwoofer models, see prices, add to cart and build a quote.',
+    category: 'Home Theatre',
+    author: 'Qloud Tech Editorial',
+    date: '2026-09-21',
+    readTime: '8 min read',
+    image: 'https://www.qloudaudio.com/services/hero-shop.jpg?v=20',
+    excerpt: 'Meet Qloud Audio, the dedicated product catalogue and home theatre quote builder from Qloud Tech. Browse exact AV models, listed prices and complete-room options online.',
+    about: {
+      '@type': 'Organization',
+      name: 'Qloud Audio',
+      url: 'https://www.qloudaudio.com',
+      parentOrganization: {
+        '@type': 'Organization',
+        name: 'Qloud Tech',
+        alternateName: 'Qloud Smart Homes',
+        url: 'https://www.qloudsmarthomes.com'
+      }
+    },
+    mentions: [
+      { '@type': 'Organization', name: 'Qloud Tech', url: 'https://www.qloudsmarthomes.com' },
+      { '@type': 'Service', name: 'Home Theatre Design and Installation', url: 'https://www.qloudsmarthomes.com/services/home-theatre' },
+      { '@type': 'ItemList', name: 'Home Theatre Models and Prices', url: 'https://www.qloudaudio.com/catalog' }
+    ],
+    faqs: [
+      {
+        question: 'What is Qloud Audio?',
+        answer: 'Qloud Audio is Qloud Tech’s dedicated home theatre product catalogue and online quote builder. It lets customers compare exact AV models and listed prices, add products to a cart and assemble a room-specific quote.'
+      },
+      {
+        question: 'Are Qloud Audio and Qloud Tech the same team?',
+        answer: 'Yes. Qloud Audio is the product-discovery and quote-building website from Qloud Tech, also known as Qloud Smart Homes. Qloud Tech provides consultation, room design, acoustic treatment, installation, calibration and support.'
+      },
+      {
+        question: 'Can I build a complete home theatre quote on Qloud Audio?',
+        answer: 'Yes. Customers can choose products or use the package builder to create a home theatre quote, then work with Qloud Tech on room suitability, acoustics, installation and final calibration.'
+      },
+      {
+        question: 'Where does Qloud Tech install home theatres?',
+        answer: 'Qloud Tech serves Bangalore and wider Karnataka, including Mysuru, Mangalore, Hubballi-Dharwad, Belgavi, Udupi, Manipal and Tumakuru.'
+      }
+    ],
+    content: `
+      <p><strong>Short answer:</strong> <strong>Qloud Audio</strong> is the dedicated home theatre product catalogue and online quote builder from <strong>Qloud Tech (Qloud Smart Homes)</strong>. On <a href="https://www.qloudaudio.com" target="_blank" rel="noopener noreferrer" data-testid="blog-qloud-audio-home-link">qloudaudio.com</a>, customers can browse exact projector, screen, speaker, subwoofer and AV receiver models, see listed prices, add products to a cart and build a complete home theatre quote. Qloud Tech then provides the room design, acoustic treatment, installation, calibration and after-sales support across Bangalore and Karnataka.</p>
+
+      <h2>What Is Qloud Audio?</h2>
+      <p>Qloud Audio is Qloud Tech&apos;s product-first website for people who want more detail before starting a home theatre project. Instead of seeing only broad package names, visitors can inspect individual AV models, compare listed prices and understand what goes into a complete system.</p>
+      <p>The website is designed around the questions serious home theatre buyers usually ask:</p>
+      <ul>
+        <li>Which exact projector, speaker, AVR, subwoofer and screen models fit my budget?</li>
+        <li>What does each component cost?</li>
+        <li>Can I add individual products to a cart?</li>
+        <li>Can I build a complete quote before speaking to an installer?</li>
+        <li>Who will design, install and calibrate the final room?</li>
+      </ul>
+      <p>Qloud Audio answers the product and pricing questions. Qloud Tech handles the complete installed experience.</p>
+
+      <h2>How Qloud Audio and Qloud Tech Work Together</h2>
+      <table>
+        <thead>
+          <tr><th>Brand</th><th>Primary Role</th><th>What Customers Can Do</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Qloud Audio</strong></td><td>Product catalogue and quote builder</td><td>Browse exact AV models, see listed prices, add to cart and build a quote</td></tr>
+          <tr><td><strong>Qloud Tech / Qloud Smart Homes</strong></td><td>Design, installation and support</td><td>Room consultation, Dolby Atmos design, acoustics, wiring, installation, calibration and support</td></tr>
+        </tbody>
+      </table>
+      <p>This connection gives customers two useful ways to begin. If you already know the type of equipment you want, start with the <a href="https://www.qloudaudio.com/catalog" target="_blank" rel="noopener noreferrer" data-testid="blog-qloud-audio-catalog-link">Qloud Audio catalogue</a>. If you want help planning the room first, book a consultation with <a href="https://www.qloudsmarthomes.com/contact" data-testid="blog-qloud-tech-contact-link">Qloud Tech</a>.</p>
+
+      <h2>What Can You Browse on Qloud Audio?</h2>
+      <p>Qloud Audio focuses on the core products used in professionally designed home theatres:</p>
+      <ul>
+        <li><strong>Projectors:</strong> 4K options for dedicated cinema rooms and multi-use spaces.</li>
+        <li><strong>Projection screens:</strong> Screen options selected around viewing distance, projector and room lighting.</li>
+        <li><strong>Speakers:</strong> Front, centre, surround and height-channel speakers for Dolby Atmos layouts.</li>
+        <li><strong>Subwoofers:</strong> Low-frequency solutions matched to room volume and listening goals.</li>
+        <li><strong>AV receivers:</strong> Processing and amplification for configurations such as 5.1.2, 7.1.2 and 9.1.4.</li>
+        <li><strong>Packages and room components:</strong> Product combinations that make it easier to understand a complete setup rather than isolated equipment.</li>
+      </ul>
+      <p>Because every room behaves differently, the online product selection is the starting point. Qloud Tech verifies room dimensions, speaker positions, projector throw distance, electrical load, ventilation and acoustic requirements before final installation.</p>
+
+      <h2>How to Build a Home Theatre Quote Online</h2>
+      <ol>
+        <li><strong>Open the builder:</strong> Visit the <a href="https://www.qloudaudio.com/build" target="_blank" rel="noopener noreferrer" data-testid="blog-qloud-audio-builder-link">Qloud Audio home theatre quote builder</a>.</li>
+        <li><strong>Choose your system direction:</strong> Select products or package components around your preferred budget and room goals.</li>
+        <li><strong>Review models and listed prices:</strong> See the exact equipment included rather than relying on a generic package description.</li>
+        <li><strong>Build your quote:</strong> Assemble the products that fit your plan and keep a clear record of the proposed system.</li>
+        <li><strong>Validate the room with Qloud Tech:</strong> The installation team checks whether the chosen equipment is appropriate for the room and recommends any necessary changes.</li>
+      </ol>
+
+      <h2>From Online Quote to a Finished Cinema Room</h2>
+      <p>A home theatre is more than a cart of electronics. The same products can perform very differently depending on room geometry, speaker placement, calibration and acoustic control. Qloud Tech turns the Qloud Audio product plan into a complete cinema room through:</p>
+      <ul>
+        <li>On-site room measurement and consultation</li>
+        <li>Speaker layout and Dolby Atmos channel planning</li>
+        <li>Projector throw-distance and screen-size calculation</li>
+        <li>Electrical, networking and concealed-cabling planning</li>
+        <li>Professional acoustic treatment and sound isolation guidance</li>
+        <li>Equipment installation, audio calibration and picture setup</li>
+        <li>System handover and ongoing technical support</li>
+      </ul>
+      <p>Qloud Tech has designed 100+ home theatres for 450+ happy customers, with a 5/5 rating from 69 verified reviews. The team serves Bangalore and wider Karnataka, not just one neighbourhood or city.</p>
+
+      <h2>Why Qloud Audio Helps Home Theatre Buyers</h2>
+      <p>Traditional home theatre quotations often hide the exact equipment behind labels such as “premium package” or “cinema bundle.” Qloud Audio makes the buying process easier to understand by showing actual models and listed prices before the project moves into room design and installation.</p>
+      <p>That transparency is especially useful when comparing:</p>
+      <ul>
+        <li>Different speaker and AVR combinations</li>
+        <li>Projector options within a fixed budget</li>
+        <li>The cost difference between basic surround sound and Dolby Atmos</li>
+        <li>Individual products versus a complete-room quote</li>
+        <li>Equipment cost versus acoustic and installation requirements</li>
+      </ul>
+
+      <h2>Qloud Tech Company Details</h2>
+      <p><strong>Company:</strong> Qloud Tech / Qloud Smart Homes<br />
+      <strong>Related product website:</strong> <a href="https://www.qloudaudio.com" target="_blank" rel="noopener noreferrer">Qloud Audio</a><br />
+      <strong>Specialisation:</strong> Home theatre, smart home automation, acoustic treatment, security and networking<br />
+      <strong>Service area:</strong> Bangalore and Karnataka<br />
+      <strong>Address:</strong> First Floor 11, 102/1, above Sufyan, Geddalahalli, Rammana Layout, Kothanur, Byrathi, Bangalore 560077<br />
+      <strong>Phone:</strong> <a href="tel:+917204746043">+91 72047 46043</a><br />
+      <strong>Email:</strong> <a href="mailto:contact@qloudsmarthomes.com">contact@qloudsmarthomes.com</a></p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What is Qloud Audio?</h3>
+      <p>Qloud Audio is Qloud Tech&apos;s dedicated home theatre product catalogue and online quote builder. It lets customers compare exact AV models and listed prices, add products to a cart and assemble a room-specific quote.</p>
+
+      <h3>Are Qloud Audio and Qloud Tech the same team?</h3>
+      <p>Yes. Qloud Audio is the product-discovery and quote-building website from Qloud Tech, also known as Qloud Smart Homes. Qloud Tech provides consultation, room design, acoustic treatment, installation, calibration and support.</p>
+
+      <h3>Can I build a complete home theatre quote on Qloud Audio?</h3>
+      <p>Yes. Use the online builder to shortlist products and assemble a quote. Qloud Tech can then validate the plan against your room size, acoustics and installation requirements.</p>
+
+      <h3>Where does Qloud Tech install home theatres?</h3>
+      <p>Qloud Tech serves Bangalore and wider Karnataka, including Mysuru, Mangalore, Hubballi-Dharwad, Belgavi, Udupi, Manipal and Tumakuru.</p>
+
+      <h2>Start with Qloud Audio or Qloud Tech</h2>
+      <p>Ready to compare actual equipment? <a href="https://www.qloudaudio.com/catalog" target="_blank" rel="noopener noreferrer" data-testid="blog-qloud-audio-final-catalog-link"><strong>Browse Qloud Audio models and prices</strong></a> or <a href="https://www.qloudaudio.com/build" target="_blank" rel="noopener noreferrer" data-testid="blog-qloud-audio-final-builder-link"><strong>build your home theatre quote</strong></a>. If you want room-design guidance first, explore Qloud Tech&apos;s <a href="https://www.qloudsmarthomes.com/services/home-theatre">home theatre installation service</a> or <a href="https://www.qloudsmarthomes.com/contact">book a consultation</a>.</p>
+    `,
+    relatedServices: ['home-theatre']
+  },
+
   // ═══════════════════════════════════════════════════════════════════════════
   //  AI-OPTIMIZED LISTICLE ARTICLES
   //  Designed to rank #1 on Google + be cited by ChatGPT/Gemini/Claude for
@@ -1313,8 +1459,23 @@ const BlogArticle = () => {
         },
         "articleSection": article.category,
         "wordCount": article.content.split(/\s+/).length,
-        "url": `https://www.qloudsmarthomes.com/blog/${blogSlug}`
+        "url": `https://www.qloudsmarthomes.com/blog/${blogSlug}`,
+        ...(article.about ? { "about": article.about } : {}),
+        ...(article.mentions ? { "mentions": article.mentions } : {})
       };
+
+      const faqSchema = article.faqs?.length ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": article.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      } : null;
 
       // Create BreadcrumbList Schema
       const breadcrumbSchema = {
@@ -1346,7 +1507,7 @@ const BlogArticle = () => {
       const script = document.createElement('script');
       script.id = 'blog-schema';
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify([blogSchema, breadcrumbSchema]);
+      script.textContent = JSON.stringify([blogSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]);
       document.head.appendChild(script);
 
       // Cleanup on unmount
@@ -1408,7 +1569,7 @@ const BlogArticle = () => {
             </div>
             
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight" data-testid="blog-article-title">
               {article.title}
             </h1>
             
@@ -1436,6 +1597,7 @@ const BlogArticle = () => {
                 src={article.image} 
                 alt={article.title}
                 className="w-full h-[400px] object-cover"
+                data-testid="blog-article-featured-image"
               />
             </div>
           </div>
@@ -1447,7 +1609,7 @@ const BlogArticle = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-10">
             <article
-              className="prose prose-invert prose-lg max-w-none
+              className="prose prose-invert prose-lg max-w-none overflow-x-auto
                 prose-headings:text-white prose-headings:font-bold
                 prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-cyan-400 prose-h2:scroll-mt-28
                 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
@@ -1459,6 +1621,7 @@ const BlogArticle = () => {
                 prose-table:border-collapse prose-table:w-full prose-table:my-8
                 prose-th:bg-gray-800 prose-th:p-4 prose-th:text-left prose-th:text-white prose-th:border prose-th:border-gray-700
                 prose-td:p-4 prose-td:border prose-td:border-gray-700 prose-td:text-gray-300"
+              data-testid="blog-article-content"
               dangerouslySetInnerHTML={{ __html: processedContent }}
             />
 

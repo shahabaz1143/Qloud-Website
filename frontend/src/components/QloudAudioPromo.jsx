@@ -41,6 +41,13 @@ const QloudAudioPromo = () => (
           screens, speakers, subwoofers and AV receivers with listed prices, then add products to your
           cart or assemble a complete quote around your room and budget.
         </p>
+        <a
+          href="/blog/qloud-audio-by-qloud-tech"
+          className="mt-4 inline-flex text-sm font-medium text-white underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white"
+          data-testid="qloud-audio-learn-more-link"
+        >
+          How Qloud Audio and Qloud Tech work together →
+        </a>
 
         <div className="mt-8 space-y-4">
           {highlights.map((label, index) => (
