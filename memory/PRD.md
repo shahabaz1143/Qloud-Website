@@ -179,6 +179,8 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
   - 1200×630 white social-sharing image for Open Graph and Twitter.
   - Replaced legacy logo URLs in the header, footer, Google Ads landing page, company profile, blog/service schema, LocalBusiness schema and static SEO generator.
 - ✅ Logo verification: desktop/mobile header, footer and landing-page placements load at correct aspect ratio without overflow; favicon resolves; production build and all 66 SEO route files pass; no legacy logo references remain.
+- ✅ **Favicon refined** — replaced the oversized full-canvas mark with a polished rounded obsidian tile, centered white Q monogram, larger safe area and subtle neutral border. Added crisp 16×16 and 32×32 browser icons, multi-size `.ico`, and a dedicated 180×180 Apple touch icon.
+- ✅ Favicon verification: all icon files return HTTP 200, the preview publishes every required `<link>` size, the Q remains recognizable at 16px, and the production/SEO build still passes all 66 routes.
 
 ---
 
