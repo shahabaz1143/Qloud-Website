@@ -337,7 +337,7 @@ function articleSchema(meta, url) {
       logo: { "@type": "ImageObject", url: DEFAULT_OG }
     },
     datePublished: meta.date || "2024-01-01",
-    dateModified: meta.date || "2024-12-15",
+    dateModified: new Date().toISOString().slice(0, 10),
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     image: DEFAULT_OG,
     articleSection: meta.category || "Smart Home"

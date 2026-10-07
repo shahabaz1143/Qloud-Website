@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.qloudsmarthomes.com/sitemap.xml
+Sitemap: https://www.qloudsmarthomes.com/sitemap-images.xml

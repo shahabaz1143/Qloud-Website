@@ -1641,7 +1641,7 @@ const blogData = {
       <p>As a vendor-neutral installer, Qloud Tech recommends the receiver that best fits your speakers, room and budget — most often a Denon for value-focused Atmos rooms and a Marantz for premium music-plus-movie setups.</p>
 
       <h2>Get Expert Advice Before You Buy</h2>
-      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. We supply, install and calibrate Denon and Marantz receivers. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">request a free consultation</a>.</p>
+      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. We supply, install and calibrate Denon and Marantz receivers. Compare the <a href="https://www.qloudsmarthomes.com/blog/best-home-theatre-company-bangalore">best home theatre companies in Bangalore</a> or call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">request a free consultation</a>.</p>
     `,
     relatedServices: ['home-theatre', 'home-automation']
   },
@@ -1691,7 +1691,7 @@ const blogData = {
       <p>Good 4K laser projectors start in the mid range and go up for premium native-4K models. We quote the projector as part of a complete home theatre package — see <a href="https://www.qloudsmarthomes.com/blog/home-theatre-cost-bangalore">home theatre cost in Bangalore</a>.</p>
 
       <h2>Get the Right Projector for Your Room</h2>
-      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. We supply, mount and calibrate 4K laser projectors from Sony, Epson and BenQ. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free demo</a>.</p>
+      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. We supply, mount and calibrate 4K laser projectors from Sony, Epson and BenQ. See the <a href="https://www.qloudsmarthomes.com/blog/best-home-theatre-company-bangalore">best home theatre companies in Bangalore</a> or call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free demo</a>.</p>
     `,
     relatedServices: ['home-theatre']
   },
@@ -1743,7 +1743,7 @@ const blogData = {
       <p>At minimum a 5.1.2 layout (2 height channels) for Atmos. Larger rooms benefit from 7.1.4. We recommend the right count based on your room.</p>
 
       <h2>Let an Expert Match Speakers to Your Room</h2>
-      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. We'll recommend, supply and calibrate the right speakers for your space. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>.</p>
+      <p>Qloud Tech has installed 100+ home theatres across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 450+ happy customers. We'll recommend, supply and calibrate the right speakers for your space. Compare the <a href="https://www.qloudsmarthomes.com/blog/best-home-theatre-company-bangalore">best home theatre companies in Bangalore</a> or call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>.</p>
     `,
     relatedServices: ['home-theatre']
   },
@@ -1845,7 +1845,7 @@ const blogData = {
       <p>Yes. KNX core automation runs locally over the bus and keeps working without the internet; cloud/remote access is an optional add-on.</p>
 
       <h2>Plan Your KNX Villa the Right Way</h2>
-      <p>Qloud Tech has automated 450+ homes across Bangalore and Karnataka with a 5-star rating from 70 verified reviews. We design and install KNX and hybrid systems for villas and luxury homes. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/services/home-automation">explore home automation</a>.</p>
+      <p>Qloud Tech has automated 450+ homes across Bangalore and Karnataka with a 5-star rating from 70 verified reviews. We design and install KNX and hybrid systems for villas and luxury homes. See the <a href="https://www.qloudsmarthomes.com/blog/best-home-automation-company-bangalore">best home automation companies in Bangalore</a> or call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/services/home-automation">explore home automation</a>.</p>
     `,
     relatedServices: ['home-automation', 'smart-switches']
   },
@@ -1895,7 +1895,7 @@ const blogData = {
       <p>Yes — through the app you can control and schedule lights from anywhere, and set "away" scenes that make the home look occupied.</p>
 
       <h2>Light Up Your Home the Smart Way</h2>
-      <p>Qloud Tech has automated 450+ homes across Bangalore and Karnataka with a 5-star rating from 70 verified reviews. We design and install smart lighting with switches, dimmers, bulbs and strips. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/services/home-automation">explore home automation</a>.</p>
+      <p>Qloud Tech has automated 450+ homes across Bangalore and Karnataka with a 5-star rating from 70 verified reviews. We design and install smart lighting with switches, dimmers, bulbs and strips. See the <a href="https://www.qloudsmarthomes.com/blog/best-home-automation-company-bangalore">best home automation companies in Bangalore</a> or call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/services/home-automation">explore home automation</a>.</p>
     `,
     relatedServices: ['smart-switches', 'home-automation']
   },
@@ -1955,7 +1955,7 @@ const blogData = {
       <p>It varies with villa size and the systems you automate. We provide a transparent, itemised quote after a site assessment.</p>
 
       <h2>Design Your Smart Villa with Qloud Tech</h2>
-      <p>Qloud Tech has automated 450+ homes across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 100+ home theatres delivered. We design whole-home villa automation end to end. Call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>.</p>
+      <p>Qloud Tech has automated 450+ homes across Bangalore and Karnataka with a 5-star rating from 70 verified reviews and 100+ home theatres delivered. We design whole-home villa automation end to end. See the <a href="https://www.qloudsmarthomes.com/blog/best-home-automation-company-bangalore">best home automation companies in Bangalore</a> or call <strong>+91 72047 46043</strong> or <a href="https://www.qloudsmarthomes.com/contact">book a free consultation</a>.</p>
     `,
     relatedServices: ['home-automation', 'security-systems']
   },

@@ -177,6 +177,8 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
    - `/blog/automatic-gate-installation-bangalore` (Security) — "automatic gate installation bangalore" (fills motorised-gates blog gap)
    - All cross-link to existing blogs/services for internal-link equity. Smoke-tested (renders with theme, breadcrumb, TOC). No backend.
 
+- ✅ **NEW Jun 2026 — On-page SEO hardening (4 technical wins)** — (1) **Freshness:** `seo-build.js` now stamps `dateModified` on every Article/BlogPosting with the build date (auto-freshens each deploy), and all 44 stale `2025-02-01` sitemap `lastmod` dates bumped to `2026-06-20`. (2) **Image sitemap:** generated `public/sitemap-images.xml` (32 image entries — all blogs + homepage hero, mapped to their page URLs with titles) and referenced it in `robots.txt` as a second Sitemap line for richer Google Images indexing. (3) **Internal-link hub:** the 8 new blogs now link into the two "best company" money listicles (3 → best-home-theatre-company, 3 → best-home-automation-company) to funnel topical authority to the pages that need to rank #1. (4) Audited image alt-text — already comprehensive site-wide (no gap). Verified: frontend compiles, seo-build.js syntax OK, 0 stale lastmods. NOTE: real named-author E-E-A-T profile still pending (needs user to supply person name/bio/photo/LinkedIn); off-page levers (GBP, reviews, citations, backlinks) remain the dominant remaining factor — see `/app/memory/seo-backlink-checklist.md`.
+
 ---
 
 ## Roadmap
