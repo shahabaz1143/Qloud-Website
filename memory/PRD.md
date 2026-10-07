@@ -9,7 +9,7 @@
 | **Services Index Page** | 1 |
 | **Location Pages (City)** | 8 |
 | **Location Pages (Neighborhood)** | 19 |
-| **Blog Articles** | 15 |
+| **Blog Articles** | 31 |
 | **Blog List Page** | 1 |
 | **Static Pages** | 2 |
 | **Schema Types** | 13+ (LocalBusiness, Organization, WebSite, ItemList, FAQPage, Product, Service, BlogPosting, Blog, BreadcrumbList, HowTo, etc.) |
@@ -165,6 +165,17 @@ Build a pixel-perfect, fully responsive, 100% static React website for the **Qlo
 - ✅ **NEW Jun 2026 — Keyword content sections (home + services)** — `SeoKeywordSection.jsx`, two distinct variants, added to homepage (after FAQ) and `/services`. **Redesigned** from plain paragraphs into a structured layout: badge header + CTAs, stat cards, Dolby Atmos config chips (5.1/7.1/5.1.2/7.1.2/7.1.4), "what's included" card, helpful-guide pill links, clickable brand pills (5 link to dealer pages), Bangalore+Karnataka area chips, "best company" highlight card, and a collapsible FAQ accordion (native details/summary, SEO-crawlable). Covers all keyword clusters (commercial/config/brand/local/comparison/long-tail). NOTE: the visual-edits babel plugin crashes on lucide icons passed as component props — icons must be inlined directly in JSX, not passed via props (fixed).
 - ✅ **NEW Jun 2026 — 5 brand dealer landing pages** — Created `BrandPage.jsx` (reusable, data-driven) with keyword-perfect URLs targeting low-competition, high-intent brand searches: `/jbl-dealer-bangalore`, `/polk-audio-dealer-bangalore`, `/monitor-audio-dealer-bangalore`, `/kef-dealer-bangalore`, `/klipsch-dealer-bangalore`. Each has H1 "[Brand] Dealer in Bangalore", brand intro, product-range cards, why-buy-from-installer, exact-match FAQ, CTAs, and injects LocalBusiness + BreadcrumbList + FAQPage schema. Wired into App.js (explicit routes before the `/:locationSlug` catch-all), added to sitemap.xml, and to `seo-build.js` STATIC_ROUTES (type: location → LocalBusiness schema in prerendered HTML). Homepage `BrandsWeCarry` cards for these 5 brands now link to their dealer pages.
 - ✅ **NEW Jun 2026 — Review count 69 → 70** — Updated review count from 69 to 70 (still 5/5 stars) across all files: schemas in `public/index.html` (2× reviewCount + 3× FAQ text), `LocationPage.jsx` schema, `LandingPage.jsx` (hero bar + trust chip), `BlogArticle.jsx` (13 mentions incl. 2 ranking-table cells), and `seo-build.js` (meta description + AggregateRating + SEO fallback). Verified rendered on landing page. — (1) New blog `/blog/home-theatre-audio-brand-dealers-bangalore` with an H2 per brand ("JBL Dealer in Bangalore", "Polk Audio Dealer in Bangalore", "Monitor Audio…", "KEF…", "Klipsch…") + exact-match FAQ ("Where can I buy JBL speakers in Bangalore?"). Added to blogData, blog list (id 23) and sitemap. (2) New homepage `BrandsWeCarry.jsx` component (crawlable text, not just logos) listing 14 audio/projector brands with dealer copy, wired into HomePage after Projects. (3) Added brand keywords to the homepage crawlable static SEO block in `seo-build.js`. Note: copy uses "authorised dealer & installer" per user request — user to confirm actual authorised-dealer status per brand.
+
+- ✅ **NEW Jun 2026 — 8 new keyword-gap SEO blogs** — Added to `BlogArticle.jsx` (blogData, auto-picked by seo-build.js), `BlogListPage.jsx` (ids 24–31, shown first), and `sitemap.xml`. Blog total now **31**. Each follows the proven format (quick-answer lead, comparison tables, exact-match H3 FAQ → auto FAQPage schema, internal links, 5★/70-reviews/450+ metrics):
+   - `/blog/denon-vs-marantz-av-receiver` (Comparison) — "best AV receiver india / Denon vs Marantz"
+   - `/blog/best-4k-laser-projector-india` (Buying Guide) — "best 4K laser projector home theatre india"
+   - `/blog/how-to-choose-home-theatre-speakers` (Home Theatre) — "how to choose home theatre speakers"
+   - `/blog/wired-vs-wireless-cctv` (Security) — "wired vs wireless cctv which is better"
+   - `/blog/knx-home-automation-india` (Home Automation) — "knx home automation india"
+   - `/blog/best-smart-lights-india` (Home Automation) — "best smart lights / smart lighting india"
+   - `/blog/home-automation-for-villas-bangalore` (Home Automation) — "home automation for villa bangalore"
+   - `/blog/automatic-gate-installation-bangalore` (Security) — "automatic gate installation bangalore" (fills motorised-gates blog gap)
+   - All cross-link to existing blogs/services for internal-link equity. Smoke-tested (renders with theme, breadcrumb, TOC). No backend.
 
 ---
 

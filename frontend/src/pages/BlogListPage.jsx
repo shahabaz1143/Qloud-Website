@@ -7,6 +7,94 @@ import Header from '../components/Header';
 // All blog posts data
 const allBlogPosts = [
   {
+    id: 24,
+    title: "Denon vs Marantz AV Receiver 2026: Which Should You Buy?",
+    slug: "denon-vs-marantz-av-receiver",
+    excerpt: "Denon and Marantz are the two most recommended AV receiver brands for Indian home theatres. We compare sound, features, price and which to pick for your Dolby Atmos setup.",
+    category: "Comparison",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-20",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1589647157397-6080774a0952?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 25,
+    title: "Best 4K Laser Projector for Home Theatre in India 2026",
+    slug: "best-4k-laser-projector-india",
+    excerpt: "A 2026 buying guide to the best 4K laser projectors for Indian home theatres — brightness, contrast, throw distance and value compared, with expert setup advice.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-19",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1721733258410-35e699661ad6?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 26,
+    title: "How to Choose Home Theatre Speakers: 2026 Expert Guide",
+    slug: "how-to-choose-home-theatre-speakers",
+    excerpt: "A practical 2026 guide to choosing home theatre speakers — floorstanding vs bookshelf vs in-wall, subwoofers, Atmos height channels and matching speakers to your room.",
+    category: "Home Theatre",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-18",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1595432541891-a461100d3054?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 27,
+    title: "Wired vs Wireless CCTV: Which Is Better in 2026?",
+    slug: "wired-vs-wireless-cctv",
+    excerpt: "Wired vs wireless CCTV compared on reliability, video quality, installation and cost — plus which is best for homes, villas and offices in Bangalore.",
+    category: "Security",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-17",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1589935447067-5531094415d1?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 28,
+    title: "KNX Home Automation in India 2026: Complete Guide",
+    slug: "knx-home-automation-india",
+    excerpt: "Everything about KNX home automation in India in 2026 — how the wired KNX standard works, its benefits over Wi-Fi/Zigbee, cost, and whether it suits your villa.",
+    category: "Home Automation",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-16",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1650682009477-52fd77302b78?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 29,
+    title: "Best Smart Lights in India 2026: Complete Buying Guide",
+    slug: "best-smart-lights-india",
+    excerpt: "A 2026 buying guide to the best smart lights in India — bulbs vs switches vs strips, scenes, voice control, brands and cost, with expert setup advice.",
+    category: "Home Automation",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-15",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1769938021552-0b6639af57e8?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 30,
+    title: "Home Automation for Villas in Bangalore 2026: Complete Guide",
+    slug: "home-automation-for-villas-bangalore",
+    excerpt: "How to automate a villa in Bangalore in 2026 — lighting, climate, blinds, security and AV under one system, with KNX vs wireless advice and cost guidance.",
+    category: "Home Automation",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-14",
+    readTime: "9 min",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 31,
+    title: "Automatic Gate Installation in Bangalore 2026: Cost & Guide",
+    slug: "automatic-gate-installation-bangalore",
+    excerpt: "A 2026 guide to automatic gate installation in Bangalore — sliding vs swing vs boom barrier, motors, safety features, smart integration and cost.",
+    category: "Security",
+    author: "Qloud Tech Editorial",
+    date: "2026-06-13",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1613850011958-cfb3e7364058?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
     id: 23,
     title: "JBL, Polk, KEF & Klipsch Dealer in Bangalore: Where to Buy in 2026",
     slug: "home-theatre-audio-brand-dealers-bangalore",
