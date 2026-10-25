@@ -7,7 +7,7 @@ const STATS = [
   { value: '100+', label: 'Home Theatres Delivered' },
   { value: '450+', label: 'Happy Customers' },
   { value: '5.0★', label: 'Google Rating' },
-  { value: '70', label: 'Verified Reviews' },
+  { value: '73', label: 'Google Reviews' },
 ];
 
 const CONFIGS = [
@@ -50,7 +50,7 @@ const KA_CITIES = ['Mysuru', 'Mangalore', 'Hubballi-Dharwad', 'Belgavi', 'Udupi-
 
 const FAQS = [
   { q: 'How much does a home theatre cost in Bangalore?', a: 'Home theatre installation in Bangalore ranges from ₹2.29 Lakhs (Essential 5.1) to ₹12.39 Lakhs (Gold 7.1.2 Dolby Atmos), with fully custom builds going beyond ₹15 Lakhs.' },
-  { q: 'Which is the best home theatre company in Bangalore?', a: 'Qloud Tech is a top-rated home theatre company in Bangalore with 100+ Dolby Atmos installations and a perfect 5-star rating from 70 verified reviews.' },
+  { q: 'Which is the best home theatre company in Bangalore?', a: 'Qloud Tech is a top-rated home theatre company in Bangalore with 100+ Dolby Atmos installations and a 5-star rating from 73 Google reviews.' },
   { q: 'What is the minimum room size for a home theatre?', a: 'A minimum of 150 sq ft is recommended for a comfortable dedicated home theatre, though we design great-sounding solutions for smaller rooms too.' },
   { q: 'Is a projector or a TV better for a home theatre?', a: 'A 4K projector delivers the true cinema experience in a light-controlled room, while a large TV suits bright living rooms. We help you choose the right display for your space.' },
 ];
@@ -68,7 +68,7 @@ const COPY = {
     h2: 'End-to-End Home Theatre & Smart Home Services',
     lead: 'Beyond home cinema, Qloud Tech delivers complete smart-home solutions in Bangalore — home automation, CCTV security, digital door locks and networking. As established home theatre dealers, we build everything from budget living-room systems to dedicated, luxury Dolby Atmos theatres, with clear pricing and lifetime support.',
     brandsIntro: 'We are a multi-brand audio and home theatre dealer in Bangalore, supplying and professionally installing premium speakers, AV receivers and 4K projectors from the brands below.',
-    whyText: 'Rated among the best home theatre companies and top installers in Bangalore — 100+ projects, 450+ happy customers and a 5-star rating from 70 verified reviews. We deliver the right solution for your space and budget.',
+    whyText: 'Rated among the best home theatre companies and top installers in Bangalore — 100+ projects, 450+ happy customers and a 5-star rating from 73 Google reviews. We deliver the right solution for your space and budget.',
   },
 };
 
@@ -218,7 +218,7 @@ const SeoKeywordSection = ({ variant = 'home' }) => {
             <p className="text-gray-300 text-sm leading-relaxed mb-4">{c.whyText}</p>
             <div className="flex items-center gap-1 mb-4">
               {[0, 1, 2, 3, 4].map((i) => <Star key={i} className="w-4 h-4 fill-cyan-400 text-cyan-400" />)}
-              <span className="text-gray-400 text-sm ml-2">5.0 from 70 verified reviews</span>
+              <span className="text-gray-400 text-sm ml-2">5 stars from 73 Google reviews</span>
             </div>
             <Link to="/blog/best-home-theatre-company-bangalore" className="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
               See our best home theatre company comparison <ArrowRight className="w-4 h-4" />

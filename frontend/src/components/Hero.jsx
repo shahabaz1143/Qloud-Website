@@ -86,7 +86,7 @@ const Hero = () => {
               { v: '450+', l: 'Happy\nCustomers' },
               { v: '8+', l: 'Years of\nExperience' },
               { v: '100+', l: 'Home Theatres\nDesigned' },
-              { v: '5/5', l: 'Customer\nRatings' },
+              { v: '5★', l: '73 Google\nReviews' },
             ].map((s) => (
               <div key={s.v}>
                 <div className="text-3xl lg:text-4xl font-light text-white mb-2">{s.v}</div>

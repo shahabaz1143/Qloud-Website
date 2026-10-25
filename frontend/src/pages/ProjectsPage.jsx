@@ -98,7 +98,7 @@ const ProjectsPage = () => {
               <div className="p-4 rounded-xl bg-gray-900/40 border border-gray-800 text-center">
                 <Award className="w-5 h-5 text-cyan-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">5★</div>
-                <div className="text-xs text-gray-400">Google reviews avg.</div>
+                <div className="text-xs text-gray-400">73 Google reviews</div>
               </div>
             </div>
           </div>

@@ -95,7 +95,7 @@ const whyPoints = [
   'Correct model & amplifier matching for your room size',
   'Professional installation, acoustic treatment & calibration',
   'Transparent packages from ₹2.29 Lakhs',
-  'Lifetime technical support & 5-star service (70 reviews)',
+  'Lifetime technical support & 5-star service (73 reviews)',
 ];
 
 const BrandPage = ({ slug }) => {
@@ -136,7 +136,7 @@ const BrandPage = ({ slug }) => {
       },
       "areaServed": { "@type": "City", "name": "Bangalore" },
       "priceRange": "₹₹",
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "70" }
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "73" }
     };
 
     const breadcrumb = {

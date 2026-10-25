@@ -183,7 +183,7 @@ const ContactPage = () => {
           <div className="rounded-2xl overflow-hidden border border-gray-800 shadow-lg">
             <iframe
               title="Qloud Tech — Home Theatre & Smart Home Company, Bangalore"
-              src="https://www.google.com/maps?q=Qloud%20Smart%20Homes%2C%20Kothanur%2C%20Byrathi%2C%20Bangalore%20560077&output=embed"
+              src="https://www.google.com/maps?q=13.0559047,77.6474565&z=17&output=embed"
               width="100%"
               height="420"
               style={{ border: 0 }}
@@ -195,7 +195,7 @@ const ContactPage = () => {
           </div>
           <div className="text-center mt-6">
             <a
-              href="https://www.google.com/maps/dir/?api=1&destination=Qloud%20Smart%20Homes%2C%20Kothanur%2C%20Byrathi%2C%20Bangalore%20560077"
+              href="https://maps.app.goo.gl/rFxj5mbnaSVcbx8k7"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="get-directions-btn"

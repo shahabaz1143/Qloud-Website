@@ -180,7 +180,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-white mb-1">Visit Us</h3>
-                    <p className="text-cyan-400 text-sm font-semibold leading-tight">First Floor 11, 102/1, above Sufyan, Geddalahalli, Rammana Layout</p>
+                    <p className="text-cyan-400 text-sm font-semibold leading-tight">First Floor 11, 102/1, above Sufyan, Geddalahalli, Rammana Layout, Kothanur, Byrathi</p>
                   </div>
                 </div>
               </div>
