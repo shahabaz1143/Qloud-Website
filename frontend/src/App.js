@@ -8,8 +8,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Pricing from './components/Pricing';
 import Process from './components/Process';
 import Projects from './components/Projects';
-import BrandsWeCarry from './components/BrandsWeCarry';
-import SeoKeywordSection from './components/SeoKeywordSection';
+import QloudAudioPromo from './components/QloudAudioPromo';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
@@ -52,6 +51,15 @@ const classifyLeadUrl = (url) => {
   return null;
 };
 
+const isQloudAudioUrl = (url) => {
+  if (!url || typeof url !== 'string') return false;
+  try {
+    return new URL(url, window.location.origin).hostname.replace(/^www\./, '') === 'qloudaudio.com';
+  } catch {
+    return false;
+  }
+};
+
 const GAListener = () => {
   const location = useLocation();
 
@@ -75,6 +83,14 @@ const GAListener = () => {
       for (const el of path) {
         if (!el || el.nodeType !== 1) continue;
         if (el.tagName === 'A' && el.href) {
+          if (isQloudAudioUrl(el.href)) {
+            fireGAEvent('qloud_audio_click', {
+              link_url: el.href,
+              link_text: (el.innerText || '').trim().slice(0, 80) || 'Qloud Audio',
+              outbound: true
+            });
+            return;
+          }
           const channel = classifyLeadUrl(el.href);
           if (channel) {
             fireGAEvent('generate_lead', {
@@ -94,6 +110,13 @@ const GAListener = () => {
     // 2) Wrap window.open so wa.me / tel: opens fire GA too
     const originalOpen = window.open;
     window.open = function patchedOpen(url, ...rest) {
+      if (isQloudAudioUrl(url)) {
+        fireGAEvent('qloud_audio_click', {
+          link_url: url,
+          link_text: 'window.open',
+          outbound: true
+        });
+      }
       const channel = classifyLeadUrl(url);
       if (channel) {
         fireGAEvent('generate_lead', {
@@ -171,16 +194,15 @@ const HomePage = () => {
       <Header />
       <Hero />
       <Services />
+      <QloudAudioPromo />
       <WhyChooseUs />
       <Pricing />
       <Process />
       <Projects />
-      <BrandsWeCarry />
       <Testimonials />
       <Gallery />
       <Blog />
       <FAQ />
-      <SeoKeywordSection variant="home" />
       <Contact />
       <Footer />
       <WhatsAppButton />

@@ -7,6 +7,17 @@ import Header from '../components/Header';
 // All blog posts data
 const allBlogPosts = [
   {
+    id: 32,
+    title: "Qloud Audio by Qloud Tech: Models, Prices, Cart & Quote Builder",
+    slug: "qloud-audio-by-qloud-tech",
+    excerpt: "Meet Qloud Audio, Qloud Tech's dedicated product catalogue and home theatre quote builder for exact AV models, listed prices and complete-room planning.",
+    category: "Home Theatre",
+    author: "Qloud Tech Editorial",
+    date: "2026-09-21",
+    readTime: "8 min",
+    image: "https://www.qloudaudio.com/services/hero-shop.jpg?v=20"
+  },
+  {
     id: 24,
     title: "Denon vs Marantz AV Receiver 2026: Which Should You Buy?",
     slug: "denon-vs-marantz-av-receiver",

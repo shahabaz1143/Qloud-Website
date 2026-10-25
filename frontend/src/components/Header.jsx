@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { ExternalLink, Menu, Phone, X } from 'lucide-react';
+
+const QLOUD_AUDIO_URL = 'https://www.qloudaudio.com';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,8 +44,8 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-10">
-            <nav className="flex items-center gap-7" aria-label="Main navigation">
+          <div className="hidden xl:flex items-center gap-7">
+            <nav className="flex items-center gap-5" aria-label="Main navigation">
               {navItems.map((item) => (
                 <Link
                   key={item.to}
@@ -61,6 +63,16 @@ const Header = () => {
                   )}
                 </Link>
               ))}
+              <a
+                href={QLOUD_AUDIO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-white transition-opacity hover:opacity-70"
+                data-testid="desktop-nav-qloud-audio"
+              >
+                Qloud Audio
+                <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+              </a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -82,7 +94,7 @@ const Header = () => {
           </div>
 
           {/* Mobile/Tablet Menu Button */}
-          <div className="flex lg:hidden items-center gap-3">
+          <div className="flex xl:hidden items-center gap-3">
             <button
               onClick={() => window.open('https://wa.me/917204746043', '_blank')}
               className="bg-white text-black hover:bg-neutral-200 font-medium px-4 py-2 rounded-md transition-all duration-200 text-sm"
@@ -93,6 +105,7 @@ const Header = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-white p-2"
+              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               data-testid="mobile-menu-toggle"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -102,8 +115,8 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-white/10 pt-4 bg-[#0B0C0E]/95 backdrop-blur-xl">
-            <nav className="flex flex-col space-y-1">
+          <div className="xl:hidden mt-4 pb-4 border-t border-white/10 pt-4 bg-[#0B0C0E]/95 backdrop-blur-xl">
+            <nav className="flex flex-col space-y-1" aria-label="Mobile navigation">
               {navItems.map((item) => (
                 <Link
                   key={item.to}
@@ -116,6 +129,17 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
+              <a
+                href={QLOUD_AUDIO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-2 py-2.5 text-left text-base font-medium text-white"
+                data-testid="mobile-nav-qloud-audio"
+              >
+                Qloud Audio · Models &amp; Prices
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
               <a href="tel:+917204746043" className="text-left py-2.5 text-base text-[#E5E7EB] flex items-center gap-2">
                 <Phone className="w-4 h-4" /> +91 72047 46043
               </a>

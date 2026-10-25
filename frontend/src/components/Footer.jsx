@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,6 +18,19 @@ const Footer = () => {
             <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">
               Pioneers in Smart Home Automation & Immersive Home Theatre Solutions with best-in-class quality.
             </p>
+            <p className="text-neutral-500 text-xs leading-relaxed mb-3 max-w-xs">
+              Looking for exact AV models and prices? Qloud Audio is our dedicated catalogue for shopping products and building a home theatre quote.
+            </p>
+            <a
+              href="https://www.qloudaudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-5 inline-flex items-center gap-1.5 text-sm font-medium text-white transition-opacity hover:opacity-70"
+              data-testid="footer-qloud-audio-link"
+            >
+              Visit Qloud Audio
+              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </a>
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/p/qloudtech-100091642968091/"
