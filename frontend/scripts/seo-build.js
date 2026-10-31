@@ -44,7 +44,7 @@ const DEFAULT_OG = "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-
 // Related blog guides per service — crawlable internal links injected into
 // the SEO fallback of each service page to funnel ranking power to guides.
 const SERVICE_RELATED_GUIDES = {
-  "home-theatre": ["home-theatre-cost-bangalore", "home-theatre-soundproofing-guide", "best-home-theatre-company-bangalore", "home-theatre-setup-bangalore-guide"],
+  "home-theatre": ["how-to-choose-home-theatre-company-bangalore", "dolby-atmos-cost-bangalore", "apartment-home-theatre-bangalore", "home-theatre-near-me-bangalore", "best-home-theatre-company-bangalore", "home-theatre-cost-bangalore"],
   "home-automation": ["knx-vs-zigbee-vs-wifi", "home-automation-cost-bangalore", "best-home-automation-company-bangalore", "smart-home-automation-guide"],
   "security-systems": ["cctv-installation-cost-bangalore", "best-smart-door-locks-india", "security-systems-guide", "video-door-phone-guide"],
   "smart-switches": ["smart-switches-guide", "knx-vs-zigbee-vs-wifi", "home-automation-cost-bangalore", "smart-home-automation-guide"],
@@ -57,6 +57,10 @@ const SERVICE_RELATED_GUIDES = {
 const GUIDE_TITLES = {
   "home-theatre-cost-bangalore": "Home Theatre Cost in Bangalore 2026",
   "home-theatre-soundproofing-guide": "How to Soundproof a Home Theatre Room in India",
+  "how-to-choose-home-theatre-company-bangalore": "How to Choose a Home Theatre Company in Bangalore",
+  "dolby-atmos-cost-bangalore": "Dolby Atmos Home Theatre Cost in Bangalore",
+  "apartment-home-theatre-bangalore": "Apartment Home Theatre in Bangalore",
+  "home-theatre-near-me-bangalore": "Home Theatre Company Near Me in Bangalore",
   "best-home-theatre-company-bangalore": "Best Home Theatre Company in Bangalore 2026",
   "home-theatre-setup-bangalore-guide": "Complete Guide to Home Theatre Setup in Bangalore",
   "knx-vs-zigbee-vs-wifi": "KNX vs Zigbee vs Wi-Fi: Best Automation Protocol 2026",
@@ -177,6 +181,21 @@ for (const [slug, b] of Object.entries(BRAND_DEALER_ROUTES)) {
 // --------------------------------------------------------------------------
 // Extract dynamic page data from JSX files via regex
 // --------------------------------------------------------------------------
+function firstAnswer(body) {
+  const content = body.match(/content\s*:\s*`([\s\S]*?)`\s*,/);
+  if (!content) return null;
+  const paragraph = content[1].match(/<p>([\s\S]*?)<\/p>/);
+  if (!paragraph) return null;
+  const text = paragraph[1]
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&apos;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text || null;
+}
+
 function extractSlugBlocks(filePath) {
   if (!fs.existsSync(filePath)) return {};
   const src = fs.readFileSync(filePath, "utf-8");
@@ -224,6 +243,7 @@ function extractSlugBlocks(filePath) {
     const category = get("category");
     const author = get("author");
     const date = get("date");
+    const lead = firstAnswer(body);
 
     if (metaTitle || title) {
       out[slug] = {
@@ -231,6 +251,7 @@ function extractSlugBlocks(filePath) {
         metaDescription,
         title,
         description,
+        lead,
         service,
         location,
         category,
@@ -290,7 +311,7 @@ function buildDynamicMeta() {
       title: data.metaTitle || `${data.title} | ${BRAND} Blog`,
       description: data.metaDescription || data.description || "",
       h1: data.title,
-      intro: data.description || data.metaDescription || "",
+      intro: data.lead || data.description || data.metaDescription || "",
       type: "article",
       category: data.category,
       author: data.author || `${BRAND} Team`,

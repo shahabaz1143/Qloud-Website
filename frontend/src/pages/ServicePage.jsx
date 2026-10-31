@@ -228,10 +228,12 @@ const servicesData = {
 // into high-intent guides (new cost/comparison posts prioritised first).
 const relatedGuidesMap = {
   'home-theatre': [
-    { title: 'Home Theatre Cost in Bangalore 2026: Complete Price Breakdown', slug: 'home-theatre-cost-bangalore', tag: 'Pricing' },
-    { title: 'How to Soundproof a Home Theatre Room in India', slug: 'home-theatre-soundproofing-guide', tag: 'Guide' },
+    { title: 'How to Choose a Home Theatre Company in Bangalore', slug: 'how-to-choose-home-theatre-company-bangalore', tag: 'Buying Guide' },
+    { title: 'Dolby Atmos Home Theatre Cost in Bangalore', slug: 'dolby-atmos-cost-bangalore', tag: 'Pricing' },
+    { title: 'Apartment Home Theatre in Bangalore: 2BHK and 3BHK', slug: 'apartment-home-theatre-bangalore', tag: 'Guide' },
+    { title: 'Home Theatre Company Near Me in Bangalore', slug: 'home-theatre-near-me-bangalore', tag: 'Guide' },
     { title: 'Best Home Theatre Company in Bangalore 2026 (Top 7)', slug: 'best-home-theatre-company-bangalore', tag: 'Comparison' },
-    { title: 'Complete Guide to Home Theatre Setup in Bangalore', slug: 'home-theatre-setup-bangalore-guide', tag: 'Guide' },
+    { title: 'Home Theatre Cost in Bangalore 2026: Complete Price Breakdown', slug: 'home-theatre-cost-bangalore', tag: 'Pricing' },
   ],
   'home-automation': [
     { title: 'KNX vs Zigbee vs Wi-Fi: Best Automation Protocol 2026', slug: 'knx-vs-zigbee-vs-wifi', tag: 'Comparison' },

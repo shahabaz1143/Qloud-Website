@@ -7,6 +7,50 @@ import Header from '../components/Header';
 // All blog posts data
 const allBlogPosts = [
   {
+    id: 33,
+    title: "How to Choose a Home Theatre Company in Bangalore (2026)",
+    slug: "how-to-choose-home-theatre-company-bangalore",
+    excerpt: "Five checks before you hire: a written quote, a free site visit, more than one brand, a speaker warranty, and Google reviews. Qloud Tech matches all five.",
+    category: "Buying Guide",
+    author: "Qloud Tech Editorial",
+    date: "2026-10-31",
+    readTime: "9 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
+  },
+  {
+    id: 34,
+    title: "Apartment Home Theatre in Bangalore: 2BHK and 3BHK Guide (2026)",
+    slug: "apartment-home-theatre-bangalore",
+    excerpt: "How a 5.1 or 5.1.2 Dolby Atmos system fits a Bangalore apartment, including projector versus TV, neighbour noise and package prices.",
+    category: "Home Theatre",
+    author: "Qloud Tech Editorial",
+    date: "2026-10-31",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 35,
+    title: "Dolby Atmos Home Theatre Cost in Bangalore (2026)",
+    slug: "dolby-atmos-cost-bangalore",
+    excerpt: "Published Atmos prices: 5.1.2 from ₹9.99 lakhs and 7.1.2 from ₹12.39 lakhs, plus when a simpler 5.1 is the better buy.",
+    category: "Pricing",
+    author: "Qloud Tech Editorial",
+    date: "2026-10-31",
+    readTime: "8 min",
+    image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+  },
+  {
+    id: 36,
+    title: "Home Theatre Company Near Me in Bangalore (2026)",
+    slug: "home-theatre-near-me-bangalore",
+    excerpt: "Qloud Tech visits homes across Bangalore from its Byrathi office. Areas covered, how to judge a near-me result, and how to book a site visit.",
+    category: "Home Theatre",
+    author: "Qloud Tech Editorial",
+    date: "2026-10-31",
+    readTime: "8 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
+  },
+  {
     id: 32,
     title: "Qloud Audio by Qloud Tech: Models, Prices, Cart & Quote Builder",
     slug: "qloud-audio-by-qloud-tech",
