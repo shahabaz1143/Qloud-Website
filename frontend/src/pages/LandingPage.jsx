@@ -227,9 +227,9 @@ const MiniHeader = () => (
     <div className="container mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
       <Link to="/" className="flex-shrink-0" aria-label="Qloud Tech Home">
         <img
-          src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png"
+          src="/qloud-logo.png"
           alt="Qloud Tech"
-          className="h-5 brightness-0 invert"
+          className="h-8 w-auto brightness-0 invert"
         />
       </Link>
       <div className="hidden sm:flex items-center gap-2 text-xs text-gray-400">

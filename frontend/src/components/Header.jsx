@@ -18,10 +18,6 @@ const Header = () => {
   const navItems = [
     { label: 'Home', to: '/' },
     { label: 'Services', to: '/services' },
-    { label: 'Packages', to: '/packages' },
-    { label: 'Process', to: '/process' },
-    { label: 'Projects', to: '/projects' },
-    { label: 'Blog', to: '/blog' },
     { label: 'Contact', to: '/contact' },
   ];
 
@@ -40,11 +36,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex-shrink-0 group" aria-label="Qloud Tech Home">
-            <img src="https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/mnksn56d_cropped-logo-1.png" alt="Qloud Tech Logo" className="h-6 brightness-0 invert transition-opacity group-hover:opacity-80" />
+            <img src="/qloud-logo.png" alt="Qloud Tech" className="h-8 sm:h-9 w-auto brightness-0 invert transition-opacity group-hover:opacity-80" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center gap-7">
+          <div className="hidden lg:flex items-center gap-7">
             <nav className="flex items-center gap-5" aria-label="Main navigation">
               {navItems.map((item) => (
                 <Link
@@ -67,7 +63,7 @@ const Header = () => {
                 href={QLOUD_AUDIO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-white transition-opacity hover:opacity-70"
+                className="inline-flex items-center gap-1.5 rounded-full bg-cyan-400 px-3.5 py-1.5 text-sm font-semibold text-black transition-colors hover:bg-cyan-300"
                 data-testid="desktop-nav-qloud-audio"
               >
                 Qloud Audio
@@ -94,7 +90,7 @@ const Header = () => {
           </div>
 
           {/* Mobile/Tablet Menu Button */}
-          <div className="flex xl:hidden items-center gap-3">
+          <div className="flex lg:hidden items-center gap-3">
             <button
               onClick={() => window.open('https://wa.me/917204746043', '_blank')}
               className="bg-white text-black hover:bg-neutral-200 font-medium px-4 py-2 rounded-md transition-all duration-200 text-sm"
@@ -115,7 +111,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="xl:hidden mt-4 pb-4 border-t border-white/10 pt-4 bg-[#0B0C0E]/95 backdrop-blur-xl">
+          <div className="lg:hidden mt-4 pb-4 border-t border-white/10 pt-4 bg-[#0B0C0E]/95 backdrop-blur-xl">
             <nav className="flex flex-col space-y-1" aria-label="Mobile navigation">
               {navItems.map((item) => (
                 <Link
@@ -134,10 +130,10 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2 py-2.5 text-left text-base font-medium text-white"
+                className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-cyan-400 px-4 py-2 text-base font-semibold text-black transition-colors hover:bg-cyan-300"
                 data-testid="mobile-nav-qloud-audio"
               >
-                Qloud Audio · Models &amp; Prices
+                Qloud Audio
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </a>
               <a href="tel:+917204746043" className="text-left py-2.5 text-base text-[#E5E7EB] flex items-center gap-2">
