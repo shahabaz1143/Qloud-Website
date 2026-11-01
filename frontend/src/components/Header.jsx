@@ -33,7 +33,7 @@ const Header = () => {
         scrolled ? 'bg-[#0B0C0E]/80 backdrop-blur-xl border-b border-white/10' : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex-shrink-0 group" aria-label="Qloud Tech Home">
             <img src="/qloud-logo.png" alt="Qloud Tech" className="h-8 sm:h-9 w-auto brightness-0 invert transition-opacity group-hover:opacity-80" />

@@ -39,6 +39,12 @@ const BRAND = "Qloud Tech";
 const PHONE = "+91-7204746043";
 const EMAIL = "contact@qloudsmarthomes.com";
 const ADDRESS = "First Floor 11, 102/1, above Sufyan, Geddalahalli, Rammana Layout, Kothanur, Byrathi, Bangalore 560077";
+const SAME_AS = [
+  "https://maps.app.goo.gl/rFxj5mbnaSVcbx8k7",
+  "https://www.youtube.com/@Qloudtech",
+  "https://www.facebook.com/p/qloudtech-100091642968091/",
+  "https://www.instagram.com/qloud.tech/"
+];
 const DEFAULT_OG = "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/h7afabwe_cropped-Untitled-design-6.png";
 
 // Related blog guides per service — crawlable internal links injected into
@@ -61,6 +67,7 @@ const GUIDE_TITLES = {
   "dolby-atmos-cost-bangalore": "Dolby Atmos Home Theatre Cost in Bangalore",
   "apartment-home-theatre-bangalore": "Apartment Home Theatre in Bangalore",
   "home-theatre-near-me-bangalore": "Home Theatre Company Near Me in Bangalore",
+  "home-karaoke-setup-bangalore": "Home Karaoke Setup in Bangalore",
   "best-home-theatre-company-bangalore": "Best Home Theatre Company in Bangalore 2026",
   "home-theatre-setup-bangalore-guide": "Complete Guide to Home Theatre Setup in Bangalore",
   "knx-vs-zigbee-vs-wifi": "KNX vs Zigbee vs Wi-Fi: Best Automation Protocol 2026",
@@ -378,7 +385,8 @@ function serviceSchema(meta, url) {
       telephone: PHONE,
       email: EMAIL,
       address: ADDRESS,
-      url: SITE_URL
+      url: SITE_URL,
+      sameAs: SAME_AS
     },
     areaServed: { "@type": "City", name: "Bangalore" },
     url
@@ -405,7 +413,8 @@ function localBusinessSchema(meta, url) {
     },
     areaServed: { "@type": "City", name: meta.location || "Bangalore" },
     priceRange: "₹₹",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "73" }
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "73" },
+    sameAs: SAME_AS
   };
 }
 
@@ -519,6 +528,7 @@ function buildSeoFallback(meta, url) {
     ${BRAND}<br />
     ${ADDRESS}<br />
     Phone: <a href="tel:${PHONE}">${PHONE}</a><br />
+    YouTube: <a href="https://www.youtube.com/@Qloudtech">youtube.com/@Qloudtech</a><br />
     Email: <a href="mailto:${EMAIL}">${EMAIL}</a><br />
     Hours: Mon–Sat 09:00–19:00
   </address>

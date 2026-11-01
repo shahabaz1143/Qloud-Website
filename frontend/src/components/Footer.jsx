@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, Facebook, Instagram, MessageCircle, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -47,6 +47,15 @@ const Footer = () => {
                 className="w-9 h-9 bg-gray-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors duration-200"
               >
                 <Instagram className="w-4 h-4 text-white" />
+              </a>
+              <a
+                href="https://www.youtube.com/@Qloudtech"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Qloud Tech on YouTube"
+                className="w-9 h-9 bg-gray-800 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors duration-200"
+              >
+                <Youtube className="w-4 h-4 text-white" />
               </a>
               <a
                 href="https://wa.me/917204746043"

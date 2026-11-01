@@ -7,6 +7,17 @@ import Header from '../components/Header';
 // All blog posts data
 const allBlogPosts = [
   {
+    id: 37,
+    title: "Home Karaoke Setup in Bangalore (2026)",
+    slug: "home-karaoke-setup-bangalore",
+    excerpt: "A home karaoke setup uses your theatre speakers and a microphone. Qloud Tech installs it in your house. It is not a karaoke bar.",
+    category: "Home Theatre",
+    author: "Qloud Tech Editorial",
+    date: "2026-11-01",
+    readTime: "7 min",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif"
+  },
+  {
     id: 33,
     title: "How to Choose a Home Theatre Company in Bangalore (2026)",
     slug: "how-to-choose-home-theatre-company-bangalore",
