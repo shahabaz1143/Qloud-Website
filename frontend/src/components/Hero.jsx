@@ -35,11 +35,12 @@ const Hero = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.08] tracking-tight mb-6">
-            Where Smart Living
-            <br />
-            Meets{' '}
-            <span className="font-serif-accent italic text-[#E5E7EB]">Cinematic Magic</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold text-white leading-[1.12] tracking-tight mb-6">
+            <span className="block">Where Smart Living</span>
+            <span className="mt-3 block">
+              Meets{' '}
+              <span className="font-serif-accent italic text-[#E5E7EB]">Cinematic Magic</span>
+            </span>
           </h1>
 
           <p className="text-base sm:text-lg text-neutral-300 font-light leading-relaxed max-w-xl mb-10">

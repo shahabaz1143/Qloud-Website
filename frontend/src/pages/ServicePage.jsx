@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Check, Phone, MessageCircle, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import Header from '../components/Header';
+import ShopLocksPromo from '../components/ShopLocksPromo';
 
 // Service data
 const servicesData = {
@@ -10,7 +11,7 @@ const servicesData = {
     title: 'Home Theatre Installation in Bangalore',
     metaTitle: 'Home Theatre Installation Bangalore | Dolby Atmos | Qloud Tech',
     metaDescription: 'Professional home theatre installation in Bangalore. Dolby Atmos, 4K projection, acoustic treatment. Starting ₹2.29 lakhs. Free consultation!',
-    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif',
+    heroImage: 'https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/ed1qzck3_8108210b-8bfc-48f0-9a11-297980d55850.JPG',
     description: 'Transform your living space into a cinematic paradise with our professional home theatre installation services in Bangalore. We specialize in creating immersive entertainment experiences with Dolby Atmos sound systems, 4K/8K projection, custom seating, and professional acoustic treatment.',
     features: [
       'Dolby Atmos 5.1.2 / 7.1.2 / 9.1.4 configurations',
@@ -145,7 +146,7 @@ const servicesData = {
     title: 'Digital Door Locks in Bangalore',
     metaTitle: 'Digital Door Locks Bangalore | Smart Locks | Fingerprint | Qloud Tech',
     metaDescription: 'Premium digital door locks in Bangalore. Fingerprint, PIN, card, app access. Yale, Godrej, Samsung. Professional installation. Free consultation!',
-    heroImage: 'https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/emph1fnm_1_d41ba0ee-d7c8-4526-bcb2-c9b3c69a7090%20%284%29.webp',
+    heroImage: '/services/digital-door-locks.jpg',
     description: 'Upgrade to keyless entry with our digital door locks. Access your home with fingerprint, PIN, card, or smartphone. Grant temporary access to guests, monitor entry logs, and never worry about lost keys again.',
     features: [
       'Multiple access modes (fingerprint, PIN, card, key, app)',
@@ -501,10 +502,20 @@ const ServicePage = () => {
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>
+              {serviceSlug === 'digital-door-locks' && (
+                <Link
+                  to="/shop"
+                  className="inline-flex items-center justify-center border-2 border-white/20 text-white px-8 py-3 rounded-full text-lg hover:border-cyan-400"
+                >
+                  Shop Yale locks
+                </Link>
+              )}
             </div>
           </div>
         </div>
       </section>
+
+      {serviceSlug === 'digital-door-locks' && <ShopLocksPromo />}
 
       {/* Features Section */}
       <section className="py-16 bg-[#0f1419]">

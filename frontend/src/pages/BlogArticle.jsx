@@ -957,7 +957,7 @@ const blogData = {
     author: 'Qloud Tech Editorial',
     date: '2026-09-21',
     readTime: '8 min read',
-    image: 'https://www.qloudaudio.com/services/hero-shop.jpg?v=20',
+    image: 'https://www.qloudaudio.com/services/hero-shop.jpg?v=29',
     excerpt: 'Meet Qloud Audio, the dedicated product catalogue and home theatre quote builder from Qloud Tech. Browse exact AV models, listed prices and complete-room options online.',
     about: {
       '@type': 'Organization',

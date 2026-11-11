@@ -1,0 +1,1120 @@
+{
+  "version": "yale-2026-04-24-v4",
+  "brand": "Yale",
+  "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+  "seller": "Qloud Tech",
+  "city": "Bangalore",
+  "phone": "+91 72047 46043",
+  "whatsapp": "917204746043",
+  "note": "MRP from the official Yale India price list dated 24 April 2026. Qloud Tech supplies and installs in Bangalore. Prices do not include installation unless stated.",
+  "categories": [
+    {
+      "slug": "smart-door-locks",
+      "name": "Smart Door Locks",
+      "description": "Yale Home app, Bluetooth and Wi-Fi ready locks with fingerprint, PIN, RFID and keys."
+    },
+    {
+      "slug": "digital-door-locks",
+      "name": "Digital Door Locks",
+      "description": "Standalone biometric and PIN digital locks for wooden main doors."
+    },
+    {
+      "slug": "speciality-door-locks",
+      "name": "Glass, Sliding & PVC Locks",
+      "description": "Locks for glass, metal, sliding, PVC and patio doors."
+    }
+  ],
+  "products": [
+    {
+      "slug": "yale-luna-pro-plus",
+      "name": "Yale Luna Pro+ Facial Smart Lock",
+      "sku": "LUNA-PRO-PLUS",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 131099,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-luna-pro-plus.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–100 mm",
+      "access": [
+        "Face recognition",
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Yale Home app"
+      ],
+      "features": [
+        "Yale Home Kit included (module + Wi-Fi Bridge)",
+        "Up to 100 face users",
+        "Up to 50 fingerprints",
+        "Lithium-ion battery",
+        "Matte black with champagne gold trimming"
+      ],
+      "description": "Yale's flagship facial-recognition smart lock with the Yale Home kit in the box. Remote unlock, guest keys and door status through the Yale Home app.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "LUNA-PRO-PLUS",
+          "finish": "Standard",
+          "mrp": 131099,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-luna-pro-plus.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-luna-pro",
+      "name": "Yale Luna Pro Smart Lock",
+      "sku": "LUNA-PRO",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 97199,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-luna-pro.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–100 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Yale Home app"
+      ],
+      "features": [
+        "Yale Home Kit included",
+        "Remote control optional",
+        "Matte black with champagne gold trimming"
+      ],
+      "description": "Premium biometric smart lock with Yale Home connectivity included. Fingerprint, PIN, RFID card and mechanical key.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "LUNA-PRO",
+          "finish": "Standard",
+          "mrp": 97199,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-luna-pro.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-zuri",
+      "name": "Yale Zuri Smart Door Lock",
+      "sku": "Yzuri",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 29999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-zuri.jpg?v=official",
+      "warrantyYears": 3,
+      "doorThickness": "35–65 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Built-in Bluetooth"
+      ],
+      "features": [
+        "Built-in Bluetooth",
+        "Yale Connect Wi-Fi Bridge available as a bundle",
+        "4x AA alkaline batteries"
+      ],
+      "description": "Slim smart lock with built-in Bluetooth. Add the Wi-Fi Bridge bundle for Yale Home app control from anywhere.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "Yzuri/BL",
+          "finish": "Black",
+          "mrp": 29999,
+          "bundle": false
+        },
+        {
+          "sku": "Yzuri/BL/BD",
+          "finish": "Black",
+          "mrp": 39999,
+          "bundle": true,
+          "bundleName": "Wi-Fi Bridge Bundle"
+        },
+        {
+          "sku": "Yzuri/AB",
+          "finish": "Antique Bronze",
+          "mrp": 30999,
+          "bundle": false
+        },
+        {
+          "sku": "Yzuri/AB/BD",
+          "finish": "Antique Bronze",
+          "mrp": 40499,
+          "bundle": true,
+          "bundleName": "Wi-Fi Bridge Bundle"
+        }
+      ],
+      "images": [
+        "/shop/products/yale-zuri.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-zuri-s",
+      "name": "Yale Zuri S Smart Door Lock",
+      "sku": "YzuriS",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 21399,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-zuri-s.jpg?v=official",
+      "warrantyYears": 3,
+      "doorThickness": "35–65 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Built-in Bluetooth"
+      ],
+      "features": [
+        "Compact body (63 x 270 mm)",
+        "Built-in Bluetooth",
+        "Wi-Fi Bridge bundle available"
+      ],
+      "description": "Compact version of the Zuri for thinner doors. Bluetooth in the lock; Wi-Fi Bridge sold as a bundle.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YzuriS/BL",
+          "finish": "Black",
+          "mrp": 21399,
+          "bundle": false
+        },
+        {
+          "sku": "YzuriS/BL/BD",
+          "finish": "Black",
+          "mrp": 30899,
+          "bundle": true,
+          "bundleName": "Wi-Fi Bridge Bundle"
+        },
+        {
+          "sku": "YzuriS/AB",
+          "finish": "Antique Bronze",
+          "mrp": 22499,
+          "bundle": false
+        },
+        {
+          "sku": "YzuriS/AB/BD",
+          "finish": "Antique Bronze",
+          "mrp": 31999,
+          "bundle": true,
+          "bundleName": "Wi-Fi Bridge Bundle"
+        }
+      ],
+      "images": [
+        "/shop/products/yale-zuri-s.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ymi70a-yh",
+      "name": "Yale YMI70A-YH Smart Lock",
+      "sku": "YMI70A-YH",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 89299,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ymi70a-yh.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–100 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Yale Home app"
+      ],
+      "features": [
+        "Yale Home Kit included",
+        "Single push action",
+        "Remote control optional"
+      ],
+      "description": "Yale Home connected mortise lock with single-push locking and full biometric access.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YMI70A-YH",
+          "finish": "Standard",
+          "mrp": 89299,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ymi70a-yh.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-kyra-pro",
+      "name": "Yale Kyra Pro Smart Lock",
+      "sku": "Kyra-Pro",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 66199,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-kyra-pro.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–100 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Yale Home app"
+      ],
+      "features": [
+        "Yale Home Kit included",
+        "Remote control optional"
+      ],
+      "description": "Yale Kyra Pro push-pull smart lock with fingerprint, PIN, RFID, mechanical key and Yale Home app.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "Kyra-Pro",
+          "finish": "Matt Black / Gold",
+          "mrp": 66199,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-kyra-pro.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydm7116a-yh",
+      "name": "Yale YDM7116A-YH Smart Lock",
+      "sku": "YDM7116A-YH",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 79999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydm7116a-yh.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–100 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Yale Home app"
+      ],
+      "features": [
+        "Yale Home Kit included",
+        "Remote control optional"
+      ],
+      "description": "Yale YDM7116A with Yale Home kit included. Fingerprint, PIN, RFID, mechanical key and app access.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDM7116A-YH",
+          "finish": "Standard",
+          "mrp": 79999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydm7116a-yh.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-byyou-v-pro",
+      "name": "Yale ByYou V Pro Smart Lock",
+      "sku": "ByYou-V-Pro",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 52499,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-byyou-v-pro.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "30–50 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Built-in BLE"
+      ],
+      "features": [
+        "Built-in Bluetooth Low Energy",
+        "Fits thinner doors from 30 mm"
+      ],
+      "description": "Built-in BLE smart lock for doors 30–50 mm thick. App control without a separate module.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "ByYou-V-Pro",
+          "finish": "Standard",
+          "mrp": 52499,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-byyou-v-pro.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydm4109a-rl",
+      "name": "Yale YDM4109A RL Smart Lock",
+      "sku": "YDM4109A-RL",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 66199,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydm4109a-rl.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–90 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "Remote control optional",
+        "Matt Black, Champagne Gold or Red Bronze"
+      ],
+      "description": "Full-size smart mortise lock with biometric, PIN, RFID and mechanical key.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDM4109A-RL",
+          "finish": "Standard",
+          "mrp": 66199,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydm4109a-rl.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydm4109a",
+      "name": "Yale YDM4109 A Smart Lock",
+      "sku": "YDM4109A",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 59999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydm4109a.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–80 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "Mechanical key"
+      ],
+      "features": [
+        "Remote control optional",
+        "Matt Black or Gold"
+      ],
+      "description": "Biometric and PIN smart lock with mechanical key override.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDM4109A",
+          "finish": "Standard",
+          "mrp": 59999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydm4109a.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydm4115a",
+      "name": "Yale YDM4115A Smart Lock",
+      "sku": "YDM4115A",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 57699,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydm4115a.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "38–80 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "Mechanical key"
+      ],
+      "features": [
+        "Remote control optional",
+        "Matt Black, Champagne Gold or Red Bronze"
+      ],
+      "description": "Biometric smart lock for 38–80 mm wooden doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDM4115A-GOLD",
+          "finish": "Gold",
+          "mrp": 57699,
+          "bundle": false
+        },
+        {
+          "sku": "YDM4115A-MB",
+          "finish": "Matt Black",
+          "mrp": 60399,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydm4115a.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-byyou-mortise",
+      "name": "Yale ByYou Mortise Smart Lock",
+      "sku": "ByYou-Mortise",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 53599,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-byyou-mortise.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "40–80 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key",
+        "Built-in BLE"
+      ],
+      "features": [
+        "Built-in Bluetooth",
+        "Matt Black or Gold"
+      ],
+      "description": "Mortise smart lock with built-in BLE, biometric and RFID access.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "ByYou-Mortise-MB",
+          "finish": "Matt Black",
+          "mrp": 53599,
+          "bundle": false
+        },
+        {
+          "sku": "ByYou-Mortise-GOLD",
+          "finish": "Gold",
+          "mrp": 47999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-byyou-mortise.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydr50ga",
+      "name": "Yale YDR 50GA Smart Lock",
+      "sku": "YDR-50GA",
+      "brand": "Yale",
+      "category": "speciality-door-locks",
+      "mrp": 55999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydr50ga.jpg?v=official2",
+      "warrantyYears": 5,
+      "doorThickness": "32–55 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "Suitable for metal doors",
+        "Remote control optional"
+      ],
+      "description": "Smart lock specified for metal doors, with biometric, PIN, RFID and key.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDR-50GA",
+          "finish": "Standard",
+          "mrp": 55999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydr50ga.jpg?v=official2"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydr414a",
+      "name": "Yale YDR 414A Smart Lock",
+      "sku": "YDR-414A",
+      "brand": "Yale",
+      "category": "speciality-door-locks",
+      "mrp": 43999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydr414a.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "35–55 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "Mechanical key"
+      ],
+      "features": [
+        "Remote control optional",
+        "Black finish"
+      ],
+      "description": "Rim-style biometric smart lock for 35–55 mm doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDR-414A",
+          "finish": "Standard",
+          "mrp": 43999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydr414a.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydr41a",
+      "name": "Yale YDR 41A Sliding Door Smart Lock",
+      "sku": "YDR-41A",
+      "brand": "Yale",
+      "category": "speciality-door-locks",
+      "mrp": 45999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydr41a.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "32–55 mm",
+      "access": [
+        "Fingerprint",
+        "PIN"
+      ],
+      "features": [
+        "Suitable for sliding doors",
+        "Remote control optional"
+      ],
+      "description": "Biometric smart lock made for sliding doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDR-41A",
+          "finish": "Standard",
+          "mrp": 45999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydr41a.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydg413a-gl",
+      "name": "Yale YDG 413A GL Glass Door Lock",
+      "sku": "YDG-413A-GL",
+      "brand": "Yale",
+      "category": "speciality-door-locks",
+      "mrp": 43999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydg413a-gl.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "9–13 mm",
+      "access": [
+        "Fingerprint",
+        "PIN"
+      ],
+      "features": [
+        "Glass-to-glass kit sold separately (MRP ₹4,999)",
+        "Black finish"
+      ],
+      "description": "Digital lock for 9–13 mm glass doors. Glass-to-glass kit is extra.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDG-413A-GL",
+          "finish": "Standard",
+          "mrp": 43999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydg413a-gl.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydd724a",
+      "name": "Yale YDD 724A Smart Lock",
+      "sku": "YDD-724A",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 52999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydd724a.jpg?v=official",
+      "warrantyYears": 5,
+      "doorThickness": "38–55 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "Remote control optional",
+        "Black finish"
+      ],
+      "description": "Biometric digital lock with RFID and mechanical key for 38–55 mm doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDD-724A",
+          "finish": "Standard",
+          "mrp": 52999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydd724a.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydm3115a",
+      "name": "Yale YDM 3115A Smart Lock",
+      "sku": "YDM-3115A",
+      "brand": "Yale",
+      "category": "smart-door-locks",
+      "mrp": 34599,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydm3115a.jpg?v=official",
+      "warrantyYears": 3,
+      "doorThickness": "38–80 mm",
+      "access": [
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "Remote control optional"
+      ],
+      "description": "PIN and RFID smart lock without fingerprint, for 38–80 mm doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDM3115A-MB",
+          "finish": "Matt Black",
+          "mrp": 34599,
+          "bundle": false
+        },
+        {
+          "sku": "YDM3115A-SILVER",
+          "finish": "Silver",
+          "mrp": 38199,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydm3115a.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydl325",
+      "name": "Yale YDL325 PVC Door & Window Lock",
+      "sku": "YDL325",
+      "brand": "Yale",
+      "category": "speciality-door-locks",
+      "mrp": 14999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydl325.jpg?v=official",
+      "warrantyYears": 1,
+      "doorThickness": "35–60 mm",
+      "access": [
+        "Fingerprint",
+        "Mechanical key",
+        "Built-in BLE"
+      ],
+      "features": [
+        "For PVC doors and windows",
+        "YDL325 S and YDL325 C"
+      ],
+      "description": "Biometric lock with built-in BLE for PVC doors and windows.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDL325",
+          "finish": "Standard",
+          "mrp": 14999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydl325.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydme-200nxt",
+      "name": "Yale YDME 200NxT Digital Lock",
+      "sku": "YDME-200NxT",
+      "brand": "Yale",
+      "category": "digital-door-locks",
+      "mrp": 27999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydme-200nxt.jpg?v=official",
+      "warrantyYears": 3,
+      "doorThickness": "35–65 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "Gold & Black or Black Brown"
+      ],
+      "description": "Digital mortise lock with fingerprint, PIN, RFID and key. No Yale Home kit required.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDME-200NxT-BB",
+          "finish": "Black Brown",
+          "mrp": 27999,
+          "bundle": false
+        },
+        {
+          "sku": "YDME-200NxT-GB",
+          "finish": "Gold & Black",
+          "mrp": 29999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydme-200nxt.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydme-100nxt",
+      "name": "Yale YDME 100NxT Digital Lock",
+      "sku": "YDME-100NxT",
+      "brand": "Yale",
+      "category": "digital-door-locks",
+      "mrp": 26499,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydme-100nxt.jpg?v=official",
+      "warrantyYears": 3,
+      "doorThickness": "35–65 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "Black or Brown"
+      ],
+      "description": "Mid-range digital lock with fingerprint, PIN, RFID and mechanical key.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDME-100NxT",
+          "finish": "Standard",
+          "mrp": 26499,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydme-100nxt.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydme-50nxt",
+      "name": "Yale YDME 50NxT Digital Lock",
+      "sku": "YDME-50NxT",
+      "brand": "Yale",
+      "category": "digital-door-locks",
+      "mrp": 18999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydme-50nxt.jpg?v=official",
+      "warrantyYears": 3,
+      "doorThickness": "35–65 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "Black or Brown"
+      ],
+      "description": "Compact digital lock with fingerprint, PIN, RFID and key.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDME-50NxT-BL",
+          "finish": "Black",
+          "mrp": 18999,
+          "bundle": false
+        },
+        {
+          "sku": "YDME-50NxT-BR",
+          "finish": "Brown",
+          "mrp": 19999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydme-50nxt.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydme-50pro",
+      "name": "Yale YDME 50Pro Digital Lock",
+      "sku": "YDME-50Pro",
+      "brand": "Yale",
+      "category": "digital-door-locks",
+      "mrp": 15499,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydme-50pro.jpg?v=official",
+      "warrantyYears": 3,
+      "doorThickness": "35–65 mm",
+      "access": [
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "No fingerprint sensor",
+        "Black finish"
+      ],
+      "description": "Entry digital lock with PIN, RFID and key. No fingerprint reader.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDME-50Pro",
+          "finish": "Standard",
+          "mrp": 15499,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydme-50pro.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydal-openable",
+      "name": "Yale YDAL Lock — Openable Aluminium Door",
+      "sku": "YDAL-OPENABLE",
+      "brand": "Yale",
+      "category": "speciality-door-locks",
+      "mrp": 23099,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydal-openable.jpg?v=official",
+      "warrantyYears": 1,
+      "doorThickness": "25–65 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "For openable aluminium profile doors"
+      ],
+      "description": "Digital lock specified for openable aluminium profile doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDAL-OPENABLE",
+          "finish": "Standard",
+          "mrp": 23099,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydal-openable.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-ydal-sliding",
+      "name": "Yale YDAL Lock — Sliding Aluminium Door",
+      "sku": "YDAL-SLIDING",
+      "brand": "Yale",
+      "category": "speciality-door-locks",
+      "mrp": 23099,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-ydal-sliding.jpg?v=official",
+      "warrantyYears": 1,
+      "doorThickness": "25–65 mm",
+      "access": [
+        "Fingerprint",
+        "PIN",
+        "RFID",
+        "Mechanical key"
+      ],
+      "features": [
+        "For sliding aluminium profile doors"
+      ],
+      "description": "Digital lock specified for sliding aluminium profile doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YDAL-SLIDING",
+          "finish": "Standard",
+          "mrp": 23099,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-ydal-sliding.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-reflecta",
+      "name": "Yale REFLECTA Digital Lock",
+      "sku": "YREFLECTA",
+      "brand": "Yale",
+      "category": "digital-door-locks",
+      "mrp": 14999,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-reflecta.jpg?v=official",
+      "warrantyYears": 1,
+      "doorThickness": "35–65 mm",
+      "access": [
+        "PIN",
+        "Mechanical key"
+      ],
+      "features": [
+        "Black or Silver"
+      ],
+      "description": "Simple PIN digital lock with mechanical key override.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YREFLECTA",
+          "finish": "Standard",
+          "mrp": 14999,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-reflecta.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    },
+    {
+      "slug": "yale-yrefb",
+      "name": "Yale REFLECTA Biometric Lock",
+      "sku": "YREFB",
+      "brand": "Yale",
+      "category": "digital-door-locks",
+      "mrp": 10499,
+      "currency": "INR",
+      "inStock": true,
+      "image": "/shop/products/yale-yrefb.jpg?v=official",
+      "warrantyYears": 1,
+      "doorThickness": "30–50 mm",
+      "access": [
+        "Fingerprint",
+        "PIN"
+      ],
+      "features": [
+        "Black or Silver"
+      ],
+      "description": "Compact biometric and PIN lock for 30–50 mm doors.",
+      "priceList": "Yale Price List 2026, w.e.f. 24 April 2026",
+      "installationNote": "Supply and professional installation by Qloud Tech in Bangalore. Yale list prices are MRP. Installation is quoted after a door check.",
+      "variants": [
+        {
+          "sku": "YREFB",
+          "finish": "Standard",
+          "mrp": 10499,
+          "bundle": false
+        }
+      ],
+      "images": [
+        "/shop/products/yale-yrefb.jpg?v=official"
+      ],
+      "imageSource": "https://www.yalehome.com/in"
+    }
+  ]
+}

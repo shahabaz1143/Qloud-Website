@@ -131,3 +131,46 @@ html {
         animation: none;
     }
 }
+
+.lock-marquee {
+    --visible: 2.15;
+    --gap: 12px;
+    container-type: inline-size;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+}
+
+@media (min-width: 768px) {
+    .lock-marquee {
+        --visible: 5;
+    }
+}
+
+.lock-marquee-track {
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+    animation: lock-marquee 55s linear infinite;
+}
+
+.lock-marquee-card {
+    flex: 0 0 calc((100cqi - (var(--visible) - 1) * var(--gap)) / var(--visible));
+}
+
+.lock-marquee:hover .lock-marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes lock-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lock-marquee-track {
+        animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+}

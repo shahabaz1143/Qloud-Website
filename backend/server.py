@@ -3,12 +3,14 @@ from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
+import json
 import logging
 from pathlib import Path
 from typing import List, Optional
 from models import (
     Service, Benefit, PricingPackage, ProcessStep, 
-    Project, Testimonial, FAQ, ContactInquiry, ContactInquiryResponse
+    Project, Testimonial, FAQ, ContactInquiry, ContactInquiryResponse,
+    ShopEnquiry
 )
 from seed_data import (
     services_data, benefits_data, pricing_data, process_data,
@@ -23,6 +25,15 @@ from email.mime.multipart import MIMEMultipart
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
+
+SHOP_CATALOG_PATH = ROOT_DIR / "shop_catalog.json"
+
+def load_shop_catalog():
+    if not SHOP_CATALOG_PATH.exists():
+        return {"version": "missing", "categories": [], "products": []}
+    return json.loads(SHOP_CATALOG_PATH.read_text(encoding="utf-8"))
+
+SHOP_CATALOG = load_shop_catalog()
 
 # MongoDB connection
 mongo_url = os.environ['MONGO_URL']
@@ -177,6 +188,22 @@ async def seed_database():
         if await db.faqs.count_documents({}) == 0:
             await db.faqs.insert_many(faqs_data)
             logger.info("Seeded faqs collection")
+
+        catalog_version = SHOP_CATALOG.get("version")
+        stored = await db.shop_meta.find_one({"key": "catalogVersion"}, {"_id": 0})
+        if not stored or stored.get("value") != catalog_version:
+            await db.shop_products.delete_many({})
+            await db.shop_categories.delete_many({})
+            if SHOP_CATALOG.get("categories"):
+                await db.shop_categories.insert_many(SHOP_CATALOG["categories"])
+            if SHOP_CATALOG.get("products"):
+                await db.shop_products.insert_many(SHOP_CATALOG["products"])
+            await db.shop_meta.update_one(
+                {"key": "catalogVersion"},
+                {"$set": {"key": "catalogVersion", "value": catalog_version}},
+                upsert=True,
+            )
+            logger.info("Seeded shop catalog %s (%s products)", catalog_version, len(SHOP_CATALOG.get("products") or []))
         
         logger.info("Database seeding completed")
     except Exception as e:
@@ -285,6 +312,84 @@ async def create_contact_inquiry(inquiry: ContactInquiry, background_tasks: Back
     except Exception as e:
         logger.error(f"Error creating contact inquiry: {e}")
         raise HTTPException(status_code=500, detail="Failed to submit contact form")
+
+@api_router.get("/shop/catalog", response_model=dict)
+async def get_shop_catalog():
+    return SHOP_CATALOG
+
+@api_router.get("/shop/categories", response_model=dict)
+async def get_shop_categories():
+    try:
+        categories = await db.shop_categories.find({}, {"_id": 0}).to_list(50)
+        if not categories:
+            categories = SHOP_CATALOG.get("categories", [])
+        return {"categories": categories}
+    except Exception as e:
+        logger.error(f"Error fetching shop categories: {e}")
+        return {"categories": SHOP_CATALOG.get("categories", [])}
+
+@api_router.get("/shop/products", response_model=dict)
+async def get_shop_products(category: Optional[str] = None):
+    try:
+        query = {"category": category} if category else {}
+        products = await db.shop_products.find(query, {"_id": 0}).to_list(200)
+        if not products:
+            products = SHOP_CATALOG.get("products", [])
+            if category:
+                products = [p for p in products if p.get("category") == category]
+        return {"products": products, "version": SHOP_CATALOG.get("version")}
+    except Exception as e:
+        logger.error(f"Error fetching shop products: {e}")
+        products = SHOP_CATALOG.get("products", [])
+        if category:
+            products = [p for p in products if p.get("category") == category]
+        return {"products": products, "version": SHOP_CATALOG.get("version")}
+
+@api_router.get("/shop/products/{slug}", response_model=dict)
+async def get_shop_product(slug: str):
+    try:
+        product = await db.shop_products.find_one({"slug": slug}, {"_id": 0})
+        if not product:
+            product = next((p for p in SHOP_CATALOG.get("products", []) if p.get("slug") == slug), None)
+        if not product:
+            raise HTTPException(status_code=404, detail="Product not found")
+        return {"product": product}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching shop product {slug}: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch product")
+
+@api_router.post("/shop/enquiries", response_model=dict)
+async def create_shop_enquiry(enquiry: ShopEnquiry, background_tasks: BackgroundTasks):
+    try:
+        payload = enquiry.dict()
+        payload["id"] = str(uuid.uuid4())
+        payload["status"] = "new"
+        payload["createdAt"] = datetime.utcnow()
+        payload["source"] = "shop"
+        await db.shop_enquiries.insert_one({**payload})
+        lines = "\n".join(
+            f"- {item.name} ({item.sku}) x{item.quantity} — ₹{item.mrp:,}"
+            for item in enquiry.items
+        )
+        background_tasks.add_task(
+            send_contact_email,
+            enquiry.fullName,
+            enquiry.email or "shop@qloudsmarthomes.com",
+            enquiry.phone,
+            "Digital Door Locks Shop",
+            f"{enquiry.message or ''}\n\nCart:\n{lines}".strip()
+        )
+        response = {k: v for k, v in payload.items() if k != "_id"}
+        return {
+            "success": True,
+            "message": "Quote request received. We will confirm stock and installation on WhatsApp.",
+            "enquiry": response
+        }
+    except Exception as e:
+        logger.error(f"Error creating shop enquiry: {e}")
+        raise HTTPException(status_code=500, detail="Failed to submit shop enquiry")
 
 @api_router.get("/contact", response_model=dict)
 async def get_contact_inquiries():

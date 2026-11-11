@@ -60,3 +60,20 @@ class ContactInquiryResponse(ContactInquiry):
     id: str
     status: str = "new"
     createdAt: datetime = Field(default_factory=datetime.utcnow)
+
+
+class ShopCartItem(BaseModel):
+    slug: str
+    sku: str
+    name: str
+    finish: Optional[str] = None
+    quantity: int = 1
+    mrp: int
+
+
+class ShopEnquiry(BaseModel):
+    fullName: str
+    phone: str
+    email: Optional[str] = None
+    message: Optional[str] = ""
+    items: List[ShopCartItem]

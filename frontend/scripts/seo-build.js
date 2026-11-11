@@ -149,6 +149,15 @@ const STATIC_ROUTES = {
       "Long-form, vendor-neutral guides from our installation team — covering Dolby Atmos configurations, projector vs TV, Yale vs Samsung smart locks, Alexa vs Google Home and more.",
     type: "blog-index"
   },
+  "/shop": {
+    title: "Yale Digital Door Locks Shop Bangalore | Qloud Tech",
+    description:
+      "Buy Yale digital and smart door locks in Bangalore. Official 24 April 2026 MRP, supply and installation by Qloud Tech. Fingerprint, PIN, facial and Wi-Fi locks.",
+    h1: "Yale Digital Door Locks Shop",
+    intro:
+      "Qloud Tech sells and installs Yale digital door locks in Bangalore. Browse Smart Door Locks, Digital Door Locks and glass/sliding/PVC specialty locks from the Yale India price list dated 24 April 2026. WhatsApp a quote for stock and installation.",
+    type: "shop-index"
+  },
   "/lp/home-theatre-bangalore": {
     title: "Dedicated Home Theatre Installation Bangalore & Karnataka | Dolby Atmos from ₹2.29L | Qloud Tech",
     description:
@@ -332,6 +341,30 @@ function buildDynamicMeta() {
     };
   }
 
+  try {
+    const catalog = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "..", "public", "shop", "catalog.json"), "utf-8")
+    );
+    for (const product of catalog.products || []) {
+      const mrp = (product.variants && product.variants[0] && product.variants[0].mrp) || product.mrp;
+      meta[`/shop/${product.slug}`] = {
+        title: `${product.name} | Yale Lock Shop | Qloud Tech`,
+        description: (product.description || "").slice(0, 155),
+        h1: product.name,
+        intro: `${product.description} MRP ₹${Number(mrp).toLocaleString("en-IN")} from the Yale price list dated 24 April 2026. Qloud Tech supplies and installs in Bangalore.`,
+        type: "shop-product",
+        slug: product.slug,
+        breadcrumbs: [
+          { name: "Home", url: SITE_URL },
+          { name: "Shop", url: `${SITE_URL}/shop` },
+          { name: product.name, url: `${SITE_URL}/shop/${product.slug}` }
+        ]
+      };
+    }
+  } catch (err) {
+    console.warn("[seo-build] shop catalog missing:", err.message);
+  }
+
   return meta;
 }
 
@@ -509,7 +542,7 @@ function buildSeoFallback(meta, url) {
     <li>Free on-site consultation across Bangalore</li>
   </ul>
   <h2>Explore</h2>
-  <p><a href="${SITE_URL}/services">Browse services</a> · <a href="${SITE_URL}/packages">View packages</a> · <a href="${SITE_URL}/projects">Recent projects</a> · <a href="${SITE_URL}/blog">Read our guides</a> · <a href="${SITE_URL}/contact">Contact us</a></p>
+  <p><a href="${SITE_URL}/services">Browse services</a> · <a href="${SITE_URL}/shop">Shop Yale locks</a> · <a href="${SITE_URL}/packages">View packages</a> · <a href="${SITE_URL}/projects">Recent projects</a> · <a href="${SITE_URL}/blog">Read our guides</a> · <a href="${SITE_URL}/contact">Contact us</a></p>
   ${
     meta.type === "service" && SERVICE_RELATED_GUIDES[meta.slug]
       ? `<h2>Related Guides</h2>

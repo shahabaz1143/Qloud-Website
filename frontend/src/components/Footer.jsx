@@ -78,6 +78,7 @@ const Footer = () => {
               <li><Link to="/services/home-automation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Home Automation</Link></li>
               <li><Link to="/services/networking" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Networking</Link></li>
               <li><Link to="/services/digital-door-locks" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Door Locks</Link></li>
+              <li><Link to="/shop" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Shop Yale Locks</Link></li>
             </ul>
           </div>
 

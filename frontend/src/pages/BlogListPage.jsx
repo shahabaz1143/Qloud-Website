@@ -70,7 +70,7 @@ const allBlogPosts = [
     author: "Qloud Tech Editorial",
     date: "2026-09-21",
     readTime: "8 min",
-    image: "https://www.qloudaudio.com/services/hero-shop.jpg?v=20"
+    image: "https://www.qloudaudio.com/services/hero-shop.jpg?v=29"
   },
   {
     id: 24,

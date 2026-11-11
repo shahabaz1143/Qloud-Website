@@ -9,6 +9,7 @@ import Pricing from './components/Pricing';
 import Process from './components/Process';
 import Projects from './components/Projects';
 import QloudAudioPromo from './components/QloudAudioPromo';
+import ShopLocksPromo from './components/ShopLocksPromo';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
@@ -27,6 +28,8 @@ import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import LandingPage from './pages/LandingPage';
 import BrandPage from './pages/BrandPage';
+import ShopPage from './pages/ShopPage';
+import ShopProductPage from './pages/ShopProductPage';
 
 // Google Analytics 4 SPA page_view tracker + lead-event auto-tracking
 const GA_MEASUREMENT_ID = 'G-G41DNBE1PK';
@@ -195,6 +198,7 @@ const HomePage = () => {
       <Hero />
       <Services />
       <QloudAudioPromo />
+      <ShopLocksPromo />
       <WhyChooseUs />
       <Pricing />
       <Process />
@@ -228,6 +232,8 @@ function App() {
         <Route path="/lp/home-theatre-bangalore" element={<LandingPage />} />
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:blogSlug" element={<BlogArticle />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/shop/:productSlug" element={<ShopProductPage />} />
 
         {/* Brand dealer landing pages */}
         <Route path="/jbl-dealer-bangalore" element={<BrandPage slug="jbl" />} />

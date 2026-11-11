@@ -21,7 +21,7 @@ const services = [
     title: "Home Theatre",
     slug: "home-theatre",
     description: "Transform your living space into a cinematic experience with immersive sound, stunning visuals, and personalized smart controls. From Dolby Atmos systems to 4K projection.",
-    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/x2ao5one_luxury-movie-theater-with-modern-design-lighting-generated-by-ai_188544-33089.avif",
+    image: "https://customer-assets.emergentagent.com/job_bbd75f07-b85c-4326-830b-0e6f04e9a467/artifacts/ed1qzck3_8108210b-8bfc-48f0-9a11-297980d55850.JPG",
     icon: "Film",
     features: ["Dolby Atmos Sound", "4K Projection"]
   },
@@ -66,7 +66,7 @@ const services = [
     title: "Digital Door Locks",
     slug: "digital-door-locks",
     description: "Keyless entry with fingerprint, PIN, card, or smartphone access. Monitor who enters your home and grant temporary access to guests remotely.",
-    image: "https://customer-assets.emergentagent.com/job_8365fb75-1c5e-4d42-8737-cfeb86f573cf/artifacts/emph1fnm_1_d41ba0ee-d7c8-4526-bcb2-c9b3c69a7090%20%284%29.webp",
+    image: "/services/digital-door-locks.jpg",
     icon: "Lock",
     features: ["Fingerprint Access", "PIN & Card Entry"]
   },
@@ -122,9 +122,9 @@ const Services = () => {
                     alt={`${service.title} - Qloud Tech ${service.title} Installation Services in Bangalore`}
                     title={`${service.title} Services by Qloud Tech`}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
                   
                   {/* Icon Badge */}
                   <div className="absolute top-3 right-3 w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#67E8F9] rounded-full flex items-center justify-center">
