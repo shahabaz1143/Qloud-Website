@@ -84,16 +84,30 @@ export const whatsappCartUrl = (items, extra = '') => {
 };
 
 export async function loadShopCatalog() {
+  try {
+    const res = await fetch('/shop/catalog.json');
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data?.products) && data.products.length) return data;
+    }
+  } catch {
+    /* try the API next */
+  }
+
   const apiBase = process.env.REACT_APP_BACKEND_URL;
   if (apiBase) {
     try {
-      const res = await fetch(`${apiBase.replace(/\/$/, '')}/api/shop/catalog`);
-      if (res.ok) return res.json();
+      const res = await fetch(`${apiBase.replace(/\/$/, '')}/api/shop/catalog`, {
+        signal: AbortSignal.timeout(2500),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data?.products) && data.products.length) return data;
+      }
     } catch {
-      /* fall through to static catalogue */
+      /* fall through */
     }
   }
-  const res = await fetch('/shop/catalog.json');
-  if (!res.ok) throw new Error('Could not load shop catalogue');
-  return res.json();
+
+  throw new Error('Could not load shop catalogue');
 }
